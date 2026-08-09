@@ -5,14 +5,19 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
+    "build": "node scripts/generate-course-data.mjs && node scripts/prebuild-tikz.mjs --check && vite build",
     "preview": "vite preview",
-    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "test:payload": "node --experimental-strip-types scripts/check-lecture-payload.mjs",
+    "content:sync": "node scripts/generate-course-data.mjs",
+    "content:reset": "node scripts/generate-course-data.mjs --force",
+    "content:tikz": "node scripts/prebuild-tikz.mjs",
+    "content:tikz:force": "node scripts/prebuild-tikz.mjs --force"
   },
   "dependencies": {
+    "@lucide/svelte": "^1.30.0",
     "jsxgraph": "^1.13.1",
-    "katex": "^0.16.22",
-    "@lucide/svelte": "^1.30.0"
+    "katex": "^0.16.22"
   },
   "devDependencies": {
     "@sveltejs/adapter-vercel": "^6.3.4",
@@ -20,6 +25,7 @@
     "@sveltejs/vite-plugin-svelte": "^6.1.0",
     "@tailwindcss/postcss": "^4.2.1",
     "daisyui": "^5.7.16",
+    "node-tikzjax": "^1.0.5",
     "svelte": "^5.38.0",
     "svelte-check": "^4.3.1",
     "tailwindcss": "^4.2.1",

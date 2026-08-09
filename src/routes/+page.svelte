@@ -19,7 +19,7 @@
       <div class="mb-5 flex items-center gap-2 text-sm font-bold text-primary"><Sparkles size={17}/> Interactive mathematics</div>
       <h1 class="display-title text-5xl font-black leading-[.98] tracking-[-.055em] sm:text-7xl">See the pattern.<br/><span class="text-primary">Shape the idea.</span></h1>
       <p class="mt-7 max-w-xl text-lg leading-8 text-base-content/70">A visual, hands-on math course for creative thinkers. Explore each idea, play with it, and prove you understand it before moving forward.</p>
-      <div class="mt-9 flex flex-wrap gap-3"><a class="btn btn-primary btn-lg rounded-full px-7" href="/course">Explore the course <ArrowRight size={19}/></a><span class="flex items-center px-3 text-sm text-base-content/55">12 weeks · self-paced</span></div>
+      <div class="mt-9 flex flex-wrap gap-3"><a class="btn btn-primary btn-lg rounded-full px-7" href="/courses/math-for-designer">Explore the course <ArrowRight size={19}/></a><span class="flex items-center px-3 text-sm text-base-content/55">12 weeks · self-paced</span></div>
     </div>
     <div class="relative mx-auto aspect-square w-full max-w-[520px]">
       <div class="absolute inset-[8%] rotate-6 rounded-[36%_64%_63%_37%/47%_40%_60%_53%] bg-primary/10"></div>

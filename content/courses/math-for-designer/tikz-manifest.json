@@ -1,0 +1,638 @@
+{
+  "compiler": "node-tikzjax@1.0.5",
+  "diagrams": {
+    "content/courses/math-for-designer/lectures/01/01-concept.md": [
+      {
+        "hash": "645925e675d02148",
+        "url": "/generated/tikz/645925e675d02148.svg",
+        "caption": "Diagram representation of $A$"
+      },
+      {
+        "hash": "817efdf4133e762c",
+        "url": "/generated/tikz/817efdf4133e762c.svg",
+        "caption": "Venn Diagram vs. Euler Diagram"
+      },
+      {
+        "hash": "bc0f94548f7208a9",
+        "url": "/generated/tikz/bc0f94548f7208a9.svg",
+        "caption": "Venn Diagram vs. Euler Diagram"
+      },
+      {
+        "hash": "3d7d467f37ddb629",
+        "url": "/generated/tikz/3d7d467f37ddb629.svg",
+        "caption": "Venn Diagrams: Subset vs. Disjoint"
+      },
+      {
+        "hash": "c32fe374c480ddcd",
+        "url": "/generated/tikz/c32fe374c480ddcd.svg",
+        "caption": "Venn Diagrams: Subset vs. Disjoint"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/01/02-set-operation.md": [
+      {
+        "hash": "cce9b146283403b7",
+        "url": "/generated/tikz/cce9b146283403b7.svg",
+        "caption": "Venn diagram for $A$ intersects $B$"
+      },
+      {
+        "hash": "8bb1645effe6fb79",
+        "url": "/generated/tikz/8bb1645effe6fb79.svg",
+        "caption": "Venn diagram for $A$ unions $B$"
+      },
+      {
+        "hash": "8543755ecec69a75",
+        "url": "/generated/tikz/8543755ecec69a75.svg",
+        "caption": "Venn diagram for example \\theexample"
+      },
+      {
+        "hash": "182ff0e70c04c556",
+        "url": "/generated/tikz/182ff0e70c04c556.svg",
+        "caption": "Venn diagram for set complement $A^{c"
+      },
+      {
+        "hash": "1789d3b36aeb47b6",
+        "url": "/generated/tikz/1789d3b36aeb47b6.svg",
+        "caption": "The MDA Framework: Mechanics $\\cap$ Dynamics $\\cap$ Aesthetics form the core player experience."
+      }
+    ],
+    "content/courses/math-for-designer/lectures/01/03-3-set-venn-diagrams.md": [
+      {
+        "hash": "66cb5a8238ade357",
+        "url": "/generated/tikz/66cb5a8238ade357.svg",
+        "caption": "3-Set Venn Diagrams: The 8 Regions"
+      },
+      {
+        "hash": "5bbfc22e9c839a40",
+        "url": "/generated/tikz/5bbfc22e9c839a40.svg",
+        "caption": "Example: Constructing a 3-Set Venn Diagram"
+      },
+      {
+        "hash": "0eec8dcfe1c1d301",
+        "url": "/generated/tikz/0eec8dcfe1c1d301.svg",
+        "caption": "Step 1: Region $B \\cap C$"
+      },
+      {
+        "hash": "8406cc996b5f110c",
+        "url": "/generated/tikz/8406cc996b5f110c.svg",
+        "caption": "Step 2: $A \\cup (B \\cap C)$"
+      },
+      {
+        "hash": "af0867fa03c99548",
+        "url": "/generated/tikz/af0867fa03c99548.svg",
+        "caption": "$(A \\cap B) \\setminus C$"
+      },
+      {
+        "hash": "ee4d7a7651d52ed4",
+        "url": "/generated/tikz/ee4d7a7651d52ed4.svg",
+        "caption": "$(A \\cup B)^\\mathsf{c"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/01/04-activity.md": [
+      {
+        "hash": "1fb7dce71c98b7d9",
+        "url": "/generated/tikz/1fb7dce71c98b7d9.svg",
+        "caption": "A blank Venn diagram for 3 sets"
+      },
+      {
+        "hash": "54ba984398f1242c",
+        "url": "/generated/tikz/54ba984398f1242c.svg",
+        "caption": "Example"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/01/05-types-of-sets.md": [
+      {
+        "hash": "ec8b5871e9af139b",
+        "url": "/generated/tikz/ec8b5871e9af139b.svg",
+        "caption": "Example of interval notations. An open dot (hollow) denotes an open interval, and an opaque dot denotes a closed interval."
+      }
+    ],
+    "content/courses/math-for-designer/lectures/02/01-the-tale-of-numbers.md": [
+      {
+        "hash": "00bd60577eca2340",
+        "url": "/generated/tikz/00bd60577eca2340.svg",
+        "caption": "A diagram for natural numbers, integers, and rational numbers"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/02/02-common-keywords.md": [
+      {
+        "hash": "1c448b352372d60e",
+        "url": "/generated/tikz/1c448b352372d60e.svg",
+        "caption": "A diagram for $m = q \\times n + r$"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/02/03-modulo.md": [
+      {
+        "hash": "9da5e6bfd1411db5",
+        "url": "/generated/tikz/9da5e6bfd1411db5.svg",
+        "caption": "Modular arithmetic (mod 5) represented as positions on a circle"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/02/04-number-bases.md": [
+      {
+        "hash": "7c771959c403e7a2",
+        "url": "/generated/tikz/7c771959c403e7a2.svg",
+        "caption": "Division algorithm for finding $13$ in base $2$"
+      },
+      {
+        "hash": "415fdf963e4d5b92",
+        "url": "/generated/tikz/415fdf963e4d5b92.svg",
+        "caption": "Division algorithm for finding $78$ in base $4$"
+      },
+      {
+        "hash": "5d30691daae54384",
+        "url": "/generated/tikz/5d30691daae54384.svg",
+        "caption": "Division algorithm for finding $175$ in base $16$"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/03/04-inequality.md": [
+      {
+        "hash": "29783c43ce62b06f",
+        "url": "/generated/tikz/29783c43ce62b06f.svg",
+        "caption": "Types of intervals"
+      },
+      {
+        "hash": "f19507024483b2ae",
+        "url": "/generated/tikz/f19507024483b2ae.svg",
+        "caption": "Types of intervals"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/03/05-linear-inequality.md": [
+      {
+        "hash": "4a089497ae738147",
+        "url": "/generated/tikz/4a089497ae738147.svg",
+        "caption": "The addition property"
+      },
+      {
+        "hash": "330340363e6f0657",
+        "url": "/generated/tikz/330340363e6f0657.svg",
+        "caption": "The multiplication property when $c$ is positive"
+      },
+      {
+        "hash": "23d7e58f16c6a38d",
+        "url": "/generated/tikz/23d7e58f16c6a38d.svg",
+        "caption": "The multiplication property when $c$ is negative"
+      },
+      {
+        "hash": "5179a38b20f0f07a",
+        "url": "/generated/tikz/5179a38b20f0f07a.svg",
+        "caption": "Positions of Koopa and Mario"
+      },
+      {
+        "hash": "d5171ee8bea99003",
+        "url": "/generated/tikz/d5171ee8bea99003.svg",
+        "caption": "The intervals of positions where Mario is safe."
+      }
+    ],
+    "content/courses/math-for-designer/lectures/03/06-absolute-ineq.md": [
+      {
+        "hash": "3a2e629350ee9e9c",
+        "url": "/generated/tikz/3a2e629350ee9e9c.svg",
+        "caption": "The interval solution of $|x-4| < 2$"
+      },
+      {
+        "hash": "6412f6f4ae375207",
+        "url": "/generated/tikz/6412f6f4ae375207.svg",
+        "caption": "The interval solution of $|x+3| \\geq 3$"
+      },
+      {
+        "hash": "936a441d0071deb6",
+        "url": "/generated/tikz/936a441d0071deb6.svg",
+        "caption": "The distance between Mario's and Koopa's center."
+      }
+    ],
+    "content/courses/math-for-designer/lectures/03/07-quadratic-inequality.md": [
+      {
+        "hash": "bfe8c098315c399d",
+        "url": "/generated/tikz/bfe8c098315c399d.svg",
+        "caption": "A sign of a product when $x > m_2$"
+      },
+      {
+        "hash": "39684a6ad0690e5e",
+        "url": "/generated/tikz/39684a6ad0690e5e.svg",
+        "caption": "A sign of a product when $m_1 < x < m_2$"
+      },
+      {
+        "hash": "f84a03ae1e120fb9",
+        "url": "/generated/tikz/f84a03ae1e120fb9.svg",
+        "caption": "A sign of a product when $x < m_1$"
+      },
+      {
+        "hash": "f9130d56bb202a13",
+        "url": "/generated/tikz/f9130d56bb202a13.svg",
+        "caption": "A sign of a product for any real number $x$"
+      },
+      {
+        "hash": "2b22ecd3d1b982c1",
+        "url": "/generated/tikz/2b22ecd3d1b982c1.svg",
+        "caption": "The signs of values of $f(x)=x^2-3x+2$ in each interval."
+      },
+      {
+        "hash": "f2abdf3d6bb049a4",
+        "url": "/generated/tikz/f2abdf3d6bb049a4.svg",
+        "caption": "The signs of values of $f(x)=x^2-x$ in each interval."
+      }
+    ],
+    "content/courses/math-for-designer/lectures/04/01-function.md": [
+      {
+        "hash": "8e205be87b02566b",
+        "url": "/generated/tikz/8e205be87b02566b.svg",
+        "caption": "A function as a relationship between objects"
+      },
+      {
+        "hash": "47b5f3cd7fcfbfd5",
+        "url": "/generated/tikz/47b5f3cd7fcfbfd5.svg",
+        "caption": "A function as a machine"
+      },
+      {
+        "hash": "0a9cb4304e78679e",
+        "url": "/generated/tikz/0a9cb4304e78679e.svg",
+        "caption": "A function as points $(x,y)$ on the plane."
+      },
+      {
+        "hash": "ce93171be3cef8ed",
+        "url": "/generated/tikz/ce93171be3cef8ed.svg",
+        "caption": "Which ones are functions?"
+      },
+      {
+        "hash": "8c977cd2a0eedab1",
+        "url": "/generated/tikz/8c977cd2a0eedab1.svg",
+        "caption": "Solutions"
+      },
+      {
+        "hash": "e6dd40908dd45504",
+        "url": "/generated/tikz/e6dd40908dd45504.svg",
+        "caption": "Which ones are functions?"
+      },
+      {
+        "hash": "7a9eea09971e292c",
+        "url": "/generated/tikz/7a9eea09971e292c.svg",
+        "caption": "Graph for example \\theexample"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/04/05-composite.md": [
+      {
+        "hash": "665a6934048ff2a3",
+        "url": "/generated/tikz/665a6934048ff2a3.svg",
+        "caption": "Creating the composite function $g \\circ f$ using set diagram"
+      },
+      {
+        "hash": "1b6848953edbd931",
+        "url": "/generated/tikz/1b6848953edbd931.svg",
+        "caption": "Creating a composite function as a chain of machines"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/04/06-section-6.md": [
+      {
+        "hash": "741f2828aab95130",
+        "url": "/generated/tikz/741f2828aab95130.svg",
+        "caption": "ตัวอย่างฟังก์ชันหนึ่งต่อหนึ่ง $f_1$ และฟังก์ชันที่ไม่ใช่ฟังก์ชันหนึ่งต่อหนึ่ง $f_2$"
+      },
+      {
+        "hash": "ac00169beb792b26",
+        "url": "/generated/tikz/ac00169beb792b26.svg",
+        "caption": "การสร้างฟังก์ชันผกผัน $f\\,^{-1"
+      },
+      {
+        "hash": "ab8bea95ac1a0d52",
+        "url": "/generated/tikz/ab8bea95ac1a0d52.svg",
+        "caption": "การสร้างฟังก์ชันผกผัน $f\\,^{-1"
+      },
+      {
+        "hash": "734dfadf1d4a515d",
+        "url": "/generated/tikz/734dfadf1d4a515d.svg",
+        "caption": "ตัวอย่างการหาฟังก์ชันผกผันจากกราฟ"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/04/07-coordinate.md": [
+      {
+        "hash": "176a65c1cb5904c3",
+        "url": "/generated/tikz/176a65c1cb5904c3.svg",
+        "caption": "A coordinate of $(x,y) = (3,2)$"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/04/08-function-type.md": [
+      {
+        "hash": "ca5aba3adfce5e84",
+        "url": "/generated/tikz/ca5aba3adfce5e84.svg",
+        "caption": "Constant functions $f(x) = c$"
+      },
+      {
+        "hash": "7ba449a08255cc8c",
+        "url": "/generated/tikz/7ba449a08255cc8c.svg",
+        "caption": "Linear functions $f(x) = ax+b$"
+      },
+      {
+        "hash": "ee8837dc815bc324",
+        "url": "/generated/tikz/ee8837dc815bc324.svg",
+        "caption": "Quadratic functions $f(x) = ax^2+bx+c$"
+      },
+      {
+        "hash": "0ac8b59b81ecb349",
+        "url": "/generated/tikz/0ac8b59b81ecb349.svg",
+        "caption": "Polynomials $f(x) = a_nx^n + a_{n-1"
+      },
+      {
+        "hash": "b9ab81c175893894",
+        "url": "/generated/tikz/b9ab81c175893894.svg",
+        "caption": "Rational functions $f(x) = \\tfrac{f(x)"
+      },
+      {
+        "hash": "359087ca82c942e1",
+        "url": "/generated/tikz/359087ca82c942e1.svg",
+        "caption": "Absolute value functions"
+      },
+      {
+        "hash": "0b8927cda7c20851",
+        "url": "/generated/tikz/0b8927cda7c20851.svg",
+        "caption": "Step functions"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/05/05-logarithm.md": [
+      {
+        "hash": "e914db70c3e30745",
+        "url": "/generated/tikz/e914db70c3e30745.svg",
+        "caption": "Illustration for the notation of logarithm."
+      }
+    ],
+    "content/courses/math-for-designer/lectures/06/02-trigonometry.md": [
+      {
+        "hash": "23bc5e5f5b854594",
+        "url": "/generated/tikz/23bc5e5f5b854594.svg",
+        "caption": "A triangle for example \\theexample"
+      },
+      {
+        "hash": "40be13079225f8b4",
+        "url": "/generated/tikz/40be13079225f8b4.svg",
+        "caption": "A triangle for example \\theexample"
+      },
+      {
+        "hash": "34316eb34b13bf21",
+        "url": "/generated/tikz/34316eb34b13bf21.svg",
+        "caption": "A triangle for example \\theexample"
+      },
+      {
+        "hash": "d54077d4e64be4ad",
+        "url": "/generated/tikz/d54077d4e64be4ad.svg",
+        "caption": "Definition"
+      },
+      {
+        "hash": "27b6734fd04f5ad1",
+        "url": "/generated/tikz/27b6734fd04f5ad1.svg",
+        "caption": "Definition"
+      },
+      {
+        "hash": "981107974854b1f5",
+        "url": "/generated/tikz/981107974854b1f5.svg",
+        "caption": "A right triangle with $45^{\\circ"
+      },
+      {
+        "hash": "b612a288a5fa22d5",
+        "url": "/generated/tikz/b612a288a5fa22d5.svg",
+        "caption": "A right triangle with $30^{\\circ"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/06/03-the-unit-circle.md": [
+      {
+        "hash": "590e75d1371e3339",
+        "url": "/generated/tikz/590e75d1371e3339.svg",
+        "caption": "If we fix the length of the hypotenuse to be be 1, then we reduce the functions to be"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/06/06-extra.md": [
+      {
+        "hash": "8bdac63273886e33",
+        "url": "/generated/tikz/8bdac63273886e33.svg",
+        "caption": "Geometrical interpretations of all six trigonometry functions."
+      }
+    ],
+    "content/courses/math-for-designer/lectures/07/02-vector.md": [
+      {
+        "hash": "415976e14a105ee5",
+        "url": "/generated/tikz/415976e14a105ee5.svg",
+        "caption": "Vector $\\bv{3,2"
+      },
+      {
+        "hash": "042053c4fa8517d4",
+        "url": "/generated/tikz/042053c4fa8517d4.svg",
+        "caption": "A vector $\\vec{u"
+      },
+      {
+        "hash": "a6d577abae1c0088",
+        "url": "/generated/tikz/a6d577abae1c0088.svg",
+        "caption": "A 3-dimentional vector $\\bv{4,2,3"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/07/03-non-origin.md": [
+      {
+        "hash": "cf776a189130254d",
+        "url": "/generated/tikz/cf776a189130254d.svg",
+        "caption": "A vector from $P_1$ to $P_2$"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/07/04-operation.md": [
+      {
+        "hash": "a3dd1a7557a8b040",
+        "url": "/generated/tikz/a3dd1a7557a8b040.svg",
+        "caption": "Vector addition $\\vec{u"
+      },
+      {
+        "hash": "2d8272521065267c",
+        "url": "/generated/tikz/2d8272521065267c.svg",
+        "caption": "Vector subtraction $\\vec{u"
+      },
+      {
+        "hash": "1b51c2d85d926838",
+        "url": "/generated/tikz/1b51c2d85d926838.svg",
+        "caption": "Scalar multiplication $k\\vec{u"
+      },
+      {
+        "hash": "c1a552157dac38f1",
+        "url": "/generated/tikz/c1a552157dac38f1.svg",
+        "caption": "Norm of vector $\\vec{u"
+      },
+      {
+        "hash": "a0624172fd5703e3",
+        "url": "/generated/tikz/a0624172fd5703e3.svg",
+        "caption": "Unit vectors"
+      },
+      {
+        "hash": "3fd4c31d1ff348fb",
+        "url": "/generated/tikz/3fd4c31d1ff348fb.svg",
+        "caption": "The unit vectors $\\vec{i"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/07/05-dot-product.md": [
+      {
+        "hash": "f605407636991b47",
+        "url": "/generated/tikz/f605407636991b47.svg",
+        "caption": "Angle $\\theta$ between $\\vec{u"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/07/06-2d-on-plane.md": [
+      {
+        "hash": "788fb84f3517a96c",
+        "url": "/generated/tikz/788fb84f3517a96c.svg",
+        "caption": "Analytical Approach"
+      },
+      {
+        "hash": "df97176e6d591be3",
+        "url": "/generated/tikz/df97176e6d591be3.svg",
+        "caption": "Analytical Approach"
+      },
+      {
+        "hash": "b6635c701fbe673f",
+        "url": "/generated/tikz/b6635c701fbe673f.svg",
+        "caption": "Analytical Approach"
+      },
+      {
+        "hash": "103548f3f41e8577",
+        "url": "/generated/tikz/103548f3f41e8577.svg",
+        "caption": "Analytical Approach"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/09/05-permutation.md": [
+      {
+        "hash": "6b7a259c626f8170",
+        "url": "/generated/tikz/6b7a259c626f8170.svg",
+        "caption": "A permutation of 3 distinct objects."
+      },
+      {
+        "hash": "e68c1622b8e2454e",
+        "url": "/generated/tikz/e68c1622b8e2454e.svg",
+        "caption": "Permutation"
+      },
+      {
+        "hash": "88e26335886911f6",
+        "url": "/generated/tikz/88e26335886911f6.svg",
+        "caption": "Permutation"
+      },
+      {
+        "hash": "e519c17198cfede8",
+        "url": "/generated/tikz/e519c17198cfede8.svg",
+        "caption": "Counting the number of permutations of $r$ objects from $n$ distinct objects."
+      }
+    ],
+    "content/courses/math-for-designer/lectures/09/06-combination.md": [
+      {
+        "hash": "a45cd6d50c172dac",
+        "url": "/generated/tikz/a45cd6d50c172dac.svg",
+        "caption": "A combination of 2 objects from 3 distinct objects."
+      }
+    ],
+    "content/courses/math-for-designer/lectures/10/02-event.md": [
+      {
+        "hash": "8bb1645effe6fb79",
+        "url": "/generated/tikz/8bb1645effe6fb79.svg",
+        "caption": "Venn diagram for $A$ or $B$"
+      },
+      {
+        "hash": "cce9b146283403b7",
+        "url": "/generated/tikz/cce9b146283403b7.svg",
+        "caption": "Venn diagram for $A$ and $B$"
+      },
+      {
+        "hash": "5d41611d451c4ea4",
+        "url": "/generated/tikz/5d41611d451c4ea4.svg",
+        "caption": "Venn diagram for $A$ and $B$"
+      },
+      {
+        "hash": "1ff15b14bd953fe5",
+        "url": "/generated/tikz/1ff15b14bd953fe5.svg",
+        "caption": "$A$ are $B$ mutually exclusive."
+      },
+      {
+        "hash": "68113f062707c9ec",
+        "url": "/generated/tikz/68113f062707c9ec.svg",
+        "caption": "Venn diagram for $A,B,C$ and $D$"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/10/03-conditional.md": [
+      {
+        "hash": "c064f06baf859401",
+        "url": "/generated/tikz/c064f06baf859401.svg",
+        "caption": "Comparing $P(A)$ to $P(A|B)$"
+      },
+      {
+        "hash": "52af2a098ee9bb22",
+        "url": "/generated/tikz/52af2a098ee9bb22.svg",
+        "caption": "Venn diagrams to compute $P(A|B)$ and $P(B|A)$"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/11/04-prob-dist-func.md": [
+      {
+        "hash": "eb1f11ca60d4dae6",
+        "url": "/generated/tikz/eb1f11ca60d4dae6.svg",
+        "caption": "Representation of PDF as a bar chart"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/11/05-binomial.md": [
+      {
+        "hash": "a2859fcb949c78ce",
+        "url": "/generated/tikz/a2859fcb949c78ce.svg",
+        "caption": "Motivation"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/11/06-geometric.md": [
+      {
+        "hash": "5a8925fb7f431748",
+        "url": "/generated/tikz/5a8925fb7f431748.svg",
+        "caption": "Motivation"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/12/02-complex-dice-example.md": [
+      {
+        "hash": "45da5bc50b762a67",
+        "url": "/generated/tikz/45da5bc50b762a67.svg",
+        "caption": "Risk"
+      },
+      {
+        "hash": "128267df4a97f2f8",
+        "url": "/generated/tikz/128267df4a97f2f8.svg",
+        "caption": "Risk"
+      },
+      {
+        "hash": "eb85270a536e388c",
+        "url": "/generated/tikz/eb85270a536e388c.svg",
+        "caption": "Risk"
+      },
+      {
+        "hash": "7751f7bb9e516917",
+        "url": "/generated/tikz/7751f7bb9e516917.svg",
+        "caption": "Risk"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/12/03-complex-number.md": [
+      {
+        "hash": "09eef4cf2e34e6a9",
+        "url": "/generated/tikz/09eef4cf2e34e6a9.svg",
+        "caption": "Fractions"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/12/04-complex-plane.md": [
+      {
+        "hash": "b479ea11995171ab",
+        "url": "/generated/tikz/b479ea11995171ab.svg",
+        "caption": "Complex plane and rectangular form"
+      },
+      {
+        "hash": "dc5d160eeb4048fb",
+        "url": "/generated/tikz/dc5d160eeb4048fb.svg",
+        "caption": "Drawing a vector and labeling"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/12/05-polar-form.md": [
+      {
+        "hash": "dad12c18d2e45876",
+        "url": "/generated/tikz/dad12c18d2e45876.svg",
+        "caption": "Representing a complex number both in rectangular form $(a+bi)$ and polar form ($re^{i\\theta"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/12/06-roots.md": [
+      {
+        "hash": "aecf75a2fd2bad68",
+        "url": "/generated/tikz/aecf75a2fd2bad68.svg",
+        "caption": "Roots of Unity"
+      }
+    ]
+  }
+}

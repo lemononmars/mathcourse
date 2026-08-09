@@ -1,0 +1,54 @@
+%
+%	PMATH for DESIGNER
+%
+
+\newcommand{\then}{\longrightarrow}
+\newcommand{\pa}{\pause}
+\newcommand{\ch}[2]{{#1 \choose #2}}
+\newcommand{\mathnote}[1]{\quad \fbox{\small #1}}
+
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\green}[1]{\textcolor{teal}{#1}}
+\newcommand{\orange}[1]{\textcolor{orange}{#1}}
+%set new column type
+\usepackage{array}
+\newcommand{\vv}[2]{#1 \, \textbf{i} #2 \textbf{j}}
+\newcommand{\bvec}[1]{\textbf{#1}}
+\newcommand{\cvec}[2]{\begin{pmatrix} #1 \\ #2 \end{pmatrix}}
+\newcommand{\bv}[1]{\langle #1 \rangle}
+\newcolumntype{C}{>{$} c<{$}}
+
+ %boxed solutioned
+\newcommand{\solbox}[1]{\framebox[1.1\width]{\parbox[h]{0.8\textwidth}{#1}}}
+
+
+\newcounter{ex}
+\newenvironment{ex}%
+{
+\refstepcounter{ex}%
+\begin{exampleblock}{Example \theex}%
+}
+{\end{exampleblock}%
+
+}
+
+\newenvironment{eq}%
+{\begin{eqnarray}%
+}
+{\end{eqnarray}%
+}
+
+\newenvironment{eq*}%
+{\begin{eqnarray*}%
+}
+{\end{eqnarray*}%
+}
+
+\newcommand{\addfig}[3]{\begin{figure}[h!]\centering \includegraphics[width = #1\textwidth]{#2} \caption{#3}\end{figure}}
+
+\newenvironment{sol}%
+{\underline{Solution:}%
+}
+{%
+}

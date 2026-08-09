@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/course",
+      "destination": "/courses/math-for-designer",
+      "permanent": true
+    },
+    {
+      "source": "/course/:path*",
+      "destination": "/courses/math-for-designer/:path*",
+      "permanent": true
+    }
+  ]
+}

@@ -12,7 +12,7 @@
     </a>
   </div>
   <div class="navbar-end gap-1">
-    <a href="/course" class="btn btn-ghost btn-sm hidden sm:inline-flex">Course</a>
+    <a href="/courses/math-for-designer" class="btn btn-ghost btn-sm hidden sm:inline-flex">Course</a>
     <ThemeToggle/>
   </div>
 </header>
