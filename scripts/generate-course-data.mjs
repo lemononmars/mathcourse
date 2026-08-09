@@ -62,8 +62,8 @@ function worksheetQuestions(source) {
 const weeks = [];
 for (let week = 1; week <= 12; week += 1) {
   const id = String(week).padStart(2, "0");
-  const lectureSource = fs.readFileSync(path.join(root, `lecture${id}.tex`), "utf8");
-  const worksheetSource = fs.readFileSync(path.join(root, `worksheet${id}.tex`), "utf8");
+  const lectureSource = fs.readFileSync(path.join(root, "tex", `lecture${id}.tex`), "utf8");
+  const worksheetSource = fs.readFileSync(path.join(root, "tex", `worksheet${id}.tex`), "utf8");
   weeks.push({
     week,
     title: titleOf(lectureSource, `Week ${week}`),
@@ -72,5 +72,5 @@ for (let week = 1; week <= 12; week += 1) {
   });
 }
 
-fs.writeFileSync(path.join(root, "app", "course-data.json"), JSON.stringify(weeks, null, 2));
+fs.writeFileSync(path.join(root, "src", "lib", "course-data.json"), JSON.stringify(weeks, null, 2));
 console.log(`Generated ${weeks.length} weeks with ${weeks.reduce((sum, week) => sum + week.sections.length, 0)} sections.`);
