@@ -34,7 +34,7 @@ function titleOf(source, fallback) {
 }
 
 function lectureSections(source, week) {
-  const markers = [...source.matchAll(/\\section\{([^}]*)\}/g)];
+  const markers = [...source.matchAll(/\\section(?:\[[^\]]*\])?\{([^}]*)\}/g)];
   if (!markers.length) {
     const frames = [...source.matchAll(/\\begin\{frame\}(?:\[[^\]]*\])?(?:\{([^}]*)\})?([\s\S]*?)\\end\{frame\}/g)];
     const size = Math.max(1, Math.ceil(frames.length / 4));

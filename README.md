@@ -9,7 +9,7 @@ An interactive, mobile-friendly 12-week mathematics course built from the TeX le
 - Tailwind CSS 4 and DaisyUI
 - KaTeX for mathematical notation
 - JSXGraph for interactive diagrams
-- Cloudflare adapter
+- Vercel adapter
 
 ## Development
 
