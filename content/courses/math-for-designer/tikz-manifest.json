@@ -84,7 +84,7 @@
       {
         "hash": "ee4d7a7651d52ed4",
         "url": "/generated/tikz/ee4d7a7651d52ed4.svg",
-        "caption": "$(A \\cup B)^\\mathsf{c"
+        "caption": "$(A \\cup B)^\\mathsf{c} \\cap C = C \\setminus (A \\cup B)$"
       }
     ],
     "content/courses/math-for-designer/lectures/01/04-activity.md": [
@@ -106,47 +106,18 @@
         "caption": "Example of interval notations. An open dot (hollow) denotes an open interval, and an opaque dot denotes a closed interval."
       }
     ],
-    "content/courses/math-for-designer/lectures/02/01-the-tale-of-numbers.md": [
-      {
-        "hash": "00bd60577eca2340",
-        "url": "/generated/tikz/00bd60577eca2340.svg",
-        "caption": "A diagram for natural numbers, integers, and rational numbers"
-      }
-    ],
     "content/courses/math-for-designer/lectures/02/02-common-keywords.md": [
       {
-        "hash": "1c448b352372d60e",
-        "url": "/generated/tikz/1c448b352372d60e.svg",
-        "caption": "A diagram for $m = q \\times n + r$"
-      }
-    ],
-    "content/courses/math-for-designer/lectures/02/03-modulo.md": [
-      {
-        "hash": "mod6_pos_spiral",
-        "url": "/generated/tikz/mod6_pos_spiral.svg",
-        "caption": "Clock Arithmetic (Modulo 6) - Positive Numbers 0 to 17"
-      },
-      {
-        "hash": "mod6_neg_spiral",
-        "url": "/generated/tikz/mod6_neg_spiral.svg",
-        "caption": "Clock Arithmetic (Modulo 6) - Negative Numbers 0 to -17"
+        "hash": "af874354abda621b",
+        "url": "/generated/tikz/af874354abda621b.svg",
+        "caption": "Fundamental Theorem of Arithmetic (Factor Chart)"
       }
     ],
     "content/courses/math-for-designer/lectures/02/04-number-bases.md": [
       {
-        "hash": "7c771959c403e7a2",
-        "url": "/generated/tikz/7c771959c403e7a2.svg",
-        "caption": "Division algorithm for finding $13$ in base $2$"
-      },
-      {
-        "hash": "415fdf963e4d5b92",
-        "url": "/generated/tikz/415fdf963e4d5b92.svg",
-        "caption": "Division algorithm for finding $78$ in base $4$"
-      },
-      {
-        "hash": "5d30691daae54384",
-        "url": "/generated/tikz/5d30691daae54384.svg",
-        "caption": "Division algorithm for finding $175$ in base $16$"
+        "hash": "fd4fd74de96a1842",
+        "url": "/generated/tikz/fd4fd74de96a1842.svg",
+        "caption": "Positional weights and digit values of a base-m number"
       }
     ],
     "content/courses/math-for-designer/lectures/03/04-inequality.md": [

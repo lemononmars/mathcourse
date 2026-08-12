@@ -16,10 +16,7 @@ What do you mean when you write the number
 :::
 
 
-
-
-
-## 
+## Definition of Base-m Number
 
 
 :::definition
@@ -41,9 +38,6 @@ $(023)_4$ is not a valid number because the leading digit is zero. $(150)_5$ is 
 :::
 
 
-
-
-
 ## Converting base-m numbers to base 10
 
 
@@ -56,9 +50,40 @@ n = a_k \times (m^k) + a_{k-1} \times (m^{k-1}) + \cdots + a_1 \times m + a_0.
 
 :::
 
+:::tikz Positional weights and digit values of a base-m number
+\begin{tikzpicture}[scale=0.85, every node/.style={transform shape}]
+  % Position labels
+  \node[text=gray, font=\small\bfseries] at (-2.2, 1.1) {Position};
+  \node[text=blue!80!black, font=\small\bfseries] at (0, 1.1) {$k$};
+  \node[text=blue!80!black, font=\small\bfseries] at (1.5, 1.1) {$k-1$};
+  \node[text=gray, font=\small] at (2.8, 1.1) {$\cdots$};
+  \node[text=blue!80!black, font=\small\bfseries] at (4, 1.1) {$1$};
+  \node[text=blue!80!black, font=\small\bfseries] at (5.5, 1.1) {$0$};
 
+  % Digits / Values
+  \node[text=gray, font=\small\bfseries] at (-2.2, 0) {Digit Value};
+  \node[draw=blue!60, fill=blue!10, rounded corners, minimum width=0.8cm, minimum height=0.7cm, font=\bfseries] at (0, 0) {$a_k$};
+  \node[draw=blue!60, fill=blue!10, rounded corners, minimum width=0.8cm, minimum height=0.7cm, font=\bfseries] at (1.5, 0) {$a_{k-1}$};
+  \node[font=\large] at (2.8, 0) {$\cdots$};
+  \node[draw=blue!60, fill=blue!10, rounded corners, minimum width=0.8cm, minimum height=0.7cm, font=\bfseries] at (4, 0) {$a_1$};
+  \node[draw=blue!60, fill=blue!10, rounded corners, minimum width=0.8cm, minimum height=0.7cm, font=\bfseries] at (5.5, 0) {$a_0$};
+  \node[font=\bfseries, text=blue!80!black] at (6.3, -0.2) {${}_m$};
 
+  % Weights
+  \node[text=gray, font=\small\bfseries] at (-2.2, -1.1) {Weight};
+  \node[text=teal!80!black, font=\small\bfseries] at (0, -1.1) {$m^k$};
+  \node[text=teal!80!black, font=\small\bfseries] at (1.5, -1.1) {$m^{k-1}$};
+  \node[text=gray, font=\small] at (2.8, -1.1) {$\cdots$};
+  \node[text=teal!80!black, font=\small\bfseries] at (4, -1.1) {$m^1$};
+  \node[text=teal!80!black, font=\small\bfseries] at (5.5, -1.1) {$m^0$};
 
+  % Connecting arrows
+  \draw[->, >=stealth, thick, teal] (0, -0.4) -- (0, -0.85);
+  \draw[->, >=stealth, thick, teal] (1.5, -0.4) -- (1.5, -0.85);
+  \draw[->, >=stealth, thick, teal] (4, -0.4) -- (4, -0.85);
+  \draw[->, >=stealth, thick, teal] (5.5, -0.4) -- (5.5, -0.85);
+\end{tikzpicture}
+:::
 
 
 :::example
@@ -90,10 +115,6 @@ Write the following numbers in base 10
 :::
 
 
-
-
-
-
 ## Digits in base higher than 10
 
 We know that each digit is between $0$ and the base itself. What do we do if we work in base 16?
@@ -108,9 +129,6 @@ If the base is higher than 10, we use English letters.
 
 
 Popular bases are base 12 with digits $0,1,2,\ldots, 9,A,B$ and base 16 with digits $0,1,2,\ldots,9,A,B,C,D,E,F$.
-
-
-
 
 
 :::example
@@ -142,9 +160,6 @@ Write the following numbers in base 10
 :::
 
 
-
-
-
 ## Converting base-10 numbers to any base
 
 
@@ -165,10 +180,6 @@ Let $n$ and $m$ be positive integers ($m > 1$). We can write $n$ in base $m$ usi
 :::
 
 
-
-
-
-
 :::example
 
 Write 13 in base 2
@@ -191,61 +202,10 @@ Write 13 in base 2
 Now that $q_4 = 0$, we stop and conclude that $13 = (1101)_2$.
 
 :::
-
-
-Let $n$ and $m$ be positive integers ($m > 1$). We can write $n$ in base $m$ using the following division algorithm:
-
-
-- Divide $n$ by $m$ and write $n = m \times q_1 + r_1$, where $q_1$ is the quotient and $r_1$ is the remainder ($0 \leq r_1 \leq m-1$).
-
-- Repeat for $q_1$: Write $q_1 = m \times q_2 + r_2$ where $q_2$ is the quotient and $r_2$ is the remainder ($0 \le r_2 \le m-1$).
-
-- Stop when $q_k = 0$ (i.e. we cannot divide further).
-
-- The base $m$ representation is $n = (r_k r_{k-1} \ldots r_2 r_1)_m$.
-
-
-:::
-
-
-
-
-
-
-:::example
-
-Write 13 in base 2
-
-:::
-
-
-:::solution
-
-
-
-- Divide 13 by 2 and write $13 = 2 \times 6 + 1$. We have $q_1 = 6$ and $r_1 = 1$.
-
-- Divide 6 by 2 and write $6 = 2 \times 3 + 0$. We have $q_2 = 3$ and $r_2 = 0$.
-
-- Divide 3 by 2 and write $3 = 2 \times 1 + 1$. We have $q_3 = 1$ and $r_3 = 1$.
-
-- Divide 1 by 2 and write $1 = 2 \times 0 + 1$. We have $q_4 = 0$ and $r_4 = 1$.
-
-Now that $q_4 = 0$, we stop and conclude that $13 = (1101)_2$.
-
-:::
-
-
-
-
-
 
 
 :::tikzsvg /generated/tikz/7c771959c403e7a2.svg | Division algorithm for finding $13$ in base $2$
 :::
-
-
-
 
 
 :::example
@@ -272,16 +232,8 @@ Now that $q_4 = 0$, we stop and conclude that $78 = (1032)_4$.
 :::
 
 
-
-
-
-
-
 :::tikzsvg /generated/tikz/415fdf963e4d5b92.svg | Division algorithm for finding $78$ in base $4$
 :::
-
-
-
 
 
 :::example
@@ -304,17 +256,8 @@ Now that $q_2 = 0$, we stop and conclude that $175 = (\text{AF})_{16}$.
 :::
 
 
-
-
-
-
-
-
 :::tikzsvg /generated/tikz/5d30691daae54384.svg | Division algorithm for finding $175$ in base $16$
 :::
-
-
-
 
 
 :::exercise

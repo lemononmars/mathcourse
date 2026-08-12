@@ -137,4 +137,3 @@ Draw the Venn diagram for $\mathbb{N}, \mathbb{Z}, \mathbb{Q}, \mathbb{R}$ and p
 \[ -1, \sqrt{2}, 42, \pi, 0.8, \frac{1}{\pi}, 0.9999\ldots, \sqrt{0.25}\]
 
 :::
-
