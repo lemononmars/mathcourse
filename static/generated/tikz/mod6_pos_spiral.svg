@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-220 -220 440 440" width="440" height="440">
+  <style>
+    .bg { fill: #93c5fd; stroke: #1e3a8a; stroke-width: 3; }
+    .sp-line { stroke: #1e3a8a; stroke-width: 1.5; }
+    .spiral { fill: none; stroke: #1e40af; stroke-width: 2.5; stroke-dasharray: 6 4; }
+    .node-bg { fill: #ffffff; stroke: #1e293b; stroke-width: 2; }
+    .node-text { font-family: system-ui, sans-serif; font-size: 16px; font-weight: bold; fill: #0f172a; text-anchor: middle; dominant-baseline: central; }
+  </style>
+
+  <circle cx="0" cy="0" r="200" class="bg" />
+
+  <line x1="0" y1="0" x2="0" y2="-200" class="sp-line" />
+  <line x1="0" y1="0" x2="173.2" y2="-100" class="sp-line" />
+  <line x1="0" y1="0" x2="173.2" y2="100" class="sp-line" />
+  <line x1="0" y1="0" x2="0" y2="200" class="sp-line" />
+  <line x1="0" y1="0" x2="-173.2" y2="100" class="sp-line" />
+  <line x1="0" y1="0" x2="-173.2" y2="-100" class="sp-line" />
+
+  <g transform="translate(0, -45)"><circle r="14" class="node-bg"/><text class="node-text">0</text></g>
+  <g transform="translate(49.8, -28.75)"><circle r="14" class="node-bg"/><text class="node-text">1</text></g>
+  <g transform="translate(60.6, 35)"><circle r="14" class="node-bg"/><text class="node-text">2</text></g>
+  <g transform="translate(0, 82.5)"><circle r="14" class="node-bg"/><text class="node-text">3</text></g>
+  <g transform="translate(-82.3, 47.5)"><circle r="14" class="node-bg"/><text class="node-text">4</text></g>
+  <g transform="translate(-93.1, -53.75)"><circle r="14" class="node-bg"/><text class="node-text">5</text></g>
+
+  <g transform="translate(0, -120)"><circle r="14" class="node-bg"/><text class="node-text">6</text></g>
+  <g transform="translate(114.7, -66.25)"><circle r="14" class="node-bg"/><text class="node-text">7</text></g>
+  <g transform="translate(125.6, 72.5)"><circle r="14" class="node-bg"/><text class="node-text">8</text></g>
+  <g transform="translate(0, 157.5)"><circle r="14" class="node-bg"/><text class="node-text">9</text></g>
+  <g transform="translate(-147.2, 85)"><circle r="14" class="node-bg"/><text class="node-text">10</text></g>
+  <g transform="translate(-158.1, -91.25)"><circle r="14" class="node-bg"/><text class="node-text">11</text></g>
+
+  <g transform="translate(0, -195)"><circle r="14" class="node-bg"/><text class="node-text">12</text></g>
+  <g transform="translate(179.7, -103.75)"><circle r="14" class="node-bg"/><text class="node-text">13</text></g>
+  <g transform="translate(190.5, 110)"><circle r="14" class="node-bg"/><text class="node-text">14</text></g>
+</svg>

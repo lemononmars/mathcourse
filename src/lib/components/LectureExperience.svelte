@@ -42,7 +42,7 @@
       <div class="p-5"><p class="eyebrow">In this lecture</p><nav class="mt-3 space-y-1">
         {#each sections as item, index}<a href={lectureSectionPath(courseWeek, index)} class:active={active===index} class="section-link" onclick={() => menu=false}><span>{#if completed.includes(item.anchor)}<Check size={15}/>{:else}{index+1}{/if}</span><span>{item.title}</span></a>{/each}
       </nav></div>
-      <div class="mt-auto border-t border-base-300 p-5"><div class="text-sm font-semibold">Need more practice?</div><a class="link link-primary mt-1 text-sm" href={`/courses/math-for-designer/worksheet/${courseWeek.week}`}>Open the worksheet →</a></div>
+      <div class="mt-auto border-t border-base-300 p-5"><div class="text-sm font-semibold">Interactive Studio</div><a class="link link-primary mt-1 text-sm" href={`/courses/math-for-designer/activity/${courseWeek.week}`}>Open Activity →</a></div>
     </aside>
     {#if menu}<button class="fixed inset-0 z-40 bg-black/30 lg:hidden" onclick={() => menu=false} aria-label="Close menu"></button>{/if}
     <main class="min-w-0 flex-1 px-5 py-9 md:px-10 lg:px-16"><article class="mx-auto max-w-[800px]">
@@ -52,7 +52,7 @@
       {#if dev}<DevMarkdownEditor section={section}/>{/if}
       <nav class="mt-12 flex items-center justify-between border-t border-base-300 pt-6" aria-label="Section navigation">
         {#if active > 0}<a class="btn btn-ghost" href={lectureSectionPath(courseWeek, active-1)}><ArrowLeft/> Back</a>{:else}<span></span>{/if}
-        {#if active < sections.length - 1}<a class="btn btn-primary rounded-full px-6" href={lectureSectionPath(courseWeek, active+1)} onclick={markComplete}>Next section <ArrowRight/></a>{:else}<a class="btn btn-primary rounded-full px-6" href={`/courses/math-for-designer/worksheet/${courseWeek.week}`} onclick={markComplete}>Next: worksheet <ArrowRight/></a>{/if}
+        {#if active < sections.length - 1}<a class="btn btn-primary rounded-full px-6" href={lectureSectionPath(courseWeek, active+1)} onclick={markComplete}>Next section <ArrowRight/></a>{:else}<a class="btn btn-primary rounded-full px-6" href={`/courses/math-for-designer/activity/${courseWeek.week}`} onclick={markComplete}>Next: Activity <ArrowRight/></a>{/if}
       </nav>
     </article></main>
   </div>

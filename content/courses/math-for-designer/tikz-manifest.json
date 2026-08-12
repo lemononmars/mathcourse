@@ -122,9 +122,14 @@
     ],
     "content/courses/math-for-designer/lectures/02/03-modulo.md": [
       {
-        "hash": "9da5e6bfd1411db5",
-        "url": "/generated/tikz/9da5e6bfd1411db5.svg",
-        "caption": "Modular arithmetic (mod 5) represented as positions on a circle"
+        "hash": "mod6_pos_spiral",
+        "url": "/generated/tikz/mod6_pos_spiral.svg",
+        "caption": "Clock Arithmetic (Modulo 6) - Positive Numbers 0 to 17"
+      },
+      {
+        "hash": "mod6_neg_spiral",
+        "url": "/generated/tikz/mod6_neg_spiral.svg",
+        "caption": "Clock Arithmetic (Modulo 6) - Negative Numbers 0 to -17"
       }
     ],
     "content/courses/math-for-designer/lectures/02/04-number-bases.md": [

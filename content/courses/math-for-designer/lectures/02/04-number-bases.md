@@ -12,9 +12,8 @@ What do you mean when you write the number
 \[99?\]
 
 
-:::figure number_base_intro — [](https://www.youtube.com/watch?v=2SUvWfNJSsM&ab_channel=3Blue1Brown
+:::figureimg /graphics/number_base_intro.png | Binary, Hanoi and Sierpinski
 :::
-)
 
 
 
@@ -194,29 +193,56 @@ Now that $q_4 = 0$, we stop and conclude that $13 = (1101)_2$.
 :::
 
 
+Let $n$ and $m$ be positive integers ($m > 1$). We can write $n$ in base $m$ using the following division algorithm:
 
 
+- Divide $n$ by $m$ and write $n = m \times q_1 + r_1$, where $q_1$ is the quotient and $r_1$ is the remainder ($0 \leq r_1 \leq m-1$).
+
+- Repeat for $q_1$: Write $q_1 = m \times q_2 + r_2$ where $q_2$ is the quotient and $r_2$ is the remainder ($0 \le r_2 \le m-1$).
+
+- Stop when $q_k = 0$ (i.e. we cannot divide further).
+
+- The base $m$ representation is $n = (r_k r_{k-1} \ldots r_2 r_1)_m$.
 
 
-
-:::tikz TikZ diagram
-\begin{tikzpicture}
-\node at (0,1) {$m$};
-\node at (1, 1) {$q$};
-\node at (2.5,1) {$r$};
-\foreach \y / \q / \r in {0/13/1, -1/6/0, -2/3/1, -3/1/1}
-{
-	\node at (0, \y) {$2$};
-	\node at (1, \y) {$\q$};
-	\node at (2.5,{\y-1}) {$\r$};
-	\draw (0.5,{\y+0.4}) --++ (0, -0.8) --+ (1.5,0);
-}
-\node at (1,-4) {0};
-\draw[double] (0.5, -4.4) --+ (1.5,0);
-\draw[->] (3, -4) -- (3,-1) node[right] {$(1101)_2$};
-\end{tikzpicture}
 :::
-*Division algorithm for finding $13$ in base $2$*
+
+
+
+
+
+
+:::example
+
+Write 13 in base 2
+
+:::
+
+
+:::solution
+
+
+
+- Divide 13 by 2 and write $13 = 2 \times 6 + 1$. We have $q_1 = 6$ and $r_1 = 1$.
+
+- Divide 6 by 2 and write $6 = 2 \times 3 + 0$. We have $q_2 = 3$ and $r_2 = 0$.
+
+- Divide 3 by 2 and write $3 = 2 \times 1 + 1$. We have $q_3 = 1$ and $r_3 = 1$.
+
+- Divide 1 by 2 and write $1 = 2 \times 0 + 1$. We have $q_4 = 0$ and $r_4 = 1$.
+
+Now that $q_4 = 0$, we stop and conclude that $13 = (1101)_2$.
+
+:::
+
+
+
+
+
+
+
+:::tikzsvg /generated/tikz/7c771959c403e7a2.svg | Division algorithm for finding $13$ in base $2$
+:::
 
 
 
@@ -251,24 +277,8 @@ Now that $q_4 = 0$, we stop and conclude that $78 = (1032)_4$.
 
 
 
-:::tikz TikZ diagram
-\begin{tikzpicture}
-\node at (0,1) {$m$};
-\node at (1, 1) {$q$};
-\node at (2.5,1) {$r$};
-\foreach \y / \q / \r in {0/78/2, -1/19/3, -2/4/0, -3/1/1}
-{
-	\node at (0, \y) {$4$};
-	\node at (1, \y) {$\q$};
-	\node at (2.5,{\y-1}) {$\r$};
-	\draw (0.5,{\y+0.4}) --++ (0, -0.8) --+ (1.5,0);
-}
-\node at (1,-4) {0};
-\draw[double] (0.5, -4.4) --+ (1.5,0);
-\draw[->] (3, -4) -- (3,-1) node[right] {$(1032)_4$};
-\end{tikzpicture}
+:::tikzsvg /generated/tikz/415fdf963e4d5b92.svg | Division algorithm for finding $78$ in base $4$
 :::
-*Division algorithm for finding $78$ in base $4$*
 
 
 
@@ -300,24 +310,8 @@ Now that $q_2 = 0$, we stop and conclude that $175 = (\text{AF})_{16}$.
 
 
 
-:::tikz TikZ diagram
-\begin{tikzpicture}
-\node at (0,1) {$m$};
-\node at (1, 1) {$q$};
-\node at (2.5,1) {$r$};
-\foreach \y / \q / \r in {0/175/15, -1/10/10}
-{
-	\node at (0, \y) {$16$};
-	\node at (1, \y) {$\q$};
-	\node at (2.5,{\y-1}) {$\r$};
-	\draw (0.5,{\y+0.4}) --++ (0, -0.8) --+ (1.5,0);
-}
-\node at (1,-2) {0};
-\draw[double] (0.5, -2.4) --+ (1.5,0);
-\draw[->] (3, -2) -- (3,-1) node[right] {$(AF)_{16}$};
-\end{tikzpicture}
+:::tikzsvg /generated/tikz/5d30691daae54384.svg | Division algorithm for finding $175$ in base $16$
 :::
-*Division algorithm for finding $175$ in base $16$*
 
 
 

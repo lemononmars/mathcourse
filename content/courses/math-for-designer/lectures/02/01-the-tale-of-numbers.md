@@ -32,31 +32,8 @@ $\mathbb{Q} = \left\{ \frac{a}{b} \, | \, a,b \in \mathbb{Z} \text{ and } b \neq
 
 \[ \mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q}\]
 
-
-
-
-
-
-:::tikz TikZ diagram
-\begin{tikzpicture}[scale = 0.8, every node/.style = {scale = 2}]
-\filldraw[fill = teal!20, draw = black] (0,0) circle (4cm);
-\filldraw[fill = blue!20, draw = black] (-1,0) circle (2.5cm);
-\filldraw[fill = red!20, draw = black] (-1.5,0) circle (1.5cm);
-\node[teal] at (4.5,0) {$\mathbb{Q}$};
-\node[blue] at (2,0) {$\mathbb{Z}$};
-\node[red] at (0.5,0) {$\mathbb{N}$};
-\node at (-1.5,0) {$3$};
-\node at (0.5,1) {$-5$};
-\node at (0,-1.5) {$0$};
-\node at (2,2) {$\frac{1}{3}$};
-\node at (2.5,-1.5) {$-1.2$};
-\end{tikzpicture}
+:::tikzsvg /generated/tikz/00bd60577eca2340.svg | A diagram for natural numbers, integers, and rational numbers
 :::
-*A diagram for natural numbers, integers, and rational numbers*
-
-
-
-
 
 ## What is out there?
 
@@ -80,40 +57,30 @@ $\mathbb{R} = \mathbb{Q} \cup \tilde{\mathbb{Q}}$
 
 
 
-## What is in \tilde{\mathbb{Q
-}$?}
+## What is in $\tilde{\mathbb{Q}}$?
 Short answer: pretty much everything. 
 
 Long answer: 
 
 :::note
 
+Algebraic numbers (roots of polynomials) 
 
+\[ \sqrt{2}, \sqrt[3]{1.34}, \frac{1 - \sqrt{5}}{2} \]
 
-- Algebraic numbers (roots of polynomials) 
-\[ \sqrt{2}, \sqrt[3]{1.34}, \frac{1 - \sqrt{5}}{2}\] 
+Computable numbers 
 
-- Computable numbers 
-\[ e, \pi, \text{Euler's constant} , \ldots\] 
-
-- Non-computable numbers 
-\[ \text{Chaitin's constant} \]
-
+$$e, \pi$$
 
 :::
 
 
-
-
-
-:::figure non_computer_number_simba_meme — Shadowy dark place, indeed
+:::figureimg /graphics/non_computer_number_simba_meme.jpg | Shadowy dark place, indeed
 :::
 
 
 
-
-
-## I NEED MORE!!!
+## The Set of Complex Numbers
 
 
 :::note The set of complex numbers
@@ -133,9 +100,8 @@ No! That's all the numbers!
 ## ALL THE NUMBERS
 
 
-:::figure l03i05 — \href{https://www.youtube.com/watch?v=5TkIe60y2GI
+:::youtube 5TkIe60y2GI | All the Numbers — Numberphile
 :::
-}
 
 
 
@@ -148,7 +114,7 @@ No! That's all the numbers!
 
 
 
-:::figure l03i01.png
+:::figureimg /graphics/l03i01.png | Fibonacci numbers
 :::
 
 
@@ -157,41 +123,12 @@ No! That's all the numbers!
 
 
 
-:::figure l03i02.png
+:::figureimg /graphics/l03i02.png | Triangular numbers
 :::
 
 
-:::figure l03i03.png
+:::figureimg /graphics/l03i03.png | Triangular numbers
 :::
-
-
-
-
-
-
-
-## Exotic ``numbers''
-
-$\{ a+bi+cj+dk\, | \, a,b,c,d \in \mathbb{R} \}$ - Quaternion 
-\begin{eqnarray*}
-i^2 &=& j^2 = k^2 = -1 
-
-ij &=& k 
-
-jk &=& i 
-
-ki &=& j
-\end{eqnarray*} 
-Useful in defining 3D rotations 
-
-
-
-:::figure l03i04.png
-:::
-
-
-
-
 
 
 :::exercise
@@ -200,3 +137,4 @@ Draw the Venn diagram for $\mathbb{N}, \mathbb{Z}, \mathbb{Q}, \mathbb{R}$ and p
 \[ -1, \sqrt{2}, 42, \pi, 0.8, \frac{1}{\pi}, 0.9999\ldots, \sqrt{0.25}\]
 
 :::
+
