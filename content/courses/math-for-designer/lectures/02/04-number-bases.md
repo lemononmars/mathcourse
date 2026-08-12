@@ -12,7 +12,7 @@ What do you mean when you write the number
 \[99?\]
 
 
-:::figureimg /graphics/number_base_intro.png | Binary, Hanoi and Sierpinski
+:::youtube 2SUvWfNJSsM | Binary, Hanoi and Sierpinski, part 1
 :::
 
 
