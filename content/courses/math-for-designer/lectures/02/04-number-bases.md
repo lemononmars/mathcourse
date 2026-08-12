@@ -204,7 +204,22 @@ Now that $q_4 = 0$, we stop and conclude that $13 = (1101)_2$.
 :::
 
 
-:::tikzsvg /generated/tikz/7c771959c403e7a2.svg | Division algorithm for finding $13$ in base $2$
+:::tikz Division algorithm for finding $13$ in base $2$
+\begin{tikzpicture}
+\node at (0,1) {$m$};
+\node at (1, 1) {$q$};
+\node at (2.5,1) {$r$};
+\foreach \y / \q / \r in {0/13/1, -1/6/0, -2/3/1, -3/1/1}
+{
+	\node at (0, \y) {$2$};
+	\node at (1, \y) {$\q$};
+	\node at (2.5,{\y-1}) {$\r$};
+	\draw (0.5,{\y+0.4}) --++ (0, -0.8) --+ (1.5,0);
+}
+\node at (1,-4) {0};
+\draw[double] (0.5, -4.4) --+ (1.5,0);
+\draw[->] (3, -4) -- (3,-1) node[right] {$(1101)_2$};
+\end{tikzpicture}
 :::
 
 
@@ -232,7 +247,22 @@ Now that $q_4 = 0$, we stop and conclude that $78 = (1032)_4$.
 :::
 
 
-:::tikzsvg /generated/tikz/415fdf963e4d5b92.svg | Division algorithm for finding $78$ in base $4$
+:::tikz Division algorithm for finding $78$ in base $4$
+\begin{tikzpicture}
+\node at (0,1) {$m$};
+\node at (1, 1) {$q$};
+\node at (2.5,1) {$r$};
+\foreach \y / \q / \r in {0/78/2, -1/19/3, -2/4/0, -3/1/1}
+{
+	\node at (0, \y) {$4$};
+	\node at (1, \y) {$\q$};
+	\node at (2.5,{\y-1}) {$\r$};
+	\draw (0.5,{\y+0.4}) --++ (0, -0.8) --+ (1.5,0);
+}
+\node at (1,-4) {0};
+\draw[double] (0.5, -4.4) --+ (1.5,0);
+\draw[->] (3, -4) -- (3,-1) node[right] {$(1032)_4$};
+\end{tikzpicture}
 :::
 
 
@@ -256,7 +286,22 @@ Now that $q_2 = 0$, we stop and conclude that $175 = (\text{AF})_{16}$.
 :::
 
 
-:::tikzsvg /generated/tikz/5d30691daae54384.svg | Division algorithm for finding $175$ in base $16$
+:::tikz Division algorithm for finding $175$ in base $16$
+\begin{tikzpicture}
+\node at (0,1) {$m$};
+\node at (1, 1) {$q$};
+\node at (2.5,1) {$r$};
+\foreach \y / \q / \r in {0/175/15, -1/10/10}
+{
+	\node at (0, \y) {$16$};
+	\node at (1, \y) {$\q$};
+	\node at (2.5,{\y-1}) {$\r$};
+	\draw (0.5,{\y+0.4}) --++ (0, -0.8) --+ (1.5,0);
+}
+\node at (1,-2) {0};
+\draw[double] (0.5, -2.4) --+ (1.5,0);
+\draw[->] (3, -2) -- (3,-1) node[right] {$(\text{AF})_{16}$};
+\end{tikzpicture}
 :::
 
 

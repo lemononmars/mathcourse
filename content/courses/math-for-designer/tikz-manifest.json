@@ -106,6 +106,13 @@
         "caption": "Example of interval notations. An open dot (hollow) denotes an open interval, and an opaque dot denotes a closed interval."
       }
     ],
+    "content/courses/math-for-designer/lectures/02/01-the-tale-of-numbers.md": [
+      {
+        "hash": "00bd60577eca2340",
+        "url": "/generated/tikz/00bd60577eca2340.svg",
+        "caption": "A diagram for natural numbers, integers, and rational numbers"
+      }
+    ],
     "content/courses/math-for-designer/lectures/02/02-common-keywords.md": [
       {
         "hash": "af874354abda621b",
@@ -113,11 +120,38 @@
         "caption": "Fundamental Theorem of Arithmetic (Factor Chart)"
       }
     ],
+    "content/courses/math-for-designer/lectures/02/03-modulo.md": [
+      {
+        "hash": "a19ea86b64795fc2",
+        "url": "/generated/tikz/a19ea86b64795fc2.svg",
+        "caption": "Clock Arithmetic (Modulo 6)"
+      },
+      {
+        "hash": "384225b24c929cef",
+        "url": "/generated/tikz/384225b24c929cef.svg",
+        "caption": "Clock Arithmetic (Modulo 6 - Negative Numbers)"
+      }
+    ],
     "content/courses/math-for-designer/lectures/02/04-number-bases.md": [
       {
         "hash": "fd4fd74de96a1842",
         "url": "/generated/tikz/fd4fd74de96a1842.svg",
         "caption": "Positional weights and digit values of a base-m number"
+      },
+      {
+        "hash": "7c771959c403e7a2",
+        "url": "/generated/tikz/7c771959c403e7a2.svg",
+        "caption": "Division algorithm for finding $13$ in base $2$"
+      },
+      {
+        "hash": "415fdf963e4d5b92",
+        "url": "/generated/tikz/415fdf963e4d5b92.svg",
+        "caption": "Division algorithm for finding $78$ in base $4$"
+      },
+      {
+        "hash": "1f02c711c403d900",
+        "url": "/generated/tikz/1f02c711c403d900.svg",
+        "caption": "Division algorithm for finding $175$ in base $16$"
       }
     ],
     "content/courses/math-for-designer/lectures/03/04-inequality.md": [

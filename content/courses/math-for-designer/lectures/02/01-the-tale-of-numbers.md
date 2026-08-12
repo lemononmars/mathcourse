@@ -32,7 +32,20 @@ $\mathbb{Q} = \left\{ \frac{a}{b} \, | \, a,b \in \mathbb{Z} \text{ and } b \neq
 
 \[ \mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q}\]
 
-:::tikzsvg /generated/tikz/00bd60577eca2340.svg | A diagram for natural numbers, integers, and rational numbers
+:::tikz A diagram for natural numbers, integers, and rational numbers
+\begin{tikzpicture}[scale = 0.8, every node/.style = {scale = 2}]
+\filldraw[fill = teal!20, draw = black] (0,0) circle (4cm);
+\filldraw[fill = blue!20, draw = black] (-1,0) circle (2.5cm);
+\filldraw[fill = red!20, draw = black] (-1.5,0) circle (1.5cm);
+\node[teal] at (4.5,0) {$\mathbb{Q}$};
+\node[blue] at (2,0) {$\mathbb{Z}$};
+\node[red] at (0.5,0) {$\mathbb{N}$};
+\node at (-1.5,0) {$3$};
+\node at (0.5,1) {$-5$};
+\node at (0,-1.5) {$0$};
+\node at (2,2) {$\frac{1}{3}$};
+\node at (2.5,-1.5) {$-1.2$};
+\end{tikzpicture}
 :::
 
 ## What is out there?

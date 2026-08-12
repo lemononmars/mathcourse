@@ -24,13 +24,33 @@ We have $365 = 52 \times 7 + 1$. Thus the day of week will shift by 1. So, New Y
 
 ## Clock Arithmetic (Modulo 6)
 
-:::tikzsvg /generated/tikz/mod6_pos_spiral.svg | Clock Arithmetic (Modulo 6)
+:::tikz Clock Arithmetic (Modulo 6)
+\begin{tikzpicture}[scale=0.7]
+\filldraw[thick, fill = blue!30] (0,0) circle (4.5 cm);
+\foreach \theta in {0,1,2,3,4,5} {
+	\draw (0,0) -- ({\theta*60}:4.5);
+}
+\draw[->, dashed, domain = 0:19, smooth, samples = 200, variable=\t] plot ({(1+\t/6)*cos((pi/2 - \t) r)}, {(1+\t/6)*sin((pi/2 - \t) r)});
+\foreach \n in {0,1,...,17} {
+ 	\node[circle, fill = white, draw, minimum size=1mm, font=\small] at ({90-\n*60}:{1+\n/6}) {\n};
+}
+\end{tikzpicture}
 :::
 *Numbers 0-17 on a six-segment spiral.*
 
 ## Clock Arithmetic (Modulo 6 - Negative Numbers)
 
-:::tikzsvg /generated/tikz/mod6_neg_spiral.svg | Clock Arithmetic (Modulo 6 - Negative Numbers)
+:::tikz Clock Arithmetic (Modulo 6 - Negative Numbers)
+\begin{tikzpicture}[scale=0.7]
+\filldraw[thick, fill = red!20] (0,0) circle (4.5 cm);
+\foreach \theta in {0,1,2,3,4,5} {
+	\draw (0,0) -- ({\theta*60}:4.5);
+}
+\draw[->, dashed, domain = 0:19, smooth, samples = 200, variable=\t] plot ({(1+\t/6)*cos((pi/2 + \t) r)}, {(1+\t/6)*sin((pi/2 + \t) r)});
+\foreach \n in {0,1,...,17} {
+ 	\node[circle, fill = white, draw, minimum size=1mm, font=\small] at ({90+\n*60}:{1+\n/6}) {-\n};
+}
+\end{tikzpicture}
 :::
 *Numbers 0 to -17 on a six-segment spiral.*
 
