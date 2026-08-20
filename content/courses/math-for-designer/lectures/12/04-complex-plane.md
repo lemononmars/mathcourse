@@ -31,11 +31,18 @@ We will call $a+bi$ a \text{rectangular form}, because $a$ and $b$ represent rec
         \filldraw[black] (3,-2) circle (1.5pt) node[below right]{\small $3-2i$};
       \end{tikzpicture}
 :::
+
+
+
+
+
+
+
 ## Modulus (length) and argument (angle)
 
 It is very crucial to think of a complex number on the plane as a vector. Then, the addition and subtraction are defined in the same way.
 \begin{eq*}
-\text{vector addition: \quad } \bv{a,b} + \bv{c,d} &=& \bv{a+c, b+d} 
+\text{vector addition: \quad } \left\langle a,b \right\rangle + \left\langle c,d \right\rangle &=& \left\langle a+c, b+d \right\rangle 
 
 \text{complex number addition: \quad} (a+bi) + (c+di) &=& (a+c) + (b+d)i
 \end{eq*}

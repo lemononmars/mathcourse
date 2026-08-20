@@ -162,14 +162,18 @@ P(A \cap B) = P(A) P(B)
 
 :::
 
-\begin{proof}
+
+:::proof
+
 Since we are given that $P(A|B) = P(A)$ and we know that $P(A|B) = \frac{P(A\cap B)}{P(B)}$, we have
 \begin{eq*}
 P(A) &= \frac{P(A\cap B)}{P(B)} 
 
 P(A\cap B) &= P(A) P(B)
 \end{eq*}
-\end{proof}
+
+:::
+
 
 
 
@@ -184,7 +188,7 @@ Suppose you roll a six-sided die. Let $A$ be the event that the roll is even, an
 :::solution
 
 We can write $A = \{2,4,6\}$ and $B \{5,6\}$, so $P(A) = \frac{3}{6}$ and $P(B) = \frac{2}{6}$. Therefore, the product is $P(A) P(B) = \left( \frac{3}{6} \right) \left( \frac{2}{6} \right) = \frac{1}{6}$.
-\medskip
+
 
 We can see that $A \cap B = \{6\}$ (or that 6 is the only even result which is also greather than or equal to 5), so $P(A \cap B) = \frac{1}{6}$. Thus, we have
 
@@ -209,11 +213,11 @@ Suppose we roll 3 fair dice. What is the probability that each of them shows at 
 :::solution
 
 From now on, we will assume that dice results are independent.
-\medskip
+
 
 Let $A_1$ = the first dice showing at least 5, $A_2$ = the second dice showing at least $5$, and $A_3$ = the third dice showing at least $5$. We see that $P(A_1) = P(A_2) = P(A_3) = \frac{2}{6}$. 
 
-\medskip Therefore, the probability of getting all numbers at least 5 is $P_1 \cap P_2 \cap P_3$, which gives
+Therefore, the probability of getting all numbers at least 5 is $P_1 \cap P_2 \cap P_3$, which gives
 \[P(A_1 \cap A_2 \cap A_3) = P(A_1) P(A_2) P(A_3) = \frac{2}{6} \times \frac{2}{6} \times \frac{2}{6} = \frac{1}{27}\]
 
 :::
@@ -271,28 +275,3 @@ Since both events are mutually exclusive, the probability that either event occu
 
 
 :::
-
-
-
-\iffalse
-
-
-:::exercise
-
-Suppose that you have eight cards. Five are green and three are yellow. The five green cards are numbered 1, 2, 3, 4, and 5. The three yellow cards are numbered 1, 2, and 3. The cards are well shuffled. You randomly draw one card.
-\medskip
-
-Let $G$ be the event where the card drawn is green, and $E$ be the event where the card drawn is even.
-
-
-- List the sample space.
-
-- Find $P(G), P(G|E), P(G \cap E), P(G \cup E)$.
-
-- Are G and E mutually exclusive? Justify your answer numerically.
-
-
-:::
-
-
-\fi

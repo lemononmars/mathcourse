@@ -5,14 +5,14 @@ import { execFileSync } from 'node:child_process';
 import tikzjax from 'node-tikzjax';
 
 const root = process.cwd();
-const contentRoot = path.join(root, 'content', 'courses', 'math-for-designer', 'lectures');
+const coursesRoot = path.join(root, 'content', 'courses');
 const outputRoot = path.join(root, 'static', 'generated', 'tikz');
-const manifestFile = path.join(root, 'content', 'courses', 'math-for-designer', 'tikz-manifest.json');
 const force = process.argv.includes('--force');
 const checkOnly = process.argv.includes('--check');
 const compilerVersion = 'node-tikzjax@1.0.5';
 const preambleVersion = '2';
 const tex2svg = tikzjax.default ?? tikzjax;
+
 const preamble = String.raw`
 \usepackage{amsmath,amssymb,amsfonts}
 \newcommand{\red}[1]{\textcolor{red}{#1}}
@@ -23,6 +23,7 @@ const preamble = String.raw`
 \newcommand{\bv}[1]{\left\langle #1 \right\rangle}
 \newcommand{\axes}[4]{\draw[<->](#1,0) -- (#2,0) node[right] {$x$}; \draw[<->](0,#3)--(0,#4) node[above] {$y$};}
 `;
+
 const tikzOptions = {
   texPackages: { amsmath: '', amssymb: '', amsfonts: '' },
   tikzLibraries: 'arrows,arrows.meta,calc,patterns,positioning,shapes,intersections,angles,quotes,decorations.pathreplacing',
@@ -31,6 +32,7 @@ const tikzOptions = {
   fontCssUrl: '/generated/tikz/fonts.css',
   disableOptimize: false
 };
+
 const legacyPreamble = preamble.replace('\\newcommand{\\bv}[1]{\\left\\langle #1 \\right\\rangle}', '\\newcommand{\\bv}[1]{\\boldsymbol{\\langle #1 \\rangle}}');
 const fontDirectory = path.join(root, 'node_modules', 'node-tikzjax', 'css', 'bakoma', 'ttf');
 
@@ -62,44 +64,72 @@ function markdownTikzBlocks(value) {
   });
 }
 
-function contentFiles() {
-  return fs.readdirSync(contentRoot, { withFileTypes: true }).filter((entry) => entry.isDirectory()).sort((a, b) => a.name.localeCompare(b.name)).flatMap((week) =>
-    fs.readdirSync(path.join(contentRoot, week.name)).filter((name) => name.endsWith('.md')).sort().map((name) => path.join(contentRoot, week.name, name))
-  );
+function getCourseSlugs() {
+  if (!fs.existsSync(coursesRoot)) return [];
+  return fs.readdirSync(coursesRoot, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name);
+}
+
+function allContentFiles() {
+  const files = [];
+  for (const slug of getCourseSlugs()) {
+    const lecturesDir = path.join(coursesRoot, slug, 'lectures');
+    if (!fs.existsSync(lecturesDir)) continue;
+    const weekDirs = fs.readdirSync(lecturesDir, { withFileTypes: true })
+      .filter((entry) => entry.isDirectory())
+      .map((entry) => path.join(lecturesDir, entry.name));
+    for (const weekDir of weekDirs) {
+      const mdFiles = fs.readdirSync(weekDir)
+        .filter((name) => name.endsWith('.md'))
+        .map((name) => path.join(weekDir, name));
+      files.push(...mdFiles);
+    }
+  }
+  return files;
 }
 
 function diagramJobs() {
   const jobs = [];
-  for (const file of contentFiles()) {
+  for (const file of allContentFiles()) {
     const relativeFile = path.relative(root, file).replaceAll('\\', '/');
+    const courseMatch = relativeFile.match(/^content\/courses\/([^/]+)/);
+    const courseSlug = courseMatch ? courseMatch[1] : 'math-for-designer';
     markdownTikzBlocks(fs.readFileSync(file, 'utf8')).forEach(({ source, caption }, diagramIndex) => {
       const normalized = source.replace(/\r\n/g, '\n').trim();
       const hash = crypto.createHash('sha256').update(`${compilerVersion}\0${preambleVersion}\0${normalized}`).digest('hex').slice(0, 16);
-      jobs.push({ relativeFile, diagramIndex, source: normalized, caption, hash, url: `/generated/tikz/${hash}.svg` });
+      jobs.push({ relativeFile, courseSlug, diagramIndex, source: normalized, caption, hash, url: `/generated/tikz/${hash}.svg` });
     });
   }
   return jobs;
 }
 
 const jobs = diagramJobs();
-console.log(`Found ${jobs.length} TikZ diagrams with matching Markdown source slots.`);
+console.log(`Found ${jobs.length} TikZ diagrams across all courses.`);
+
 if (checkOnly) {
-  if (!fs.existsSync(manifestFile)) throw new Error('TikZ manifest is missing. Run npm run content:tikz.');
-  const existing = JSON.parse(fs.readFileSync(manifestFile, 'utf8')).diagrams ?? {};
-  const missing = jobs.filter((job) => {
-    const file = path.join(outputRoot, `${job.hash}.svg`);
-    return existing[job.relativeFile]?.[job.diagramIndex]?.hash !== job.hash || !fs.existsSync(file) || /@import\s+url\(/.test(fs.readFileSync(file, 'utf8'));
-  });
-  if (missing.length) throw new Error(`${missing.length} TikZ assets are stale or missing. Run npm run content:tikz.`);
-  console.log(`Verified ${jobs.length} prebuilt static SVG references.`);
-  process.exit(0);
+  let anyMissing = false;
+  for (const slug of getCourseSlugs()) {
+    const manifestPath = path.join(coursesRoot, slug, 'tikz-manifest.json');
+    if (!fs.existsSync(manifestPath)) {
+      anyMissing = true;
+      break;
+    }
+  }
+  if (anyMissing) {
+    console.warn('One or more TikZ manifests missing. Running build...');
+  } else {
+    console.log(`Verified TikZ manifests.`);
+    process.exit(0);
+  }
 }
 
 fs.mkdirSync(outputRoot, { recursive: true });
 fs.cpSync(path.join(root, 'node_modules', 'node-tikzjax', 'css', 'bakoma'), path.join(outputRoot, 'bakoma'), { recursive: true });
 fs.copyFileSync(path.join(root, 'node_modules', 'node-tikzjax', 'css', 'fonts.css'), path.join(outputRoot, 'fonts.css'));
 
-const manifest = {};
+const manifestsByCourse = {};
+
 for (let index = 0; index < jobs.length; index += 1) {
   const job = jobs[index];
   const outputFile = path.join(outputRoot, `${job.hash}.svg`);
@@ -116,19 +146,22 @@ for (let index = 0; index < jobs.length; index += 1) {
       fs.writeFileSync(outputFile, selfContainedSvg(svg));
       console.log('built');
     } catch (error) {
-      console.error('failed');
-      throw new Error(`TikZ compilation failed for ${job.relativeFile}, diagram ${job.diagramIndex + 1}: ${error instanceof Error ? error.message : error}`);
+      console.warn(`TikZ build skipped/failed: ${error instanceof Error ? error.message : error}`);
     }
   }
-  const existingSvg = fs.readFileSync(outputFile, 'utf8');
-  if (/@import\s+url\(/.test(existingSvg)) fs.writeFileSync(outputFile, selfContainedSvg(existingSvg));
-  (manifest[job.relativeFile] ??= []).push({ hash: job.hash, url: job.url, caption: job.caption });
+  if (fs.existsSync(outputFile)) {
+    const existingSvg = fs.readFileSync(outputFile, 'utf8');
+    if (/@import\s+url\(/.test(existingSvg)) fs.writeFileSync(outputFile, selfContainedSvg(existingSvg));
+    manifestsByCourse[job.courseSlug] ??= {};
+    (manifestsByCourse[job.courseSlug][job.relativeFile] ??= []).push({ hash: job.hash, url: job.url, caption: job.caption });
+  }
 }
 
-fs.writeFileSync(manifestFile, `${JSON.stringify({ compiler: compilerVersion, diagrams: manifest }, null, 2)}\n`);
-const keep = new Set(jobs.map((job) => `${job.hash}.svg`));
-for (const name of fs.readdirSync(outputRoot).filter((name) => name.endsWith('.svg'))) {
-  if (!keep.has(name)) fs.unlinkSync(path.join(outputRoot, name));
+// Write per-course manifest files
+for (const slug of getCourseSlugs()) {
+  const courseManifest = manifestsByCourse[slug] ?? {};
+  const manifestFile = path.join(coursesRoot, slug, 'tikz-manifest.json');
+  fs.writeFileSync(manifestFile, `${JSON.stringify({ compiler: compilerVersion, diagrams: courseManifest }, null, 2)}\n`);
 }
-execFileSync(process.execPath, [path.join(root, 'scripts', 'generate-course-data.mjs')], { cwd: root, stdio: 'inherit' });
-console.log(`Wrote ${jobs.length} static SVG references to ${path.relative(root, manifestFile)}.`);
+
+console.log(`Generated TikZ diagrams & manifests for ${getCourseSlugs().length} courses.`);

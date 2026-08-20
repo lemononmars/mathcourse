@@ -70,6 +70,10 @@ source: "tex/lecture12.tex"
   \draw[->] (0,1.1) arc[start angle = 0, end angle = 355, radius = 0.6] node[pos=0.5, left] {$?$};
   \end{tikzpicture}
 :::
+
+
+
+
 - Fix: define ``decimal numbers''. Now we have the set of rational numbers 
 \[\mathbb{R} = \left\{ x \, \Big| x \text{ can be written as an infinite decimal number.}\right\} \]
 $\sqrt{2}$ and $\pi$ are real numbers because we can write $\sqrt{2} = 1.41421356\ldots$ and $\pi = 3.14159265\ldots$

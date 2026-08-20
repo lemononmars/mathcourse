@@ -31,6 +31,8 @@ source: "tex/lecture01.tex"
 \node at (0.75, -3.5) {C};
 \end{tikzpicture}
 :::
+
+
 *A blank Venn diagram for 3 sets*
 
 
@@ -89,6 +91,13 @@ source: "tex/lecture01.tex"
 \node[scale = 1] at (0.8, -0.6) {Computer};
 \end{tikzpicture}
 :::
+
+
+
+
+
+
+
 :::exercise Post-play
 
 Answer the followings and submit them on Teams

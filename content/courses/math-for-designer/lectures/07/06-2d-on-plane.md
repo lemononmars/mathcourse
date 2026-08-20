@@ -20,7 +20,9 @@ Consider a plane that consists of all points $(x,y)$ where $x,y$ are real number
 We think of 2D transformation as a function 
 \[ T(\vec{v}) = \vec{v}'\]
 In other words,
-\[\cvec{v_1}{v_2} \to \cvec{v_1'}{v_2'}\]
+\[\begin{pmatrix}v_1
+v_2\end{pmatrix} \to \begin{pmatrix}v_1'
+v_2'\end{pmatrix}\]
 where $v_1, v_2, v_1', v_2'$ are real numbers.
 
 
@@ -32,13 +34,21 @@ where $v_1, v_2, v_1', v_2'$ are real numbers.
 Describe how each transformation change the square consisting of points $(0,0), (0,1), (1,1)$ and $(1,0)$.
 
 
-- $\cvec{x}{y} \to \cvec{2x}{y}$
+- $\begin{pmatrix}x
+y\end{pmatrix} \to \begin{pmatrix}2x
+y\end{pmatrix}$
 
-- $\cvec{x}{y} \to \cvec{x}{-2y}$
+- $\begin{pmatrix}x
+y\end{pmatrix} \to \begin{pmatrix}x
+-2y\end{pmatrix}$
 
-- $\cvec{x}{y} \to \cvec{y}{-x}$
+- $\begin{pmatrix}x
+y\end{pmatrix} \to \begin{pmatrix}y
+-x\end{pmatrix}$
 
-- $\cvec{x}{y} \to \cvec{x+y}{x-y}$
+- $\begin{pmatrix}x
+y\end{pmatrix} \to \begin{pmatrix}x+y
+x-y\end{pmatrix}$
 
 
 :::
@@ -50,10 +60,18 @@ Describe how each transformation change the square consisting of points $(0,0), 
 :::solution
 
 (a) Compute the image of transformation of each point. 
-\[\green{\cvec{0}{0} \to \cvec{0}{0}} \qquad 
-\textcolor{yellow}{\cvec{1}{0} \to \cvec{2}{0}} \qquad
-\blue{\cvec{1}{1} \to \cvec{2}{1}} \qquad 
-\red{\cvec{0}{1} \to \cvec{0}{1}} \]
+\[\green{\begin{pmatrix}0
+0\end{pmatrix} \to \begin{pmatrix}0
+0\end{pmatrix}} \qquad 
+\textcolor{yellow}{\begin{pmatrix}1
+0\end{pmatrix} \to \begin{pmatrix}2
+0\end{pmatrix}} \qquad
+\blue{\begin{pmatrix}1
+1\end{pmatrix} \to \begin{pmatrix}2
+1\end{pmatrix}} \qquad 
+\red{\begin{pmatrix}0
+1\end{pmatrix} \to \begin{pmatrix}0
+1\end{pmatrix}} \]
 
 
 
@@ -84,6 +102,9 @@ Describe how each transformation change the square consisting of points $(0,0), 
 \end{scope}
 \end{tikzpicture}
 :::
+
+
+
 This is a dilation in the x-axis by a factor of 2.
 
 :::
@@ -95,10 +116,18 @@ This is a dilation in the x-axis by a factor of 2.
 :::solution
 
 (b)
-\[\green{\cvec{0}{0} \to \cvec{0}{0}} \qquad 
-\textcolor{yellow}{\cvec{1}{0} \to \cvec{1}{0}} \qquad
-\blue{\cvec{1}{1} \to \cvec{1}{-2}} \qquad 
-\red{\cvec{0}{1} \to \cvec{0}{-2}}\] 
+\[\green{\begin{pmatrix}0
+0\end{pmatrix} \to \begin{pmatrix}0
+0\end{pmatrix}} \qquad 
+\textcolor{yellow}{\begin{pmatrix}1
+0\end{pmatrix} \to \begin{pmatrix}1
+0\end{pmatrix}} \qquad
+\blue{\begin{pmatrix}1
+1\end{pmatrix} \to \begin{pmatrix}1
+-2\end{pmatrix}} \qquad 
+\red{\begin{pmatrix}0
+1\end{pmatrix} \to \begin{pmatrix}0
+-2\end{pmatrix}}\] 
 
 
 :::tikz TikZ diagram
@@ -127,6 +156,9 @@ This is a dilation in the x-axis by a factor of 2.
 \end{scope}
 \end{tikzpicture}
 :::
+
+
+
 This is a dilation in the y-axis by a factor of -2.
 
 :::
@@ -138,10 +170,18 @@ This is a dilation in the y-axis by a factor of -2.
 :::solution
 
 (c)
-\[\green{\cvec{0}{0} \to \cvec{0}{0}} \qquad 
-\textcolor{yellow}{\cvec{1}{0} \to \cvec{0}{-1}} \qquad
-\blue{\cvec{1}{1} \to \cvec{-1}{1}} \qquad 
-\red{\cvec{0}{1} \to \cvec{-1}{0}} \]
+\[\green{\begin{pmatrix}0
+0\end{pmatrix} \to \begin{pmatrix}0
+0\end{pmatrix}} \qquad 
+\textcolor{yellow}{\begin{pmatrix}1
+0\end{pmatrix} \to \begin{pmatrix}0
+-1\end{pmatrix}} \qquad
+\blue{\begin{pmatrix}1
+1\end{pmatrix} \to \begin{pmatrix}-1
+1\end{pmatrix}} \qquad 
+\red{\begin{pmatrix}0
+1\end{pmatrix} \to \begin{pmatrix}-1
+0\end{pmatrix}} \]
 
 
 :::tikz TikZ diagram
@@ -170,6 +210,9 @@ This is a dilation in the y-axis by a factor of -2.
 \end{scope}
 \end{tikzpicture}
 :::
+
+
+
 This is a rotation around the origin $(0,0)$ by 90 degrees.
 
 :::
@@ -181,10 +224,18 @@ This is a rotation around the origin $(0,0)$ by 90 degrees.
 :::solution
 
 (d)
-\[\green{\cvec{0}{0} \to \cvec{0}{0}} \qquad 
-\textcolor{yellow}{\cvec{1}{0} \to \cvec{1}{1}} \qquad
-\blue{\cvec{1}{1} \to \cvec{2}{0}} \qquad 
-\red{\cvec{0}{1} \to \cvec{1}{-1}} \]
+\[\green{\begin{pmatrix}0
+0\end{pmatrix} \to \begin{pmatrix}0
+0\end{pmatrix}} \qquad 
+\textcolor{yellow}{\begin{pmatrix}1
+0\end{pmatrix} \to \begin{pmatrix}1
+1\end{pmatrix}} \qquad
+\blue{\begin{pmatrix}1
+1\end{pmatrix} \to \begin{pmatrix}2
+0\end{pmatrix}} \qquad 
+\red{\begin{pmatrix}0
+1\end{pmatrix} \to \begin{pmatrix}1
+-1\end{pmatrix}} \]
 
 
 :::tikz TikZ diagram
@@ -213,6 +264,9 @@ This is a rotation around the origin $(0,0)$ by 90 degrees.
 \end{scope}
 \end{tikzpicture}
 :::
+
+
+
 This is a rotation around the origin $(0,0)$ by 45 degree, and also a dilation in both directions by a factor of $\sqrt{2}$.
 
 :::
@@ -225,11 +279,17 @@ This is a rotation around the origin $(0,0)$ by 45 degree, and also a dilation i
 Describe how each transformation change the square consisting of points $(0,0), (0,1), (1,1)$ and $(1,0)$. Also, explain in your own words what kind of transformation it looks like.
 
 
-- $\cvec{x}{y} \to \cvec{3x}{2y}$
+- $\begin{pmatrix}x
+y\end{pmatrix} \to \begin{pmatrix}3x
+2y\end{pmatrix}$
 
-- $\cvec{x}{y} \to \cvec{-x}{2y}$
+- $\begin{pmatrix}x
+y\end{pmatrix} \to \begin{pmatrix}-x
+2y\end{pmatrix}$
 
-- $\cvec{x}{y} \to \cvec{4-x}{2-y}$
+- $\begin{pmatrix}x
+y\end{pmatrix} \to \begin{pmatrix}4-x
+2-y\end{pmatrix}$
 
 
 :::

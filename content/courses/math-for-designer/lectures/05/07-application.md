@@ -180,7 +180,7 @@ Thus, $10^{100}$ has 333 digits in base 2.
 :::example
 
 A standard deck of cards consists of 52 cards. It is known that it is unlikely that two well-shuffled deck of cards would have the same arrangements. 
-\medskip
+
 
 It is know that the number of different arrangements is $52!$, where $!$ is the factorial. How many digits does $52!$ have in base 10?
 

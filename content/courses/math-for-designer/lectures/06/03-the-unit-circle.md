@@ -9,9 +9,9 @@ source: "tex/lecture06.tex"
 ## Revelation
 
 
-:::figure trig_plot_twist — [](https://www.youtube.com/watch?v=yBw67Fb31Cs&t=3508s&ab_channel=3Blue1Brown
+:::youtube yBw67Fb31Cs | You have been tricked!
 :::
-)
+
 
 
 
@@ -45,16 +45,23 @@ If we fix the length of the hypotenuse to be be 1, then we reduce the functions 
 \filldraw[red] (2.4,1.8) circle (1mm) node[above right] {$(x,y) = (\red{\cos \theta}, \blue{\sin \theta})$};
 \end{tikzpicture}
 :::
+
+
+
+
+
+
+
 ## Extension
 
 Moreover, we can think of the hypotenuse as a radius of a circle. As we move the radius around, the angle changes.
 
-\bigskip
-Now, instead of thinking of $\sin \theta$ as the ratio between two sides, we can instead think of $\sin \theta$ as the **height** of the dot from the ground ($x$ axis). \pa 
-\bigskip
 
-Likewise, $\cos \theta$ now becomes the **distance** of the dot from the start ($y$ axis). \pa
-\bigskip
+Now, instead of thinking of $\sin \theta$ as the ratio between two sides, we can instead think of $\sin \theta$ as the **height** of the dot from the ground ($x$ axis). 
+
+
+Likewise, $\cos \theta$ now becomes the **distance** of the dot from the start ($y$ axis). 
+
 
 This lets us extend $\theta$ to be any real number!
 
@@ -104,7 +111,7 @@ This lets us extend $\theta$ to be any real number!
 ## Computing Sine and Cosine
 
 If the angle $\theta$ is between 0 and 90, you can immediately draw a triangle to find sine and cosine of that angle. 
-\medskip
+
 
 If not, you need to first look at the point and draw an appropriate triangle first. For instance, suppose you want to find.
 \[ \sin (390) \]
@@ -121,15 +128,19 @@ We can summarize as follows.
 \[\cos (360+\theta) = \cos \theta\]
 
 :::
-\pa
 
-\begin{proof}
+
+
+:::proof
+
 $360 + \theta$ means going around the circle exactly once and returning to the same point, so the result stays unchanged.
 
 :::figure trig_prop_360plus
 :::
 
-\end{proof}
+
+:::
+
 
 
 
@@ -142,13 +153,17 @@ $360 + \theta$ means going around the circle exactly once and returning to the s
 :::
 
 
-\begin{proof}
+
+:::proof
+
 $180 + \theta$ means going around half the circle, so $\sin \theta$ changes sign (from up to down) and so does $\cos \theta$ (from left to right).
 
 :::figure trig_prop_180plus
 :::
 
-\end{proof}
+
+:::
+
 
 
 

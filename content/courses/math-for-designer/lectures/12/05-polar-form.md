@@ -72,6 +72,8 @@ b &=& r \sin \theta
       \draw (0.8,0) arc (0:34:0.8) node[midway, below left]{$\theta$};
     \end{tikzpicture}
 :::
+
+
 *Representing a complex number both in rectangular form $(a+bi)$ and polar form ($re^{i\theta*$)}
 
 

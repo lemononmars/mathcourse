@@ -54,6 +54,13 @@ A 3-set Venn diagram divides the Universe $U$ into **8 mutually exclusive region
 \node at (1.8,-2.0) {\tiny Outside};
 \end{tikzpicture}
 :::
+
+
+
+
+
+
+
 ## Constructing a 3-Set Diagram from Given Sets
 
 
@@ -124,12 +131,17 @@ $A \cap C \text{ (only)} = \{4, 7\}$
 \node at (2.0,-2.1) {$10$};
 \end{tikzpicture}
 :::
+
+
+
+
+
 :::
 
 
 
 
-## Evaluating Set Operations visually: $A \cup (B \cap C)$
+## Evaluating Set Operations visually: A \cup (B \cap C)
 
 
 :::note Evaluating Compound Set Operations
@@ -162,6 +174,8 @@ Break down the operation step-by-step:
 \draw[thick] (0,-0.5) circle (1.3cm) node[below] {$C$};
 \end{tikzpicture}
 :::
+
+
 *Step 1: Region $B \cap C$*
 
 
@@ -181,6 +195,8 @@ Break down the operation step-by-step:
 \draw[thick] (0,-0.5) circle (1.3cm) node[below] {$C$};
 \end{tikzpicture}
 :::
+
+
 *Step 2: $A \cup (B \cap C)$*
 
 
@@ -210,6 +226,8 @@ Break down the operation step-by-step:
 \draw[thick] (0,-0.5) circle (1.3cm) node[below] {$C$};
 \end{tikzpicture}
 :::
+
+
 *$(A \cap B) \setminus C$*
 
 
@@ -229,6 +247,8 @@ Break down the operation step-by-step:
 \draw[thick] (0,-0.5) circle (1.3cm) node[below] {$C$};
 \end{tikzpicture}
 :::
-*$(A \cup B)^\mathsf{c} \cap C = C \setminus (A \cup B)$*
+
+
+*$(A \cup B)^\mathsf{c* \cap C = C \setminus (A \cup B)$}
 
 *Visualizing region boundaries for set operations*

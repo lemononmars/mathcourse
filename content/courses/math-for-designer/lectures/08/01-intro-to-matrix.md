@@ -28,7 +28,8 @@ In general, we can define $m$ by $n$ matrix in the same way, but we only need to
 
 Given two matrices $A = \begin{pmatrix} a & b 
 c & d \end{pmatrix}$ and $A' = \begin{pmatrix} a' & b' 
-c' & d' \end{pmatrix}$, a vector $\vec{v} = \cvec{v_1}{v_2}$, and a real number $k$. We can define the following operations.
+c' & d' \end{pmatrix}$, a vector $\vec{v} = \begin{pmatrix}v_1
+v_2\end{pmatrix}$, and a real number $k$. We can define the following operations.
 
 
 - Scalar multiplication: $kA$
@@ -166,7 +167,8 @@ Compute the followings.
 
 \begin{equation}
 \begin{pmatrix} **a** & **b** 
-**c** & **d** \end{pmatrix}\cvec{v_1}{v_2} = v_1 \cvec{**a**}{**c**} + v_2 \cvec{**b**}{**d**} = \cvec{**a**v_1 + **b**v_2}{**c**v_1 +**b**v_2}
+**c** & **d** \end{pmatrix}\begin{pmatrix}v_1
+v_2\end{pmatrix} = v_1 \cvec{**a**}{**c**} + v_2 \cvec{**b**}{**d**} = \cvec{**a**v_1 + **b**v_2}{**c**v_1 +**b**v_2}
 \end{equation}
 
 :::
@@ -182,10 +184,12 @@ Compute the followings.
 
 
 - $\begin{pmatrix} **2** & **3** 
-**-1** & **0** \end{pmatrix}\cvec{4}{5}$
+**-1** & **0** \end{pmatrix}\begin{pmatrix}4
+5\end{pmatrix}$
 
 - $\begin{pmatrix} **-3** & **1** 
-**5** & **-2** \end{pmatrix}\cvec{1}{0}$
+**5** & **-2** \end{pmatrix}\begin{pmatrix}1
+0\end{pmatrix}$
 
 
 :::
@@ -196,12 +200,20 @@ Compute the followings.
 
 
 - $\begin{pmatrix} **2** & **3** 
-**-1** & **0** \end{pmatrix}\cvec{4}{5} = 4 \cvec{**2**}{**-1**} + 5 \cvec{**3**}{**0**}
-= \cvec{8}{-4} + \cvec{15}{0} = \cvec{23}{-4}$
+**-1** & **0** \end{pmatrix}\begin{pmatrix}4
+5\end{pmatrix} = 4 \cvec{**2**}{**-1**} + 5 \cvec{**3**}{**0**}
+= \begin{pmatrix}8
+-4\end{pmatrix} + \begin{pmatrix}15
+0\end{pmatrix} = \begin{pmatrix}23
+-4\end{pmatrix}$
 
 - $\begin{pmatrix} **-3** & **1** 
-**5** & **-2** \end{pmatrix}\cvec{1}{0} = 1 \cvec{**-3**}{**1**} + 0 \cvec{**5**}{**2**}
-= \cvec{-3}{1} + \cvec{0}{0} = \cvec{-3}{1}$
+**5** & **-2** \end{pmatrix}\begin{pmatrix}1
+0\end{pmatrix} = 1 \cvec{**-3**}{**1**} + 0 \cvec{**5**}{**2**}
+= \begin{pmatrix}-3
+1\end{pmatrix} + \begin{pmatrix}0
+0\end{pmatrix} = \begin{pmatrix}-3
+1\end{pmatrix}$
 
 
 :::
@@ -217,27 +229,33 @@ Every single math student is perplexed by the formula
 **c** & **d** \end{pmatrix}\cvec{**v_1**}{\orange{v_2}} = \cvec{**a****v_1** + **b**\orange{v_2}}{**c****v_1** +**b**\orange{v_2}}.\]
 Why is it defined this way? Won't it be much simpler if we define it naturally as
 \[ \begin{pmatrix} a & b 
-c & d \end{pmatrix}\cvec{v_1}{v_2} = \begin{pmatrix} av_1 & bv_1 
+c & d \end{pmatrix}\begin{pmatrix}v_1
+v_2\end{pmatrix} = \begin{pmatrix} av_1 & bv_1 
 cv_2 & dv_2 \end{pmatrix}\]
 or 
 \[ \begin{pmatrix} a & b 
-c & d \end{pmatrix}\cvec{v_1}{v_2} = \begin{pmatrix} av_1 + bv_1 
+c & d \end{pmatrix}\begin{pmatrix}v_1
+v_2\end{pmatrix} = \begin{pmatrix} av_1 + bv_1 
 cv_2 + dv_2 \end{pmatrix}?\]
 
 
 
 The answer is: this is the *natural* way to define the multiplication. 
 
-Notice what happens when we multiply the matrix by the unit vector $\vec{i} = \cvec{1}{0}$.
+Notice what happens when we multiply the matrix by the unit vector $\vec{i} = \begin{pmatrix}1
+0\end{pmatrix}$.
 \[ \begin{pmatrix} **a** & **b** 
-**c** & **d** \end{pmatrix}\cvec{1}{0} = \cvec{**a**\times 1 + **b** \times 0}{**c** \times 1 +**b** \times 0} = \cvec{**a**}{**c**}.\]
+**c** & **d** \end{pmatrix}\begin{pmatrix}1
+0\end{pmatrix} = \cvec{**a**\times 1 + **b** \times 0}{**c** \times 1 +**b** \times 0} = \cvec{**a**}{**c**}.\]
 So the matrix transform $\vec{i}$ to the vector $\cvec{**a**}{**c**}$, which is the first column of the matrix. 
 
 
 
-Likewise, for the unit vector $\vec{j} = \cvec{0}{1}$, we have
+Likewise, for the unit vector $\vec{j} = \begin{pmatrix}0
+1\end{pmatrix}$, we have
 \[ \begin{pmatrix} **a** & **b** 
-**c** & **d** \end{pmatrix}\cvec{0}{1} = \cvec{**a**\times 0 + **b** \times 1}{**c** \times 0 +**b** \times 1} = \cvec{**b**}{**d**}.\]
+**c** & **d** \end{pmatrix}\begin{pmatrix}0
+1\end{pmatrix} = \cvec{**a**\times 0 + **b** \times 1}{**c** \times 0 +**b** \times 1} = \cvec{**b**}{**d**}.\]
 So the matrix transform $\vec{j}$ to the vector $\cvec{**b**}{**d**}$, which is the second column of the matrix.
 
 

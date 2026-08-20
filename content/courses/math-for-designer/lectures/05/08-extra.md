@@ -29,12 +29,12 @@ Define the **Euler's constant** $e$ to be
 \[ e = \lim_{n \rightarrow \infty} \left(1 + \frac{1}{n} \right)^n\]
 
 :::
-\pa
+
 \begin{eqnarray*}
 e &=& 1 + \frac{1}{1!} + \frac{1}{2!} + \frac{1}{3!} + \cdots 
-\pa
+
 &=& 1 + 1 + \frac{1}{2} + \frac{1}{6} + \cdots 
-\pa
+
 &\approx& 2.71828\ldots
 \end{eqnarray*}
 

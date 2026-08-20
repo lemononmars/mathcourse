@@ -6,7 +6,9 @@ title: "Types of Linear Transformations"
 source: "tex/lecture07.tex"
 ---
 
-Notice how each of the transformations in the previous example has the form $\cvec{x}{y} \to \cvec{ax+by}{cx+dy}$. This is called a **linear transformation**.
+Notice how each of the transformations in the previous example has the form $\begin{pmatrix}x
+y\end{pmatrix} \to \begin{pmatrix}ax+by
+cx+dy\end{pmatrix}$. This is called a **linear transformation**.
 
 :::remark Note
 
@@ -34,7 +36,9 @@ Given these properties, we can prove all the useful formulas. But we are not goi
 A translation by a vector $\vec{a}$ is defined as
 \[ T(\vec{v}) = \vec{v} + \vec{a}.\]
 In two dimensions, we have
-\[ \cvec{v_1}{v_2} \to \cvec{v_1+a_1}{v_2+a_2}.\]
+\[ \begin{pmatrix}v_1
+v_2\end{pmatrix} \to \begin{pmatrix}v_1+a_1
+v_2+a_2\end{pmatrix}.\]
 
 :::
 
@@ -50,7 +54,9 @@ In two dimensions, we have
 A dilation by a factor $\vec{k}$ is defined as
 \[ T(\vec{v}) = k \cdot \vec{v}.\]
 In two dimensions, we have
-\[ \cvec{v_1}{v_2} \to \cvec{kv_1}{kv_2}\]
+\[ \begin{pmatrix}v_1
+v_2\end{pmatrix} \to \begin{pmatrix}kv_1
+kv_2\end{pmatrix}\]
 
 :::
 
@@ -64,10 +70,13 @@ Note that dilation is the same as scaling up or down, plus reversing if $k$ is n
 
 :::definition
 
-A reflection around a vector $\vec{a} = \cvec{a_1}{a_2}$ (or a point $(a_1, a_2)$) is defined as
+A reflection around a vector $\vec{a} = \begin{pmatrix}a_1
+a_2\end{pmatrix}$ (or a point $(a_1, a_2)$) is defined as
 \[ T(\vec{v}) = 2\vec{a} - \vec{v}.\]
 In two dimensions, we have
-\[ \cvec{v_1}{v_2} \to \cvec{2a_1-v_1}{2a_2-v_2}\]
+\[ \begin{pmatrix}v_1
+v_2\end{pmatrix} \to \begin{pmatrix}2a_1-v_1
+2a_2-v_2\end{pmatrix}\]
 
 :::
 
@@ -78,7 +87,9 @@ In two dimensions, we have
 ## Rotation
 
 We can use trigonometry functions and some analysis to compute the formula for rotation, which is.
-\[ \cvec{v_1}{v_2} \to \cvec{v_1\cos\theta - v_2\sin\theta}{v_1\sin\theta + v_2\cos\theta}\]
+\[ \begin{pmatrix}v_1
+v_2\end{pmatrix} \to \begin{pmatrix}v_1\cos\theta - v_2\sin\theta
+v_1\sin\theta + v_2\cos\theta\end{pmatrix}\]
 However, it seems impossible to express the result as a linear combination of vectors...
 \[ \vec{v} \to ???\]
 
@@ -86,9 +97,14 @@ However, it seems impossible to express the result as a linear combination of ve
 
 We can't define rotation using only vector notations. This means that we need to extent the definitions. Notice that
 \begin{eq*} 
-\cvec{x\cos\theta - y\sin\theta}{ x\sin\theta + y\cos\theta} &=& \cvec{x\cos\theta}{x\cos\theta} + \cvec{-y\sin\theta}{y\cos\theta} 
+\begin{pmatrix}x\cos\theta - y\sin\theta
+x\sin\theta + y\cos\theta\end{pmatrix} &=& \begin{pmatrix}x\cos\theta
+x\cos\theta\end{pmatrix} + \begin{pmatrix}-y\sin\theta
+y\cos\theta\end{pmatrix} 
 
-&=& x\cvec{\cos\theta}{\sin\theta} + y\cvec{-\sin\theta}{\cos\theta}
+&=& x\begin{pmatrix}\cos\theta
+\sin\theta\end{pmatrix} + y\begin{pmatrix}-\sin\theta
+\cos\theta\end{pmatrix}
 \end{eq*}
 We'll see how to express the result neatly next week! Stay tuned!
 
@@ -100,11 +116,17 @@ We'll see how to express the result neatly next week! Stay tuned!
 Without computing or graphing, identify the following transformations.
 
 
-- $\cvec{x}{y} \to \cvec{2x}{2y}$
+- $\begin{pmatrix}x
+y\end{pmatrix} \to \begin{pmatrix}2x
+2y\end{pmatrix}$
 
-- $\cvec{x}{y} \to \cvec{x+3}{y-2}$
+- $\begin{pmatrix}x
+y\end{pmatrix} \to \begin{pmatrix}x+3
+y-2\end{pmatrix}$
 
-- $\cvec{x}{y} \to \cvec{1-x}{1-y}$
+- $\begin{pmatrix}x
+y\end{pmatrix} \to \begin{pmatrix}1-x
+1-y\end{pmatrix}$
 
 
 :::

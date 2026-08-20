@@ -49,18 +49,14 @@ Similary, we can compute $P(X=2) = \frac{3}{8}$ and $P(X=3) = \frac{1}{8}$.
 
 :::solution
 (Continued) Thus, we have the following table
-\begin{table}[h!]
+
 \def\arraystretch{2}
-\begin{tabular}{|C|C|C|C|C|}
-\hline
-k & 0 & 1 & 2 & 3
 
-\hline
-P(X=k) & \frac{1}{8} & \frac{3}{8} & \frac{3}{8} & \frac{1}{8}
+| k | 0 | 1 | 2 | 3 |
+| --- | --- | --- | --- | --- |
+| P(X=k) | \frac{1}{8} | \frac{3}{8} | \frac{3}{8} | \frac{1}{8} |
 
-\hline
-\end{tabular}
-\end{table}
+
 
 Using the table above, we can make the folowing chart.
 
@@ -81,6 +77,10 @@ Using the table above, we can make the folowing chart.
 }
 \end{tikzpicture}
 :::
+
+
+
+
 :::
 
 
@@ -131,9 +131,9 @@ Let $X$ be the number of successes obtained in the $n$ independent trails. Then,
 :::
 
 
-:::figure binomial_example — \href{https://www.youtube.com/watch?v=WR0nMTr6uOo
+:::youtube WR0nMTr6uOo | Electrifying
 :::
-}
+
 
 
 
@@ -155,7 +155,7 @@ Let $X$ be the number of successes obtained in the $n$ independent trails. Then,
 
 
 
-- The probability of exactly $k$ successes in $n$ trials is $$P(X=k) = \ch{n}{k} p^k (1-p)^{n-k}.$$
+- The probability of exactly $k$ successes in $n$ trials is $$P(X=k) = \binom{n}{k} p^k (1-p)^{n-k}.$$
 
 - The expected number is $$\mu = E(X) = np.$$
 

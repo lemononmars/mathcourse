@@ -55,17 +55,17 @@ How many ways you can finish an exam with ten true-or-false questions.
 
 
 
-- For the first question, you have two options (true or false). \pa
+- For the first question, you have two options (true or false). 
 
-- For the second question, you have two options (true or false). \pa
+- For the second question, you have two options (true or false). 
 
-- For the third question, you have two options (true or false). \pa
+- For the third question, you have two options (true or false). 
 
 - $\vdots$
 
 - For the tenth (and final) question, you have two options (true or false).
 
-Thus, there are $2 \times 2 \times 2 \times 2 \times 2 \times 2 \times 2 \times 2 \times 2 \times 2 \pa = 2^{10} \pa = 1024$ possible ways.
+Thus, there are $2 \times 2 \times 2 \times 2 \times 2 \times 2 \times 2 \times 2 \times 2 \times 2 = 2^{10} = 1024$ possible ways.
 
 :::
 
@@ -115,18 +115,18 @@ We first choose which value would be the the four-of-a-kind, in which there are 
 How many three-digit numbers are there where all digits are odd?
 
 :::
-\pa
+
 
 :::solution
 
-We can construct such three-digit number in three steps. \pa
+We can construct such three-digit number in three steps. 
 
 
-- Choose the left most (hundreds) digit: there are 5 options (1,3,5,7 or 9) \pa
+- Choose the left most (hundreds) digit: there are 5 options (1,3,5,7 or 9) 
 
-- Choose the middle most (tens) digit: there are 5 options (1,3,5,7 or 9) \pa
+- Choose the middle most (tens) digit: there are 5 options (1,3,5,7 or 9) 
 
-- Choose the right most (ones) digit: there are 5 options (1,3,5,7 or 9) \pa
+- Choose the right most (ones) digit: there are 5 options (1,3,5,7 or 9) 
 
 Thus, the number of three-digit numbers where all digits are odd is $5 \times 5 \times 5 = 125$.
 

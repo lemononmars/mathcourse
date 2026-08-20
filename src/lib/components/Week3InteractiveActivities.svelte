@@ -145,20 +145,29 @@
   // ==========================================
   // TAB 5: QUADRATIC INEQUALITIES & SIGN CHART
   // ==========================================
-  let qIneqM1 = $state(1);
-  let qIneqM2 = $state(3);
+  let qIneqM1 = $state<number | string>(1);
+  let qIneqM2 = $state<number | string>(3);
   let qIneqA = $state(1); // >0 or <0
   let qIneqOp = $state<'>' | '>=' | '<' | '<='>('<');
   let qIneqTestX = $state(0);
 
+  let numM1 = $derived(typeof qIneqM1 === 'number' ? (isNaN(qIneqM1) ? 0 : qIneqM1) : (parseFloat(qIneqM1) || 0));
+  let numM2 = $derived(typeof qIneqM2 === 'number' ? (isNaN(qIneqM2) ? 0 : qIneqM2) : (parseFloat(qIneqM2) || 0));
+
   let qIneqRoots = $derived.by(() => {
-    const r1 = Math.min(qIneqM1, qIneqM2);
-    const r2 = Math.max(qIneqM1, qIneqM2);
-    return { r1, r2 };
+    const r1 = Math.min(numM1, numM2);
+    const r2 = Math.max(numM1, numM2);
+    return { r1, r2, m1: numM1, m2: numM2 };
   });
 
-  let testTerm1 = $derived(qIneqTestX - qIneqRoots.r1);
-  let testTerm2 = $derived(qIneqTestX - qIneqRoots.r2);
+  let xDomain = $derived.by(() => {
+    const minVal = Math.min(-5, Math.floor(Math.min(numM1, numM2, qIneqTestX) - 1));
+    const maxVal = Math.max(5, Math.ceil(Math.max(numM1, numM2, qIneqTestX) + 1));
+    return { min: minVal, max: maxVal };
+  });
+
+  let testTerm1 = $derived(qIneqTestX - numM1);
+  let testTerm2 = $derived(qIneqTestX - numM2);
   let testProd = $derived(qIneqA * testTerm1 * testTerm2);
 
   let testSatisfies = $derived.by(() => {
@@ -166,6 +175,20 @@
     if (qIneqOp === '<=') return testProd <= 0;
     if (qIneqOp === '>') return testProd > 0;
     return testProd >= 0;
+  });
+
+  let solutionText = $derived.by(() => {
+    const { r1, r2 } = qIneqRoots;
+    if (r1 === r2) {
+      if (qIneqOp === '<') return '∅';
+      if (qIneqOp === '<=') return `{${r1}}`;
+      if (qIneqOp === '>') return `x ≠ ${r1}`;
+      return 'ℝ';
+    }
+    if (qIneqOp === '<') return `(${r1}, ${r2})`;
+    if (qIneqOp === '<=') return `[${r1}, ${r2}]`;
+    if (qIneqOp === '>') return `(-∞, ${r1}) ∪ (${r2}, ∞)`;
+    return `(-∞, ${r1}] ∪ [${r2}, ∞)`;
   });
 </script>
 
@@ -339,15 +362,19 @@
               <line x1={linCenterX} y1="0" x2={linCenterX} y2={linHeight} stroke="currentColor" stroke-opacity="0.4" stroke-width="1.5" />
 
               <!-- Line 1: y = a*x + b -->
-              {@const l1y1 = linA * (-15) + linB}
-              {@const l1y2 = linA * 15 + linB}
-              <line x1={toSvgX(-15)} y1={toSvgY(l1y1)} x2={toSvgX(15)} y2={toSvgY(l1y2)} stroke="#0284c7" stroke-width="2.5" />
+              {#if true}
+                {@const l1y1 = linA * (-15) + linB}
+                {@const l1y2 = linA * 15 + linB}
+                <line x1={toSvgX(-15)} y1={toSvgY(l1y1)} x2={toSvgX(15)} y2={toSvgY(l1y2)} stroke="#0284c7" stroke-width="2.5" />
+              {/if}
 
               <!-- Line 2: y = c*x + d or y = c -->
-              {@const cVal = linMode === 'both' ? linC : 0}
-              {@const l2y1 = cVal * (-15) + linD}
-              {@const l2y2 = cVal * 15 + linD}
-              <line x1={toSvgX(-15)} y1={toSvgY(l2y1)} x2={toSvgX(15)} y2={toSvgY(l2y2)} stroke="#d97706" stroke-width="2.5" stroke-dasharray={linMode === 'single' ? '4 4' : 'none'} />
+              {#if true}
+                {@const cVal = linMode === 'both' ? linC : 0}
+                {@const l2y1 = cVal * (-15) + linD}
+                {@const l2y2 = cVal * 15 + linD}
+                <line x1={toSvgX(-15)} y1={toSvgY(l2y1)} x2={toSvgX(15)} y2={toSvgY(l2y2)} stroke="#d97706" stroke-width="2.5" stroke-dasharray={linMode === 'single' ? '4 4' : 'none'} />
+              {/if}
 
               <!-- Intersection Point -->
               {#if linSol.type === 'unique' && linSol.val !== null}
@@ -533,7 +560,7 @@
                 {:else if quadRoots.type === 'one'}
                   <div class="text-info font-bold">Single Root: x = {quadRoots.r1?.toFixed(2)}</div>
                 {:else}
-                  <div class="text-error font-bold">Δ < 0 → No Real Roots</div>
+                  <div class="text-error font-bold">Δ &lt; 0 → No Real Roots</div>
                 {/if}
               {:else if quadMethod === 'factoring'}
                 <div class="font-bold text-primary">Factoring: (x - m₁)(x - m₂) = 0</div>
@@ -542,7 +569,7 @@
                 {#if quadRoots.type !== 'complex'}
                   <div class="text-success font-bold mt-1">(x - ({quadRoots.r1?.toFixed(1)}))(x - ({quadRoots.r2?.toFixed(1)})) = 0</div>
                 {:else}
-                  <div class="text-error font-bold">Cannot factor over Real numbers (Δ < 0)</div>
+                  <div class="text-error font-bold">Cannot factor over Real numbers (Δ &lt; 0)</div>
                 {/if}
               {:else}
                 <div class="font-bold text-primary">Completing the Square:</div>
@@ -572,12 +599,14 @@
               <line x1={linCenterX} y1="0" x2={linCenterX} y2={linHeight} stroke="currentColor" stroke-opacity="0.3" stroke-width="1" />
 
               <!-- Parabola Path -->
-              {@const pts = Array(61).fill(0).map((_, i) => {
-                const px = -6 + i * 0.2;
-                const py = quadA * px * px + quadB * px + quadC;
-                return `${toSvgX(px)},${toSvgY(py)}`;
-              }).join(' ')}
-              <polyline points={pts} fill="none" stroke="#2563eb" stroke-width="3" />
+              {#if true}
+                {@const pts = Array(61).fill(0).map((_, i) => {
+                  const px = -6 + i * 0.2;
+                  const py = quadA * px * px + quadB * px + quadC;
+                  return `${toSvgX(px)},${toSvgY(py)}`;
+                }).join(' ')}
+                <polyline points={pts} fill="none" stroke="#2563eb" stroke-width="3" />
+              {/if}
 
               <!-- Vertex Point -->
               <circle cx={toSvgX(quadVertex.h)} cy={toSvgY(quadVertex.k)} r="5" fill="#ea580c" />
@@ -636,7 +665,7 @@
               
               <div class="p-2 rounded-lg bg-base-200/60 font-bold mt-1">
                 {#if isColliding}
-                  <div class="text-error">|x - {koopaX.toFixed(1)}| < {safeThreshold.toFixed(1)} → Hitboxes Overlap!</div>
+                  <div class="text-error">|x - {koopaX.toFixed(1)}| &lt; {safeThreshold.toFixed(1)} → Hitboxes Overlap!</div>
                 {:else}
                   <div class="text-success">|x - {koopaX.toFixed(1)}| ≥ {safeThreshold.toFixed(1)} → Safe Distance!</div>
                 {/if}
@@ -664,27 +693,29 @@
                 <text x={tickX} y="140" text-anchor="middle" font-size="10" fill="currentColor" opacity="0.6">{i - 2}</text>
               {/each}
 
-              <!-- Koopa Hitbox Interval (Green) -->
-              {@const kSvgL = 40 + (koopaLeft + 2) * 32}
-              {@const kSvgW = koopaW * 32}
-              <rect x={kSvgL} y="75" width={kSvgW} height="25" rx="6" fill="#22c55e" opacity="0.4" stroke="#16a34a" stroke-width="2" />
-              <text x={kSvgL + kSvgW/2} y="92" text-anchor="middle" font-size="11" font-weight="bold" fill="#15803d">Koopa</text>
+              {#if true}
+                <!-- Koopa Hitbox Interval (Green) -->
+                {@const kSvgL = 40 + (koopaLeft + 2) * 32}
+                {@const kSvgW = koopaW * 32}
+                <rect x={kSvgL} y="75" width={kSvgW} height="25" rx="6" fill="#22c55e" opacity="0.4" stroke="#16a34a" stroke-width="2" />
+                <text x={kSvgL + kSvgW/2} y="92" text-anchor="middle" font-size="11" font-weight="bold" fill="#15803d">Koopa</text>
 
-              <!-- Mario Hitbox Interval (Red) -->
-              {@const mSvgL = 40 + (marioLeft + 2) * 32}
-              {@const mSvgW = marioW * 32}
-              <rect x={mSvgL} y="40" width={mSvgW} height="25" rx="6" fill="#ef4444" opacity="0.4" stroke="#dc2626" stroke-width="2" />
-              <text x={mSvgL + mSvgW/2} y="57" text-anchor="middle" font-size="11" font-weight="bold" fill="#b91c1c">Mario</text>
+                <!-- Mario Hitbox Interval (Red) -->
+                {@const mSvgL = 40 + (marioLeft + 2) * 32}
+                {@const mSvgW = marioW * 32}
+                <rect x={mSvgL} y="40" width={mSvgW} height="25" rx="6" fill="#ef4444" opacity="0.4" stroke="#dc2626" stroke-width="2" />
+                <text x={mSvgL + mSvgW/2} y="57" text-anchor="middle" font-size="11" font-weight="bold" fill="#b91c1c">Mario</text>
 
-              <!-- Distance Arrow -->
-              {@const kCenterSvg = 40 + (koopaX + 2) * 32}
-              {@const mCenterSvg = 40 + (marioX + 2) * 32}
-              <line x1={kCenterSvg} y1="160" x2={mCenterSvg} y2="160" stroke="#0284c7" stroke-width="2" stroke-dasharray="4 4" />
-              <circle cx={kCenterSvg} cy="160" r="4" fill="#0284c7" />
-              <circle cx={mCenterSvg} cy="160" r="4" fill="#0284c7" />
-              <text x={(kCenterSvg + mCenterSvg)/2} y="178" text-anchor="middle" font-size="11" font-weight="bold" fill="#0369a1">
-                |x_M - x_K| = {hitboxDist.toFixed(1)}
-              </text>
+                <!-- Distance Arrow -->
+                {@const kCenterSvg = 40 + (koopaX + 2) * 32}
+                {@const mCenterSvg = 40 + (marioX + 2) * 32}
+                <line x1={kCenterSvg} y1="160" x2={mCenterSvg} y2="160" stroke="#0284c7" stroke-width="2" stroke-dasharray="4 4" />
+                <circle cx={kCenterSvg} cy="160" r="4" fill="#0284c7" />
+                <circle cx={mCenterSvg} cy="160" r="4" fill="#0284c7" />
+                <text x={(kCenterSvg + mCenterSvg)/2} y="178" text-anchor="middle" font-size="11" font-weight="bold" fill="#0369a1">
+                  |x_M - x_K| = {hitboxDist.toFixed(1)}
+                </text>
+              {/if}
             </svg>
           </div>
         </div>
@@ -693,10 +724,21 @@
 
     <!-- TAB 5: QUADRATIC INEQUALITIES & SIGN CHART -->
     {#if activeTab === 'quadineq'}
-      <div class="flex flex-col md:grid md:grid-cols-12 gap-4 h-full animate-fade-in">
+      {@const toSvgX = (v: number) => {
+        const span = xDomain.max - xDomain.min || 1;
+        const raw = 85 + ((v - xDomain.min) / span) * 430;
+        return Math.max(85, Math.min(515, raw));
+      }}
+      {@const testSvgX = toSvgX(qIneqTestX)}
+      {@const m1SvgX = toSvgX(numM1)}
+      {@const m2SvgX = toSvgX(numM2)}
+      {@const r1SvgX = toSvgX(qIneqRoots.r1)}
+      {@const r2SvgX = toSvgX(qIneqRoots.r2)}
+
+      <div class="flex flex-col md:grid md:grid-cols-12 gap-4 h-full animate-fade-in overflow-y-auto pr-1">
         
         <!-- Controls Column -->
-        <div class="order-2 md:order-1 md:col-span-5 flex flex-col justify-between rounded-2xl border border-base-300 bg-base-200/40 p-4">
+        <div class="order-2 md:order-1 md:col-span-4 flex flex-col justify-between gap-3 rounded-2xl border border-base-300 bg-base-200/40 p-4">
           <div>
             <div class="flex items-center justify-between mb-3">
               <span class="text-xs font-bold uppercase tracking-wider text-primary">Inequality Operator</span>
@@ -709,91 +751,236 @@
               </div>
             </div>
 
-            <!-- Roots & Test Point Sliders -->
+            <!-- Roots Text Inputs -->
             <div class="space-y-2.5 font-mono text-xs">
               <div class="bg-base-100 p-2.5 rounded-xl border border-base-300">
-                <div class="flex justify-between font-bold text-info mb-1">
-                  <span>Root m₁:</span> <span>{qIneqM1}</span>
+                <div class="flex justify-between items-center font-bold text-info mb-1.5">
+                  <label for="input-m1">Root m₁:</label>
+                  <span class="badge badge-info badge-sm font-mono font-bold">{numM1}</span>
                 </div>
-                <input type="range" min="-4" max="4" step="1" class="range range-xs range-info" bind:value={qIneqM1} />
+                <input
+                  id="input-m1"
+                  type="number"
+                  step="any"
+                  class="input input-sm input-bordered w-full font-mono font-bold text-base focus:input-info"
+                  bind:value={qIneqM1}
+                  placeholder="Enter m₁"
+                />
               </div>
 
               <div class="bg-base-100 p-2.5 rounded-xl border border-base-300">
-                <div class="flex justify-between font-bold text-secondary mb-1">
-                  <span>Root m₂:</span> <span>{qIneqM2}</span>
+                <div class="flex justify-between items-center font-bold text-secondary mb-1.5">
+                  <label for="input-m2">Root m₂:</label>
+                  <span class="badge badge-secondary badge-sm font-mono font-bold">{numM2}</span>
                 </div>
-                <input type="range" min="-4" max="4" step="1" class="range range-xs range-secondary" bind:value={qIneqM2} />
-              </div>
-
-              <div class="bg-base-100 p-2.5 rounded-xl border border-base-300">
-                <div class="flex justify-between font-bold text-warning mb-1">
-                  <span>Test Point (x):</span> <span>{qIneqTestX.toFixed(1)}</span>
-                </div>
-                <input type="range" min="-5" max="5" step="0.5" class="range range-xs range-warning" bind:value={qIneqTestX} />
+                <input
+                  id="input-m2"
+                  type="number"
+                  step="any"
+                  class="input input-sm input-bordered w-full font-mono font-bold text-base focus:input-secondary"
+                  bind:value={qIneqM2}
+                  placeholder="Enter m₂"
+                />
               </div>
             </div>
 
             <!-- Interval Test Result Card -->
-            <div class="mt-4 p-3 rounded-xl bg-base-100 border border-base-300 font-mono text-xs space-y-1.5">
-              <span class="text-xs font-bold text-base-content/60 uppercase">Sign Product at x = {qIneqTestX.toFixed(1)}</span>
-              <div>(x - m₁) = ({qIneqTestX.toFixed(1)} - {qIneqRoots.r1}) = <span class={testTerm1 >= 0 ? 'text-success font-bold' : 'text-error font-bold'}>{testTerm1 >= 0 ? '+' : ''}{testTerm1.toFixed(1)}</span></div>
-              <div>(x - m₂) = ({qIneqTestX.toFixed(1)} - {qIneqRoots.r2}) = <span class={testTerm2 >= 0 ? 'text-success font-bold' : 'text-error font-bold'}>{testTerm2 >= 0 ? '+' : ''}{testTerm2.toFixed(1)}</span></div>
-              <div>Product Sign: <span class={testProd > 0 ? 'text-success font-bold' : testProd < 0 ? 'text-error font-bold' : 'font-bold'}>{testProd > 0 ? '(+) × (+) = +' : testProd < 0 ? '(+) × (-) = -' : '0'}</span></div>
+            <div class="mt-3 p-3 rounded-xl bg-base-100 border border-base-300 font-mono text-xs space-y-1.5 shadow-sm">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] font-bold text-base-content/60 uppercase">Evaluation at x = {qIneqTestX.toFixed(1)}</span>
+                <span class={`badge badge-xs font-bold ${testSatisfies ? 'badge-success' : 'badge-error'}`}>
+                  {testSatisfies ? 'Satisfied' : 'Not Satisfied'}
+                </span>
+              </div>
+              <div class="pt-1 text-[11px]">
+                (x - m₁) = ({qIneqTestX.toFixed(1)} - {numM1}) = 
+                <span class={testTerm1 >= 0 ? 'text-success font-bold' : 'text-error font-bold'}>
+                  {testTerm1 >= 0 ? '+' : ''}{testTerm1.toFixed(1)} ({testTerm1 >= 0 ? '+' : '−'})
+                </span>
+              </div>
+              <div class="text-[11px]">
+                (x - m₂) = ({qIneqTestX.toFixed(1)} - {numM2}) = 
+                <span class={testTerm2 >= 0 ? 'text-success font-bold' : 'text-error font-bold'}>
+                  {testTerm2 >= 0 ? '+' : ''}{testTerm2.toFixed(1)} ({testTerm2 >= 0 ? '+' : '−'})
+                </span>
+              </div>
+              <div class="text-[11px]">
+                Product Sign: 
+                <span class={testProd > 0 ? 'text-success font-bold' : testProd < 0 ? 'text-error font-bold' : 'font-bold'}>
+                  {testProd > 0 ? '(+) × (+) = +' : testProd < 0 ? '(+) × (−) = −' : '0'}
+                </span>
+              </div>
               
-              <div class={`mt-2 p-2 rounded-lg font-bold ${testSatisfies ? 'bg-success/15 text-success' : 'bg-error/15 text-error'}`}>
-                {testSatisfies ? '✅ Point x satisfies inequality!' : '❌ Point x does NOT satisfy inequality'}
+              <div class={`mt-2 p-2 rounded-lg font-bold text-center text-xs ${testSatisfies ? 'bg-success/15 text-success' : 'bg-error/15 text-error'}`}>
+                {testSatisfies ? '✅ x satisfies inequality' : '❌ x does NOT satisfy inequality'}
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Real Line Sign Chart Graphic -->
-        <div class="order-1 md:order-2 md:col-span-7 flex flex-col justify-between rounded-2xl border border-base-300 bg-base-100 p-4 shadow-inner">
-          <div class="flex items-center justify-between mb-2">
-            <span class="text-xs font-bold text-base-content/70">Interval Sign Chart</span>
+        <!-- Charts Column -->
+        <div class="order-1 md:order-2 md:col-span-8 flex flex-col justify-between rounded-2xl border border-base-300 bg-base-100 p-3.5 shadow-inner">
+          <div class="flex items-center justify-between mb-1.5">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold text-base-content/80 uppercase tracking-wide">Sign Charts</span>
+              <span class="badge badge-neutral badge-xs font-mono">(x - m₁)(x - m₂) {qIneqOp} 0</span>
+            </div>
             <span class="text-xs font-mono font-bold text-primary">
-              {#if qIneqOp === '<' || qIneqOp === '<='}
-                Solution: ({qIneqRoots.r1}, {qIneqRoots.r2})
-              {:else}
-                Solution: (-∞, {qIneqRoots.r1}) ∪ ({qIneqRoots.r2}, ∞)
-              {/if}
+              Solution: {solutionText}
             </span>
           </div>
 
-          <div class="relative w-full h-[280px] bg-base-200/40 rounded-xl overflow-hidden border border-base-200 flex items-center justify-center p-4">
-            <svg viewBox="0 0 400 200" class="w-full h-full">
-              <!-- Real Line -->
-              <line x1="20" y1="100" x2="380" y2="100" stroke="currentColor" stroke-opacity="0.4" stroke-width="2" />
+          <!-- Interactive Test Point Slider Bar -->
+          <div class="bg-base-200/50 p-2.5 rounded-xl border border-base-200 mb-2">
+            <div class="flex items-center justify-between text-xs font-bold mb-1">
+              <span class="text-warning flex items-center gap-1.5">
+                <span class="inline-block w-2.5 h-2.5 rounded-full bg-warning"></span>
+                Test Point (x):
+              </span>
+              <span class="font-mono text-xs px-2 py-0.5 rounded bg-warning/20 text-warning font-black">
+                {qIneqTestX.toFixed(1)}
+              </span>
+            </div>
+            <input
+              type="range"
+              min={xDomain.min}
+              max={xDomain.max}
+              step="0.1"
+              class="range range-xs range-warning w-full cursor-pointer"
+              bind:value={qIneqTestX}
+            />
+            <div class="flex justify-between text-[10px] text-base-content/40 font-mono mt-0.5">
+              <span>{xDomain.min}</span>
+              <span>0</span>
+              <span>{xDomain.max}</span>
+            </div>
+          </div>
+
+          <!-- SVG Stacked Charts Area -->
+          <div class="relative w-full h-[270px] bg-base-200/30 rounded-xl overflow-hidden border border-base-200 p-1 flex items-center justify-center">
+            <svg viewBox="0 0 540 250" class="w-full h-full select-none">
+              <!-- Grid line markers for domain -->
+              <line x1="85" y1="15" x2="85" y2="235" stroke="currentColor" stroke-opacity="0.08" stroke-width="1" />
+              <line x1="515" y1="15" x2="515" y2="235" stroke="currentColor" stroke-opacity="0.08" stroke-width="1" />
+              <line x1={toSvgX(0)} y1="15" x2={toSvgX(0)} y2="235" stroke="currentColor" stroke-opacity="0.12" stroke-width="1" stroke-dasharray="2 2" />
+
+              <!-- Test Point Vertical Guide across all 3 charts -->
+              <line x1={testSvgX} y1="18" x2={testSvgX} y2="238" stroke="#eab308" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.85" />
+              <text x={testSvgX} y="14" text-anchor="middle" font-size="9" font-weight="bold" fill="#ca8a04" font-family="monospace">x={qIneqTestX.toFixed(1)}</text>
+
+              <!-- ============================================== -->
+              <!-- CHART 1: (x - m₁) -->
+              <!-- ============================================== -->
+              <!-- Label -->
+              <text x="12" y="44" font-size="11" font-weight="bold" fill="#0284c7" font-family="monospace">(x - m₁)</text>
               
-              <!-- Roots m1, m2 ticks -->
-              {@const r1SvgX = 200 + qIneqRoots.r1 * 30}
-              {@const r2SvgX = 200 + qIneqRoots.r2 * 30}
+              <!-- Real Line 1 -->
+              <line x1="85" y1="40" x2="515" y2="40" stroke="currentColor" stroke-opacity="0.4" stroke-width="2" />
               
-              <!-- Zone 1: (-inf, r1) -->
-              <rect x="20" y="60" width={r1SvgX - 20} height="80" fill={qIneqOp.includes('>') ? '#22c55e' : '#ef4444'} opacity="0.15" />
-              <text x={(20 + r1SvgX)/2} y="90" text-anchor="middle" font-size="14" font-weight="bold" fill={qIneqOp.includes('>') ? '#16a34a' : '#dc2626'}>+</text>
-              <text x={(20 + r1SvgX)/2} y="125" text-anchor="middle" font-size="10" opacity="0.7">(-∞, {qIneqRoots.r1})</text>
+              <!-- Zones for (x - m₁) -->
+              <!-- Left of m1 (-) -->
+              <rect x="85" y="24" width={Math.max(0, m1SvgX - 85)} height="32" fill="#ef4444" opacity="0.15" rx="3" />
+              <text x={(85 + m1SvgX) / 2} y="44" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc2626">−</text>
+              
+              <!-- Right of m1 (+) -->
+              <rect x={m1SvgX} y="24" width={Math.max(0, 515 - m1SvgX)} height="32" fill="#22c55e" opacity="0.15" rx="3" />
+              <text x={(m1SvgX + 515) / 2} y="44" text-anchor="middle" font-size="13" font-weight="bold" fill="#16a34a">+</text>
+              
+              <!-- Root m1 tick & circle -->
+              <line x1={m1SvgX} y1="20" x2={m1SvgX} y2="58" stroke="#0284c7" stroke-width="2" />
+              <circle cx={m1SvgX} cy="40" r="5" fill="#0284c7" stroke="#ffffff" stroke-width="1.5" />
+              <text x={m1SvgX} y="68" text-anchor="middle" font-size="9" font-weight="bold" fill="#0284c7" font-family="monospace">m₁={numM1}</text>
+              
+              <!-- Test point on Chart 1 (static circle, no bounce) -->
+              <circle cx={testSvgX} cy="40" r="6" fill="#eab308" stroke="#ffffff" stroke-width="2" />
+              <text x={testSvgX} y="28" text-anchor="middle" font-size="9" font-weight="bold" fill={testTerm1 >= 0 ? '#16a34a' : '#dc2626'} font-family="monospace">
+                {testTerm1 >= 0 ? '(+)' : '(−)'}
+              </text>
 
-              <!-- Zone 2: (r1, r2) -->
-              <rect x={r1SvgX} y="60" width={r2SvgX - r1SvgX} height="80" fill={qIneqOp.includes('<') ? '#22c55e' : '#ef4444'} opacity="0.15" />
-              <text x={(r1SvgX + r2SvgX)/2} y="90" text-anchor="middle" font-size="14" font-weight="bold" fill={qIneqOp.includes('<') ? '#16a34a' : '#dc2626'}>-</text>
-              <text x={(r1SvgX + r2SvgX)/2} y="125" text-anchor="middle" font-size="10" opacity="0.7">({qIneqRoots.r1}, {qIneqRoots.r2})</text>
 
-              <!-- Zone 3: (r2, +inf) -->
-              <rect x={r2SvgX} y="60" width={380 - r2SvgX} height="80" fill={qIneqOp.includes('>') ? '#22c55e' : '#ef4444'} opacity="0.15" />
-              <text x={(r2SvgX + 380)/2} y="90" text-anchor="middle" font-size="14" font-weight="bold" fill={qIneqOp.includes('>') ? '#16a34a' : '#dc2626'}>+</text>
-              <text x={(r2SvgX + 380)/2} y="125" text-anchor="middle" font-size="10" opacity="0.7">({qIneqRoots.r2}, ∞)</text>
+              <!-- ============================================== -->
+              <!-- CHART 2: (x - m₂) -->
+              <!-- ============================================== -->
+              <!-- Label -->
+              <text x="12" y="119" font-size="11" font-weight="bold" fill="#c026d3" font-family="monospace">(x - m₂)</text>
+              
+              <!-- Real Line 2 -->
+              <line x1="85" y1="115" x2="515" y2="115" stroke="currentColor" stroke-opacity="0.4" stroke-width="2" />
+              
+              <!-- Zones for (x - m₂) -->
+              <!-- Left of m2 (-) -->
+              <rect x="85" y="99" width={Math.max(0, m2SvgX - 85)} height="32" fill="#ef4444" opacity="0.15" rx="3" />
+              <text x={(85 + m2SvgX) / 2} y="119" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc2626">−</text>
+              
+              <!-- Right of m2 (+) -->
+              <rect x={m2SvgX} y="99" width={Math.max(0, 515 - m2SvgX)} height="32" fill="#22c55e" opacity="0.15" rx="3" />
+              <text x={(m2SvgX + 515) / 2} y="119" text-anchor="middle" font-size="13" font-weight="bold" fill="#16a34a">+</text>
+              
+              <!-- Root m2 tick & circle -->
+              <line x1={m2SvgX} y1="95" x2={m2SvgX} y2="133" stroke="#c026d3" stroke-width="2" />
+              <circle cx={m2SvgX} cy="115" r="5" fill="#c026d3" stroke="#ffffff" stroke-width="1.5" />
+              <text x={m2SvgX} y="143" text-anchor="middle" font-size="9" font-weight="bold" fill="#c026d3" font-family="monospace">m₂={numM2}</text>
+              
+              <!-- Test point on Chart 2 (static circle, no bounce) -->
+              <circle cx={testSvgX} cy="115" r="6" fill="#eab308" stroke="#ffffff" stroke-width="2" />
+              <text x={testSvgX} y="103" text-anchor="middle" font-size="9" font-weight="bold" fill={testTerm2 >= 0 ? '#16a34a' : '#dc2626'} font-family="monospace">
+                {testTerm2 >= 0 ? '(+)' : '(−)'}
+              </text>
 
-              <!-- Root circles -->
-              <circle cx={r1SvgX} cy="100" r="6" fill="#0284c7" stroke="#fff" stroke-width="2" />
-              <text x={r1SvgX} y="155" text-anchor="middle" font-size="11" font-weight="bold">m₁={qIneqRoots.r1}</text>
 
-              <circle cx={r2SvgX} cy="100" r="6" fill="#c026d3" stroke="#fff" stroke-width="2" />
-              <text x={r2SvgX} y="155" text-anchor="middle" font-size="11" font-weight="bold">m₂={qIneqRoots.r2}</text>
+              <!-- ============================================== -->
+              <!-- CHART 3: Product (x - m₁)(x - m₂) -->
+              <!-- ============================================== -->
+              <!-- Label -->
+              <text x="12" y="194" font-size="11" font-weight="bold" fill="currentColor" font-family="monospace">Product</text>
+              
+              <!-- Real Line 3 -->
+              <line x1="85" y1="190" x2="515" y2="190" stroke="currentColor" stroke-opacity="0.4" stroke-width="2" />
+              
+              {#if qIneqRoots.r1 < qIneqRoots.r2}
+                <!-- Zone 1: (-inf, r1) -> Product is (+) -->
+                <rect x="85" y="174" width={Math.max(0, r1SvgX - 85)} height="32" fill={qIneqOp.includes('>') ? '#22c55e' : '#ef4444'} opacity="0.15" rx="3" />
+                <text x={(85 + r1SvgX) / 2} y="194" text-anchor="middle" font-size="13" font-weight="bold" fill={qIneqOp.includes('>') ? '#16a34a' : '#dc2626'}>+</text>
+                <text x={(85 + r1SvgX) / 2} y="222" text-anchor="middle" font-size="8" opacity="0.65" font-family="monospace">(-∞, {qIneqRoots.r1})</text>
 
-              <!-- Active Test Point -->
-              {@const testSvgX = 200 + qIneqTestX * 30}
-              <circle cx={testSvgX} cy="100" r="8" fill="#eab308" stroke="#ffffff" stroke-width="2" class="animate-bounce" />
+                <!-- Zone 2: (r1, r2) -> Product is (-) -->
+                <rect x={r1SvgX} y="174" width={Math.max(0, r2SvgX - r1SvgX)} height="32" fill={qIneqOp.includes('<') ? '#22c55e' : '#ef4444'} opacity="0.15" rx="3" />
+                <text x={(r1SvgX + r2SvgX) / 2} y="194" text-anchor="middle" font-size="13" font-weight="bold" fill={qIneqOp.includes('<') ? '#16a34a' : '#dc2626'}>−</text>
+                <text x={(r1SvgX + r2SvgX) / 2} y="222" text-anchor="middle" font-size="8" opacity="0.65" font-family="monospace">({qIneqRoots.r1}, {qIneqRoots.r2})</text>
+
+                <!-- Zone 3: (r2, +inf) -> Product is (+) -->
+                <rect x={r2SvgX} y="174" width={Math.max(0, 515 - r2SvgX)} height="32" fill={qIneqOp.includes('>') ? '#22c55e' : '#ef4444'} opacity="0.15" rx="3" />
+                <text x={(r2SvgX + 515) / 2} y="194" text-anchor="middle" font-size="13" font-weight="bold" fill={qIneqOp.includes('>') ? '#16a34a' : '#dc2626'}>+</text>
+                <text x={(r2SvgX + 515) / 2} y="222" text-anchor="middle" font-size="8" opacity="0.65" font-family="monospace">({qIneqRoots.r2}, ∞)</text>
+
+                <!-- Root ticks on product line -->
+                <line x1={r1SvgX} y1="170" x2={r1SvgX} y2="208" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="2 2" />
+                <line x1={r2SvgX} y1="170" x2={r2SvgX} y2="208" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="2 2" />
+
+                <!-- Root circles (solid if inclusive <= / >=, hollow if strict < / >) -->
+                {#if qIneqOp === '<=' || qIneqOp === '>='}
+                  <circle cx={r1SvgX} cy="190" r="5" fill="#3b82f6" stroke="#ffffff" stroke-width="1.5" />
+                  <circle cx={r2SvgX} cy="190" r="5" fill="#3b82f6" stroke="#ffffff" stroke-width="1.5" />
+                {:else}
+                  <circle cx={r1SvgX} cy="190" r="5" fill="#ffffff" stroke="#3b82f6" stroke-width="2" />
+                  <circle cx={r2SvgX} cy="190" r="5" fill="#ffffff" stroke="#3b82f6" stroke-width="2" />
+                {/if}
+              {:else}
+                <!-- Equal roots (r1 == r2) -->
+                <rect x="85" y="174" width="430" height="32" fill={qIneqOp.includes('>') || qIneqOp === '>=' ? '#22c55e' : '#ef4444'} opacity="0.15" rx="3" />
+                <text x="300" y="194" text-anchor="middle" font-size="13" font-weight="bold" fill={qIneqOp.includes('>') || qIneqOp === '>=' ? '#16a34a' : '#dc2626'}>+</text>
+                {#if qIneqOp === '<=' || qIneqOp === '>='}
+                  <circle cx={r1SvgX} cy="190" r="5" fill="#3b82f6" stroke="#ffffff" stroke-width="1.5" />
+                {:else}
+                  <circle cx={r1SvgX} cy="190" r="5" fill="#ffffff" stroke="#3b82f6" stroke-width="2" />
+                {/if}
+              {/if}
+
+              <!-- Test point on Chart 3 (static circle, no bounce) -->
+              <circle cx={testSvgX} cy="190" r="6" fill="#eab308" stroke="#ffffff" stroke-width="2" />
+              <text x={testSvgX} y="178" text-anchor="middle" font-size="9" font-weight="bold" fill={testProd > 0 ? '#16a34a' : testProd < 0 ? '#dc2626' : '#ca8a04'} font-family="monospace">
+                {testProd > 0 ? '(+)' : testProd < 0 ? '(−)' : '0'}
+              </text>
             </svg>
           </div>
         </div>

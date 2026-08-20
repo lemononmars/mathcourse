@@ -9,9 +9,9 @@ source: "tex/lecture04.tex"
 ## Example of a composite system
 
 
-:::figure function_intro_factori — A chain of factories [](https://www.youtube.com/watch?v=v-tFGm9nCV0&ab_channel=StarGardenGames
+:::youtube v-tFGm9nCV0 | (Source)
 :::
-)
+
 
 
 
@@ -85,6 +85,8 @@ In other words, we replace $x$ in $f(x)$ by another function $g(x)$.
 \end{scope}
 \end{tikzpicture}
 :::
+
+
 *Creating the composite function $g \circ f$ using set diagram*
 
 
@@ -133,6 +135,8 @@ In other words, we replace $x$ in $f(x)$ by another function $g(x)$.
 \end{scope}
 \end{tikzpicture}
 :::
+
+
 *Creating a composite function as a chain of machines*
 
 
@@ -167,15 +171,15 @@ Let $f(x) = x+1$ and $g(x) = x^2$. Find the followings.
 :::solution
 
 \begin{eqnarray*}
-(f \circ g)(x) \pa &=& f(**g(x)**) \pa= **g(x)** + 1 = x^2 + 1 
-\pa
-(g \circ f)(x) \pa &=& g(**f(x)**) \pa = **f(x)**^2 \pa = **(x+1)**^2
+(f \circ g)(x) &=& f(**g(x)**) = **g(x)** + 1 = x^2 + 1 
+
+(g \circ f)(x) &=& g(**f(x)**) = **f(x)**^2 = **(x+1)**^2
 \end{eqnarray*}
 Notice that $(f \circ g)(x) \neq (g \circ f)(x)$, so the order matters.
 \begin{eqnarray*}
-(f \circ f)(x) \pa &=& f(**f(x)**) \pa = **f(x)** + 1 \pa = **x+1** + 1 \pa = x+2 
-\pa
-(g \circ g)(x) \pa &=& g(**g(x)**) \pa = (**g(x)**)^2 \pa = (**x^2**)^2 \pa = x^4
+(f \circ f)(x) &=& f(**f(x)**) = **f(x)** + 1 = **x+1** + 1 = x+2 
+
+(g \circ g)(x) &=& g(**g(x)**) = (**g(x)**)^2 = (**x^2**)^2 = x^4
 \end{eqnarray*}
 
 :::
@@ -205,16 +209,17 @@ Let $f(x) = \sqrt{x} $ and $g(x) = 2x+1$. Find the followings.
 :::solution
 
 \begin{eqnarray*}
-(f \circ g)(x) \pa &=& f(**g(x)**) \pa= \sqrt{**g(x)**} \pa = \sqrt{2x+1} 
-\pa
-(f \circ g)(4) \pa &=& \sqrt{2(4) + 1 } \pa = \sqrt{9} \pa = 3 
-\pa
-(g \circ f)(x) \pa &=& g(**f(x)**) \pa = 2**f(x)**+1 \pa = 2\green{\sqrt{x}} + 1 
-\pa
-(g \circ f)(4) \pa &=& 2\sqrt{4} + 1 \pa = 2(2) + 1 \pa = 5
+(f \circ g)(x) &=& f(**g(x)**) = \sqrt{**g(x)**} = \sqrt{2x+1} 
+
+(f \circ g)(4) &=& \sqrt{2(4) + 1 } = \sqrt{9} = 3 
+
+(g \circ f)(x) &=& g(**f(x)**) = 2**f(x)**+1 = 2\green{\sqrt{x}} + 1 
+
+(g \circ f)(4) &=& 2\sqrt{4} + 1 = 2(2) + 1 = 5
 \end{eqnarray*}
 
 :::
 
 
 
+\iffalse

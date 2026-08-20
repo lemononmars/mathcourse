@@ -14,11 +14,21 @@ Here are some basic vector operations using the new notation.
 
 
 
-- Scalar multiplication: $k\cvec{v_1}{v_2} = \cvec{kv_1}{kv_2}$
+- Scalar multiplication: $k\begin{pmatrix}v_1
+v_2\end{pmatrix} = \begin{pmatrix}kv_1
+kv_2\end{pmatrix}$
 
-- Addition: $\cvec{v_1}{v_2} + \cvec{u_1}{u_2} = \cvec{v_1 + u_1}{v_2 + u_2}$
+- Addition: $\begin{pmatrix}v_1
+v_2\end{pmatrix} + \begin{pmatrix}u_1
+u_2\end{pmatrix} = \begin{pmatrix}v_1 + u_1
+v_2 + u_2\end{pmatrix}$
 
-- Subtraction: $\cvec{v_1}{v_2} - \cvec{u_1}{u_2} = \cvec{v_1}{v_2} + \cvec{-u_1}{-u_2} = \cvec{v_1 - u_1}{v_2 - u_2}$
+- Subtraction: $\begin{pmatrix}v_1
+v_2\end{pmatrix} - \begin{pmatrix}u_1
+u_2\end{pmatrix} = \begin{pmatrix}v_1
+v_2\end{pmatrix} + \begin{pmatrix}-u_1
+-u_2\end{pmatrix} = \begin{pmatrix}v_1 - u_1
+v_2 - u_2\end{pmatrix}$
 
 
 :::
@@ -41,6 +51,8 @@ Here are some basic vector operations using the new notation.
 \draw[->, very thick, teal] (0,0) -- (4,3) node [fill = white, fill opacity = 0.8, pos=0.5, above, scale = 2] {$\vec{u} + \vec{v}$};
 \end{tikzpicture}
 :::
+
+
 *Vector addition $\vec{u* + \vec{v}$}
 
 
@@ -60,6 +72,8 @@ Here are some basic vector operations using the new notation.
 \draw[->, very thick, teal] (0,0) -- (2,-1) node [fill = white, fill opacity = 0.8, pos=0.5, below left, scale = 2] {$\vec{u} - \vec{v}$};
 \end{tikzpicture}
 :::
+
+
 *Vector subtraction $\vec{u* - \vec{v}$}
 
 
@@ -81,6 +95,8 @@ Here are some basic vector operations using the new notation.
 \draw[->, very thick, orange] (0,-0.2) -- (-6,-3.2) node [fill = white, fill opacity = 0.8, pos=0.83, below, scale = 2] {$-3\vec{u}$};
 \end{tikzpicture}
 :::
+
+
 *Scalar multiplication $k\vec{u*$ when $k$ is $-3,-2,-1,1,2$ and $3$}
 
 
@@ -100,7 +116,8 @@ Here are some basic vector operations using the new notation.
 
 - Identity: $1\vec{v} = \vec{v}$
 
-- Define $\vec{0} = \cvec{0}{0}$. Then, we have 
+- Define $\vec{0} = \begin{pmatrix}0
+0\end{pmatrix}$. Then, we have 
 \[\vec{v} + \vec{0} = \vec{0} + \vec{v} = \vec{v}\]
 
 - $(-1)\vec{v} = -\vec{v}$
@@ -125,7 +142,8 @@ Since a vector, drawn as an arrow, has length, then we can compute it using Pyth
 
 :::definition
 
-The **norm** (or length) of a vector $\vec{v} = \cvec{a}{b}$ is 
+The **norm** (or length) of a vector $\vec{v} = \begin{pmatrix}a
+b\end{pmatrix}$ is 
 \begin{equation}
 \| \vec{v} \| = \sqrt{a^2+b^2}
 \end{equation}
@@ -149,6 +167,8 @@ The **norm** (or length) of a vector $\vec{v} = \cvec{a}{b}$ is
 \draw[<->, dashed, red] (4,0) -- (4,3) node [right, pos=0.5] {$v_2$};
 \end{tikzpicture}
 :::
+
+
 *Norm of vector $\vec{u*$}
 
 
@@ -180,6 +200,8 @@ A unit vector $\vec{u}$ is a vector with norm equal to 1 ($\| \vec{u} \| = 1$).
 }
 \end{tikzpicture}
 :::
+
+
 *Unit vectors *
 
 
@@ -193,10 +215,13 @@ A unit vector $\vec{u}$ is a vector with norm equal to 1 ($\| \vec{u} \| = 1$).
 :::definition
 
 The standard unit vectors in two dimension $**i**$ and $**j**$ are defined as
-\[ **i** = \cvec{1}{0}, \qquad **j** = \cvec{0}{1}.\]
+\[ **i** = \begin{pmatrix}1
+0\end{pmatrix}, \qquad **j** = \begin{pmatrix}0
+1\end{pmatrix}.\]
 
 
-Given a vector $\vec{v} = \cvec{v_1}{v_2}$, we can rewrite $\vec{v}$ as 
+Given a vector $\vec{v} = \begin{pmatrix}v_1
+v_2\end{pmatrix}$, we can rewrite $\vec{v}$ as 
 \[ \vec{v} = v_1 **i** + v_2 **j**\]
 
 :::
@@ -211,14 +236,16 @@ Given a vector $\vec{v} = \cvec{v_1}{v_2}$, we can rewrite $\vec{v}$ as
 \draw[very thin,color=gray] (-0.5,-0.5) grid (2.5,2.5);
 \draw[<->, thick] (-0.5,0) -- (3,0) node[right] {$x$};
 \draw[<->, thick] (0,-0.5) -- (0,3) node[above] {$y$};
-\draw[->, blue, very thick] (0,0) -- (1,0) node[below right, scale = 1.5, fill = white, fill opacity = 0.8] {$\vec{i} = \bv{1,0}$};
-\draw[->, red, very thick] (0,0) -- (0,1) node[right, scale = 1.5, fill = white, fill opacity = 0.8] {$\vec{j} = \bv{0,1}$};
+\draw[->, blue, very thick] (0,0) -- (1,0) node[below right, scale = 1.5, fill = white, fill opacity = 0.8] {$\vec{i} = \left\langle 1,0 \right\rangle$};
+\draw[->, red, very thick] (0,0) -- (0,1) node[right, scale = 1.5, fill = white, fill opacity = 0.8] {$\vec{j} = \left\langle 0,1 \right\rangle$};
 \end{tikzpicture}
 :::
+
+
 *The unit vectors $\vec{i*$ and $\vec{j}$}
 
 We can express $\vec{v}$ as a linear combination of $\vec{i}$ and $\vec{j}$ as
-\[ \vec{v} = \bv{v_1, v_2} \pa = \vv{v_1}{+ v_2}\]
+\[ \vec{v} = \left\langle v_1, v_2 \right\rangle = \leftlangle v_1, + v_2 \rightangle\]
 
 
 
@@ -229,13 +256,13 @@ We can express $\vec{v}$ as a linear combination of $\vec{i}$ and $\vec{j}$ as
 Express the following vectors as a linear combination of $\vec{i}$ and $\vec{j}$ 
 
 
-- $\bv{3,4} $
+- $\left\langle 3,4 \right\rangle $
 
-- $\bv{-2,2}$
+- $\left\langle -2,2 \right\rangle$
 
-- $\bv{0,-2}$
+- $\left\langle 0,-2 \right\rangle$
 
-- $\bv{5,0}$
+- $\left\langle 5,0 \right\rangle$
 
 
 :::
@@ -245,13 +272,13 @@ Express the following vectors as a linear combination of $\vec{i}$ and $\vec{j}$
 
 
 
-- $\bv{3,4} \pa = \vv{3}{+4}$ \pa
+- $\left\langle 3,4 \right\rangle = \leftlangle 3, +4 \rightangle$ 
 
-- $\bv{-2,2} \pa= \vv{-2}{+2}$ \pa
+- $\left\langle -2,2 \right\rangle = \leftlangle -2, +2 \rightangle$ 
 
-- $\bv{0,-2} \pa= -2 \bvec{j}$ \pa
+- $\left\langle 0,-2 \right\rangle = -2 \mathbf{j}$ 
 
-- $\bv{5,0} \pa = 5\bvec{i}$
+- $\left\langle 5,0 \right\rangle = 5\mathbf{i}$
 
 
 :::
@@ -266,13 +293,13 @@ Express the following vectors as a linear combination of $\vec{i}$ and $\vec{j}$
 Express the following vectors as $\langle , \rangle$
 
 
-- $\vv{2}{-5} $
+- $\leftlangle 2, -5 \rightangle $
 
-- $\vv{-1}{2}$
+- $\leftlangle -1, 2 \rightangle$
 
-- $3\bvec{i}$
+- $3\mathbf{i}$
 
-- $-4\bvec{j}$
+- $-4\mathbf{j}$
 
 
 :::
@@ -282,13 +309,13 @@ Express the following vectors as $\langle , \rangle$
 
 
 
-- $\vv{2}{-5} \pa = \bv{2,-5}$ \pa
+- $\leftlangle 2, -5 \rightangle = \left\langle 2,-5 \right\rangle$ 
 
-- $\vv{-1}{2} \pa = \bv{-1,2}$ \pa
+- $\leftlangle -1, 2 \rightangle = \left\langle -1,2 \right\rangle$ 
 
-- $3\bvec{i} \pa = 3\bvec{i} + 0\bvec{j} \pa = \bv{3,0}$ \pa
+- $3\mathbf{i} = 3\mathbf{i} + 0\mathbf{j} = \left\langle 3,0 \right\rangle$ 
 
-- $-4\bvec{j} = 0\bvec{i} - 4\bvec{j} = \bv{0,-4}$
+- $-4\mathbf{j} = 0\mathbf{i} - 4\mathbf{j} = \left\langle 0,-4 \right\rangle$
 
 
 :::

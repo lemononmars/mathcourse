@@ -29,15 +29,17 @@ $A \cap B$ ($A$ intersects $B$) is the set of elements that are in both $A$ and 
   \fill[green, fill opacity = 0.3] (2,0)  circle (15mm);
 \end{tikzpicture}
 :::
+
+
 *Venn diagram for $A$ intersects $B$*
 
 
 
 
 
-:::figure venn_diagram_cecilia — \href{https://www.youtube.com/watch?v=p0quM2txQwg
+:::youtube p0quM2txQwg | Vein's diagram done... right?
 :::
-}
+
 
 
 
@@ -64,6 +66,8 @@ $A \cup B$ ($A$ unions $B$) is the set of elements that are in either $A$ or $B$
 \fill[green, fill opacity = 0.3] (2,0)  circle (15mm) (0,0)  circle (15mm);
 \end{tikzpicture}
 :::
+
+
 *Venn diagram for $A$ unions $B$*
 
 
@@ -108,6 +112,8 @@ Let $A = \{1,2,4\}$ and $B = \{2,3,5\}$. Find
   \node at (3, -0.75) {5};
 \end{tikzpicture}
 :::
+
+
 *Venn diagram for example \theexample*
 
 
@@ -174,6 +180,8 @@ First we need to write out the elements of $A$ and $B$
 \node at (0.2, 3.2) {$U$};
 \end{tikzpicture}
 :::
+
+
 *Venn diagram for set complement $A^{c*$}
 
 
@@ -224,4 +232,6 @@ Let $A = \{1,2,3\}$.
 \node at (0,0) {\textbf{Game}};
 \end{tikzpicture}
 :::
+
+
 *The MDA Framework: Mechanics $\cap$ Dynamics $\cap$ Aesthetics form the core player experience.*

@@ -303,25 +303,3 @@ For the specific event we are looking for, we need to use the rule of product to
 Because all these processes are independent, the number of lotteries with the specified pattern is $10 \times 9 \times 6 = 540$. Hence, the probability of such pattern to appear is $P(A) = \frac{|A|}{|S|} = \frac{540}{1,000,000} = 0.00054$
 
 :::
-
-
-
-\iffalse
-
-
-:::exercise
-
-Suppose you choose a random number from the set $\{1,2,3,4,5,6,7,8,9,10\}$.
-
-
-- What is the probability that the number is divisible by 4?
-
-- What is the probability that the number is greater than or equals to 5?
-
-- What is the probability that the number is a square?
-
-
-:::
-
-
-\fi

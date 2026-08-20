@@ -8,7 +8,7 @@ source: "tex/lecture05.tex"
 
 ## Choose one
 
-You are offered two boxes, $A$ and $B$, each with a label that has a function. \pa You have to choose one box, in which on day $x$, you will receive that amount of money. Which box would you choose? \pa
+You are offered two boxes, $A$ and $B$, each with a label that has a function. You have to choose one box, in which on day $x$, you will receive that amount of money. Which box would you choose? 
 
 
 :::remark
@@ -17,15 +17,15 @@ You are offered two boxes, $A$ and $B$, each with a label that has a function. \
 A &\text{vs.}& B 
 
 10 \times x & \text{vs.}& x^2 
-\pa
+
 10,000 \times x & \text{vs.}& x^2 
-\pa
+
 10,000 \times x^2 & \text{vs.}& x^3 
-\pa
+
 x^2 & \text{vs.}& 2^x 
-\pa
+
 x^{1,000,000} & \text{vs.}& 2^x 
-\pa
+
 \end{eqnarray*}
 
 :::
@@ -50,7 +50,7 @@ x^{1,000,000} & \text{vs.}& 2^x
 ## Basic definition
 
 Let $a$ be a positive integer and $M$ be a real number. Recall that we define the multiplication $a \times M$ to be
-\[ a \times M = \underbrace{M + M + M + \cdots + M}_{a \text{ times}}\] \pa
+\[ a \times M = \underbrace{M + M + M + \cdots + M}_{a \text{ times}}\] 
 
 :::definition
 
@@ -58,7 +58,7 @@ Let $a$ be a positive integer and $M$ be a real number. We define the exponent $
 \[ M^a = \underbrace{M \times M \times M \times \cdots \times M}_{a \text{ times}}.\] 
 
 :::
-\pa
+
 
 
 

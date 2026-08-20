@@ -44,7 +44,7 @@ In other words, $\log_b x$ is asking: $b$ to the what equals $x$?
 We read this logarithmic expression as ``The logarithm with base $b$ of $x$ equals $y$.
 
 :::
-\pa
+
 
 
 
@@ -78,6 +78,8 @@ We read this logarithmic expression as ``The logarithm with base $b$ of $x$ equa
 \end{scope}
 \end{tikzpicture}
 :::
+
+
 *Illustration for the notation of logarithm.*
 
 
@@ -136,9 +138,9 @@ Use definition of logarithm function to find the following.
 
 
 
-- $\log_3 9$ is the number $x$ such that $3^x = 9$, so $\log_3 9 = x = 2.$ \pa
+- $\log_3 9$ is the number $x$ such that $3^x = 9$, so $\log_3 9 = x = 2.$ 
 
-- $\log_4 64$ is the number $x$ such that $4^x = 64$ so $\log_4 64 = x = 3.$ \pa
+- $\log_4 64$ is the number $x$ such that $4^x = 64$ so $\log_4 64 = x = 3.$ 
 
 - $\log_2 \frac{1}{32}$ is the number $x$ such that $2^x = \frac{1}{32} = 2^{-5}$ so $\log_2 \frac{1}{32} = x = -5$.
 
@@ -168,7 +170,7 @@ Use definition of logarithm function to find the following.
 Is it necessary that $b > 0$? Why can't we have $b=1$?
 \tcbsubtitle{Answer}
 Yes. Because $f(x) = \log_{-2} x$ is not a function. There is no solution for some value of $x$. For instance, $(-2)^y = 8$ has no solution. 
-\medskip
+
 
 To avoid the issue, we require the base $b$ to be positive. Then, the function would be defined for all positive real numbers $x$.
 

@@ -145,18 +145,18 @@ This is useful when you want to change from one base to another.
 
 :::property
 
-Let $M,N, a$ be positive real numbers. \pa
+Let $M,N, a$ be positive real numbers. 
 
 
 - $\log_a 1 = 0$
 
-- $\log_a (M \times N) = \log_a M + \log_a N$ \pa
+- $\log_a (M \times N) = \log_a M + \log_a N$ 
 
-- $\log_a \left( \frac{M}{N}\right) = \log_a M - \log_a N$ \pa
+- $\log_a \left( \frac{M}{N}\right) = \log_a M - \log_a N$ 
 
-- $\log_a (M^b) = b \times \log_a M$, for any real number $b$ \pa
+- $\log_a (M^b) = b \times \log_a M$, for any real number $b$ 
 
-- $ \log_a M = \frac{\log_b M}{\log_b a}$, for any positive real number $b$ \pa
+- $ \log_a M = \frac{\log_b M}{\log_b a}$, for any positive real number $b$ 
 
 
 :::

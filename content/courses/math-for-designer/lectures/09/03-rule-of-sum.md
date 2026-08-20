@@ -46,7 +46,7 @@ A student is shopping for a new computer. He is deciding among 3 desktop compute
 
 :::solution
 
-Since the student only needs on computer, we can add the number of desktop computers and laptop computers to find the total number of options. \pa Hence, the number of computer options is 7.
+Since the student only needs on computer, we can add the number of desktop computers and laptop computers to find the total number of options. Hence, the number of computer options is 7.
 
 :::
 
@@ -65,9 +65,9 @@ If you flip 6 coins and count the number of heads, then how many possible outcom
 
 :::solution
 
-Since we only consider the number of heads, we do not care which coin lands on heads. \pa The possible outcomes are: 0 heads, 1 head, 2 heads, 3 heads, 4 heads, 5 heads, and 6 heads. \pa
+Since we only consider the number of heads, we do not care which coin lands on heads. The possible outcomes are: 0 heads, 1 head, 2 heads, 3 heads, 4 heads, 5 heads, and 6 heads. 
 
-\medskip
+
 Thus, there are 7 possible outcomes.
 
 :::
@@ -87,10 +87,10 @@ How many integers between 1 and 100 are divisible by 11 or 13?
 :::solution
 
 The number of integers between 1 and 100 that are divisible by 11 is 9 (namely, $11, 22, 33, \ldots, 99$.)
-\bigskip
+
 
 The number of integers between 1 and 100 that are divisible by 13 is 7 (namely, $13, 26, 39, \ldots, 91$.)
-\bigskip
+
 
 Since integers between 1 and 100 cannot both be divisible by 11 and 13 at the same time, these two conditions cannot both happen. Thus, the number of integers satisfying **either** condition is $9 + 7 = 16$.
 

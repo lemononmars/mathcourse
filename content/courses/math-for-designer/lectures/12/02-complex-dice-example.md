@@ -67,6 +67,9 @@ Create a table listing all possible outcomes.
 \end{scope}
 \end{tikzpicture}
 :::
+
+
+
 We see that the attacker wins 15 out of 36 equally likely outcomes. Therefore, the expected win is $E(X) = \tfrac{15}{36} = \tfrac{5}{12}$ for each combat.
 
 :::
@@ -128,6 +131,11 @@ First, let $X$ be the maximum of two dice for the attacker and determine $P(X)$ 
 \end{scope}
 \end{tikzpicture}
 :::
+
+
+
+
+
 :::
 
 
@@ -166,6 +174,10 @@ Then, we can apply these values to the previous table, but replacing a single wi
 \end{scope}
 \end{tikzpicture}
 :::
+
+
+
+
 :::
 
 
@@ -202,6 +214,10 @@ Here is how to interpret the table: in the first row when the defender rolls a 1
 \end{scope}
 \end{tikzpicture}
 :::
+
+
+
+
 Since the defender's values from 1-6 are equally likely, the expected number can be obtained by adding all red numbers. 
 \[ E(X) = \frac{1}{6}\left(\frac{35}{36} + \frac{32}{36} + \frac{27}{36} + \frac{20}{36} + \frac{11}{36}\right) = \frac{125}{216}.\]
 

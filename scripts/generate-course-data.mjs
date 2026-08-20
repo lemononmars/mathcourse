@@ -181,16 +181,25 @@ function titleOf(source, fallback) {
   return cleanTitle(source.match(/\\title\{([^}]*)\}/)?.[1] || fallback).replace(/Lecture\s*\d+\s*[:–-]?\s*/i, "");
 }
 
+function stripIfFalse(source) {
+  let cleaned = source;
+  while (/\\iffalse[\s\S]*?\\fi/.test(cleaned)) {
+    cleaned = cleaned.replace(/\\iffalse[\s\S]*?\\fi/g, "");
+  }
+  return cleaned;
+}
+
 function lectureSections(source) {
-  const markers = [...source.matchAll(/\\section(?:\[([^\]]*)\])?\{([^}]*)\}/g)];
+  const cleanSource = stripIfFalse(source);
+  const markers = [...cleanSource.matchAll(/\\section(?:\[([^\]]*)\])?\{([^}]*)\}/g)];
   return markers.map((marker, index) => {
-    const start = marker.index + marker[0].length; const end = markers[index + 1]?.index ?? source.length;
-    return { title: cleanTitle(marker[2]), preferredSlug: cleanTitle(marker[1] || marker[2]), content: texToMarkdown(source.slice(start, end)) };
+    const start = marker.index + marker[0].length; const end = markers[index + 1]?.index ?? cleanSource.length;
+    return { title: cleanTitle(marker[2]), preferredSlug: cleanTitle(marker[1] || marker[2]), content: texToMarkdown(cleanSource.slice(start, end)) };
   }).filter((section) => section.content.length > 40);
 }
 
 function worksheetQuestions(source) {
-  const cleaned = source.replace(/(?<!\\)%.*$/gm, "")
+  const cleaned = stripIfFalse(source).replace(/(?<!\\)%.*$/gm, "")
     .replace(/\\begin\{(?:enumerate|tasks|itemize)\}(?:\[[^\]]*\])?(?:\([^)]*\))?/g, "")
     .replace(/\\end\{(?:enumerate|tasks|itemize)\}/g, "");
   return cleaned.split(/\\(?:item|task)\b(?:\[[^\]]*\])?/).slice(1).map(texToMarkdown).filter((q) => q.length > 10).slice(0, 14);

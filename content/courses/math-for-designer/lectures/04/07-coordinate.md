@@ -47,6 +47,8 @@ In geometry, a **coordinate system** is a system that uses one or more numbers, 
 node [above right] {$(\red{3},\blue{2})$};
 \end{tikzpicture}
 :::
+
+
 *A coordinate of $(x,y) = (3,2)$*
 
 

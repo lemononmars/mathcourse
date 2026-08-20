@@ -32,7 +32,12 @@ $\mathbb{Q} = \left\{ \frac{a}{b} \, | \, a,b \in \mathbb{Z} \text{ and } b \neq
 
 \[ \mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q}\]
 
-:::tikz A diagram for natural numbers, integers, and rational numbers
+
+
+
+
+
+:::tikz TikZ diagram
 \begin{tikzpicture}[scale = 0.8, every node/.style = {scale = 2}]
 \filldraw[fill = teal!20, draw = black] (0,0) circle (4cm);
 \filldraw[fill = blue!20, draw = black] (-1,0) circle (2.5cm);
@@ -47,6 +52,13 @@ $\mathbb{Q} = \left\{ \frac{a}{b} \, | \, a,b \in \mathbb{Z} \text{ and } b \neq
 \node at (2.5,-1.5) {$-1.2$};
 \end{tikzpicture}
 :::
+
+
+*A diagram for natural numbers, integers, and rational numbers*
+
+
+
+
 
 ## What is out there?
 
@@ -70,30 +82,40 @@ $\mathbb{R} = \mathbb{Q} \cup \tilde{\mathbb{Q}}$
 
 
 
-## What is in $\tilde{\mathbb{Q}}$?
+## What is in \tilde{\mathbb{Q
+}$?}
 Short answer: pretty much everything. 
 
 Long answer: 
 
 :::note
 
-Algebraic numbers (roots of polynomials) 
 
-\[ \sqrt{2}, \sqrt[3]{1.34}, \frac{1 - \sqrt{5}}{2} \]
 
-Computable numbers 
+- Algebraic numbers (roots of polynomials) 
+\[ \sqrt{2}, \sqrt[3]{1.34}, \frac{1 - \sqrt{5}}{2}\] 
 
-$$e, \pi$$
+- Computable numbers 
+\[ e, \pi, \text{Euler's constant} , \ldots\] 
+
+- Non-computable numbers 
+\[ \text{Chaitin's constant} \]
+
 
 :::
 
 
-:::figureimg /graphics/non_computer_number_simba_meme.jpg | Shadowy dark place, indeed
+
+
+
+:::figure non_computer_number_simba_meme — Shadowy dark place, indeed
 :::
 
 
 
-## The Set of Complex Numbers
+
+
+## I NEED MORE!!!
 
 
 :::note The set of complex numbers
@@ -113,8 +135,9 @@ No! That's all the numbers!
 ## ALL THE NUMBERS
 
 
-:::youtube 5TkIe60y2GI | All the Numbers — Numberphile
+:::youtube 5TkIe60y2GI | All the Numbers - Numberphile
 :::
+
 
 
 
@@ -127,7 +150,7 @@ No! That's all the numbers!
 
 
 
-:::figureimg /graphics/l03i01.png | Fibonacci numbers
+:::figure l03i01.png
 :::
 
 
@@ -136,12 +159,41 @@ No! That's all the numbers!
 
 
 
-:::figureimg /graphics/l03i02.png | Triangular numbers
+:::figure l03i02.png
 :::
 
 
-:::figureimg /graphics/l03i03.png | Triangular numbers
+:::figure l03i03.png
 :::
+
+
+
+
+
+
+
+## Exotic ``numbers''
+
+$\{ a+bi+cj+dk\, | \, a,b,c,d \in \mathbb{R} \}$ - Quaternion 
+\begin{eqnarray*}
+i^2 &=& j^2 = k^2 = -1 
+
+ij &=& k 
+
+jk &=& i 
+
+ki &=& j
+\end{eqnarray*} 
+Useful in defining 3D rotations 
+
+
+
+:::figure l03i04.png
+:::
+
+
+
+
 
 
 :::exercise

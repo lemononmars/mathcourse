@@ -9,10 +9,15 @@ source: "tex/lecture08.tex"
 ## Dilation (Scaling)
 
 Previously, if we only use vector notations, we have
-\[ \cvec{x}{y} \to k \cvec{x}{y} = \cvec{kx}{ky},\]
+\[ \begin{pmatrix}x
+y\end{pmatrix} \to k \begin{pmatrix}x
+y\end{pmatrix} = \begin{pmatrix}kx
+ky\end{pmatrix},\]
 which scales both coordinates by the same factor. Now, with matrix, we can scale each coordinate separately.
-\[ \cvec{x}{y} \to \begin{pmatrix} **k** & 0 
-0 & **l** \end{pmatrix} \cvec{x}{y} = \cvec{**k**x}{**l**y}\]
+\[ \begin{pmatrix}x
+y\end{pmatrix} \to \begin{pmatrix} **k** & 0 
+0 & **l** \end{pmatrix} \begin{pmatrix}x
+y\end{pmatrix} = \cvec{**k**x}{**l**y}\]
 $**k**$ and $**l**$ are real numbers.
 
 
@@ -21,11 +26,17 @@ $**k**$ and $**l**$ are real numbers.
 ## Reflection over the x-axis and y-axis
 
 A reflection over the x-axis is
-\[ \cvec{x}{y} \to \begin{pmatrix} 1 & 0 
-0 & -1 \end{pmatrix} \cvec{x}{y} = \cvec{x}{-y}\]
+\[ \begin{pmatrix}x
+y\end{pmatrix} \to \begin{pmatrix} 1 & 0 
+0 & -1 \end{pmatrix} \begin{pmatrix}x
+y\end{pmatrix} = \begin{pmatrix}x
+-y\end{pmatrix}\]
 A reflection over the y-axis is
-\[ \cvec{x}{y} \to \begin{pmatrix} -1 & 0 
-0 & 1 \end{pmatrix} \cvec{x}{y} = \cvec{-x}{y}\]
+\[ \begin{pmatrix}x
+y\end{pmatrix} \to \begin{pmatrix} -1 & 0 
+0 & 1 \end{pmatrix} \begin{pmatrix}x
+y\end{pmatrix} = \begin{pmatrix}-x
+y\end{pmatrix}\]
 
 
 
@@ -50,11 +61,15 @@ A reflection over the y-axis is
 ## Rotation
 
 A counterclockwise rotation around the origin by $\theta$ degree can be computed by
-\[ \cvec{x}{y} \to \begin{pmatrix} \cos\theta & -\sin\theta 
-\sin\theta & \cos\theta \end{pmatrix} \cvec{x}{y}.\]
+\[ \begin{pmatrix}x
+y\end{pmatrix} \to \begin{pmatrix} \cos\theta & -\sin\theta 
+\sin\theta & \cos\theta \end{pmatrix} \begin{pmatrix}x
+y\end{pmatrix}.\]
 A clockwise rotation around the origin by $\theta$ degree can be computed by
-\[ \cvec{x}{y} \to \begin{pmatrix} \cos(-\theta) & -\sin(-\theta) 
-\sin(-\theta) & \cos(-\theta) \end{pmatrix} \cvec{x}{y}.\]
+\[ \begin{pmatrix}x
+y\end{pmatrix} \to \begin{pmatrix} \cos(-\theta) & -\sin(-\theta) 
+\sin(-\theta) & \cos(-\theta) \end{pmatrix} \begin{pmatrix}x
+y\end{pmatrix}.\]
 
 
 
@@ -65,7 +80,8 @@ A clockwise rotation around the origin by $\theta$ degree can be computed by
 Rotate the following vectors counterclockwise around the origin by $60^{\circ}$
 
 
-- $\cvec{2}{0}$ 
+- $\begin{pmatrix}2
+0\end{pmatrix}$ 
 
 - $\cvec{2\sqrt{3}}{2}$
 
@@ -90,9 +106,10 @@ Hence, the result of rotation is the same as the matrix-vector multiplication.
 
 
 
-:::figure 2dtransform_rotation_ex1 — Rotating $\cvec{2
+:::figure 2dtransform_rotation_ex1 — Rotating $\begin{pmatrix
 :::
-$ by $60^{\circ}$}{}
+2
+0\end{pmatrix}$ by $60^{\circ}$}{}
 
 
 
@@ -109,7 +126,8 @@ $ by $60^{\circ}$}{}
 (continued)
 \begin{eq*} 
 \begin{pmatrix} \red{\frac{1}{2}} & \green{-\frac{\sqrt{3}}{2}} 
-\red{\frac{\sqrt{3}}{2}}& \green{\frac{1}{2}} \end{pmatrix} \cvec{2}{0} &=&2 \cvec{\red{\frac{1}{2}} }{\red{\frac{\sqrt{3}}{2}}} + 0 \cvec{\green{-\frac{\sqrt{3}}{2}}}{\green{\frac{1}{2}}} 
+\red{\frac{\sqrt{3}}{2}}& \green{\frac{1}{2}} \end{pmatrix} \begin{pmatrix}2
+0\end{pmatrix} &=&2 \cvec{\red{\frac{1}{2}} }{\red{\frac{\sqrt{3}}{2}}} + 0 \cvec{\green{-\frac{\sqrt{3}}{2}}}{\green{\frac{1}{2}}} 
 
 &=& \cvec{2 \times \frac{1}{2}}{2 \times \frac{\sqrt{3}}{2}} + \cvec{0 \times -\frac{\sqrt{3}}{2}}{0 \times \frac{1}{2}} 
 
@@ -132,7 +150,8 @@ $ by $60^{\circ}$}{}
 
 &=& \cvec{\sqrt{3}}{3} + \cvec{-\sqrt{3}}{1} 
 
-&=& \cvec{\sqrt{3}-\sqrt{3}}{3+1} = \cvec{0}{4}
+&=& \cvec{\sqrt{3}-\sqrt{3}}{3+1} = \begin{pmatrix}0
+4\end{pmatrix}
 \end{eq*}
 
 :::
@@ -156,16 +175,20 @@ $ by $60^{\circ}$}{}
 
 
 
-\[ \cvec{x}{y} \to \begin{pmatrix} 1 & **k** 
-0 & 1 \end{pmatrix} \cvec{x}{y} = \cvec{x+**k**y}{y},\]
+\[ \begin{pmatrix}x
+y\end{pmatrix} \to \begin{pmatrix} 1 & **k** 
+0 & 1 \end{pmatrix} \begin{pmatrix}x
+y\end{pmatrix} = \cvec{x+**k**y}{y},\]
 
 :::figure 2dtransform_shear_xaxis — Shearing parallel to the x-axis 
 :::
 
 
 
-\[ \cvec{x}{y} \to \begin{pmatrix} 1 & 0 
-**k** & 1 \end{pmatrix} \cvec{x}{y} = \cvec{x}{**k**x+y}\]
+\[ \begin{pmatrix}x
+y\end{pmatrix} \to \begin{pmatrix} 1 & 0 
+**k** & 1 \end{pmatrix} \begin{pmatrix}x
+y\end{pmatrix} = \cvec{x}{**k**x+y}\]
 
 :::figure 2dtransform_shear_yaxis — Shearing parallel to the y-axis
 :::
@@ -180,8 +203,10 @@ $ by $60^{\circ}$}{}
 
 In general, given a matrix $\begin{pmatrix} a & b 
 c & d \end{pmatrix}$, the transformation
-\[ \cvec{x}{y} \to \begin{pmatrix} a & b 
-c & d \end{pmatrix} \cvec{x}{y} \]
+\[ \begin{pmatrix}x
+y\end{pmatrix} \to \begin{pmatrix} a & b 
+c & d \end{pmatrix} \begin{pmatrix}x
+y\end{pmatrix} \]
 is a linear transformation. Some of them are not common, and thus do not have a name.
 
 

@@ -112,6 +112,8 @@ A **set** is a collection of distinct objects (called **elements** or **members*
 \node[teal] at (45: 2.4)  {\textbf{$A$}};
 \end{tikzpicture}
 :::
+
+
 *Diagram representation of $A$*
 
 
@@ -149,6 +151,10 @@ Shows **all theoretically possible** overlaps, regardless of whether a region co
 \filldraw[fill=blue!20, draw=black] (1.6,0) circle (1.1cm) node {$B$};
 \end{tikzpicture}
 :::
+
+
+
+
 **Venn Diagram** (Standard overlap template)
 
 
@@ -161,6 +167,14 @@ Shows **all theoretically possible** overlaps, regardless of whether a region co
 \node at (0,0) {\tiny $\emptyset$};
 \end{tikzpicture}
 :::
+
+
+
+
+
+
+
+
 :::figure set_venn — Can you guess what each set is?
 :::
 
@@ -271,6 +285,11 @@ Some textbooks use the notation $A \subset B$ to imply that $A \subseteq B$ but 
 \node at (0.5,0) {$A$};
 \end{tikzpicture}
 :::
+
+
+
+
+
 **Disjoint Sets ($A \cap B = \emptyset$)**
 
 
@@ -281,6 +300,14 @@ Some textbooks use the notation $A \subset B$ to imply that $A \subseteq B$ but 
 \filldraw[fill = blue!30!white] (1.3,0) circle (11mm) node {$B$};
 \end{tikzpicture}
 :::
+
+
+
+
+
+
+
+
 :::example
 
 For each pair of sets, determine whether they have subset ($\subseteq$), equality ($=$), disjoint ($\cap = \emptyset$), or neither relationship.

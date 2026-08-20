@@ -15,9 +15,9 @@ Algebra of functions is the operation of the functions, specifically the arithem
 Let $f$ and $g$ be functions and $c$ be a constant.
 
 
-- $(cf) (x) = c ( f(x) )$ \pa
+- $(cf) (x) = c ( f(x) )$ 
 
-- $(f+g) (x) = f(x) + g(x)$ \pa
+- $(f+g) (x) = f(x) + g(x)$ 
 
 - $(f-g) (x) = f(x) - g(x)$
 
@@ -53,21 +53,21 @@ Let $f(x) = x+1$ and $g(x) = 2x-3$. Find the followings.
 :::solution
 
 \begin{eqnarray*}
-(2f)(x) \pa &=& 2f(x) 
-\pa
-&=& 2(x+1) \pa = 2x+2 
-\pa
-(f+g)(x) \pa &=& (x+1) + (2x-3) 
-\pa
-&=& (x+2x) + (1-3) \pa = 3x-2 
-\pa
-(f-g)(x) \pa &=& (x+1) - (2x-3) 
-\pa
-&=& (x+1) + (-2x + 3) \pa = (x-2x) + (1+3) \pa = -x+4 
-\pa
+(2f)(x) &=& 2f(x) 
+
+&=& 2(x+1) = 2x+2 
+
+(f+g)(x) &=& (x+1) + (2x-3) 
+
+&=& (x+2x) + (1-3) = 3x-2 
+
+(f-g)(x) &=& (x+1) - (2x-3) 
+
+&=& (x+1) + (-2x + 3) = (x-2x) + (1+3) = -x+4 
+
 (3f + 2g) &=& 3f(x) + 2g(x) 
-\pa
-&=& 3(x+1) + 2(2x-3) \pa = (3x+3) + (4x-6) \pa = (7x-3)
+
+&=& 3(x+1) + 2(2x-3) = (3x+3) + (4x-6) = (7x-3)
 \end{eqnarray*}
 
 :::
@@ -93,10 +93,10 @@ Let $f(x) = x+1$ and $g(x) = 2x-3$. Find the followings.
 :::solution
 
 \begin{eqnarray*}
-(fg)(x) \pa &=& (x+1)(2x-3) 
-\pa
-&=& 2x^2-3x+2x-3 \pa = 2x^2-x-3
-\pa
+(fg)(x) &=& (x+1)(2x-3) 
+
+&=& 2x^2-3x+2x-3 = 2x^2-x-3
+
 \left(\frac{f}{g} \right)(x)&=& \frac{x+1}{2x-3}
 \end{eqnarray*}
 We can leave the fraction as is.

@@ -1,0 +1,180 @@
+{
+  "compiler": "node-tikzjax@1.0.5",
+  "diagrams": {
+    "content/courses/prob-and-stat-for-gad/lectures/02/01-location.md": [
+      {
+        "hash": "fbb61ea1767bd8c0",
+        "url": "/generated/tikz/fbb61ea1767bd8c0.svg",
+        "caption": "Quartiles divide the data into quarters."
+      }
+    ],
+    "content/courses/prob-and-stat-for-gad/lectures/02/05-set-definition.md": [
+      {
+        "hash": "296e4602d42b2b85",
+        "url": "/generated/tikz/296e4602d42b2b85.svg",
+        "caption": "A diagram of a set $A = \\{-2,0,1,3\\"
+      },
+      {
+        "hash": "8ed47ee09cbf4876",
+        "url": "/generated/tikz/8ed47ee09cbf4876.svg",
+        "caption": "Venn diagram for $A \\subseteq B$"
+      }
+    ],
+    "content/courses/prob-and-stat-for-gad/lectures/02/06-set-operation.md": [
+      {
+        "hash": "8bb1645effe6fb79",
+        "url": "/generated/tikz/8bb1645effe6fb79.svg",
+        "caption": "Venn diagram for the union of $A$ and $B$"
+      },
+      {
+        "hash": "cce9b146283403b7",
+        "url": "/generated/tikz/cce9b146283403b7.svg",
+        "caption": "Venn diagram for the intersection of $A$ and $B$"
+      },
+      {
+        "hash": "f302ddee52425a11",
+        "url": "/generated/tikz/f302ddee52425a11.svg",
+        "caption": "Venn diagram for $A \\setminus B$"
+      },
+      {
+        "hash": "afb07e75deaaa4f7",
+        "url": "/generated/tikz/afb07e75deaaa4f7.svg",
+        "caption": "Set Operations: Minus"
+      },
+      {
+        "hash": "94097041eabf6418",
+        "url": "/generated/tikz/94097041eabf6418.svg",
+        "caption": "Venn diagram for $A$ and $A^{c"
+      }
+    ],
+    "content/courses/prob-and-stat-for-gad/lectures/03/05-permutation.md": [
+      {
+        "hash": "6b7a259c626f8170",
+        "url": "/generated/tikz/6b7a259c626f8170.svg",
+        "caption": "A permutation of 3 distinct objects."
+      },
+      {
+        "hash": "e68c1622b8e2454e",
+        "url": "/generated/tikz/e68c1622b8e2454e.svg",
+        "caption": "Permutation"
+      },
+      {
+        "hash": "88e26335886911f6",
+        "url": "/generated/tikz/88e26335886911f6.svg",
+        "caption": "Permutation"
+      },
+      {
+        "hash": "e519c17198cfede8",
+        "url": "/generated/tikz/e519c17198cfede8.svg",
+        "caption": "Counting the number of permutations of $r$ objects from $n$ distinct objects."
+      }
+    ],
+    "content/courses/prob-and-stat-for-gad/lectures/03/06-combination.md": [
+      {
+        "hash": "a45cd6d50c172dac",
+        "url": "/generated/tikz/a45cd6d50c172dac.svg",
+        "caption": "A combination of 2 objects from 3 distinct objects."
+      }
+    ],
+    "content/courses/prob-and-stat-for-gad/lectures/04/02-repetition.md": [
+      {
+        "hash": "c7f092822ea3ed31",
+        "url": "/generated/tikz/c7f092822ea3ed31.svg",
+        "caption": "The tree diagram of permutations of the word ``BEE''"
+      }
+    ],
+    "content/courses/prob-and-stat-for-gad/lectures/04/03-others.md": [
+      {
+        "hash": "504cee9e73812ab3",
+        "url": "/generated/tikz/504cee9e73812ab3.svg",
+        "caption": "Venn diagram for inclusion-exclusion principle"
+      }
+    ],
+    "content/courses/prob-and-stat-for-gad/lectures/05/02-terminology-for-events.md": [
+      {
+        "hash": "8bb1645effe6fb79",
+        "url": "/generated/tikz/8bb1645effe6fb79.svg",
+        "caption": "Venn diagram for $A$ or $B$"
+      },
+      {
+        "hash": "cce9b146283403b7",
+        "url": "/generated/tikz/cce9b146283403b7.svg",
+        "caption": "Venn diagram for $A$ and $B$"
+      },
+      {
+        "hash": "5d41611d451c4ea4",
+        "url": "/generated/tikz/5d41611d451c4ea4.svg",
+        "caption": "Venn diagram for $A$ and $B$"
+      },
+      {
+        "hash": "1ff15b14bd953fe5",
+        "url": "/generated/tikz/1ff15b14bd953fe5.svg",
+        "caption": "$A$ are $B$ mutually exclusive."
+      },
+      {
+        "hash": "68113f062707c9ec",
+        "url": "/generated/tikz/68113f062707c9ec.svg",
+        "caption": "Venn diagram for $A,B,C$ and $D$"
+      }
+    ],
+    "content/courses/prob-and-stat-for-gad/lectures/05/03-conditional-probability.md": [
+      {
+        "hash": "c064f06baf859401",
+        "url": "/generated/tikz/c064f06baf859401.svg",
+        "caption": "Comparing $P(A)$ to $P(A|B)$"
+      },
+      {
+        "hash": "52af2a098ee9bb22",
+        "url": "/generated/tikz/52af2a098ee9bb22.svg",
+        "caption": "Venn diagrams to compute $P(A|B)$ and $P(B|A)$"
+      }
+    ],
+    "content/courses/prob-and-stat-for-gad/lectures/07/01-definition.md": [
+      {
+        "hash": "75389fece0bbbd8e",
+        "url": "/generated/tikz/75389fece0bbbd8e.svg",
+        "caption": "Representation of PDF as a bar chart"
+      },
+      {
+        "hash": "956001a461151ef7",
+        "url": "/generated/tikz/956001a461151ef7.svg",
+        "caption": "{The bar graph of a uniform distribution function"
+      }
+    ],
+    "content/courses/prob-and-stat-for-gad/lectures/07/02-binomial.md": [
+      {
+        "hash": "15a4bba285c8b1ab",
+        "url": "/generated/tikz/15a4bba285c8b1ab.svg",
+        "caption": "Motivation"
+      }
+    ],
+    "content/courses/prob-and-stat-for-gad/lectures/07/03-geometric.md": [
+      {
+        "hash": "5a8925fb7f431748",
+        "url": "/generated/tikz/5a8925fb7f431748.svg",
+        "caption": "Motivation"
+      }
+    ],
+    "content/courses/prob-and-stat-for-gad/lectures/07/04-hypergeometric.md": [
+      {
+        "hash": "f5318790bb517f54",
+        "url": "/generated/tikz/f5318790bb517f54.svg",
+        "caption": "Hypergeometric Distribution"
+      }
+    ],
+    "content/courses/prob-and-stat-for-gad/lectures/08/01-continuous.md": [
+      {
+        "hash": "e0c6e4e7614dcbf6",
+        "url": "/generated/tikz/e0c6e4e7614dcbf6.svg",
+        "caption": "Test Your Statistical Intuition"
+      }
+    ],
+    "content/courses/prob-and-stat-for-gad/lectures/09/03-z-score.md": [
+      {
+        "hash": "cc218d6cb1f61f84",
+        "url": "/generated/tikz/cc218d6cb1f61f84.svg",
+        "caption": "Comparing $x$ and its z-score."
+      }
+    ]
+  }
+}

@@ -9,9 +9,9 @@ source: "tex/lecture06.tex"
 ## There is a Numberphile Clip for That!
 
 
-:::figure numberphile_trig — [](https://www.youtube.com/watch?v=snHKEpCv0Hk
+:::youtube snHKEpCv0Hk | Beautiful Trigonometry - Numberphile
 :::
-)
+
 
 
 
@@ -43,8 +43,8 @@ where the domain is the set of all real numbers $\mathbb{R}$ and the range is th
 These functions are commonly used to model physical behaviors such as
 
 
-- Wave \pa
+- Wave 
 
-- Oscillation \pa 
+- Oscillation 
 
-- Periodic \pa
+- Periodic

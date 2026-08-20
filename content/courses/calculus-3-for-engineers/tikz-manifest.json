@@ -1,0 +1,289 @@
+{
+  "compiler": "node-tikzjax@1.0.5",
+  "diagrams": {
+    "content/courses/calculus-3-for-engineers/lectures/04/01-การประมาณค่าปริพันธ์.md": [
+      {
+        "hash": "d4b4a5b613cc6f30",
+        "url": "/generated/tikz/d4b4a5b613cc6f30.svg",
+        "caption": "การประมาณพื้นที่ใต้เส้นโค้งด้วยผลบวกรีมัน"
+      }
+    ],
+    "content/courses/calculus-3-for-engineers/lectures/04/02-หลักเกณฑ์เชิงสี่เหลี่ยมคางหมู.md": [
+      {
+        "hash": "cc202e5fda0b10cb",
+        "url": "/generated/tikz/cc202e5fda0b10cb.svg",
+        "caption": "การประมาณค่าปริพันธ์ด้วยหลักเกณฑ์สี่เหลี่ยมคางหมู"
+      },
+      {
+        "hash": "7ef68f32961d25ac",
+        "url": "/generated/tikz/7ef68f32961d25ac.svg",
+        "caption": "การแบ่งช่วงย่อยของหลักเกณฑ์เชิงสี่เหลี่ยมคางหมู"
+      },
+      {
+        "hash": "0b7acc884fcc0dc9",
+        "url": "/generated/tikz/0b7acc884fcc0dc9.svg",
+        "caption": "การสร้างและคำนวณพื้นที่สี่เหลี่ยมคางหมู"
+      },
+      {
+        "hash": "bf50c7478e233f44",
+        "url": "/generated/tikz/bf50c7478e233f44.svg",
+        "caption": "ปริพันธ์หลักเกณฑ์สี่เหลี่ยมคางหมูของฟังก์ชัน $y = x^2$"
+      },
+      {
+        "hash": "f3b805bb3475f8eb",
+        "url": "/generated/tikz/f3b805bb3475f8eb.svg",
+        "caption": "ปริพันธ์หลักเกณฑ์สี่เหลี่ยมคางหมูของฟังก์ชัน $y = \\frac{1"
+      }
+    ],
+    "content/courses/calculus-3-for-engineers/lectures/04/03-หลักเกณฑ์ซิมป์สัน.md": [
+      {
+        "hash": "54f3a9dac6b3e9c6",
+        "url": "/generated/tikz/54f3a9dac6b3e9c6.svg",
+        "caption": "การสร้างเส้นโค้งโดยหลักเกณฑ์ของซิมป์สัน"
+      },
+      {
+        "hash": "9cfd7ed9411677d4",
+        "url": "/generated/tikz/9cfd7ed9411677d4.svg",
+        "caption": "การแบ่งช่วงย่อยของหลักเกณฑ์ซิมป์สัน"
+      },
+      {
+        "hash": "3d69e2388c1a3ae7",
+        "url": "/generated/tikz/3d69e2388c1a3ae7.svg",
+        "caption": "การสร้างเส้นโค้งโดยหลักเกณฑ์ของซิมป์สัน"
+      },
+      {
+        "hash": "a1fcd647498fc3c9",
+        "url": "/generated/tikz/a1fcd647498fc3c9.svg",
+        "caption": "การแบ่งช่วงย่อยโดยหลักเกณฑ์ซิมป์สันของฟังก์ชัน $y = x^2$"
+      },
+      {
+        "hash": "eb43e8f8cb346408",
+        "url": "/generated/tikz/eb43e8f8cb346408.svg",
+        "caption": "การแบ่งช่วงย่อยโดยหลักเกณฑ์ซิมป์สันของฟังก์ชัน $y = \\frac{1"
+      }
+    ],
+    "content/courses/calculus-3-for-engineers/lectures/05/01-ทบทวน.md": [
+      {
+        "hash": "39b17e1ef77fd3d3",
+        "url": "/generated/tikz/39b17e1ef77fd3d3.svg",
+        "caption": "การสร้างและคำนวณพื้นที่สี่เหลี่ยมคางหมู"
+      },
+      {
+        "hash": "3d69e2388c1a3ae7",
+        "url": "/generated/tikz/3d69e2388c1a3ae7.svg",
+        "caption": "การสร้างเส้นโค้งโดยหลักเกณฑ์ของซิมป์สัน"
+      }
+    ],
+    "content/courses/calculus-3-for-engineers/lectures/05/02-ค่าคลาดเคลื่อนของหลักเกณฑ์สี่เหลี่ยมคางหมู.md": [
+      {
+        "hash": "3712237c9a758246",
+        "url": "/generated/tikz/3712237c9a758246.svg",
+        "caption": "ความสัมพันธ์ระหว่างค่าประมาณ $T_n$, ค่าคลาดเคลื่อน $E$, ค่าขอบเขตความคลาดเคลื่อน $\\varepsilon$, และค่าจริง $T$"
+      },
+      {
+        "hash": "cf6fef8bd07e1d22",
+        "url": "/generated/tikz/cf6fef8bd07e1d22.svg",
+        "caption": "ความสัมพันธ์ระหว่างค่าประมาณ ค่าขอบเขตความคลาดเคลื่อน และค่าจริง"
+      },
+      {
+        "hash": "f892c19185e98ef2",
+        "url": "/generated/tikz/f892c19185e98ef2.svg",
+        "caption": "ความสัมพันธ์ระหว่างค่าประมาณ ค่าขอบเขตความคลาดเคลื่อน และค่าจริง"
+      }
+    ],
+    "content/courses/calculus-3-for-engineers/lectures/06/01-นิยามปริพันธ์ไม่ตรงแบบ.md": [
+      {
+        "hash": "a32d33483c315faf",
+        "url": "/generated/tikz/a32d33483c315faf.svg",
+        "caption": "เขาของกาเบรียล (Gabriel's Horn)"
+      }
+    ],
+    "content/courses/calculus-3-for-engineers/lectures/06/02-ปริพันธ์บนช่วง-a.md": [
+      {
+        "hash": "b56d3692e45036fa",
+        "url": "/generated/tikz/b56d3692e45036fa.svg",
+        "caption": "ปริพันธ์ $\\int_1^{+\\infty"
+      },
+      {
+        "hash": "128e8dcc6aba21a9",
+        "url": "/generated/tikz/128e8dcc6aba21a9.svg",
+        "caption": "ปริพันธ์ $\\int_1^t \\frac{1"
+      }
+    ],
+    "content/courses/calculus-3-for-engineers/lectures/06/03-ปริพันธ์บนช่วง-b.md": [
+      {
+        "hash": "d1cccce6500a03a3",
+        "url": "/generated/tikz/d1cccce6500a03a3.svg",
+        "caption": "ปริพันธ์ $\\int_{-\\infty"
+      },
+      {
+        "hash": "9708c1aa9ac74ce6",
+        "url": "/generated/tikz/9708c1aa9ac74ce6.svg",
+        "caption": "ปริพันธ์ $\\int_{t"
+      }
+    ],
+    "content/courses/calculus-3-for-engineers/lectures/06/04-ปริพันธ์บนช่วง.md": [
+      {
+        "hash": "6563321234715f69",
+        "url": "/generated/tikz/6563321234715f69.svg",
+        "caption": "ปริพันธ์ $\\int_{-\\infty"
+      },
+      {
+        "hash": "019080d790343d89",
+        "url": "/generated/tikz/019080d790343d89.svg",
+        "caption": "การแบ่งปริพันธ์เป็น $\\int_{-\\infty"
+      }
+    ],
+    "content/courses/calculus-3-for-engineers/lectures/07/01-ชนิดที่สอง.md": [
+      {
+        "hash": "cd70e829948df729",
+        "url": "/generated/tikz/cd70e829948df729.svg",
+        "caption": "ปริพันธ์ $\\int_{0"
+      },
+      {
+        "hash": "ba882d1d05d4205f",
+        "url": "/generated/tikz/ba882d1d05d4205f.svg",
+        "caption": "ปริพันธ์ $\\int_{t"
+      }
+    ],
+    "content/courses/calculus-3-for-engineers/lectures/07/02-ลิมิตบน.md": [
+      {
+        "hash": "974c90e96db81129",
+        "url": "/generated/tikz/974c90e96db81129.svg",
+        "caption": "ปริพันธ์ $\\int_{-1"
+      },
+      {
+        "hash": "c27cded9a2fe47ce",
+        "url": "/generated/tikz/c27cded9a2fe47ce.svg",
+        "caption": "ปริพันธ์ $\\int_{-1"
+      }
+    ],
+    "content/courses/calculus-3-for-engineers/lectures/07/03-ลิมิตล่าง.md": [
+      {
+        "hash": "6bf31112eabe9bbf",
+        "url": "/generated/tikz/6bf31112eabe9bbf.svg",
+        "caption": "ปริพันธ์ $\\int_{0"
+      },
+      {
+        "hash": "b7c1a4f542d8d950",
+        "url": "/generated/tikz/b7c1a4f542d8d950.svg",
+        "caption": "ปริพันธ์ $\\int_{t"
+      }
+    ],
+    "content/courses/calculus-3-for-engineers/lectures/07/04-ลิมิตบนและล่าง.md": [
+      {
+        "hash": "b7be69512af73dec",
+        "url": "/generated/tikz/b7be69512af73dec.svg",
+        "caption": "การแบ่งขอบเขตปริพันธ์ $\\int_{-3"
+      }
+    ],
+    "content/courses/calculus-3-for-engineers/lectures/07/05-ระหว่างลิมิตบนและลิมิตล่าง.md": [
+      {
+        "hash": "ea7d69d1c107a054",
+        "url": "/generated/tikz/ea7d69d1c107a054.svg",
+        "caption": "ปริพันธ์ $\\int_{-1"
+      },
+      {
+        "hash": "7fe784a0971b7c18",
+        "url": "/generated/tikz/7fe784a0971b7c18.svg",
+        "caption": "การแบ่งปริพันธ์ $\\int_{-1"
+      }
+    ],
+    "content/courses/calculus-3-for-engineers/lectures/07/06-ผสม.md": [
+      {
+        "hash": "31329dc2c7c1539d",
+        "url": "/generated/tikz/31329dc2c7c1539d.svg",
+        "caption": "ปริพันธ์ $\\int_{0"
+      },
+      {
+        "hash": "489c53878b1d214d",
+        "url": "/generated/tikz/489c53878b1d214d.svg",
+        "caption": "การแบ่งปริพันธ์ $\\int_{0"
+      }
+    ],
+    "content/courses/calculus-3-for-engineers/lectures/08/01-ทบทวนปริพันธ์.md": [
+      {
+        "hash": "33b1a7e963205e3e",
+        "url": "/generated/tikz/33b1a7e963205e3e.svg",
+        "caption": "พื้นที่ที่มีค่าเท่ากับปริพันธ์ $\\int_a^b f(x) \\, dx$"
+      }
+    ],
+    "content/courses/calculus-3-for-engineers/lectures/08/05-เส้นตรงและวงกลม.md": [
+      {
+        "hash": "0030a193cc900fa9",
+        "url": "/generated/tikz/0030a193cc900fa9.svg",
+        "caption": "สมการเวกเตอร์ของส่วนของเส้นตรง"
+      },
+      {
+        "hash": "2277adc8d7bb3d01",
+        "url": "/generated/tikz/2277adc8d7bb3d01.svg",
+        "caption": "สมการเวกเตอร์ส่วนของวงกลม"
+      }
+    ],
+    "content/courses/calculus-3-for-engineers/lectures/09/02-บนเส้นโค้งเรียบเป็นช่วง-ๆ.md": [
+      {
+        "hash": "ef4821f9a3fff146",
+        "url": "/generated/tikz/ef4821f9a3fff146.svg",
+        "caption": "เส้นโค้ง $C$ สำหรับตัวอย่าง \\theexample"
+      },
+      {
+        "hash": "c7319786e46c7ef3",
+        "url": "/generated/tikz/c7319786e46c7ef3.svg",
+        "caption": "เส้นโค้ง $C$ สำหรับตัวอย่าง \\theexample"
+      }
+    ],
+    "content/courses/calculus-3-for-engineers/lectures/09/03-สนามเวกเตอร์.md": [
+      {
+        "hash": "8968d5ca65102030",
+        "url": "/generated/tikz/8968d5ca65102030.svg",
+        "caption": "กราฟของสนามเวกเตอร์ $\\vec{F"
+      }
+    ],
+    "content/courses/calculus-3-for-engineers/lectures/09/04-บนสนามเวกเตอร์.md": [
+      {
+        "hash": "57087623d39cd5ad",
+        "url": "/generated/tikz/57087623d39cd5ad.svg",
+        "caption": "การคำนวณงานของวัตถุ เมื่อทิศทางของแรงขนานกับทิศทางการเคลื่อนที่"
+      },
+      {
+        "hash": "48653359911d4a59",
+        "url": "/generated/tikz/48653359911d4a59.svg",
+        "caption": "การคำนวณงานของวัตถุ เมื่อทิศทางของแรงไม่ได้ขนานกับทิศทางการเคลื่อนที่"
+      },
+      {
+        "hash": "944bb15c24112d64",
+        "url": "/generated/tikz/944bb15c24112d64.svg",
+        "caption": "การคำนวณงานของวัตถุ เมื่อทิศทางการเคลื่อนที่ไม่เป็นเส้นตรง"
+      }
+    ],
+    "content/courses/calculus-3-for-engineers/lectures/11/04-ลิมิตของลําดับ.md": [
+      {
+        "hash": "fea7c2664a9b81ac",
+        "url": "/generated/tikz/fea7c2664a9b81ac.svg",
+        "caption": "ตัวอย่างกราฟของลำดับ $\\seq{a_n"
+      },
+      {
+        "hash": "3cf086f188e5e5af",
+        "url": "/generated/tikz/3cf086f188e5e5af.svg",
+        "caption": "กราฟแสดงลำดับ $\\{n^k\\"
+      },
+      {
+        "hash": "4c227f912e6cdd5a",
+        "url": "/generated/tikz/4c227f912e6cdd5a.svg",
+        "caption": "กราฟแสดงลำดับ $\\{r^n\\"
+      },
+      {
+        "hash": "6c13f2854d0e7ffd",
+        "url": "/generated/tikz/6c13f2854d0e7ffd.svg",
+        "caption": "กราฟแสดงลำดับ $\\{\\ln n\\"
+      }
+    ],
+    "content/courses/calculus-3-for-engineers/lectures/11/06-ทดสอบลําดับทางเดียว.md": [
+      {
+        "hash": "15cb6c8a178a5d2d",
+        "url": "/generated/tikz/15cb6c8a178a5d2d.svg",
+        "caption": "กราฟแสดงลำดับทางเดียว และขอบเขตจากด้านบนที่มีค่าเท่ากับ $M$"
+      }
+    ]
+  }
+}

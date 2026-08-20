@@ -63,32 +63,29 @@ Which function is a probability distribution function?
 
 :::
 
-\begin{table}
-\begin{tabular}{C|C|C|C}
-x & 1 & 2 & 3 
 
-\hline
-P(x) & 0.1 & 0.3 & 1.2
-\end{tabular} 
-\end{table}
 
-\begin{table}
-\begin{tabular}{C|C|C|C}
-x & 1 & 2 & 3 
+| x | 1 | 2 | 3 |
+| --- | --- | --- | --- |
+| P(x) | 0.1 | 0.3 | 1.2 |
 
-\hline
-P(x) & 0.1 & 0.3 & 0.5
-\end{tabular} 
-\end{table}
 
-\begin{table}
-\begin{tabular}{C|C|C|C}
-x & 1 & 2 & 3 
 
-\hline
-P(x) & 0.2 & 0.5 & 0.3
-\end{tabular} 
-\end{table}
+
+
+| x | 1 | 2 | 3 |
+| --- | --- | --- | --- |
+| P(x) | 0.1 | 0.3 | 0.5 |
+
+
+
+
+
+| x | 1 | 2 | 3 |
+| --- | --- | --- | --- |
+| P(x) | 0.2 | 0.5 | 0.3 |
+
+
 
 
 
@@ -96,33 +93,30 @@ P(x) & 0.2 & 0.5 & 0.3
 ## Exercise
 
 Solution
-\begin{table}
-\begin{tabular}{C|C|C|C}
-x & 1 & 2 & 3 
 
-\hline
-P(x) & 0.1 & 0.3 & **1.2**
-\end{tabular} 
-\end{table}
 
-\begin{table}
-\begin{tabular}{C|C|C|C}
-x & 1 & 2 & 3 
+| x | 1 | 2 | 3 |
+| --- | --- | --- | --- |
+| P(x) | 0.1 | 0.3 | **1.2** |
 
-\hline
-P(x) & 0.1 & 0.3 & 0.5
-\end{tabular} 
-\end{table}
+
+
+
+
+| x | 1 | 2 | 3 |
+| --- | --- | --- | --- |
+| P(x) | 0.1 | 0.3 | 0.5 |
+
+
 \[0.1 + 0.3 + 0.5 = 0.9 **\neq 1**\]
 
-\begin{table}
-\begin{tabular}{C|C|C|C}
-x & 1 & 2 & 3 
 
-\hline
-P(x) & 0.2 & 0.5 & 0.3
-\end{tabular} 
-\end{table}
+
+| x | 1 | 2 | 3 |
+| --- | --- | --- | --- |
+| P(x) | 0.2 | 0.5 | 0.3 |
+
+
 \[0.2 + 0.5 + 0.3 = 1\]
 
 
@@ -139,14 +133,13 @@ It is useful to represent a probability distribution function as a bar chart whe
 
 
 
-\begin{table}
-\begin{tabular}{C|C|C|C}
-x & 0 & 1 & 2 
 
-\hline
-P(x) & \frac{1}{4} & \frac{2}{4} & \frac{1}{4}
-\end{tabular} 
-\end{table}
+
+| x | 0 | 1 | 2 |
+| --- | --- | --- | --- |
+| P(x) | \frac{1}{4} | \frac{2}{4} | \frac{1}{4} |
+
+
 
 
 
@@ -169,6 +162,15 @@ P(x) & \frac{1}{4} & \frac{2}{4} & \frac{1}{4}
 \node[rotate = 90] at (-1, 0.25) {Probability};
 \end{tikzpicture}
 :::
+
+
+
+
+
+
+
+
+
 ## Uniform Distribution
 
 The most basic distribution is a uniform distribution function.

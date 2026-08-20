@@ -37,13 +37,13 @@ This works if all outcomes are *equally likely*. What if they are not?
 
 ## Variable
 
-Here are the familiar **variables**: \pa
+Here are the familiar **variables**: 
 \begin{eq*}
-3x -4 &=& 5 \pa 
+3x -4 &=& 5 
 
-x^2 + y^2 &=& z^2 \pa 
+x^2 + y^2 &=& z^2 
 
-x^n + y^n &=& z^n \pa 
+x^n + y^n &=& z^n 
 
 A \cup B &=& \{1,2,4,5\}
 \end{eq*}
@@ -60,18 +60,18 @@ A \cup B &=& \{1,2,4,5\}
 A **random variable**, often denoted $X$, describes the outcomes of a statistical experiment in words.
 
 :::
-\pa
+
 
 
 :::example
 
 
 
-- Let $X$ = the number of heads you get when you toss 3 fair coins. \pa
+- Let $X$ = the number of heads you get when you toss 3 fair coins. 
 
-- Let $X$ = the sum of dice values when you roll 4 dice. \pa
+- Let $X$ = the sum of dice values when you roll 4 dice. 
 
-- Let $X$ = the temperature in Munich, Germany tomorrow. \pa
+- Let $X$ = the temperature in Munich, Germany tomorrow. 
 
 - Let $X$ = the number of points you get in this class at the end of the semester.
 
@@ -80,36 +80,7 @@ A **random variable**, often denoted $X$, describes the outcomes of a statistica
 
 
 
-\iffalse
 
-
-## Collaborative Exercise: 1/2
-
-
-
-- Every one tosses a coin 10 times and record the number of heads.
-
-- After all members of the class have completed the experiment, announce the result to fill in the table.
-
-- Let $X$ = the number of heads in ten tosses of the coin.
-
-
-
-
-
-## Collaborative Exercise: 2/2
-
-Answer the questions:
-
-
-- Which value(s) of $x$ occurred most frequently?
-
-- If you tossed the coin 1,000 times, what values could $x$ take one? Which value(s) of $x$ do you think would occur most frequently?
-
-- What does the relative frequency column sum to?
-
-
-\fi
 
 
 
@@ -138,40 +109,17 @@ is meaningless.
 
 ## Types of random variables
 
-There are two different types of random variables: \pa
+There are two different types of random variables: 
 
 :::definition
 
 
 
-- **Discrete random variable**: you can list all outcomes separately (e.g. dice, coin, card.) \pa
+- **Discrete random variable**: you can list all outcomes separately (e.g. dice, coin, card.) 
 
-- **Continuous random variable**: you can only list outcomes as an interval (e.g. temperature, height, area. Usually those with decimals.) \pa
-
-
-:::
-
-In this lecture, we are going to focus on *discrete random variables* \pa
-
-
-\iffalse
-
-
-:::exercise
-
-For each random variable, list all possible values of $X$.
-
-
-- $X = $ the number of heads when you toss 10 fair coins.
-
-- $X = $ the difference of two dice.
-
-- $X = $ the number of pairs of cards (cards with the same value) when you draw 5 cards from a single standard deck.
-
-- $X = $ the temperature of water in Celcius.
+- **Continuous random variable**: you can only list outcomes as an interval (e.g. temperature, height, area. Usually those with decimals.) 
 
 
 :::
 
-
-\fi
+In this lecture, we are going to focus on *discrete random variables*

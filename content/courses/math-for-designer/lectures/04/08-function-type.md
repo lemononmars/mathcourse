@@ -59,6 +59,8 @@ when $c$ is a constant. The graph is a horizontal line parallel to the x-axis.
 \end{scope}
 \end{tikzpicture}
 :::
+
+
 *Constant functions $f(x) = c$*
 
 
@@ -96,6 +98,8 @@ where $a,b$ are constants and $a \neq 0$.
 \end{scope}
 \end{tikzpicture}
 :::
+
+
 *Linear functions $f(x) = ax+b$*
 
 
@@ -135,6 +139,8 @@ when $a,b,c$ are constants and $a \neq 0$. The graph is called a **parabola**.
 \end{scope}
 \end{tikzpicture}
 :::
+
+
 *Quadratic functions $f(x) = ax^2+bx+c$*
 
 
@@ -172,6 +178,8 @@ where $a_n, a_{n-1}, \ldots, a_2, a_1, a_0$ are all constants and $n \geq 0$ is 
 \end{scope}
 \end{tikzpicture}
 :::
+
+
 *Polynomials $f(x) = a_nx^n + a_{n-1*x^{n-1} + \cdots + a_1x + a_0$}
 
 
@@ -213,6 +221,8 @@ where $g(x)$ and $h(x)$ are polynomials and $h(x)$ is not the constant function 
 \end{scope}
 \end{tikzpicture}
 :::
+
+
 *Rational functions $f(x) = \tfrac{f(x)*{g(x)}$}
 
 
@@ -254,6 +264,8 @@ Then, an absolute value function is any function that has an absolute value.
 \end{scope}
 \end{tikzpicture}
 :::
+
+
 *Absolute value functions*
 
 
@@ -290,6 +302,8 @@ Then, an absolute value function is any function that has an absolute value.
 \end{scope}
 \end{tikzpicture}
 :::
+
+
 *Step functions*
 
 

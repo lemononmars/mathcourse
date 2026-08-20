@@ -150,6 +150,8 @@ There is a commonly used notation of sets called **interval**. This express the 
 \end{scope}
 \end{tikzpicture}
 :::
+
+
 *Example of interval notations. An open dot (hollow) denotes an open interval, and an opaque dot denotes a closed interval.*
 
 

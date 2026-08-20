@@ -33,6 +33,8 @@ source: "tex/lecture09.tex"
  \shade[ball color=green] (3.5,-1.8) circle (0.4cm) node [white] {3};
 \end{tikzpicture}
 :::
+
+
 *A combination of 2 objects from 3 distinct objects.*
 
 
@@ -70,14 +72,14 @@ How many combinations are there of 3 letters from ABCDE?
 :::solution
 
 The combinations are
-\begin{table}[h!]
 
-\begin{tabular}{CCCCC}
-\{\text{A,B,C}\} & \{\text{A,B,D}\} & \{\text{A,B,E}\} & \{ \text{A,C,D} \} & \{ \text{A,C,E} \} 
 
-\{\text{A,D,E}\} & \{\text{B,C,D}\} & \{\text{B,C,E}\} & \{\text{B,D,E}\} & \{\text{C,D,E}\}
-\end{tabular}
-\end{table}
+
+| \{\text{A,B,C}\} | \{\text{A,B,D}\} | \{\text{A,B,E}\} | \{ \text{A,C,D} \} | \{ \text{A,C,E} \} |
+| --- | --- | --- | --- | --- |
+| \{\text{A,D,E}\} | \{\text{B,C,D}\} | \{\text{B,C,E}\} | \{\text{B,D,E}\} | \{\text{C,D,E}\} |
+
+
 Hence, there are 10 combinations.
 
 :::
@@ -108,8 +110,8 @@ How many different flush hands are there in the standard 5-card poker?
 
 :::solution
 
-We first choose which suit $\clubsuit, \vardiamondsuit, \spadesuit, \varheartsuit$ to form, in which there are 4 ways. Then, we choose 5 out of 13 possible values, in which there are $\ch{13}{5} = \frac{13 \times 12 \times 11 \times 10 \times 9}{5 \times 4 \times 3 \times 2 \times 1} = 1287$ ways. Since choosing a suit and choosing card values are two arrangements, we use the rule of product to get
-\[ \ch{13}{5} \times 4 = 5148\]
+We first choose which suit $\clubsuit, \vardiamondsuit, \spadesuit, \varheartsuit$ to form, in which there are 4 ways. Then, we choose 5 out of 13 possible values, in which there are $\binom{13}{5} = \frac{13 \times 12 \times 11 \times 10 \times 9}{5 \times 4 \times 3 \times 2 \times 1} = 1287$ ways. Since choosing a suit and choosing card values are two arrangements, we use the rule of product to get
+\[ \binom{13}{5} \times 4 = 5148\]
 
 :::
 
@@ -124,13 +126,13 @@ We first choose which suit $\clubsuit, \vardiamondsuit, \spadesuit, \varheartsui
 
 
 
-- $\ch{n}{0} = \ch{n}{n} = 1$. 
+- $\binom{n}{0} = \binom{n}{n} = 1$. 
 :::slide
 This explains that there is only one way to choose nothing. There is also only one way to choose everything.
 :::
 
 
-- $\ch{n}{1} = n$. 
+- $\binom{n}{1} = n$. 
 :::slide
 A combination of 1 object is the same as selecting 1 object.
 :::
@@ -152,10 +154,10 @@ A combination of 1 object is the same as selecting 1 object.
 
 
 
-- $\ch{n}{k} = \ch{n}{n-k}$. 
+- $\binom{n}{k} = \binom{n}{n-k}$. 
 :::slide
 This can be proved numerically 
-\[ \ch{n}{k} = \frac{n!}{k! (n-k)!} = \frac{n!}{(n-k)! (n- (n-k))!} = \ch{n}{n-k}.\]
+\[ \binom{n}{k} = \frac{n!}{k! (n-k)!} = \frac{n!}{(n-k)! (n- (n-k))!} = \binom{n}{n-k}.\]
 or, better yet, combinatorially. If there are $n$ distinct objects, then the number of ways to choose $k$ objects is the same as the number of ways to discard $n-k$ objects.
 :::
 

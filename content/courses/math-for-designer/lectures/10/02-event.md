@@ -31,6 +31,8 @@ source: "tex/lecture10.tex"
 \fill[green, fill opacity = 0.3] (2,0)  circle (15mm) (0,0)  circle (15mm);
 \end{tikzpicture}
 :::
+
+
 *Venn diagram for $A$ or $B$*
 
 
@@ -63,6 +65,8 @@ source: "tex/lecture10.tex"
   \fill[green, fill opacity = 0.3] (2,0)  circle (15mm);
 \end{tikzpicture}
 :::
+
+
 *Venn diagram for $A$ and $B$*
 
 
@@ -115,6 +119,8 @@ This gives us the following Venn diagram.
   \node at (1.25, -2.5) {2};
 \end{tikzpicture}
 :::
+
+
 *Venn diagram for $A$ and $B$*
 
 
@@ -166,6 +172,8 @@ In terms of sets, we have
   \filldraw[fill=green, fill opacity = 0.3] (4.5,0)  circle (20mm);
   \end{tikzpicture}
 :::
+
+
 *$A$ are $B$ mutually exclusive.*
 
 
@@ -264,28 +272,6 @@ D &=& \{14, 25, 36, 41, 52, 63\}
 \node at (3.5, -2.5) {$21, 23, 24, \ldots, 65$};
 \end{tikzpicture}
 :::
+
+
 *Venn diagram for $A,B,C$ and $D$*
-
-
-
-\iffalse
-
-
-:::exercise
-
-Suppose we roll two fair dice. Find all pairs of events below that are mutually exclusive.
-
-
-- $A$ = both dice have the same value
-
-- $B$ = first dice is 2
-
-- $C$ = the sum of both dice is 9
-
-- $D$ = the difference of both dice is 4
-
-
-:::
-
-
-\fi

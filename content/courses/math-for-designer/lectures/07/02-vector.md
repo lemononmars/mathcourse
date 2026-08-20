@@ -38,7 +38,8 @@ A **vector** is a specific quantity drawn as a line segment with an arrowhead at
 :::definition
 
 A vector $\vec{v}$, denoted by $\vec{v} = \langle v_1, v_2 \rangle$, can be expressed as a **column vector**
-\begin{equation} \vec{v} = \cvec{v_1}{v_2} \end{equation}
+\begin{equation} \vec{v} = \begin{pmatrix}v_1
+v_2\end{pmatrix} \end{equation}
 
 :::
 
@@ -54,7 +55,8 @@ A vector $\vec{v}$, denoted by $\vec{v} = \langle v_1, v_2 \rangle$, can be expr
 Given initial point $P$ and terminal point $Q$, a vector can be represented as $\overrightarrow{PQ}$. The arrowhead on top is what indicates that it is not just a line, but a directed line segment.
 
 
-Given an initial point of $ (0,0)$ and terminal point $ (a,b)$, a vector may be represented as $\cvec{a}{b}$.
+Given an initial point of $ (0,0)$ and terminal point $ (a,b)$, a vector may be represented as $\begin{pmatrix}a
+b\end{pmatrix}$.
 
 :::
 
@@ -88,9 +90,13 @@ Find the position vector of the following vectors.
 
 
 
-- $\vec{v} = \cvec{6-2}{4-3} = \cvec{4}{1}$
+- $\vec{v} = \begin{pmatrix}6-2
+4-3\end{pmatrix} = \begin{pmatrix}4
+1\end{pmatrix}$
 
-- $\vec{v} = \cvec{-1-3}{2-(-4)} = \cvec{-4}{6}$
+- $\vec{v} = \begin{pmatrix}-1-3
+2-(-4)\end{pmatrix} = \begin{pmatrix}-4
+6\end{pmatrix}$
 
 
 :::
@@ -111,7 +117,9 @@ Find the position vector of the following vectors.
 \draw[<->, dashed] (3.2,0) -- (3.2,2) node [pos = 0.5, right] {$\blue{2}$};
 \end{tikzpicture}
 :::
-*Vector $\bv{3,2*$}
+
+
+*Vector $\left\langle 3,2 \right\rangle$*
 
 
 
@@ -131,6 +139,8 @@ Find the position vector of the following vectors.
 \draw[->, very thick, teal] (2,1) -- (3,3) node [fill = white, fill opacity = 0.8, pos=1, above, scale = 2] {$\vec{u}$};
 \end{tikzpicture}
 :::
+
+
 *A vector $\vec{u*$ may start at any point.}
 
 
@@ -150,4 +160,6 @@ Find the position vector of the following vectors.
 \draw[->, dashed, teal] (2.59,-1.41) -- (2.59, 1.59) node [pos = 0.8, right] {3};
 \end{tikzpicture}
 :::
-*A 3-dimentional vector $\bv{4,2,3*$}
+
+
+*A 3-dimentional vector $\left\langle 4,2,3 \right\rangle$*

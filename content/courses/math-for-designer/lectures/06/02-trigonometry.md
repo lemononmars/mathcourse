@@ -54,7 +54,7 @@ source: "tex/lecture06.tex"
 :::
 
 
-\[(x,y) \then (x\cos \theta - y\sin\theta, x \sin\theta + y\cos\theta)\]
+\[(x,y) \longrightarrow (x\cos \theta - y\sin\theta, x \sin\theta + y\cos\theta)\]
 
 
 
@@ -67,9 +67,9 @@ source: "tex/lecture06.tex"
 :::figure l09i02
 :::
 
-\pa
-\[ \frac{AB}{DE} = \frac{AC}{DF} = s_1\] \pa 
-\[ \frac{AB}{BC} = \frac{DE}{EF} = s_2\] \pa
+
+\[ \frac{AB}{DE} = \frac{AC}{DF} = s_1\] 
+\[ \frac{AB}{BC} = \frac{DE}{EF} = s_2\] 
 \[ \frac{AC}{BC} = \frac{DF}{EF} = s_3\]
 
 
@@ -151,6 +151,8 @@ Let $\theta$ be the angel indicated in the figure below. Find $\sin\theta, \cos\
 \node[black] at (0.6,0.2) {$\theta$};
 \end{tikzpicture}
 :::
+
+
 *A triangle for example \theexample*{}
 
 
@@ -197,6 +199,8 @@ Let $\theta$ be the angel indicated in the figure below. Find $\sin\theta, \cos\
 \node[black] at (0.6,0.2) {$\theta$};
 \end{tikzpicture}
 :::
+
+
 *A triangle for example \theexample*{}
 
 
@@ -244,6 +248,8 @@ Let $\Omega$ be the angel indicated in the figure below. Find $\sin\theta, \cos\
 \node[black] at (0.6,0.2) {$\theta$};
 \end{tikzpicture}
 :::
+
+
 *A triangle for example \theexample*{}
 
 
@@ -279,6 +285,7 @@ Thus
 Find $\sin \theta, \cos \theta, \tan \theta$ of the following triangles.
 
 
+- 
 :::tikz TikZ diagram
 \begin{tikzpicture}[scale=0.7]
 \draw (0,0) -- (6,0) node[pos=0.5, below] {12};
@@ -290,6 +297,12 @@ Find $\sin \theta, \cos \theta, \tan \theta$ of the following triangles.
 \node[black] at (1,0.2) {$\theta$};
 \end{tikzpicture}
 :::
+
+
+
+
+
+- 
 :::tikz TikZ diagram
 \begin{tikzpicture}[scale=0.7]
 \draw (0,0) -- (6,0) node[pos=0.5, below] {3};
@@ -301,6 +314,11 @@ Find $\sin \theta, \cos \theta, \tan \theta$ of the following triangles.
 \node[black] at (1.2,0.2) {$\theta$};
 \end{tikzpicture}
 :::
+
+
+
+
+
 :::
 
 
@@ -327,6 +345,8 @@ Find $\sin \theta, \cos \theta, \tan \theta$ of the following triangles.
 \node[black] at (3.8,3.4) {$45^{\circ}$};
 \end{tikzpicture}
 :::
+
+
 *A right triangle with $45^{\circ*$ angles.}{}
 
 \[\sin 45^{\circ} = \cos 45^{\circ} = \frac{1}{\sqrt{2}} = \frac{\sqrt{2}}{2}\]
@@ -354,6 +374,8 @@ Find $\sin \theta, \cos \theta, \tan \theta$ of the following triangles.
 \node[black] at (1.8,2.4) {$30^{\circ}$};
 \end{tikzpicture}
 :::
+
+
 *A right triangle with $30^{\circ*$ and $60^{\circ}$ angle.}{}
 
 \begin{eq*}
@@ -367,22 +389,15 @@ Find $\sin \theta, \cos \theta, \tan \theta$ of the following triangles.
 
 ## Helping Hand
 
-\begin{table}
 
-\begin{tabular}{|C|C|C|C|C|C|}
-\hline
-\theta & 0 & 30 & 45 & 60 & 90 
 
-\hline
-\sin & 0 & \frac{1}{2} & \frac{\sqrt{2}}{2} & \frac{\sqrt{3}}{2} & 1 
 
-\hline
-\cos & 1 & \frac{\sqrt{3}}{2} & \frac{\sqrt{2}}{2} & \frac{1}{2} & 0 
+| \theta | 0 | 30 | 45 | 60 | 90 |
+| --- | --- | --- | --- | --- | --- |
+| \sin | 0 | \frac{1}{2} | \frac{\sqrt{2}}{2} | \frac{\sqrt{3}}{2} | 1 |
+| \cos | 1 | \frac{\sqrt{3}}{2} | \frac{\sqrt{2}}{2} | \frac{1}{2} | 0 |
 
-\hline
-\end{tabular}
-\end{table}
 
-:::figure l09i10 — [](https://www.youtube.com/watch?v=PF2nmCVSUEs&ab_channel=FuseSchool-GlobalEducation
+
+:::youtube PF2nmCVSUEs | Hand Trick
 :::
-)

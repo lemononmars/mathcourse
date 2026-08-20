@@ -16,25 +16,29 @@ source: "tex/lecture06.tex"
 :::
 
 
-\begin{proof}
+
+:::proof
+
 \begin{eqnarray*}
-\sin^2 \theta + \cos^2 \theta \pa &=& \left(\frac{a}{c}\right)^2 + \left(\frac{b}{c}\right)^2 
+\sin^2 \theta + \cos^2 \theta &=& \left(\frac{a}{c}\right)^2 + \left(\frac{b}{c}\right)^2 
 
-\pa &=& \frac{a^2}{c^2} + \frac{b^2}{c^2} 
+&=& \frac{a^2}{c^2} + \frac{b^2}{c^2} 
 
-\pa &=& \frac{a^2 + b^2}{c^2} 
+&=& \frac{a^2 + b^2}{c^2} 
 
-\pa &=& \frac{c^2}{c^2} 
+&=& \frac{c^2}{c^2} 
 
-\pa &=& 1
+&=& 1
 \end{eqnarray*}
-\end{proof}
 
-
-
-:::note
-\[\sin(\alpha + \beta) \neq \sin(\alpha) + \sin(\beta)\]
 :::
+
+
+
+
+\begin{alertblock}{}
+\[\sin(\alpha + \beta) \neq \sin(\alpha) + \sin(\beta)\]
+\end{alertblock}
 
 You can see easily that this is not the case by trying some angles (say $\alpha = \beta = 30$).
 

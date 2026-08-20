@@ -16,7 +16,11 @@ What do you mean when you write the number
 :::
 
 
-## Definition of Base-m Number
+
+
+
+
+## 
 
 
 :::definition
@@ -31,11 +35,14 @@ where $k$ is the number of digits and each $a_k, a_{k-1}, \cdots, a_0$ is an int
 :::example
 
 $(11)_4$ is a base 4 number and $(2021)_5$ is a base 5 number.
-\medskip
+
 
 $(023)_4$ is not a valid number because the leading digit is zero. $(150)_5$ is not a valid number because a base 5 number needs all digits to be less than 5.
 
 :::
+
+
+
 
 
 ## Converting base-m numbers to base 10
@@ -50,40 +57,9 @@ n = a_k \times (m^k) + a_{k-1} \times (m^{k-1}) + \cdots + a_1 \times m + a_0.
 
 :::
 
-:::tikz Positional weights and digit values of a base-m number
-\begin{tikzpicture}[scale=0.85, every node/.style={transform shape}]
-  % Position labels
-  \node[text=gray, font=\small\bfseries] at (-2.2, 1.1) {Position};
-  \node[text=blue!80!black, font=\small\bfseries] at (0, 1.1) {$k$};
-  \node[text=blue!80!black, font=\small\bfseries] at (1.5, 1.1) {$k-1$};
-  \node[text=gray, font=\small] at (2.8, 1.1) {$\cdots$};
-  \node[text=blue!80!black, font=\small\bfseries] at (4, 1.1) {$1$};
-  \node[text=blue!80!black, font=\small\bfseries] at (5.5, 1.1) {$0$};
 
-  % Digits / Values
-  \node[text=gray, font=\small\bfseries] at (-2.2, 0) {Digit Value};
-  \node[draw=blue!60, fill=blue!10, rounded corners, minimum width=0.8cm, minimum height=0.7cm, font=\bfseries] at (0, 0) {$a_k$};
-  \node[draw=blue!60, fill=blue!10, rounded corners, minimum width=0.8cm, minimum height=0.7cm, font=\bfseries] at (1.5, 0) {$a_{k-1}$};
-  \node[font=\large] at (2.8, 0) {$\cdots$};
-  \node[draw=blue!60, fill=blue!10, rounded corners, minimum width=0.8cm, minimum height=0.7cm, font=\bfseries] at (4, 0) {$a_1$};
-  \node[draw=blue!60, fill=blue!10, rounded corners, minimum width=0.8cm, minimum height=0.7cm, font=\bfseries] at (5.5, 0) {$a_0$};
-  \node[font=\bfseries, text=blue!80!black] at (6.3, -0.2) {${}_m$};
 
-  % Weights
-  \node[text=gray, font=\small\bfseries] at (-2.2, -1.1) {Weight};
-  \node[text=teal!80!black, font=\small\bfseries] at (0, -1.1) {$m^k$};
-  \node[text=teal!80!black, font=\small\bfseries] at (1.5, -1.1) {$m^{k-1}$};
-  \node[text=gray, font=\small] at (2.8, -1.1) {$\cdots$};
-  \node[text=teal!80!black, font=\small\bfseries] at (4, -1.1) {$m^1$};
-  \node[text=teal!80!black, font=\small\bfseries] at (5.5, -1.1) {$m^0$};
 
-  % Connecting arrows
-  \draw[->, >=stealth, thick, teal] (0, -0.4) -- (0, -0.85);
-  \draw[->, >=stealth, thick, teal] (1.5, -0.4) -- (1.5, -0.85);
-  \draw[->, >=stealth, thick, teal] (4, -0.4) -- (4, -0.85);
-  \draw[->, >=stealth, thick, teal] (5.5, -0.4) -- (5.5, -0.85);
-\end{tikzpicture}
-:::
 
 
 :::example
@@ -115,6 +91,10 @@ Write the following numbers in base 10
 :::
 
 
+
+
+
+
 ## Digits in base higher than 10
 
 We know that each digit is between $0$ and the base itself. What do we do if we work in base 16?
@@ -129,6 +109,9 @@ If the base is higher than 10, we use English letters.
 
 
 Popular bases are base 12 with digits $0,1,2,\ldots, 9,A,B$ and base 16 with digits $0,1,2,\ldots,9,A,B,C,D,E,F$.
+
+
+
 
 
 :::example
@@ -160,6 +143,9 @@ Write the following numbers in base 10
 :::
 
 
+
+
+
 ## Converting base-10 numbers to any base
 
 
@@ -178,6 +164,10 @@ Let $n$ and $m$ be positive integers ($m > 1$). We can write $n$ in base $m$ usi
 
 
 :::
+
+
+
+
 
 
 :::example
@@ -204,7 +194,12 @@ Now that $q_4 = 0$, we stop and conclude that $13 = (1101)_2$.
 :::
 
 
-:::tikz Division algorithm for finding $13$ in base $2$
+
+
+
+
+
+:::tikz TikZ diagram
 \begin{tikzpicture}
 \node at (0,1) {$m$};
 \node at (1, 1) {$q$};
@@ -221,6 +216,12 @@ Now that $q_4 = 0$, we stop and conclude that $13 = (1101)_2$.
 \draw[->] (3, -4) -- (3,-1) node[right] {$(1101)_2$};
 \end{tikzpicture}
 :::
+
+
+*Division algorithm for finding $13$ in base $2$*
+
+
+
 
 
 :::example
@@ -247,7 +248,12 @@ Now that $q_4 = 0$, we stop and conclude that $78 = (1032)_4$.
 :::
 
 
-:::tikz Division algorithm for finding $78$ in base $4$
+
+
+
+
+
+:::tikz TikZ diagram
 \begin{tikzpicture}
 \node at (0,1) {$m$};
 \node at (1, 1) {$q$};
@@ -264,6 +270,12 @@ Now that $q_4 = 0$, we stop and conclude that $78 = (1032)_4$.
 \draw[->] (3, -4) -- (3,-1) node[right] {$(1032)_4$};
 \end{tikzpicture}
 :::
+
+
+*Division algorithm for finding $78$ in base $4$*
+
+
+
 
 
 :::example
@@ -286,7 +298,13 @@ Now that $q_2 = 0$, we stop and conclude that $175 = (\text{AF})_{16}$.
 :::
 
 
-:::tikz Division algorithm for finding $175$ in base $16$
+
+
+
+
+
+
+:::tikz TikZ diagram
 \begin{tikzpicture}
 \node at (0,1) {$m$};
 \node at (1, 1) {$q$};
@@ -300,9 +318,15 @@ Now that $q_2 = 0$, we stop and conclude that $175 = (\text{AF})_{16}$.
 }
 \node at (1,-2) {0};
 \draw[double] (0.5, -2.4) --+ (1.5,0);
-\draw[->] (3, -2) -- (3,-1) node[right] {$(\text{AF})_{16}$};
+\draw[->] (3, -2) -- (3,-1) node[right] {$(AF)_{16}$};
 \end{tikzpicture}
 :::
+
+
+*Division algorithm for finding $175$ in base $16$*
+
+
+
 
 
 :::exercise

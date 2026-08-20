@@ -38,19 +38,19 @@ Use the definition of factorial to compute the following expressions.
 
 
 :::
-\pa
+
 
 :::solution
 
 
 
-- $2! \pa = 2 \times 1 \pa = 2$ \pa
+- $2! = 2 \times 1 = 2$ 
 
-- $3! \pa = 3 \times 2 \times 1 \pa = 6$\pa
+- $3! = 3 \times 2 \times 1 = 6$
 
-- $4! \pa = 4 \times 3 \times 2 \times 1 \pa = 24$ \pa
+- $4! = 4 \times 3 \times 2 \times 1 = 24$ 
 
-- $1! \pa = 1$ (There is only one integer from 1 to 1, which is 1, so there is nothing else in the product but 1.)
+- $1! = 1$ (There is only one integer from 1 to 1, which is 1, so there is nothing else in the product but 1.)
 
 
 :::
@@ -59,15 +59,15 @@ Use the definition of factorial to compute the following expressions.
 
 
 \begin{cor}{}{}
-Alternately, we can define $n! = n \times (n-1)!$ \pa
-\end{cor} \pa
+Alternately, we can define $n! = n \times (n-1)!$ 
+\end{cor} 
 For instance,
-\[ 4! = 4 \times (3!), \quad 5! = 5 \times (4!) \] \pa
-This definition is useful when solving math problems, or when computing a factorial when we already know smaller factorials. \pa
+\[ 4! = 4 \times (3!), \quad 5! = 5 \times (4!) \] 
+This definition is useful when solving math problems, or when computing a factorial when we already know smaller factorials. 
 \begin{cor}{}{}
 We have $0! = 1$
-\end{cor} \pa
-This holds because if we let $n=1$ in the above alternate definition, we get $1! = 1 \times (0!)$. \pa This implies that $0! = 1$. \pa There is also another good reason of why we should have $0! = 1$, but we'll find that out next week!
+\end{cor} 
+This holds because if we let $n=1$ in the above alternate definition, we get $1! = 1 \times (0!)$. This implies that $0! = 1$. There is also another good reason of why we should have $0! = 1$, but we'll find that out next week!
 
 
 
@@ -88,19 +88,19 @@ Simplify the following expressions. Do not compute them!
 
 
 :::
-\pa
+
 
 :::solution
 
 
 
-- $\frac{10!}{9!} \pa = \frac{(10)(9!)}{9!} \pa = 10$ \pa
+- $\frac{10!}{9!} = \frac{(10)(9!)}{9!} = 10$ 
 
-- $\frac{6!}{8!} \pa = \frac{6!}{(8)(7!)} \pa = \frac{6!}{(8)(7)(6!)} \pa = \frac{1}{(8)(7)}$ \pa
+- $\frac{6!}{8!} = \frac{6!}{(8)(7!)} = \frac{6!}{(8)(7)(6!)} = \frac{1}{(8)(7)}$ 
 
-- $5! + 4! \pa = (5)(4!) + 4! \pa = (5+1)(4!) \pa = (6)(4!)$ \pa
+- $5! + 4! = (5)(4!) + 4! = (5+1)(4!) = (6)(4!)$ 
 
-- $7! - 6! \pa = (7)(6!) - 6! \pa = (7-1)(6!) \pa = (6)(6!)$
+- $7! - 6! = (7)(6!) - 6! = (7-1)(6!) = (6)(6!)$
 
 
 :::
@@ -124,17 +124,17 @@ Convert the following expressions as factorials (sum, difference, product, ratio
 
 
 :::
-\pa
+
 
 :::solution
 
 
 
-- $20 \times 19 \times 18 \pa =\frac{20!}{17!}$
+- $20 \times 19 \times 18 =\frac{20!}{17!}$
 
-- $6 \times 5 \times 4 \times 3 \pa = \frac{6!}{2!}$
+- $6 \times 5 \times 4 \times 3 = \frac{6!}{2!}$
 
-- $\frac{1}{8 \times 7} \pa = \frac{6!}{8!}$
+- $\frac{1}{8 \times 7} = \frac{6!}{8!}$
 
 
 :::

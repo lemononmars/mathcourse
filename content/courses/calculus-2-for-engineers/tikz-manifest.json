@@ -1,0 +1,267 @@
+{
+  "compiler": "node-tikzjax@1.0.5",
+  "diagrams": {
+    "content/courses/calculus-2-for-engineers/lectures/01/02-กราฟ.md": [
+      {
+        "hash": "dd8e0a1be5d4b30e",
+        "url": "/generated/tikz/dd8e0a1be5d4b30e.svg",
+        "caption": "จุดที่อยู่บนเส้นโค้งของสมการอิงตัวแปรเสริม $x = 2t, y = t^2$"
+      },
+      {
+        "hash": "abcdeb4f014eca71",
+        "url": "/generated/tikz/abcdeb4f014eca71.svg",
+        "caption": "กราฟของสมการอิงตัวแปรเสริม $x = \\cos t, y = \\sin t$"
+      },
+      {
+        "hash": "dfbbadb46ef7958b",
+        "url": "/generated/tikz/dfbbadb46ef7958b.svg",
+        "caption": "กราฟของสมการอิงตัวแปรเสริม $x = \\cos 3t, y = \\sin 2t$"
+      },
+      {
+        "hash": "9703ada69c1b30fc",
+        "url": "/generated/tikz/9703ada69c1b30fc.svg",
+        "caption": "กราฟของสมการอิงตัวแปรเสริม $x = \\cos t + \\cos\\left( \\frac{t"
+      }
+    ],
+    "content/courses/calculus-2-for-engineers/lectures/01/04-อนุพันธ์.md": [
+      {
+        "hash": "426d152e5d057a84",
+        "url": "/generated/tikz/426d152e5d057a84.svg",
+        "caption": "ภาพแสดงการหาความชันของเส้นตรงที่เชื่อมจุด $(x(t_0),y(t_0))$ และ $(x(t_1),y(t_1))$"
+      }
+    ],
+    "content/courses/calculus-2-for-engineers/lectures/01/05-ความยาวโค้ง.md": [
+      {
+        "hash": "50e05c0f6a571b82",
+        "url": "/generated/tikz/50e05c0f6a571b82.svg",
+        "caption": "ความสัมพันธ์ระหว่างส่วนของเส้นตรงระหว่างสองจุด และค่า $\\Delta x$ และ $\\Delta y$"
+      }
+    ],
+    "content/courses/calculus-2-for-engineers/lectures/02/01-นิยามพิกัดเชิงขั้ว.md": [
+      {
+        "hash": "0b0697872a0c6153",
+        "url": "/generated/tikz/0b0697872a0c6153.svg",
+        "caption": "พิกัดฉากของจุด $(3,2)$"
+      },
+      {
+        "hash": "ce518c30e0ac6c73",
+        "url": "/generated/tikz/ce518c30e0ac6c73.svg",
+        "caption": "นิยามพิกัดเชิงขั้ว"
+      }
+    ],
+    "content/courses/calculus-2-for-engineers/lectures/02/02-การแปลงจุดจากพิกัดหนึ่ง-ไปยังอิกพิกัดหนึ่ง.md": [
+      {
+        "hash": "6791cc12a5d380e6",
+        "url": "/generated/tikz/6791cc12a5d380e6.svg",
+        "caption": "การเปลี่ยนระบบพิกัดเชิงขั้วไปพิกัดฉาก"
+      },
+      {
+        "hash": "f518c369b1ccb627",
+        "url": "/generated/tikz/f518c369b1ccb627.svg",
+        "caption": "การเปลี่ยนระบบพิกัดเชิงขั้วไปพิกัดฉาก"
+      },
+      {
+        "hash": "6f4ae1f4eb4ab026",
+        "url": "/generated/tikz/6f4ae1f4eb4ab026.svg",
+        "caption": "การเปลี่ยนระบบพิกัดเชิงขั้วไปพิกัดฉาก"
+      },
+      {
+        "hash": "34f3c831b9421b0c",
+        "url": "/generated/tikz/34f3c831b9421b0c.svg",
+        "caption": "การเปลี่ยนระบบพิกัดฉากไปพิกัดเชิงขั้ว"
+      }
+    ],
+    "content/courses/calculus-2-for-engineers/lectures/02/04-กราฟในพิกัดเชิงขั้ว.md": [
+      {
+        "hash": "467017f454a88412",
+        "url": "/generated/tikz/467017f454a88412.svg",
+        "caption": "จุดบนเส้นโค้ง $r = \\sin\\theta$"
+      },
+      {
+        "hash": "2b0ca2c5240f0700",
+        "url": "/generated/tikz/2b0ca2c5240f0700.svg",
+        "caption": "กราฟ $r = \\sin\\theta$ ที่วาดโดยซอฟต์แวร์"
+      }
+    ],
+    "content/courses/calculus-2-for-engineers/lectures/02/05-ตัวอย่างกราฟในพิกัดเชิงขั้ว.md": [
+      {
+        "hash": "821592e8d4847c6c",
+        "url": "/generated/tikz/821592e8d4847c6c.svg",
+        "caption": "กราฟ $r= \\frac{1"
+      },
+      {
+        "hash": "d3f710c81ecb80cd",
+        "url": "/generated/tikz/d3f710c81ecb80cd.svg",
+        "caption": "วงกลมในระบบพิกัดเชิงขั้ว"
+      },
+      {
+        "hash": "83a1c02d1ae67727",
+        "url": "/generated/tikz/83a1c02d1ae67727.svg",
+        "caption": "วงกลมในระบบพิกัดเชิงขั้ว"
+      },
+      {
+        "hash": "a69d39f5f7dc97ac",
+        "url": "/generated/tikz/a69d39f5f7dc97ac.svg",
+        "caption": "วงกลมในระบบพิกัดเชิงขั้ว"
+      },
+      {
+        "hash": "0795a08737767ab5",
+        "url": "/generated/tikz/0795a08737767ab5.svg",
+        "caption": "วงกลมในระบบพิกัดเชิงขั้ว"
+      },
+      {
+        "hash": "f97adda44f7f509b",
+        "url": "/generated/tikz/f97adda44f7f509b.svg",
+        "caption": "เส้นโค้งลีมาซอง (Limacons)"
+      },
+      {
+        "hash": "27ed7128548c239a",
+        "url": "/generated/tikz/27ed7128548c239a.svg",
+        "caption": "โค้งรูปหัวใจ (Cardioid)"
+      },
+      {
+        "hash": "2faeafb5dfe537a3",
+        "url": "/generated/tikz/2faeafb5dfe537a3.svg",
+        "caption": "เส้นโค้งเลมนิสเคต (Lemniscates)"
+      },
+      {
+        "hash": "81639472b1bde470",
+        "url": "/generated/tikz/81639472b1bde470.svg",
+        "caption": "เส้นโค้งกลีบกุหลาบ (Rose Curve)"
+      },
+      {
+        "hash": "cc9240bc0752a35d",
+        "url": "/generated/tikz/cc9240bc0752a35d.svg",
+        "caption": "เส้นโค้งกลีบกุหลาบ (Rose Curve)"
+      },
+      {
+        "hash": "96596cdcbe5c3398",
+        "url": "/generated/tikz/96596cdcbe5c3398.svg",
+        "caption": "เส้นโค้งกลีบกุหลาบ (Rose Curve)"
+      },
+      {
+        "hash": "2b1082d7a54dc93a",
+        "url": "/generated/tikz/2b1082d7a54dc93a.svg",
+        "caption": "เส้นโค้งกลีบกุหลาบ (Rose Curve)"
+      },
+      {
+        "hash": "784a89a8f18f514c",
+        "url": "/generated/tikz/784a89a8f18f514c.svg",
+        "caption": "เส้นเวียนก้นหอย (Spiral Curve)"
+      },
+      {
+        "hash": "7a02a7b90537a74b",
+        "url": "/generated/tikz/7a02a7b90537a74b.svg",
+        "caption": "เส้นเวียนก้นหอย (Spiral Curve)"
+      },
+      {
+        "hash": "8c4b3df925a96104",
+        "url": "/generated/tikz/8c4b3df925a96104.svg",
+        "caption": "เส้นเวียนก้นหอย (Spiral Curve)"
+      },
+      {
+        "hash": "7360faf6cc7558f1",
+        "url": "/generated/tikz/7360faf6cc7558f1.svg",
+        "caption": "เส้นเวียนก้นหอย (Spiral Curve)"
+      }
+    ],
+    "content/courses/calculus-2-for-engineers/lectures/04/01-ทบทวนเวกเตอร์.md": [
+      {
+        "hash": "0dcb204ef0e2b694",
+        "url": "/generated/tikz/0dcb204ef0e2b694.svg",
+        "caption": "เวกเตอร์หน่วย $\\vec{i"
+      },
+      {
+        "hash": "3d65db6c5aa5e56d",
+        "url": "/generated/tikz/3d65db6c5aa5e56d.svg",
+        "caption": "เวกเตอร์หน่วย $\\vec{i"
+      }
+    ],
+    "content/courses/calculus-2-for-engineers/lectures/04/04-กราฟ.md": [
+      {
+        "hash": "364e566cfa33f1d7",
+        "url": "/generated/tikz/364e566cfa33f1d7.svg",
+        "caption": "การวาดกราฟของฟังก์ชันค่าเวกเตอร์"
+      },
+      {
+        "hash": "8e33d02aa4d43523",
+        "url": "/generated/tikz/8e33d02aa4d43523.svg",
+        "caption": "การวาดกราฟของฟังก์ชันค่าเวกเตอร์"
+      },
+      {
+        "hash": "a4b2385e338a5654",
+        "url": "/generated/tikz/a4b2385e338a5654.svg",
+        "caption": "การวาดกราฟของฟังก์ชันค่าเวกเตอร์"
+      }
+    ],
+    "content/courses/calculus-2-for-engineers/lectures/06/01-เวกเตอร์สัมผัสหน่วย.md": [
+      {
+        "hash": "adb7d9eb9f7bd52b",
+        "url": "/generated/tikz/adb7d9eb9f7bd52b.svg",
+        "caption": "เปรียบเทียบเวกเตอร์ $\\vrt,\\dvrt$ และเวกเตอร์สัมผัสหน่วย $\\vec{T"
+      }
+    ],
+    "content/courses/calculus-2-for-engineers/lectures/06/02-เวกเตอร์ปกติหน่วย.md": [
+      {
+        "hash": "4a1c3097e50b75a4",
+        "url": "/generated/tikz/4a1c3097e50b75a4.svg",
+        "caption": "เปรียบเทียบเวกเตอร์ $\\vrt, \\vec{T"
+      },
+      {
+        "hash": "d044a08104c61d15",
+        "url": "/generated/tikz/d044a08104c61d15.svg",
+        "caption": "เวกเตอร์ $\\vec{N"
+      }
+    ],
+    "content/courses/calculus-2-for-engineers/lectures/06/05-ส่วนประกอบความเร่ง.md": [
+      {
+        "hash": "798645870b26811e",
+        "url": "/generated/tikz/798645870b26811e.svg",
+        "caption": "ส่วนประกอบความเร่ง $a_T$ และ $a_N$ เทียบเวกเตอร์ $\\vec{T"
+      }
+    ],
+    "content/courses/calculus-2-for-engineers/lectures/07/01-สมการเวกเตอร์.md": [
+      {
+        "hash": "0cba8f2d1f99c56d",
+        "url": "/generated/tikz/0cba8f2d1f99c56d.svg",
+        "caption": "สมการเส้นตรง $L$ ในปริภูมิสองมิติผ่านจุด $(x_0, y_0)$ และขนานกับเวกเตอร์ $\\left\\langle a,b \\right\\rangle$"
+      }
+    ],
+    "content/courses/calculus-2-for-engineers/lectures/08/01-พิกัดฉาก.md": [
+      {
+        "hash": "bec2e54a7aa71c68",
+        "url": "/generated/tikz/bec2e54a7aa71c68.svg",
+        "caption": "พิกัดฉาก (Cartesian coordinates)"
+      }
+    ],
+    "content/courses/calculus-2-for-engineers/lectures/12/02-ทบทวนพิกัดเชิงขั้ว.md": [
+      {
+        "hash": "6791cc12a5d380e6",
+        "url": "/generated/tikz/6791cc12a5d380e6.svg",
+        "caption": "การแปลงพิกัดเชิงขั้วเป็นพิกัดฉาก"
+      },
+      {
+        "hash": "b4b6b607c806256f",
+        "url": "/generated/tikz/b4b6b607c806256f.svg",
+        "caption": "การแปลงพิกัดฉากเป็นพิกัดเชิงขั้ว"
+      }
+    ],
+    "content/courses/calculus-2-for-engineers/lectures/12/03-พิกัดเชิงขั้วแบบง่าย.md": [
+      {
+        "hash": "ff1d139b598f0c04",
+        "url": "/generated/tikz/ff1d139b598f0c04.svg",
+        "caption": "การคำนวณพื้นที่สี่เหลี่ยมผืนผ้า $dA = dx dy$"
+      },
+      {
+        "hash": "208456258818be9c",
+        "url": "/generated/tikz/208456258818be9c.svg",
+        "caption": "การคำนวณพื้นที่รูปคล้ายสี่เหลี่ยมผืนผ้า $dA = (dr)(rd \\theta)$"
+      },
+      {
+        "hash": "d4cc997ec040a427",
+        "url": "/generated/tikz/d4cc997ec040a427.svg",
+        "caption": "ส่วนของวงแหวน $\\alpha \\leq \\theta \\leq \\beta$ และ $a \\leq r \\leq b$"
+      }
+    ]
+  }
+}

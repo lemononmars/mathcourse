@@ -5,12 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "node scripts/generate-course-data.mjs && node scripts/prebuild-tikz.mjs --check && vite build",
+    "build": "node scripts/generate-course-data.mjs && node scripts/generate-prob-stat-data.mjs && node scripts/generate-all-courses.mjs && node scripts/prebuild-tikz.mjs --check && vite build",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "test:payload": "node --experimental-strip-types scripts/check-lecture-payload.mjs",
-    "content:sync": "node scripts/generate-course-data.mjs",
-    "content:reset": "node scripts/generate-course-data.mjs --force",
+    "content:sync": "node scripts/generate-course-data.mjs && node scripts/generate-prob-stat-data.mjs && node scripts/generate-all-courses.mjs",
+    "content:reset": "node scripts/generate-course-data.mjs --force && node scripts/generate-prob-stat-data.mjs --force && node scripts/generate-all-courses.mjs --force",
     "content:tikz": "node scripts/prebuild-tikz.mjs",
     "content:tikz:force": "node scripts/prebuild-tikz.mjs --force"
   },

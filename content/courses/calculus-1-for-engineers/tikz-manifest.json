@@ -1,0 +1,526 @@
+{
+  "compiler": "node-tikzjax@1.0.5",
+  "diagrams": {
+    "content/courses/calculus-1-for-engineers/lectures/01/01-พีชคณิตเวกเตอร์.md": [
+      {
+        "hash": "415976e14a105ee5",
+        "url": "/generated/tikz/415976e14a105ee5.svg",
+        "caption": "เวกเตอร์ $\\left\\langle 3,2 \\right\\rangle$"
+      },
+      {
+        "hash": "042053c4fa8517d4",
+        "url": "/generated/tikz/042053c4fa8517d4.svg",
+        "caption": "เวกเตอร์ $\\vec{u"
+      },
+      {
+        "hash": "a6d577abae1c0088",
+        "url": "/generated/tikz/a6d577abae1c0088.svg",
+        "caption": "เวกเตอร์ $\\left\\langle 4,2,3 \\right\\rangle$"
+      },
+      {
+        "hash": "a3dd1a7557a8b040",
+        "url": "/generated/tikz/a3dd1a7557a8b040.svg",
+        "caption": "ผลบวกเวกเตอร์ $\\vec{u"
+      },
+      {
+        "hash": "2d8272521065267c",
+        "url": "/generated/tikz/2d8272521065267c.svg",
+        "caption": "ผลลบเวกเตอร์ $\\vec{u"
+      },
+      {
+        "hash": "1b51c2d85d926838",
+        "url": "/generated/tikz/1b51c2d85d926838.svg",
+        "caption": "ผลบวกคูณเวกเตอร์ $k\\vec{u"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/01/02-จุดเริ่มต้นอื่น.md": [
+      {
+        "hash": "126548550399ca26",
+        "url": "/generated/tikz/126548550399ca26.svg",
+        "caption": "เวกเตอร์ที่เริ่มต้นที่จุด $P_1$ ไปยังจุด $P_2$"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/01/03-ขนาดของเวกเตอร์.md": [
+      {
+        "hash": "c1a552157dac38f1",
+        "url": "/generated/tikz/c1a552157dac38f1.svg",
+        "caption": "ขนาดของเวกเตอร์ $\\vec{u"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/01/04-เวกเตอร์หนึ่งหน่วย.md": [
+      {
+        "hash": "a0624172fd5703e3",
+        "url": "/generated/tikz/a0624172fd5703e3.svg",
+        "caption": "ตัวอย่างเวกเตอร์หนึ่งหน่วย"
+      },
+      {
+        "hash": "8e368cd7024cd165",
+        "url": "/generated/tikz/8e368cd7024cd165.svg",
+        "caption": "เวกเตอร์หน่วย $\\vec{i"
+      },
+      {
+        "hash": "ce63fdbc645f52bf",
+        "url": "/generated/tikz/ce63fdbc645f52bf.svg",
+        "caption": "เวกเตอร์หน่วย $\\vec{i"
+      },
+      {
+        "hash": "3ae2fde6f83d96b6",
+        "url": "/generated/tikz/3ae2fde6f83d96b6.svg",
+        "caption": "เวกเตอร์หนึ่งหน่วยที่มีทิศทางเดียวกันกับ $\\vec{u"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/02/01-มุมระหว่างเวกเตอร์.md": [
+      {
+        "hash": "f605407636991b47",
+        "url": "/generated/tikz/f605407636991b47.svg",
+        "caption": "มุม $\\theta$ ระหว่างเวกเตอร์ $\\vec{u"
+      },
+      {
+        "hash": "9f05f0dddf4187ef",
+        "url": "/generated/tikz/9f05f0dddf4187ef.svg",
+        "caption": "ความสัมพันธ์ระหว่างมุม $\\theta$ และผลคูณจุด $\\vec{u"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/02/02-โคไซน์แสดงทิศทาง.md": [
+      {
+        "hash": "bd681bec0e1c94d8",
+        "url": "/generated/tikz/bd681bec0e1c94d8.svg",
+        "caption": "มุม $\\theta$ แสดงทิศทางของเวกเตอร์ $\\vec{u"
+      },
+      {
+        "hash": "a70ee0b677396c3e",
+        "url": "/generated/tikz/a70ee0b677396c3e.svg",
+        "caption": "มุมแสดงทิศทาง $\\alpha, \\beta$ และ $\\gamma$ เทียบกับแกน $x$, แกน $y$ และแกน $z$ ตามลำดับ"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/02/03-การฉายเชิงตั้งฉาก.md": [
+      {
+        "hash": "cfdfe55512ecb289",
+        "url": "/generated/tikz/cfdfe55512ecb289.svg",
+        "caption": "การแปลงเวกเตอร์ $\\vec{F"
+      },
+      {
+        "hash": "2ada4b2f62ef41a2",
+        "url": "/generated/tikz/2ada4b2f62ef41a2.svg",
+        "caption": "ภาพแสดงส่วนประกอบของเวกเตอร์ของ $\\vec{u"
+      },
+      {
+        "hash": "c0024983e68ce4cc",
+        "url": "/generated/tikz/c0024983e68ce4cc.svg",
+        "caption": "ภาพแสดงเวกเตอร์จากตัวอย่างที่ \\theexample"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/02/04-ผลคูณไขว้.md": [
+      {
+        "hash": "0101478fda8547c2",
+        "url": "/generated/tikz/0101478fda8547c2.svg",
+        "caption": "ภาพแสดงเวกเตอร์ $\\vec{w"
+      },
+      {
+        "hash": "eb286ea9d19ba552",
+        "url": "/generated/tikz/eb286ea9d19ba552.svg",
+        "caption": "วิธีช่วยจำผลคูณไขว้"
+      },
+      {
+        "hash": "4e2c5e852b85b0c5",
+        "url": "/generated/tikz/4e2c5e852b85b0c5.svg",
+        "caption": "พื้นที่ของสี่เหลี่ยมด้านขนานที่เกิดจากเวกเตอร์ $\\vec{u"
+      },
+      {
+        "hash": "f6d912dffedc4c48",
+        "url": "/generated/tikz/f6d912dffedc4c48.svg",
+        "caption": "ปริมาตรของทรงสี่เหลี่ยมด้านขนานที่เกิดจากเวกเตอร์ $\\vec{u"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/03/01-นิยามฟังก์ชัน.md": [
+      {
+        "hash": "366892a924b01106",
+        "url": "/generated/tikz/366892a924b01106.svg",
+        "caption": "การมองฟังก์ชันเป็นความสัมพันธ์ของสมาชิกของเซต"
+      },
+      {
+        "hash": "0a9cb4304e78679e",
+        "url": "/generated/tikz/0a9cb4304e78679e.svg",
+        "caption": "กราฟของความสัมพันธ์"
+      },
+      {
+        "hash": "35389a3bf9ee9dbc",
+        "url": "/generated/tikz/35389a3bf9ee9dbc.svg",
+        "caption": "ภาพสำหรับตัวอย่างที่ \\theex"
+      },
+      {
+        "hash": "8c977cd2a0eedab1",
+        "url": "/generated/tikz/8c977cd2a0eedab1.svg",
+        "caption": "ภาพสำหรับตัวอย่างที่ \\theex"
+      },
+      {
+        "hash": "0b78fcafbda1bfce",
+        "url": "/generated/tikz/0b78fcafbda1bfce.svg",
+        "caption": "กราฟสำหรับตัวอย่าง \\theex"
+      },
+      {
+        "hash": "7a9eea09971e292c",
+        "url": "/generated/tikz/7a9eea09971e292c.svg",
+        "caption": "กราฟสำหรับตัวอย่าง \\theex"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/03/02-ประเภทของฟังก์ชัน.md": [
+      {
+        "hash": "ca5aba3adfce5e84",
+        "url": "/generated/tikz/ca5aba3adfce5e84.svg",
+        "caption": "ตัวอย่างฟังก์ชันค่าคงตัว $f(x) = c$"
+      },
+      {
+        "hash": "7ba449a08255cc8c",
+        "url": "/generated/tikz/7ba449a08255cc8c.svg",
+        "caption": "ตัวอย่างฟังก์ชันเชิงเส้น $f(x) = ax+b$"
+      },
+      {
+        "hash": "ee8837dc815bc324",
+        "url": "/generated/tikz/ee8837dc815bc324.svg",
+        "caption": "ตัวอย่างฟังก์ชันเชิงกำลังสอง $f(x) = ax^2+bx+c$"
+      },
+      {
+        "hash": "0ac8b59b81ecb349",
+        "url": "/generated/tikz/0ac8b59b81ecb349.svg",
+        "caption": "ตัวอย่างฟังก์ชันพหุนาม $f(x) = a_nx^n + a_{n-1"
+      },
+      {
+        "hash": "1168449bf10a945d",
+        "url": "/generated/tikz/1168449bf10a945d.svg",
+        "caption": "ตัวอย่างฟังก์ชันตรรกยะ $f(x) = \\tfrac{f(x)"
+      },
+      {
+        "hash": "359087ca82c942e1",
+        "url": "/generated/tikz/359087ca82c942e1.svg",
+        "caption": "ตัวอย่างฟังก์ชันค่าสัมบูรณ์"
+      },
+      {
+        "hash": "8607ce181d3f160e",
+        "url": "/generated/tikz/8607ce181d3f160e.svg",
+        "caption": "ตัวอย่างฟังก์ชันขั้นบันได"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/03/03-โดเมนและเรนจ์.md": [
+      {
+        "hash": "981ce158212024ac",
+        "url": "/generated/tikz/981ce158212024ac.svg",
+        "caption": "โดเมนและเรนจ์ของฟังก์ชัน $f$ คือเซต $D_f = \\{a,b,c,d\\"
+      },
+      {
+        "hash": "b1be50d2a504c5e8",
+        "url": "/generated/tikz/b1be50d2a504c5e8.svg",
+        "caption": "โดเมนและเรนจ์ของฟังก์ชัน $f$ จากการวิเคราะห์กราฟ"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/03/05-ฟังก์ชันประกอบ.md": [
+      {
+        "hash": "665a6934048ff2a3",
+        "url": "/generated/tikz/665a6934048ff2a3.svg",
+        "caption": "การสร้างฟังก์ชันประกอบ $g \\circ f$ ในรูปแบบความสัมพันธ์"
+      },
+      {
+        "hash": "1b6848953edbd931",
+        "url": "/generated/tikz/1b6848953edbd931.svg",
+        "caption": "การสร้างฟังก์ชันประกอบในรูปของการทำงานเครื่องจักรแบบต่อเนื่อง"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/03/06-ฟังก์ชันผกผัน.md": [
+      {
+        "hash": "741f2828aab95130",
+        "url": "/generated/tikz/741f2828aab95130.svg",
+        "caption": "ตัวอย่างฟังก์ชันหนึ่งต่อหนึ่ง $f_1$ และฟังก์ชันที่ไม่ใช่ฟังก์ชันหนึ่งต่อหนึ่ง $f_2$"
+      },
+      {
+        "hash": "ac00169beb792b26",
+        "url": "/generated/tikz/ac00169beb792b26.svg",
+        "caption": "การสร้างฟังก์ชันผกผัน $f\\,^{-1"
+      },
+      {
+        "hash": "ab8bea95ac1a0d52",
+        "url": "/generated/tikz/ab8bea95ac1a0d52.svg",
+        "caption": "การสร้างฟังก์ชันผกผัน $f\\,^{-1"
+      },
+      {
+        "hash": "734dfadf1d4a515d",
+        "url": "/generated/tikz/734dfadf1d4a515d.svg",
+        "caption": "ตัวอย่างการหาฟังก์ชันผกผันจากกราฟ"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/04/01-นิยามลิมิต.md": [
+      {
+        "hash": "0d8124d1d585581c",
+        "url": "/generated/tikz/0d8124d1d585581c.svg",
+        "caption": "กราฟของฟังก์ชัน $f(x) = \\tfrac{x^2-1"
+      },
+      {
+        "hash": "a945ae2c52ec1cf3",
+        "url": "/generated/tikz/a945ae2c52ec1cf3.svg",
+        "caption": "การเข้าใกล้ค่า $x=1$ จากด้านซ้าย (สีแดง) และด้านขวา (สีน้ำเงิน)"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/04/02-ลิมิตจากกราฟ.md": [
+      {
+        "hash": "27fc183bb0896c9a",
+        "url": "/generated/tikz/27fc183bb0896c9a.svg",
+        "caption": "การหา $\\limx{a^{-"
+      },
+      {
+        "hash": "599334bc6604a7a4",
+        "url": "/generated/tikz/599334bc6604a7a4.svg",
+        "caption": "การหาลิมิตทางซ้ายจากการวิเคราะห์กราฟ"
+      },
+      {
+        "hash": "06f227ef3248016a",
+        "url": "/generated/tikz/06f227ef3248016a.svg",
+        "caption": "การหา $\\limx{a^{+"
+      },
+      {
+        "hash": "599334bc6604a7a4",
+        "url": "/generated/tikz/599334bc6604a7a4.svg",
+        "caption": "การหาลิมิตทางขวาจากการวิเคราะห์กราฟ"
+      },
+      {
+        "hash": "fbca31add30e0eac",
+        "url": "/generated/tikz/fbca31add30e0eac.svg",
+        "caption": "การหาลิมิตจากการวิเคราะห์กราฟ"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/04/03-ลิมิตจากฟังก์ชัน.md": [
+      {
+        "hash": "0269a4be40be784b",
+        "url": "/generated/tikz/0269a4be40be784b.svg",
+        "caption": "ตัวอย่างการเลือกลำดับที่เข้าใกล้ $a$ จากด้านลบ (สีน้ำเงิน) และเข้าใกล้ $a$ จากด้านบวก (สีแดง)"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/04/04-การคํานวณลิมิต.md": [
+      {
+        "hash": "95a1db4493351a49",
+        "url": "/generated/tikz/95a1db4493351a49.svg",
+        "caption": "ความสำคัญของการคำนวณลิมิต"
+      },
+      {
+        "hash": "a1365f8d0ef445cd",
+        "url": "/generated/tikz/a1365f8d0ef445cd.svg",
+        "caption": "ความสำคัญของการคำนวณลิมิต"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/04/05-ลิมิตอนันต์.md": [
+      {
+        "hash": "63dea92e4ee533e9",
+        "url": "/generated/tikz/63dea92e4ee533e9.svg",
+        "caption": "กราฟแสดง $\\limx{0^{+"
+      },
+      {
+        "hash": "624050eb31bad246",
+        "url": "/generated/tikz/624050eb31bad246.svg",
+        "caption": "ตัวอย่างลำดับที่เข้าใกล้ $-\\infty$ (สีน้ำเงิน) และเข้าใกล้ $+\\infty$ (สีแดง)"
+      },
+      {
+        "hash": "0af574aa9b98e139",
+        "url": "/generated/tikz/0af574aa9b98e139.svg",
+        "caption": "กราฟแสดง $\\limx{+\\infty"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/04/07-ความต่อเนื่อง.md": [
+      {
+        "hash": "e5df6b708b93650d",
+        "url": "/generated/tikz/e5df6b708b93650d.svg",
+        "caption": "ตัวอย่างกราฟของฟังก์ชัน $f(x)$ ที่ไม่มีลิมิตที่ $x=1$"
+      },
+      {
+        "hash": "01a5a0192d8b30f0",
+        "url": "/generated/tikz/01a5a0192d8b30f0.svg",
+        "caption": "ตัวอย่างกราฟของฟังก์ชัน $f(x)$ ที่มีลิมิตที่ $x=-1$ และ $x=1$ แต่ไม่ต่อเนื่อง"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/05/01-นิยามของอนุพันธ์.md": [
+      {
+        "hash": "b7219ad903a05161",
+        "url": "/generated/tikz/b7219ad903a05161.svg",
+        "caption": "ภาพแสดงฟังก์ชัน $y=\\frac{x^2"
+      },
+      {
+        "hash": "be329d2fc52131af",
+        "url": "/generated/tikz/be329d2fc52131af.svg",
+        "caption": "ภาพแสดงการหาความชันของเส้นตรงที่เชื่อมจุด $(x,y)$ และ $(x_1,y_1)$"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/09/08-อดิศัย.md": [
+      {
+        "hash": "7a544f6820de421d",
+        "url": "/generated/tikz/7a544f6820de421d.svg",
+        "caption": "เปรียบเทียบอนุพันธ์ $f\\,'(x)$ ของฟังก์ชัน $f(x) = \\frac{1"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/12/02-แทนค่าด้วยฟังก์ชันตรีโกณฯ.md": [
+      {
+        "hash": "3f86abe1c339ce1c",
+        "url": "/generated/tikz/3f86abe1c339ce1c.svg",
+        "caption": "การแปลงฟังก์ชันตรีโกณมิติ เมื่อกำหนดให้ x = \\frac{a"
+      },
+      {
+        "hash": "6109712320e21aeb",
+        "url": "/generated/tikz/6109712320e21aeb.svg",
+        "caption": "การแปลงฟังก์ชันตรีโกรณมิติ เมื่อกำหนดให้ x = \\frac{a"
+      },
+      {
+        "hash": "99c891885b528ce6",
+        "url": "/generated/tikz/99c891885b528ce6.svg",
+        "caption": "การแปลงฟังก์ชันตรีโกรณมิติ เมื่อกำหนดให้ x = \\frac{a"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/13/04-แทนค่าด้วยมุมครึ่ง.md": [
+      {
+        "hash": "4bc9dea72775df0d",
+        "url": "/generated/tikz/4bc9dea72775df0d.svg",
+        "caption": "Diagram"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/14/03-ผลบวกรีมันน์.md": [
+      {
+        "hash": "d4b4a5b613cc6f30",
+        "url": "/generated/tikz/d4b4a5b613cc6f30.svg",
+        "caption": "การประมาณพื้นที่ใต้เส้นโค้งด้วยผลบวกรีมัน"
+      },
+      {
+        "hash": "03f9c2bd10cf0e0c",
+        "url": "/generated/tikz/03f9c2bd10cf0e0c.svg",
+        "caption": "การแบ่งช่วงย่อยที่มีความกว้างเท่ากับ $\\Delta x$"
+      },
+      {
+        "hash": "59cf623587402b9e",
+        "url": "/generated/tikz/59cf623587402b9e.svg",
+        "caption": "การสร้างสี่เหลี่ยมผืนผ้า"
+      },
+      {
+        "hash": "145f40abbd247018",
+        "url": "/generated/tikz/145f40abbd247018.svg",
+        "caption": "เปรียบเทียบการแบ่งพื้นที่ออกเป็นช่วงที่จำนวนช่วงมากขึ้นเรื่อย ๆ"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/14/04-การหาพื้นที่ภายใต้เส้นโค้ง.md": [
+      {
+        "hash": "14e0b5d6361b769d",
+        "url": "/generated/tikz/14e0b5d6361b769d.svg",
+        "caption": "บริเวณภายใต้เส้นโค้ง $f(x) = x^2$ สำหรับตัวอย่างที่ \\theex"
+      },
+      {
+        "hash": "54eba219004143b3",
+        "url": "/generated/tikz/54eba219004143b3.svg",
+        "caption": "บริเวณภายใต้เส้นโค้ง $f(x) = \\sin x$ สำหรับตัวอย่างที่ \\theex"
+      },
+      {
+        "hash": "452d7650fced4672",
+        "url": "/generated/tikz/452d7650fced4672.svg",
+        "caption": "บริเวณภายใต้เส้นโค้งสำหรับตัวอย่างที่ \\theex"
+      },
+      {
+        "hash": "1a0fa77e0a271157",
+        "url": "/generated/tikz/1a0fa77e0a271157.svg",
+        "caption": "หมายเหตุ"
+      },
+      {
+        "hash": "f5c7f4c10c802bb5",
+        "url": "/generated/tikz/f5c7f4c10c802bb5.svg",
+        "caption": "เส้นโค้งที่มีส่วนที่อยู่เหนือแกน $x$ และใต้แกน $x$"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/14/05-การหาพื้นที่ระหว่างเส้นโค้ง.md": [
+      {
+        "hash": "915b35686ac93285",
+        "url": "/generated/tikz/915b35686ac93285.svg",
+        "caption": "บริเวณระหว่างเส้นโค้ง $y=x$ และ $y=x^2$"
+      },
+      {
+        "hash": "4dd6f3e9f8384906",
+        "url": "/generated/tikz/4dd6f3e9f8384906.svg",
+        "caption": "ความสัมพันธ์ระหว่างบริเวณระหว่างเส้นโค้ง และบริเวณใต้เส้นโค้ง"
+      },
+      {
+        "hash": "3db821e0033c9555",
+        "url": "/generated/tikz/3db821e0033c9555.svg",
+        "caption": "ภาพแสดงบริเวณระหว่างเส้นโค้ง $y=f(x)$ และ $y=g(x)$ ในช่วง $[a,b]$"
+      },
+      {
+        "hash": "35f83d0b07b76f38",
+        "url": "/generated/tikz/35f83d0b07b76f38.svg",
+        "caption": "ภาพแสดงบริเวณระหว่างเส้นโค้ง $y=f(x)$ และ $y=g(x)$ ในช่วง $[a,b]$"
+      },
+      {
+        "hash": "194e65e9f4a6fc6c",
+        "url": "/generated/tikz/194e65e9f4a6fc6c.svg",
+        "caption": "ภาพสำหรับตัวอย่างที่ \\theex"
+      },
+      {
+        "hash": "377491f75b3cb044",
+        "url": "/generated/tikz/377491f75b3cb044.svg",
+        "caption": "ภาพสำหรับตัวอย่างที่ \\theex"
+      },
+      {
+        "hash": "955243b4c22b1a58",
+        "url": "/generated/tikz/955243b4c22b1a58.svg",
+        "caption": "ภาพสำหรับตัวอย่างที่ \\theex"
+      },
+      {
+        "hash": "90952d0123bbb183",
+        "url": "/generated/tikz/90952d0123bbb183.svg",
+        "caption": "ภาพสำหรับตัวอย่างที่ \\theex"
+      },
+      {
+        "hash": "51d0f6dcbad02259",
+        "url": "/generated/tikz/51d0f6dcbad02259.svg",
+        "caption": "บริเวณสำหรับตัวอย่างที่ \\theex"
+      },
+      {
+        "hash": "522c41fef534c6f4",
+        "url": "/generated/tikz/522c41fef534c6f4.svg",
+        "caption": "บริเวณสำหรับตัวอย่างที่ \\theex"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/14/06-ทิศทางของแกน-y.md": [
+      {
+        "hash": "48ee7380713e04f9",
+        "url": "/generated/tikz/48ee7380713e04f9.svg",
+        "caption": "ภาพแสดงบริเวณระหว่างเส้นโค้ง $x=u(y)$ และ $x=v(y)$ ในช่วง $[c,d]$"
+      },
+      {
+        "hash": "878f6b509402300d",
+        "url": "/generated/tikz/878f6b509402300d.svg",
+        "caption": "ภาพแสดงบริเวณระหว่างเส้นโค้ง $x=u(y)$ และ $x=v(y)$ ในช่วง $[c,d]$"
+      },
+      {
+        "hash": "6877a3d8ea2b5f07",
+        "url": "/generated/tikz/6877a3d8ea2b5f07.svg",
+        "caption": "ภาพสำหรับตัวอย่างที่ \\theex"
+      },
+      {
+        "hash": "99a1b62d5c0945a9",
+        "url": "/generated/tikz/99a1b62d5c0945a9.svg",
+        "caption": "การแบ่งบริเวณออกเป็นสองส่วน"
+      },
+      {
+        "hash": "25e7d75de8eec59a",
+        "url": "/generated/tikz/25e7d75de8eec59a.svg",
+        "caption": "บริเวณสำหรับอย่างที่ \\theex"
+      }
+    ],
+    "content/courses/calculus-1-for-engineers/lectures/15/02-ความยาวเส้นโค้ง.md": [
+      {
+        "hash": "3189231837601be3",
+        "url": "/generated/tikz/3189231837601be3.svg",
+        "caption": "การประมาณความส่วนโค้ง ด้วยเส้นตรงที่แบ่งเป็นช่วง ๆ"
+      },
+      {
+        "hash": "26287d75f9dfb37a",
+        "url": "/generated/tikz/26287d75f9dfb37a.svg",
+        "caption": "ความสัมพันธ์ระหว่างส่วนของเส้นตรงระหว่างสองจุด และค่า $\\Delta x$ และ $\\Delta y$"
+      },
+      {
+        "hash": "1fbea76ccfd8da11",
+        "url": "/generated/tikz/1fbea76ccfd8da11.svg",
+        "caption": "การประมาณความยาวส่วนโค้ง โดยใช้จำนวนช่วงย่อยมากขึ้นเรื่อย ๆ"
+      }
+    ]
+  }
+}

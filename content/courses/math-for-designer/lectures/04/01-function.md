@@ -32,18 +32,14 @@ Five common methods for representing functions are:
 
 ## 1. Numerically by tables
 
-\begin{table}[h!]
 
-\begin{tabular}{|C||C|C|C|C|C|C|}
-\hline
-x & - 1.1&-1.01 & -1.001 & -0.999 & -0.99 & -0.9 
 
-\hline
-y & \pa 0.9 & \pa 0.99 & \pa 0.999 & \pa 1.001 & \pa 1.01 & \pa 1.1
 
-\hline
-\end{tabular}
-\end{table}
+| x | - 1.1 | -1.01 | -1.001 | -0.999 | -0.99 | -0.9 |
+| --- | --- | --- | --- | --- | --- | --- |
+| y | 0.9 | 0.99 | 0.999 | 1.001 | 1.01 | 1.1 |
+
+
 
 
 
@@ -73,6 +69,8 @@ As a relationship from one set to another.
 \draw[->, bend angle = 45] (2,5) -- (4,4.5) node [pos = 0.5, above] {$f$};
 \end{tikzpicture}
 :::
+
+
 *A function as a relationship between objects*
 
 
@@ -93,6 +91,8 @@ As a machine that takes an input $x$ and gives a consistent output $y$.
 \draw[->, line width = 3] (5,1) -- (6,1) node [right] {Output $f(x)$};
 \end{tikzpicture}
 :::
+
+
 *A function as a machine*
 
 
@@ -121,6 +121,8 @@ As points on a plane.
 \draw (4,4) circle [radius = 0.1cm] node[above] {$(x,y)$};
 \end{tikzpicture}
 :::
+
+
 *A function as points $(x,y)$ on the plane.*
 
 
@@ -151,7 +153,7 @@ where $F$ is defined as a function of $r$.
 :::definition
 
 A function needs to give only one output for any input.
-\medskip
+
 
 We write 
 \[ f: A \rightarrow B\] 
@@ -220,6 +222,8 @@ If expressed as a mapping, then every element in the domain must have only one a
 \end{scope}
 \end{tikzpicture}
 :::
+
+
 *Which ones are functions?*
 
 
@@ -275,6 +279,8 @@ If expressed as a mapping, then every element in the domain must have only one a
 \end{scope}
 \end{tikzpicture}
 :::
+
+
 *Solutions*
 
 
@@ -308,6 +314,8 @@ If expressed as a graph, every vertical line must intersect the graph once.
 \end{scope}
 \end{tikzpicture}
 :::
+
+
 *Which ones are functions?*
 
 
@@ -355,29 +363,9 @@ If expressed as a graph, every vertical line must intersect the graph once.
 \end{scope}
 \end{tikzpicture}
 :::
+
+
 *Graph for example \theexample*
 
 
 :::
-
-
-
-\iffalse
-
-
-:::exercise
-
-Convert the following sentence in to functions in all 5 ways.
-
-
-- $f(x) = x+2$
-
-- $f(x) = x^2$
-
-
-:::
-
-
-\fi
-
-\iffalse

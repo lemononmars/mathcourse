@@ -45,18 +45,14 @@ Let's consider each possible value of $X$ one by one. If the first flip is head,
 :::solution
 (Continued) 
 Thus, we have the following table
-\begin{table}[h!]
+
 \def\arraystretch{2}
-\begin{tabular}{|C|C|C|C|C|C|C|}
-\hline
-k & 0 & 1 & 2 & 3 & 4 & \ldots 
 
-\hline
-P(X=k) & \frac{1}{2} & \frac{1}{4} & \frac{1}{8} & \frac{1}{16} & \frac{1}{32} & \ldots 
+| k | 0 | 1 | 2 | 3 | 4 | \ldots |
+| --- | --- | --- | --- | --- | --- | --- |
+| P(X=k) | \frac{1}{2} | \frac{1}{4} | \frac{1}{8} | \frac{1}{16} | \frac{1}{32} | \ldots |
 
-\hline
-\end{tabular}
-\end{table}
+
 
 Using the table above, we can make the folowing chart.
 
@@ -77,6 +73,10 @@ Using the table above, we can make the folowing chart.
 }
 \end{tikzpicture}
 :::
+
+
+
+
 :::
 
 

@@ -9,14 +9,7 @@ source: "tex/lecture06.tex"
 ## The Whole Family
 
 Note: We also define the following functions
-
-::: note 
-\begin{align*}
-\sec \theta &= \frac{1}{\sin \theta} \\
-\csc \theta &= \frac{1}{\cos \theta} \\ 
-\cot \theta &= \frac{1}{\tan \theta}
-\end{align*}
-::: 
+\[ \sec \theta = \frac{1}{\sin \theta}, \quad \csc \theta = \frac{1}{\cos \theta}, \quad\cot \theta = \frac{1}{\tan \theta}\] 
 
 These notations are handy when dealing with some types of problems, but we do not need them for now.
 
@@ -80,7 +73,7 @@ If $\sin \theta = A$, then we simply have $\arcsin A = \theta$. Since $\sin \the
 ## Fun Fact
 
 Then, you may wonder why we used 360 in the first place? The number itself seems arbitrary.
-\bigskip
+
 
 Answer: Because it has lots of divisors, namely
 \[1,2,3,4,5,6,8,10,12,15,18,20,24, 30, 36, 40, 60, 72, 90, 120, 180, 360\]
@@ -114,4 +107,6 @@ There are geometrical explanations for other trigonometric functions.
 \draw[rotate = 217.1, xshift=24mm, yshift=18mm] (0,0) rectangle (0.2, 0.2);
 \end{tikzpicture}
 :::
+
+
 *Geometrical interpretations of all six trigonometry functions.*

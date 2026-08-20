@@ -41,6 +41,8 @@ source: "tex/lecture09.tex"
   \shade[ball color=red] (9, -1.5) circle (0.5cm) node [white] {3};
 \end{tikzpicture}
 :::
+
+
 *A permutation of 3 distinct objects.*
 
 
@@ -110,6 +112,10 @@ level 1/.style={sibling distance=14mm},
 \node at (-2,-3) {Result};
 \end{tikzpicture}
 :::
+
+
+
+
 :::
 
 
@@ -127,14 +133,14 @@ How many permutations are there of 2 letters from ABCD?
 :::solution
 
 The permutations are 
-\begin{table}[h!]
 
-\begin{tabular}{cccccc}
-AB & AC & AD & BA & BC & BD 
 
-CA & CB & CD & DA & DB & DC
-\end{tabular}
-\end{table}
+
+| AB | AC | AD | BA | BC | BD |
+| --- | --- | --- | --- | --- | --- |
+| CA | CB | CD | DA | DB | DC |
+
+
 Hence, there are 12 permutations, as illustrated in the tree diagram below.
 
 
@@ -193,6 +199,10 @@ sibling distance = 8mm
 \node at (-2.5,-2) {Result};
 \end{tikzpicture}
 :::
+
+
+
+
 :::
 
 
@@ -268,6 +278,8 @@ level 1/.style={sibling distance=14mm},
     child {node {$n-r+1$ ways} edge from parent [<-]};
 \end{tikzpicture}
 :::
+
+
 *Counting the number of permutations of $r$ objects from $n$ distinct objects.*
 
 

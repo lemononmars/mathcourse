@@ -8,7 +8,7 @@ source: "tex/lecture03.tex"
 
 ## Observation
 
-Consider the inequaltiy
+Consider the inequality
 
 :::note
 
@@ -20,17 +20,16 @@ We can try plugging in values of $x$ to see what the solutions would look like.
 
 :::slide
 
-\begin{table}
 
-\begin{tabular}{C||C|C|C|C|C|C|C|C|C}
-x & -4 & -3 & -2 & -1 & 0 & 1 & 2 & 3 & 4
 
-\hline
-x^2-x-6 & 14 & 6 & 0 & -4 & -6 & -6 & -4 & 0 & 6
-\end{tabular}
-\end{table}
+
+| x | -4 | -3 | -2 | -1 | 0 | 1 | 2 | 3 | 4 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| x^2-x-6 | 14 | 6 | 0 | -4 | -6 | -6 | -4 | 0 | 6 |
+
+
 We can guess that the solutions are $x < -2$ and $x > 3$. Likewise, the solution to $x^2-x-6 < 0$ is $-2 < x < 3$. 
-\medskip
+
 
 We will prove that this is the case.
 
@@ -95,6 +94,8 @@ and thus the product is also positive. Therefore, we have $f(x) > 0$.
 \node at (-7,1) {$(x-m_1)\times (x-m_2)$};
 \end{tikzpicture}
 :::
+
+
 *A sign of a product when $x > m_2$*
 
 
@@ -134,6 +135,8 @@ Hence, the product is negative. Therefore, we have $f(x) < 0$
 \node at (-7,1) {$(x-m_1)\times (x-m_2)$};
 \end{tikzpicture}
 :::
+
+
 *A sign of a product when $m_1 < x < m_2$*
 
 
@@ -170,6 +173,8 @@ and thus the product is still positive. Therefore, we have $f(x) > 0$.
 \node at (-7,1) {$(x-m_1)\times (x-m_2)$};
 \end{tikzpicture}
 :::
+
+
 *A sign of a product when $x < m_1$*
 
 
@@ -214,6 +219,8 @@ Putting them all together, we have the following complete picture.
 \node at (-7,1) {$(x-m_1)\times (x-m_2)$};
 \end{tikzpicture}
 :::
+
+
 *A sign of a product for any real number $x$*
 
 
@@ -296,6 +303,8 @@ First, we find the roots of the function $f(x) = x^2-3x+2$ and get $x = 1$ and $
 \node at (-2,1) {$(x-1)\times (x-2)$};
 \end{tikzpicture}
 :::
+
+
 *The signs of values of $f(x)=x^2-3x+2$ in each interval.*
 
 Since we want $f(x) < 0$, the solutions are $x \in (1,2)$.
@@ -361,6 +370,8 @@ Then, we can find the roots of the function $f(x) = x^2-x$ to be $x=0$ and $x=1$
 \node at (-3,1) {$x\times (x-1)$};
 \end{tikzpicture}
 :::
+
+
 *The signs of values of $f(x)=x^2-x$ in each interval.*
 
 Since we want $f(x) > 0$, the solutions are $x<0$ or $x>1$.
@@ -377,9 +388,9 @@ If the roots are the same, then everything we have still holds, with $m_1 = m_2$
 \[(x-m)(x-m) >0\] 
 when $x<m$ or $x>m$. In other words, when $x \neq m$.
 
-On the hand,
+On the other hand,
 \[(x-m)(x-m) < 0\]
-when $m < x < m$, which implies that there are no solution!
+when $m < x < m$, which implies that there are no solutions!
 
 
 

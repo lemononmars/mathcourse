@@ -68,6 +68,8 @@ P(A|B) = \frac{P(A \cap B)}{P(B)}
 \end{scope}
 \end{tikzpicture}
 :::
+
+
 *Comparing $P(A)$ to $P(A|B)$*
 
 
@@ -158,6 +160,8 @@ Notice that these two probabilities are different, so the order matters.
 \end{scope}
 \end{tikzpicture}
 :::
+
+
 *Venn diagrams to compute $P(A|B)$ and $P(B|A)$*
 
 
@@ -191,7 +195,7 @@ A family has two kids, each is equally likely to be male or female. Suppose we k
 Denote $F$ as female and $M$ as male. Then, we can express all possibilities as $S = \{MM, MF, FM, FF\}$. We also have 
 \[A_1 = \{FF\} \quad \text{ and } \quad A_2 = \{MM\}.\]
 
-\medskip
+
 Let $B$ = one of the kids is male. Then, we can see that 
 \[B = \{FM, MF, MM\}.\]
 
@@ -202,25 +206,3 @@ Let $B$ = one of the kids is male. Then, we can see that
 
 
 :::
-
-
-
-\iffalse
-
-
-:::exercise
-
-Suppose we roll two fair dice, one after another.
-
-
-- Find the probability that the sum is greater than 7, given that the first die is less than 3.
-
-- Find the probability that the first die is less than 3, given that the sum is greater than 7.
-
-- Find the probability that the sum is odd, given that the dice have the same value.
-
-
-:::
-
-
-\fi
