@@ -71,13 +71,13 @@ Matrix addition is done entry by entry.
 Compute the followings.
 \begin{tasks}(2)
 \task $\begin{pmatrix} 0 & 1 \\ 2 & 3 \end{pmatrix} +  \begin{pmatrix} 7 & -6 \\ -5 & 4 \end{pmatrix}$
-\task $\begin{pmatrix} 0 & 1 \\ 2 & 3 \end{pmatrix} +  \begin{pmatrix} 7 & -6 \\ -5 & 4 \end{pmatrix}$
+\task $\begin{pmatrix} 4 & -2 \\ 1 & 0 \end{pmatrix} +  \begin{pmatrix} -3 & 5 \\ 2 & -1 \end{pmatrix}$
 \end{tasks}
 \end{ex}
 \begin{sol}
 \begin{tasks}(1)
 \task $\begin{pmatrix} 0 & 1 \\ 2 & 3 \end{pmatrix} +  \begin{pmatrix} 7 & -6 \\ -5 & 4 \end{pmatrix} = \begin{pmatrix} 0+7 & 1+(-6) \\ 2+(-5) & 3+4 \end{pmatrix} = \begin{pmatrix} 7 & -5 \\-3 & 7 \end{pmatrix}$
-\task $\begin{pmatrix} 0 & 1 \\ 2 & 3 \end{pmatrix} +  \begin{pmatrix} 7 & -6 \\ -5 & 4 \end{pmatrix} = \begin{pmatrix} 0+7 & 1+(-6) \\ 2+(-5) & 3+4 \end{pmatrix} = \begin{pmatrix} 7 & -5 \\-3 & 7 \end{pmatrix}$
+\task $\begin{pmatrix} 4 & -2 \\ 1 & 0 \end{pmatrix} +  \begin{pmatrix} -3 & 5 \\ 2 & -1 \end{pmatrix} = \begin{pmatrix} 4+(-3) & -2+5 \\ 1+2 & 0+(-1) \end{pmatrix} = \begin{pmatrix} 1 & 3 \\ 3 & -1 \end{pmatrix}$
 \end{tasks}
 \end{sol}
 \end{frame}
@@ -87,7 +87,7 @@ Compute the followings.
 \frametitle{Matrix-Vector Multiplication}
 \begin{defn}{Matrix-Vector Multiplication}{}
 \begin{equation}
-\begin{pmatrix} \red{a} & \green{b} \\ \red{c} & \green{d} \end{pmatrix}\cvec{v_1}{v_2}  = v_1 \cvec{\red{a}}{\red{c}} + v_2 \cvec{\green{b}}{\green{d}} = \cvec{\red{a}v_1 + \green{b}v_2}{\red{c}v_1 +\green{b}v_2}
+\begin{pmatrix} \red{a} & \green{b} \\ \red{c} & \green{d} \end{pmatrix}\cvec{v_1}{v_2}  = v_1 \cvec{\red{a}}{\red{c}} + v_2 \cvec{\green{b}}{\green{d}} = \cvec{\red{a}v_1 + \green{b}v_2}{\red{c}v_1 +\green{d}v_2}
 \end{equation}
 \end{defn}
 \end{frame}
@@ -105,8 +105,8 @@ Compute the followings.
 \begin{tasks}(1)
 \task $\begin{pmatrix} \red{2} & \green{3} \\ \red{-1} & \green{0} \end{pmatrix}\cvec{4}{5} = 4 \cvec{\red{2}}{\red{-1}} + 5 \cvec{\green{3}}{\green{0}}
 = \cvec{8}{-4} + \cvec{15}{0} = \cvec{23}{-4}$
-\task $\begin{pmatrix} \red{-3} & \green{1} \\ \red{5} & \green{-2} \end{pmatrix}\cvec{1}{0} = 1 \cvec{\red{-3}}{\red{1}} + 0 \cvec{\green{5}}{\green{2}}
-= \cvec{-3}{1} + \cvec{0}{0} = \cvec{-3}{1}$
+\task $\begin{pmatrix} \red{-3} & \green{1} \\ \red{5} & \green{-2} \end{pmatrix}\cvec{1}{0} = 1 \cvec{\red{-3}}{\red{5}} + 0 \cvec{\green{1}}{\green{-2}}
+= \cvec{-3}{5} + \cvec{0}{0} = \cvec{-3}{5}$
 \end{tasks}
 \end{sol}
 \end{frame}
@@ -114,7 +114,7 @@ Compute the followings.
 \begin{frame}
 \frametitle{Motivation for Matrix-Vector Multiplication}
 Every single math student is perplexed by the formula
-\[ \begin{pmatrix} \red{a} & \green{b} \\ \red{c} & \green{d} \end{pmatrix}\cvec{\blue{v_1}}{\orange{v_2}}  = \cvec{\red{a}\blue{v_1} + \green{b}\orange{v_2}}{\red{c}\blue{v_1} +\green{b}\orange{v_2}}.\]
+\[ \begin{pmatrix} \red{a} & \green{b} \\ \red{c} & \green{d} \end{pmatrix}\cvec{\blue{v_1}}{\orange{v_2}}  = \cvec{\red{a}\blue{v_1} + \green{b}\orange{v_2}}{\red{c}\blue{v_1} +\green{d}\orange{v_2}}.\]
 Why is it defined this way? Won't it be much simpler if we define it naturally as
 \[ \begin{pmatrix} a & b \\ c & d \end{pmatrix}\cvec{v_1}{v_2} = \begin{pmatrix} av_1 & bv_1 \\ cv_2 & dv_2 \end{pmatrix}\]
 or 
@@ -125,21 +125,21 @@ or
 The answer is: this is the \textit{natural} way to define the multiplication. 
 
 Notice what happens when we multiply the matrix by the unit vector $\vec{i} = \cvec{1}{0}$.
-\[ \begin{pmatrix} \red{a} & \green{b} \\ \red{c} & \green{d} \end{pmatrix}\cvec{1}{0}  = \cvec{\red{a}\times 1 + \green{b} \times 0}{\red{c} \times 1 +\green{b} \times 0} = \cvec{\red{a}}{\red{c}}.\]
-So the matrix transform $\vec{i}$ to the vector $\cvec{\red{a}}{\red{c}}$, which is the first column of the matrix. 
+\[ \begin{pmatrix} \red{a} & \green{b} \\ \red{c} & \green{d} \end{pmatrix}\cvec{1}{0}  = \cvec{\red{a}\times 1 + \green{b} \times 0}{\red{c} \times 1 +\green{d} \times 0} = \cvec{\red{a}}{\red{c}}.\]
+So the matrix transforms $\vec{i}$ to the vector $\cvec{\red{a}}{\red{c}}$, which is the first column of the matrix. 
 \end{frame}
 
 \begin{frame}
 Likewise, for the unit vector $\vec{j} = \cvec{0}{1}$, we have
-\[ \begin{pmatrix} \red{a} & \green{b} \\ \red{c} & \green{d} \end{pmatrix}\cvec{0}{1}  = \cvec{\red{a}\times 0 + \green{b} \times 1}{\red{c} \times 0 +\green{b} \times 1} = \cvec{\green{b}}{\green{d}}.\]
-So the matrix transform $\vec{j}$ to the vector $\cvec{\green{b}}{\green{d}}$, which is the second column of the matrix.
+\[ \begin{pmatrix} \red{a} & \green{b} \\ \red{c} & \green{d} \end{pmatrix}\cvec{0}{1}  = \cvec{\red{a}\times 0 + \green{b} \times 1}{\red{c} \times 0 +\green{d} \times 1} = \cvec{\green{b}}{\green{d}}.\]
+So the matrix transforms $\vec{j}$ to the vector $\cvec{\green{b}}{\green{d}}$, which is the second column of the matrix.
 \end{frame}
 
 \begin{frame}
-Combining the equations together and using the fact that the matrix multiplication is linear, we can visually define.
+Combining the equations together and using the fact that matrix multiplication is linear, we can visually define:
 \begin{eq*} 
 \begin{pmatrix} \red{a} & \green{b} \\ \red{c} & \green{d} \end{pmatrix}\cvec{\blue{v_1}}{\orange{v_2}}  &=& \begin{pmatrix} \red{a} & \green{b} \\ \red{c} & \green{d} \end{pmatrix} \left( \cvec{\blue{v_1}}{0} + \cvec{0}{\orange{v_2}} \right) \\
-&=& \cvec{\red{a}\blue{v_1} + \green{b}\orange{v_2}}{\red{c}\blue{v_1} +\green{b}\orange{v_2}}
+&=& \cvec{\red{a}\blue{v_1} + \green{b}\orange{v_2}}{\red{c}\blue{v_1} +\green{d}\orange{v_2}}
 \end{eq*}
 \end{frame}
 
@@ -193,9 +193,9 @@ A reflection over the y-axis is
 
 \begin{frame}
 \frametitle{Rotation}
-A counterclockwise rotation around the origin by $\theta$ degree can be computed by
+A counterclockwise rotation around the origin by $\theta$ degrees can be computed by
 \[ \cvec{x}{y} \to \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix} \cvec{x}{y}.\]
-A clockwise rotation around the origin by $\theta$ degree can be computed by
+A clockwise rotation around the origin by $\theta$ degrees can be computed by
 \[ \cvec{x}{y} \to \begin{pmatrix} \cos(-\theta) & -\sin(-\theta) \\ \sin(-\theta) & \cos(-\theta) \end{pmatrix} \cvec{x}{y}.\]
 \end{frame}
 
@@ -332,8 +332,8 @@ Compute $\begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} \begin{pmatrix} 0 & 1 \\ -
 \begin{eq*}
 \begin{pmatrix} \red{1} & \red{2} \\ \green{3} & \green{4} \end{pmatrix} 
 \begin{pmatrix} \blue{0} & \orange{1} \\ \blue{-2} & \orange{3}\end{pmatrix}
-&=& \begin{pmatrix} \red{1}\times \blue{0} + \red{2} \times \blue{-2} & \red{1}\times \orange{1} +\red{2} \times \orange{3} \\ \green{3} \times \blue{0} + \green{4} \times \blue{-2} & \green{3} \times \orange{1} + \green{4} \times \orange{3 }\end{pmatrix} \\
-&=& \begin{pmatrix} -4 & -3 \\ 7 & 15 \end{pmatrix}
+&=& \begin{pmatrix} \red{1}\times \blue{0} + \red{2} \times (\blue{-2}) & \red{1}\times \orange{1} +\red{2} \times \orange{3} \\ \green{3} \times \blue{0} + \green{4} \times (\blue{-2}) & \green{3} \times \orange{1} + \green{4} \times \orange{3 }\end{pmatrix} \\
+&=& \begin{pmatrix} -4 & 7 \\ -8 & 15 \end{pmatrix}
 \end{eq*}
 \end{sol}
 \end{frame}
@@ -356,7 +356,7 @@ Dilation $\begin{pmatrix} 3 & 0 \\ 0 & 3 \end{pmatrix}$ and dilation $\begin{pma
 \end{center}
 \end{ex} 
 \begin{sol}
-In terms of transformation, dilating (or scaling) twice is the same as dilating once by the product of each scaling factor. In other word, the result should be a dilation by a factor of $3 \times 2 = 6$.
+In terms of transformation, dilating (or scaling) twice is the same as dilating once by the product of each scaling factor. In other words, the result should be a dilation by a factor of $3 \times 2 = 6$.
 
 As a matrix, we have
 \[\begin{pmatrix} 3 & 0 \\ 0 & 3 \end{pmatrix}\begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix} = \begin{pmatrix} 6 & 0 \\ 0 & 6 \end{pmatrix},\]
@@ -374,7 +374,7 @@ Counterclockwise rotation by $45^{\circ} \begin{pmatrix} \tfrac{\sqrt{2}}{2} & -
 \end{center}
 \end{ex} 
 \begin{sol}
-In terms of transformation, a sequence of ratotations is identical to a single rotation by the sum of angles. Thus, we expect the result to be a counterclockwise rotation by $45^{\circ} + 45^{\circ} = 90^{\circ}$
+In terms of transformation, a sequence of rotations is identical to a single rotation by the sum of angles. Thus, we expect the result to be a counterclockwise rotation by $45^{\circ} + 45^{\circ} = 90^{\circ}$.
 
 As a matrix, we have
 \[\begin{pmatrix} \tfrac{\sqrt{2}}{2} & -\tfrac{\sqrt{2}}{2} \\ \tfrac{\sqrt{2}}{2} & \tfrac{\sqrt{2}}{2} \end{pmatrix}\begin{pmatrix} \tfrac{\sqrt{2}}{2} & -\tfrac{\sqrt{2}}{2} \\ \tfrac{\sqrt{2}}{2} & \tfrac{\sqrt{2}}{2} \end{pmatrix}= \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix},\]

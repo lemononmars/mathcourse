@@ -616,15 +616,15 @@ Let $X$ = the number of heads from 3 coin flips. Draw the bar chart of the proba
 Compute each $P(X=k)$ separately. For $X=0$, the only way to get 0 heads is when all three coins are tails, and the probability is 
 \[P(X=0) = \frac{1}{2} \times \frac{1}{2} \times \frac{1}{2} = \frac{1}{8}.\]
 
-For $X=1$, there are 3 such outcomes - namely HTT, THT, and TTH. Hence, 
+For $X=1$, there are 3 such outcomes --- namely HTT, THT, and TTH. Hence, 
 \[P(X=1) = 3 \times \frac{1}{8} = \frac{3}{8}.\]
 
-Similary, we can compute $P(X=2) = \frac{3}{8}$ and $P(X=3) = \frac{1}{8}$.
+Similarly, we can compute $P(X=2) = \frac{3}{8}$ and $P(X=3) = \frac{1}{8}$.
 \end{sol}
 \end{frame}
 
 \begin{frame}
-\begin{sol} (Continued) Thus, we have the following table
+\begin{sol} (Continued) Thus, we have the following table:
 \begin{table}[h!]
 \def\arraystretch{2}
 \begin{tabular}{|C|C|C|C|C|}
@@ -636,7 +636,7 @@ P(X=k) & \frac{1}{8} & \frac{3}{8} & \frac{3}{8} & \frac{1}{8}\\
 \end{tabular}
 \end{table}
 
-Using the table above, we can make the folowing chart.
+Using the table above, we can make the following chart:
 \begin{figure}[h!]
 \centering
 \begin{tikzpicture}
@@ -659,16 +659,16 @@ Using the table above, we can make the folowing chart.
 \begin{frame}
 \frametitle{Binomial Distribution}
 \begin{defn}{}{}
-A \textbf{binomial experiment} has three characteristics
+A \textbf{binomial experiment} has three characteristics:
 \begin{tasks}[label = $\circ$]
 \task There are a fixed number of $n$ trials.
 \task There are only two possible outcomes: success or failure. Let $p$ be the probability of a success on a single trial.
-\task All $n$ trials are independent and are repeated using identical condition.
+\task All $n$ trials are independent and are repeated using identical conditions.
 \end{tasks}
 \end{defn}
 
 \begin{block}{}
-Let $X$ be the number of successes obtained in the $n$ independent trails. Then, $P(X)$ is called a \textbf{a binomial probability distribution}.
+Let $X$ be the number of successes obtained in the $n$ independent trials. Then, $P(X)$ is called \textbf{a binomial probability distribution}.
 \end{block}
 \end{frame}
 
@@ -702,10 +702,10 @@ Let $X$ be the number of successes obtained in the $n$ independent trails. Then,
 
 \begin{frame}
 \frametitle{Formulas (2/2)}
-These are irrelevent to our course, but for the sake of completeness here are other variables.
+These are irrelevant to our course, but for the sake of completeness here are other variables:
 \begin{tasks}[label = $\circ$]
 \task The variance is $$\sigma^2 = V(X) = np(1-p).$$
-\task The standard variation is $$\sigma = \sqrt{np(1-p)}.$$
+\task The standard deviation is $$\sigma = \sqrt{np(1-p)}.$$
 \end{tasks}
 \end{frame}
 
@@ -743,7 +743,7 @@ Let's consider each possible value of $X$ one by one. If the first flip is head,
 
 \begin{frame}
 \begin{sol} (Continued) 
-Thus, we have the following table
+Thus, we have the following table:
 \begin{table}[h!]
 \def\arraystretch{2}
 \begin{tabular}{|C|C|C|C|C|C|C|}
@@ -755,7 +755,7 @@ P(X=k) & \frac{1}{2} & \frac{1}{4} & \frac{1}{8} & \frac{1}{16} & \frac{1}{32} &
 \end{tabular}
 \end{table}
 
-Using the table above, we can make the folowing chart.
+Using the table above, we can make the following chart:
 \begin{figure}[h!]
 \centering
 \begin{tikzpicture}
@@ -779,11 +779,11 @@ Using the table above, we can make the folowing chart.
 \begin{frame}
 \frametitle{Geometric Distribution}
 \begin{defn}{}{}
-A \textbf{geometric experiment} has three characteristics
+A \textbf{geometric experiment} has three characteristics:
 \begin{tasks}[label = $\circ$]
 \task There are one or more Bernoulli trials with \textbf{ALL} failures \textbf{EXCEPT} the last one, which is a success.
 \task There must be at least one trial, but in theory the number of trials could go on forever.
-\task The probability of a success is the same number $\red{p}$  for each trial.
+\task The probability of a success is the same number $\red{p}$ for each trial.
 \end{tasks}
 \end{defn}
 \end{frame}
@@ -791,7 +791,7 @@ A \textbf{geometric experiment} has three characteristics
 
 \begin{frame}[t]
 \begin{block}{}
-Let $X$ be the number of independent trials \textbf{before} the first success. Then, $P(X)$ is called a \textbf{a geometric probability distribution}.
+Let $X$ be the number of independent trials \textbf{before} the first success. Then, $P(X)$ is called \textbf{a geometric probability distribution}.
 
 We denote $X \sim G(p)$, read as $X$ is a random variable with a geometric distribution.
 \end{block}
@@ -799,8 +799,8 @@ We denote $X \sim G(p)$, read as $X$ is a random variable with a geometric distr
 \begin{ex}
 \begin{tasks}[label = $\circ$]
 \task The number of lotteries, if you buy one biweekly until you win a last-two-digit prize.
-\task The number of friends you have a handshake with until you get a COVID-19.
-\task The number of partners you go out with until you find the TRUE LOVE.
+\task The number of friends you have a handshake with until you get COVID-19.
+\task The number of partners you go out with until you find TRUE LOVE.
 \end{tasks}
 \end{ex}
 \end{frame}
@@ -825,10 +825,10 @@ Note that this implies there are $k+1$ trials in total.
 
 \begin{frame}
 \frametitle{Formulas}
-Again, these are irrelevent to our course, but for the sake of completeness here are other variables.
+Again, these are irrelevant to our course, but for the sake of completeness here are other variables:
 \begin{tasks}[label = $\circ$]
-\task The variance is $$\sigma^2 = V(X) = \frac{1}{p} \left( \frac{1}{p} - 1\right).$$
-\task The standard variation is $$\sigma = \sqrt{\frac{1}{p} \left( \frac{1}{p} - 1\right)}.$$
+\task The variance is $$\sigma^2 = V(X) = \frac{1-p}{p^2}.$$
+\task The standard deviation is $$\sigma = \frac{\sqrt{1-p}}{p}.$$
 \end{tasks}
 \end{frame}
 

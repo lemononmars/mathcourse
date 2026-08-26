@@ -93,7 +93,7 @@ Use graphs to find the solutions of
 
 We plot the graphs of the function $f(x) = x$ and $g(x) = x^2$ and see that the part where $f(x) \geq g(x)$ is when $0 \leq x \leq 1$. Thus, the solutions are in the closed interval $[0, 1]$.
 
-:::figure graph_ineq_ex1 — The region where of $f(x) \geq g(x)$.
+:::figure graph_ineq_ex1 — The region where $f(x) \geq g(x)$.
 :::
 
 
@@ -114,9 +114,9 @@ Use graphs to find the solutions of
 
 :::solution
 
-We plot the graphs of the function $f(x) = x^2-3x+3$ and $g(x) = 1$ (which is a constant function) and see that the region where $f(x) \geq g(x)$ is when $x \leq 1$ or $x \geq 2$. Thus, the solutions are in the union of intervals $(-\infty, 1) \cup (2, \infty)$.
+We plot the graphs of the function $f(x) = x^2-3x+3$ and $g(x) = 1$ (which is a constant function) and see that the region where $f(x) \geq g(x)$ is when $x \leq 1$ or $x \geq 2$. Thus, the solutions are in the union of intervals $(-\infty, 1] \cup [2, \infty)$.
 
-:::figure graph_ineq_ex2 — The region where of $f(x) \geq g(x)$.
+:::figure graph_ineq_ex2 — The region where $f(x) \geq g(x)$.
 :::
 
 

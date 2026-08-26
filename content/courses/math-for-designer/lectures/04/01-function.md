@@ -32,14 +32,17 @@ Five common methods for representing functions are:
 
 ## 1. Numerically by tables
 
+A function can be represented as an input-output lookup table (e.g., Character Level vs. Max HP):
 
 
 
-| x | - 1.1 | -1.01 | -1.001 | -0.999 | -0.99 | -0.9 |
+| **Level ($x$)** | 1 | 2 | 3 | 4 | 5 | 6 |
 | --- | --- | --- | --- | --- | --- | --- |
-| y | 0.9 | 0.99 | 0.999 | 1.001 | 1.01 | 1.1 |
+| **Max HP ($y$)** | 100 | 160 | 240 | 340 | 460 | 600 |
 
 
+
+For every input level $x$, there is exactly one determined output HP value $y$.
 
 
 
@@ -99,7 +102,7 @@ As a machine that takes an input $x$ and gives a consistent output $y$.
 
 
 
-## Fourth concept
+## 4. Geometrically by graphs
 
 As points on a plane.
 
@@ -113,23 +116,23 @@ As points on a plane.
 
 
 :::tikz TikZ diagram
-\begin{tikzpicture}[domain=-3:3, scale = 0.4]
-\draw[help lines] (0,-6) grid (10,6);
-\draw[<->, thick] (-1,0) -- (10.5,0) node[right] {$x$};
-\draw[<->, thick] (0,-6.5) -- (0,6.5) node[above] {$y$};
-\draw[color=teal, variable = \t, very thick] plot ({\t*\t},{\t*2});
-\draw (4,4) circle [radius = 0.1cm] node[above] {$(x,y)$};
+\begin{tikzpicture}[scale = 0.6]
+\draw[help lines, color=gray!30] (-1,-3) grid (6,4);
+\draw[<->, thick] (-1.5,0) -- (6.5,0) node[right] {$x$};
+\draw[<->, thick] (0,-3.5) -- (0,4.5) node[above] {$y$};
+\draw[color=teal, variable = \x, domain = 0.2:6, very thick] plot (\x, {0.2*\x*\x - 1});
+\filldraw[teal] (4, 2.2) circle [radius = 0.1cm] node[above left] {$(x, f(x)) = (4, 2.2)$};
 \end{tikzpicture}
 :::
 
 
-*A function as points $(x,y)$ on the plane.*
+*A function as points $(x,y)$ on the Cartesian plane ($y = f(x)$).*
 
 
 
 
 
-## Fifth Concept
+## 5. Verbally
 
 Sometimes functions are described in words.
 
@@ -157,7 +160,74 @@ A function needs to give only one output for any input.
 
 We write 
 \[ f: A \rightarrow B\] 
-to represent a function $f$ from the set $A$, called **Domain**, to the set $B$, called **Range**.
+to represent a function $f$ from the set $A$, called **Domain**, to the set $B$, called **Codomain** (where the actual outputs form the **Range** $f(A) \subseteq B$).
+
+:::
+
+
+
+
+## Function Notation: f(x) = y
+
+
+
+
+:::tikz TikZ diagram
+\begin{tikzpicture}[scale = 0.85, every node/.style={align=center}]
+
+\node (fn) at (-1.6, 0) {\Huge \textbf{\textcolor{blue}{f}}};
+\node (lp) at (-1.0, 0) {\Huge \textbf{(}};
+\node (inp) at (-0.4, 0) {\Huge \textbf{\textcolor{red}{x}}};
+\node (rp) at (0.2, 0) {\Huge \textbf{)}};
+\node (eq) at (1.0, 0) {\Huge \textbf{=}};
+\node (out) at (1.8, 0) {\Huge \textbf{\textcolor{teal}{y}}};
+
+
+\node[draw=blue, fill=blue!10, rounded corners, inner sep=4pt] (lblf) at (-3.0, 1.8) {\textbf{\textcolor{blue}{Function Name}}\\\small (The rule / formula)};
+\draw[->, very thick, blue] (lblf.south) -- (fn.north);
+
+\node[draw=red, fill=red!10, rounded corners, inner sep=4pt] (lblx) at (-0.4, -1.8) {\textbf{\textcolor{red}{Input / Argument}}\\\small (Independent variable / Domain)};
+\draw[->, very thick, red] (lblx.north) -- (inp.south);
+
+\node[draw=teal, fill=teal!10, rounded corners, inner sep=4pt] (lbly) at (2.8, 1.8) {\textbf{\textcolor{teal}{Output / Value}}\\\small (Dependent variable / Range)};
+\draw[->, very thick, teal] (lbly.south) -- (out.north);
+\end{tikzpicture}
+:::
+
+
+*Breakdown of the notation: $f$ takes input $x$ and produces output $y = f(x)$.*
+
+
+
+
+## Functions vs Non-Functions in Game Design
+
+
+:::note Functions in Games (Deterministic: 1 Input \rightarrow Exactly 1 Output)
+
+
+
+- $\text{XPRequirement}(\text{Level})$: Level $5 \rightarrow 1,500\text{ XP}$ (fixed threshold). 
+
+- $\text{Speed}(\text{Agility})$: Deterministic stat formula ($v = 10 + 0.5 \times \text{Agi}$). 
+
+- $\text{ProjectileY}(\text{Time } t)$: Parabolic flight path height at time $t$.
+
+
+:::
+
+
+
+:::note Non-Functions in Games (Non-Deterministic: 1 Input \rightarrow Multiple Outputs)
+
+
+
+- $\text{LootChest}(\text{Tier } 1) \rightarrow \{\text{Common Sword}, \text{Potion}, 50\text{ Gold}\}$ (RNG loot drop). 
+
+- $\text{RollDice}() \rightarrow \{1, 2, 3, 4, 5, 6\}$ (Random dice outcome). 
+
+- Branching dialogue choices: $[\text{Talk to NPC}] \rightarrow \{\text{Accept Quest}, \text{Refuse}\}$.
+
 
 :::
 
@@ -292,7 +362,7 @@ If expressed as a mapping, then every element in the domain must have only one a
 
 ## How to Test If It's a Function (2)
 
-If expressed as a graph, every vertical line must intersect the graph once.
+If expressed as a graph, every vertical line must intersect the graph **at most once**.
 
 
 
@@ -331,7 +401,7 @@ If expressed as a graph, every vertical line must intersect the graph once.
 
 - $R_2$ is not a function, because there is a vertical line that intersects the graph twice.
 
-- $R_3$ is not a function, because there is a vertical line that intersects the graph twice.
+- $R_3$ is not a function, because there is a vertical line that intersects the graph three times.
 
 
 

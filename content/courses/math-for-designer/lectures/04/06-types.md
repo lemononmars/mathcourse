@@ -1,14 +1,14 @@
 ---
 week: 4
 order: 6
-slug: "function-type"
-title: "Function Type"
+slug: "types"
+title: "Function Types"
 source: "tex/lecture04.tex"
 ---
 
 ## Basic Functions
 
-We will learn some basic functions.
+We will learn some basic functions commonly used in mathematics and game design:
 
 
 - Constant function
@@ -23,6 +23,8 @@ We will learn some basic functions.
 
 - Absolute value function
 
+- Step function
+
 
 
 
@@ -35,8 +37,8 @@ A constant function is of the form
 \[f(x) = c\]
 :::
 
-when $c$ is a constant. The graph is a horizontal line parallel to the x-axis. 
-**Ex.** $f(x) = -2, f(x) = 5$ 
+where $c$ is a constant. The graph is a horizontal line parallel to the x-axis. use
+**Ex.** $f(x) = -2, f(x) = 5$ use
 
 
 
@@ -76,7 +78,7 @@ A linear function is of the form
 :::
 
 where $a,b$ are constants and $a \neq 0$. 
-**Ex.** $f(x) = 2x, f(x) = -3x + 1$ 
+**Ex.** $f(x) = 2x, f(x) = -3x + 1$ use
 
 
 
@@ -114,9 +116,9 @@ A quadratic function is of the form
 \[f(x) = ax^2+bx+c\]
 :::
 
-when $a,b,c$ are constants and $a \neq 0$. The graph is called a **parabola**.
+where $a,b,c$ are constants and $a \neq 0$. The graph is called a **parabola**.
 
-**Ex.** $f(x) = x^2+2x+3, f(x) = 5x^2 - 4$ 
+**Ex.** $f(x) = x^2+2x+3, f(x) = 5x^2 - 4$ use
 
 
 
@@ -155,7 +157,7 @@ A polynomial function (also called a polynomial) is of the form
 \[f(x) = a_n x^n + a_{n-1}x^{n-1} + \ldots + a_2 x^2 + a_1 x + a_0\] 
 :::
 
-where $a_n, a_{n-1}, \ldots, a_2, a_1, a_0$ are all constants and $n \geq 0$ is an integer. 
+where $a_n, a_{n-1}, \ldots, a_2, a_1, a_0$ are all constants and $n \geq 0$ is an integer. use
 
 
 
@@ -194,15 +196,15 @@ A rational function is of the form
 \[f(x) = \frac{g(x)}{h(x)}\]
 :::
 
-where $g(x)$ and $h(x)$ are polynomials and $h(x)$ is not the constant function $h(x) = 0$. 
+where $g(x)$ and $h(x)$ are polynomials and $h(x)$ is not the zero function $h(x) = 0$. 
 
-**Ex.** $\displaystyle f(x) = \frac{x+1}{x^2-1}, f(x) = \frac{4x^4 + 2x^2 + 1}{2x^2+1}, f(x) = \frac{1}{x^2+1}$ 
+**Ex.** $\displaystyle f(x) = \frac{x+1}{x^2-1}, f(x) = \frac{4x^4 + 2x^2 + 1}{2x^2+1}, f(x) = \frac{1}{x^2+1}$ use
 
 
 
 
 :::tikz TikZ diagram
-\begin{tikzpicture}[scale = 0.4, smooth, domain = -2:2]
+\begin{tikzpicture}[scale = 0.35, smooth, domain = -2:2]
 \axes{-2}{2}{-2}{2};
 \draw[blue] plot[domain = -2:-0.5] (\x, {1/\x});
 \draw[blue] plot[domain = 0.5:2] (\x, {1/\x});
@@ -223,7 +225,7 @@ where $g(x)$ and $h(x)$ are polynomials and $h(x)$ is not the constant function 
 :::
 
 
-*Rational functions $f(x) = \tfrac{f(x)*{g(x)}$}
+*Rational functions $f(x) = \tfrac{g(x)*{h(x)}$}
 
 
 
@@ -235,20 +237,20 @@ where $g(x)$ and $h(x)$ are polynomials and $h(x)$ is not the constant function 
 Recall that an absolute value is defined as
 
 :::note
-\[ |x| = \begin{cases} x &, \text{ if } x \geq 0 
--x &, \text{ if } x < 0\end{cases}\]
+\[ |x| = \begin{cases} x, & \text{if } x \geq 0 
+-x, & \text{if } x < 0\end{cases}\]
 :::
 
-Then, an absolute value function is any function that has an absolute value.
+Then, an absolute value function is any function that contains an absolute value expression.
 
-**Ex.** $f(x) = | x | , f(x) = | x^3 | + 2 , f(x) = | x - 1|$
+**Ex.** $f(x) = | x | , f(x) = | x^3 | + 2 , f(x) = | x - 1|$use
 
 
 
 
 
 :::tikz TikZ diagram
-\begin{tikzpicture}[scale = 0.6, smooth, domain = -2:2]
+\begin{tikzpicture}[scale = 0.45, smooth, domain = -2:2]
 \axes{-2}{2}{-2}{2};
 \draw[blue] plot[domain = -2:2] (\x, {abs(\x)});
 \node[blue, scale = 0.8] at (0,-3) {$f(x) = |x|$};
@@ -272,26 +274,26 @@ Then, an absolute value function is any function that has an absolute value.
 
 
 
-## Step function
+## 7. Step Function
 
-7. Step function - defined differently on intervals, so it looks like a staircase.
+A step function is defined piecewise on intervals, resulting in a staircase graph.
 
 
 
 
 :::tikz TikZ diagram
-\begin{tikzpicture}[scale = 0.6]
+\begin{tikzpicture}[scale = 0.5]
 \axes{-2}{2}{-2}{2};
 \draw[blue] (-2,-1) -- (0,-1) (0,1) -- (2,1) (0,-1) circle [radius = 0.1cm];
 \filldraw (0,1) circle [radius = 0.1cm];
-\node[blue, scale = 0.8] at (0,-3) {$f(x) = \begin{cases} -1; & x < 0 \\ 1;&x \geq 0\end{cases}$};
-\begin{scope}[xshift = 6cm]
+\node[blue, scale = 0.8] at (0,-3) {$f(x) = \begin{cases} -1, & x < 0 \\ 1, & x \geq 0\end{cases}$};
+\begin{scope}[xshift = 10cm]
 \axes{-2}{2}{-2}{2};
 \draw[red] (-2,2) -- (-1,2) (-1,-1) -- (1,-1) (1,0) -- (2,0) (-1,2) circle [radius = 0.1cm] (1,0) circle [radius = 0.1cm];
 \filldraw (-1,-1) circle [radius = 0.1cm] (1,-1) circle [radius = 0.1cm];
-\node[red, scale = 0.8] at (0,-3) {$f(x) = \begin{cases} 2; & x < -1 \\ -1;&-1 \leq x \leq 1 \\ 0; & x > 1\end{cases}$};
+\node[red, scale = 0.8] at (0,-3) {$f(x) = \begin{cases} 2, & x < -1 \\ -1, & -1 \leq x \leq 1 \\ 0, & x > 1\end{cases}$};
 \end{scope}
-\begin{scope}[xshift = 12cm]
+\begin{scope}[xshift = 20cm]
 \axes{-2}{2}{-2}{2};
 \foreach \x in {-2,-1,0,1}
 {

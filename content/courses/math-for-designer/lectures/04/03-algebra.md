@@ -8,7 +8,7 @@ source: "tex/lecture04.tex"
 
 ## Algebra of Functions
 
-Algebra of functions is the operation of the functions, specifically the arithematic operations.
+Algebra of functions refers to operations on functions, specifically arithmetic operations.
 
 :::property
 
@@ -35,7 +35,7 @@ Let $f$ and $g$ be functions and $c$ be a constant.
 
 :::example
 
-Let $f(x) = x+1$ and $g(x) = 2x-3$. Find the followings.
+Let $f(x) = x+1$ and $g(x) = 2x-3$. Find the following.
 
 
 - $(2f)(x)$
@@ -65,9 +65,9 @@ Let $f(x) = x+1$ and $g(x) = 2x-3$. Find the followings.
 
 &=& (x+1) + (-2x + 3) = (x-2x) + (1+3) = -x+4 
 
-(3f + 2g) &=& 3f(x) + 2g(x) 
+(3f + 2g)(x) &=& 3f(x) + 2g(x) 
 
-&=& 3(x+1) + 2(2x-3) = (3x+3) + (4x-6) = (7x-3)
+&=& 3(x+1) + 2(2x-3) = (3x+3) + (4x-6) = 7x-3
 \end{eqnarray*}
 
 :::

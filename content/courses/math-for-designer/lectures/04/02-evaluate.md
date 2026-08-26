@@ -1,7 +1,7 @@
 ---
 week: 4
 order: 2
-slug: "evaluation"
+slug: "evaluate"
 title: "Function Evaluation"
 source: "tex/lecture04.tex"
 ---
@@ -105,24 +105,6 @@ f\left(\frac{1}{x}\right) &=& \left(\frac{1}{x}\right)^2 + 3\left(\frac{1}{x}\ri
 \end{eqnarray*}
 
 :::
-
-
-:::
-
-
-
-
-
-:::exercise
-
-1. Google for your favorite/cool looking/bizarre/cute/funny graph.
-
-
-
-:::figure l07i20.png
-:::
-
-*[Desmos.com](desmos.com/calculator)*
 
 
 :::

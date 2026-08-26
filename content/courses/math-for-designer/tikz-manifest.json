@@ -84,7 +84,7 @@
       {
         "hash": "ee4d7a7651d52ed4",
         "url": "/generated/tikz/ee4d7a7651d52ed4.svg",
-        "caption": "$(A \\cup B)^\\mathsf{c} \\cap C = C \\setminus (A \\cup B)$"
+        "caption": "$(A \\cup B)^\\mathsf{c"
       }
     ],
     "content/courses/math-for-designer/lectures/01/04-activity.md": [
@@ -115,29 +115,19 @@
     ],
     "content/courses/math-for-designer/lectures/02/02-common-keywords.md": [
       {
-        "hash": "af874354abda621b",
-        "url": "/generated/tikz/af874354abda621b.svg",
-        "caption": "Fundamental Theorem of Arithmetic (Factor Chart)"
+        "hash": "1c448b352372d60e",
+        "url": "/generated/tikz/1c448b352372d60e.svg",
+        "caption": "A diagram for $m = q \\times n + r$"
       }
     ],
     "content/courses/math-for-designer/lectures/02/03-modulo.md": [
       {
-        "hash": "a19ea86b64795fc2",
-        "url": "/generated/tikz/a19ea86b64795fc2.svg",
-        "caption": "Clock Arithmetic (Modulo 6)"
-      },
-      {
-        "hash": "384225b24c929cef",
-        "url": "/generated/tikz/384225b24c929cef.svg",
-        "caption": "Clock Arithmetic (Modulo 6 - Negative Numbers)"
+        "hash": "9da5e6bfd1411db5",
+        "url": "/generated/tikz/9da5e6bfd1411db5.svg",
+        "caption": "Modular arithmetic (mod 5) represented as positions on a circle"
       }
     ],
     "content/courses/math-for-designer/lectures/02/04-number-bases.md": [
-      {
-        "hash": "fd4fd74de96a1842",
-        "url": "/generated/tikz/fd4fd74de96a1842.svg",
-        "caption": "Positional weights and digit values of a base-m number"
-      },
       {
         "hash": "7c771959c403e7a2",
         "url": "/generated/tikz/7c771959c403e7a2.svg",
@@ -149,12 +139,12 @@
         "caption": "Division algorithm for finding $78$ in base $4$"
       },
       {
-        "hash": "1f02c711c403d900",
-        "url": "/generated/tikz/1f02c711c403d900.svg",
+        "hash": "5d30691daae54384",
+        "url": "/generated/tikz/5d30691daae54384.svg",
         "caption": "Division algorithm for finding $175$ in base $16$"
       }
     ],
-    "content/courses/math-for-designer/lectures/03/04-inequality.md": [
+    "content/courses/math-for-designer/lectures/03/05-inequality.md": [
       {
         "hash": "29783c43ce62b06f",
         "url": "/generated/tikz/29783c43ce62b06f.svg",
@@ -166,7 +156,7 @@
         "caption": "Types of intervals"
       }
     ],
-    "content/courses/math-for-designer/lectures/03/05-linear-inequality.md": [
+    "content/courses/math-for-designer/lectures/03/06-linear-inequality.md": [
       {
         "hash": "4a089497ae738147",
         "url": "/generated/tikz/4a089497ae738147.svg",
@@ -191,13 +181,6 @@
         "hash": "d5171ee8bea99003",
         "url": "/generated/tikz/d5171ee8bea99003.svg",
         "caption": "The intervals of positions where Mario is safe."
-      }
-    ],
-    "content/courses/math-for-designer/lectures/03/06-absolute-ineq.md": [
-      {
-        "hash": "3a2e629350ee9e9c",
-        "url": "/generated/tikz/3a2e629350ee9e9c.svg",
-        "caption": "The interval solution of $|x-4| < 2$"
       },
       {
         "hash": "6412f6f4ae375207",
@@ -254,9 +237,14 @@
         "caption": "A function as a machine"
       },
       {
-        "hash": "0a9cb4304e78679e",
-        "url": "/generated/tikz/0a9cb4304e78679e.svg",
-        "caption": "A function as points $(x,y)$ on the plane."
+        "hash": "1ae34beb3dded731",
+        "url": "/generated/tikz/1ae34beb3dded731.svg",
+        "caption": "A function as points $(x,y)$ on the Cartesian plane ($y = f(x)$)."
+      },
+      {
+        "hash": "e399774f536ec301",
+        "url": "/generated/tikz/e399774f536ec301.svg",
+        "caption": "Breakdown of the notation: $f$ takes input $x$ and produces output $y = f(x)$."
       },
       {
         "hash": "ce93171be3cef8ed",
@@ -279,48 +267,41 @@
         "caption": "Graph for example \\theexample"
       }
     ],
-    "content/courses/math-for-designer/lectures/04/05-composite.md": [
+    "content/courses/math-for-designer/lectures/04/04-composite.md": [
+      {
+        "hash": "5925514016baf9aa",
+        "url": "/generated/tikz/5925514016baf9aa.svg",
+        "caption": "Chaining functions: $x \\longrightarrow g(x) \\longrightarrow f(g(x))$"
+      },
       {
         "hash": "665a6934048ff2a3",
         "url": "/generated/tikz/665a6934048ff2a3.svg",
         "caption": "Creating the composite function $g \\circ f$ using set diagram"
       },
       {
-        "hash": "1b6848953edbd931",
-        "url": "/generated/tikz/1b6848953edbd931.svg",
+        "hash": "7c687ec766763415",
+        "url": "/generated/tikz/7c687ec766763415.svg",
         "caption": "Creating a composite function as a chain of machines"
       }
     ],
-    "content/courses/math-for-designer/lectures/04/06-section-6.md": [
-      {
-        "hash": "741f2828aab95130",
-        "url": "/generated/tikz/741f2828aab95130.svg",
-        "caption": "ตัวอย่างฟังก์ชันหนึ่งต่อหนึ่ง $f_1$ และฟังก์ชันที่ไม่ใช่ฟังก์ชันหนึ่งต่อหนึ่ง $f_2$"
-      },
-      {
-        "hash": "ac00169beb792b26",
-        "url": "/generated/tikz/ac00169beb792b26.svg",
-        "caption": "การสร้างฟังก์ชันผกผัน $f\\,^{-1"
-      },
-      {
-        "hash": "ab8bea95ac1a0d52",
-        "url": "/generated/tikz/ab8bea95ac1a0d52.svg",
-        "caption": "การสร้างฟังก์ชันผกผัน $f\\,^{-1"
-      },
-      {
-        "hash": "734dfadf1d4a515d",
-        "url": "/generated/tikz/734dfadf1d4a515d.svg",
-        "caption": "ตัวอย่างการหาฟังก์ชันผกผันจากกราฟ"
-      }
-    ],
-    "content/courses/math-for-designer/lectures/04/07-coordinate.md": [
+    "content/courses/math-for-designer/lectures/04/05-coordinate.md": [
       {
         "hash": "176a65c1cb5904c3",
         "url": "/generated/tikz/176a65c1cb5904c3.svg",
         "caption": "A coordinate of $(x,y) = (3,2)$"
+      },
+      {
+        "hash": "5b4eec49e4030710",
+        "url": "/generated/tikz/5b4eec49e4030710.svg",
+        "caption": "Diagram"
+      },
+      {
+        "hash": "376cf5e3afaca65f",
+        "url": "/generated/tikz/376cf5e3afaca65f.svg",
+        "caption": "Diagram"
       }
     ],
-    "content/courses/math-for-designer/lectures/04/08-function-type.md": [
+    "content/courses/math-for-designer/lectures/04/06-types.md": [
       {
         "hash": "ca5aba3adfce5e84",
         "url": "/generated/tikz/ca5aba3adfce5e84.svg",
@@ -342,19 +323,26 @@
         "caption": "Polynomials $f(x) = a_nx^n + a_{n-1"
       },
       {
-        "hash": "b9ab81c175893894",
-        "url": "/generated/tikz/b9ab81c175893894.svg",
-        "caption": "Rational functions $f(x) = \\tfrac{f(x)"
+        "hash": "912917a773612538",
+        "url": "/generated/tikz/912917a773612538.svg",
+        "caption": "Rational functions $f(x) = \\tfrac{g(x)"
       },
       {
-        "hash": "359087ca82c942e1",
-        "url": "/generated/tikz/359087ca82c942e1.svg",
+        "hash": "95ce862e74d9c68c",
+        "url": "/generated/tikz/95ce862e74d9c68c.svg",
         "caption": "Absolute value functions"
       },
       {
-        "hash": "0b8927cda7c20851",
-        "url": "/generated/tikz/0b8927cda7c20851.svg",
+        "hash": "8b3326593584c421",
+        "url": "/generated/tikz/8b3326593584c421.svg",
         "caption": "Step functions"
+      }
+    ],
+    "content/courses/math-for-designer/lectures/04/08-extra.md": [
+      {
+        "hash": "24898f5adafde7ff",
+        "url": "/generated/tikz/24898f5adafde7ff.svg",
+        "caption": "Polar coordinate system --- used in game radars, circular AoE spells, and minimap tracking."
       }
     ],
     "content/courses/math-for-designer/lectures/05/05-logarithm.md": [
@@ -419,7 +407,7 @@
       {
         "hash": "415976e14a105ee5",
         "url": "/generated/tikz/415976e14a105ee5.svg",
-        "caption": "Vector $\\bv{3,2"
+        "caption": "Vector $\\left\\langle 3,2 \\right\\rangle$"
       },
       {
         "hash": "042053c4fa8517d4",
@@ -429,13 +417,13 @@
       {
         "hash": "a6d577abae1c0088",
         "url": "/generated/tikz/a6d577abae1c0088.svg",
-        "caption": "A 3-dimentional vector $\\bv{4,2,3"
+        "caption": "A 3-dimentional vector $\\left\\langle 4,2,3 \\right\\rangle$"
       }
     ],
     "content/courses/math-for-designer/lectures/07/03-non-origin.md": [
       {
-        "hash": "cf776a189130254d",
-        "url": "/generated/tikz/cf776a189130254d.svg",
+        "hash": "3710b5639fd95e3a",
+        "url": "/generated/tikz/3710b5639fd95e3a.svg",
         "caption": "A vector from $P_1$ to $P_2$"
       }
     ],
@@ -466,8 +454,8 @@
         "caption": "Unit vectors"
       },
       {
-        "hash": "3fd4c31d1ff348fb",
-        "url": "/generated/tikz/3fd4c31d1ff348fb.svg",
+        "hash": "8e368cd7024cd165",
+        "url": "/generated/tikz/8e368cd7024cd165.svg",
         "caption": "The unit vectors $\\vec{i"
       }
     ],

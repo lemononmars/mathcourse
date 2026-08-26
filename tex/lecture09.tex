@@ -22,7 +22,7 @@
 \item How many ways to \ldots
 \item Choose, select, pick, form a group
 \item Arrange, order, place
-\item Distinct vs. repetion
+\item Distinct vs. repetition
 \end{itemize}
 \end{frame}
 
@@ -56,7 +56,7 @@ If there are $k$ different arrangements, and for each arrangement there are $N_k
 
 \begin{frame}[t]
 \begin{ex}
-How many ways you can finish an exam with ten true-or-false questions.
+How many ways can you finish an exam with ten true-or-false questions?
 \end{ex}
 \begin{sol}
 \begin{itemize}
@@ -85,8 +85,8 @@ Since the first event (choosing a letter) can occur in 26 possible ways and each
 How many different four-of-a-kind hands are there in the standard 5-card poker?
 \end{ex}
 \begin{sol}
-We first choose which value would be the the four-of-a-kind, in which there are 13 different ways. Then, after taking all 4 cards of that value, we can pick any card as the fifth, so there are 52-4 = 48 ways. Since we do not care about order, the number of four-of-a-kind hands is
-\[ 13 \times 48 = 624\]
+We first choose which value would be the four-of-a-kind, for which there are 13 different ways. Then, after taking all 4 cards of that value, we can pick any card as the fifth, so there are $52-4 = 48$ ways. Since we do not care about order, the number of four-of-a-kind hands is
+\[ 13 \times 48 = 624.\]
 \end{sol}
 \end{frame}
 
@@ -96,11 +96,11 @@ We first choose which value would be the the four-of-a-kind, in which there are 
 How many three-digit numbers are there where all digits are odd?
 \end{ex} \pa
 \begin{sol}
-We can construct such three-digit number in three steps. \pa
+We can construct such three-digit number in three steps: \pa
 \begin{itemize}
-\item Choose the left most (hundreds) digit: there are 5 options (1,3,5,7 or 9) \pa
-\item Choose the middle most (tens) digit: there are 5 options (1,3,5,7 or 9) \pa
-\item Choose the right most (ones) digit: there are 5 options (1,3,5,7 or 9) \pa
+\item Choose the leftmost (hundreds) digit: there are 5 options (1,3,5,7 or 9) \pa
+\item Choose the middle (tens) digit: there are 5 options (1,3,5,7 or 9) \pa
+\item Choose the rightmost (ones) digit: there are 5 options (1,3,5,7 or 9) \pa
 \end{itemize}
 Thus, the number of three-digit numbers where all digits are odd is $5 \times 5 \times 5 = 125$.
 \end{sol}
@@ -136,7 +136,7 @@ N_1 + N_2 + N_3 \ldots + N_n
 A student is shopping for a new computer. He is deciding among 3 desktop computers and 4 laptop computers. What is the total number of computer options?
 \end{ex}
 \begin{sol}
-Since the student only needs on computer, we can add the number of desktop computers and laptop computers to find the total number of options. \pa Hence, the number of computer options is 7.
+Since the student only needs one computer, we can add the number of desktop computers and laptop computers to find the total number of options. \pa Hence, the number of computer options is $3 + 4 = 7$.
 \end{sol}
 \end{frame}
 
@@ -180,7 +180,7 @@ Since integers between 1 and 100 cannot both be divisible by 11 and 13 at the sa
 \begin{defn}{}{}
 Let $n$ be a positive integer. Then, define \red{the factorial of $n$} to be the product of all numbers from $1$ to $n$. In other words, the formula is given by
 \begin{equation}
-n! = n \times (n-1) \times (n-2) \times 2 \times 1
+n! = n \times (n-1) \times (n-2) \times \cdots \times 2 \times 1
 \end{equation}
 \end{defn}
 \end{frame}
@@ -244,7 +244,7 @@ Simplify the following expressions. Do not compute them!
 
 \begin{frame}[t]
 \begin{ex}
-Convert the following expressions as factorials (sum, difference, product, ratio.)
+Express the following terms using factorials.
 \begin{tasks}(3)
 \task $20 \times 19 \times 18$
 \task $6 \times 5 \times 4 \times 3$
@@ -270,7 +270,7 @@ Convert the following expressions as factorials (sum, difference, product, ratio
 \task $6! + 7!$
 \task $13! - 12!$
 \end{tasks}
-\item Convert the following expressions as factorials (sum, difference, product, ratio.)
+\item Express the following terms using factorials:
 \begin{tasks}(1)
 \task $11 \times 10 \times 9$
 \task $20 \times 19 \times 18 \times 17 \times 16 \times 15$
@@ -330,7 +330,7 @@ How many permutations are there of numbers $123$?
 \end{ex}
 \begin{sol}
 The permutations are 
-\[\text{123}, \qquad \text{132}, \qquad, \text{213}, \qquad \text{231}, \qquad \text{312}, \qquad \text{321},\]
+\[\text{123}, \qquad \text{132}, \qquad \text{213}, \qquad \text{231}, \qquad \text{312}, \qquad \text{321},\]
 which we can search exhaustively using the tree diagram below. Hence, there are 6 permutations. 
 
 \begin{figure}[h!]
@@ -462,11 +462,11 @@ sibling distance = 8mm
 How many permutations are there of 3 letters in the English alphabet?
 \end{ex}
 \begin{sol}
-Listing all permutations is possible, but would be a waste of paper. Instead, we use a rule of product to help counting. There are three arrangements to make.
+Listing all permutations is possible, but would be a waste of paper. Instead, we use the rule of product to help counting. There are three arrangements to make:
 \begin{itemize}
 \item Choosing the first letter: there are 26 ways.
-\item Choosing the second letter: there are 25 ways left, as one of the letters has already been chosen.
-\item Choosing the third letter: there are 24 ways left, as two of them have already been chosen.
+\item Choosing the second letter: there are 25 ways left, as one letter has already been chosen.
+\item Choosing the third letter: there are 24 ways left, as two letters have already been chosen.
 \end{itemize}
 Since we have to make all three arrangements, then by the rule of product there are $26 \times 25 \times 24 = 15,600$ permutations.
 \end{sol}
@@ -475,11 +475,11 @@ Since we have to make all three arrangements, then by the rule of product there 
 \begin{frame}[t]
 \frametitle{Generalization}
 \begin{slide}
-We can generalize the procedure in the previous example as follows. If there are $n$ objects and we order $r$ of them, then there are $r$ arrangements to make.
+We can generalize the procedure in the previous example as follows. If there are $n$ objects and we order $r$ of them, then there are $r$ arrangements to make:
 \begin{itemize}
 \item Choosing the first object: there are $n$ ways.
 \item Choosing the second object: there are $n-1$ ways, as you cannot choose the first object again.
-\item Choosing the third object: there are $n-2$ ways, as you cannot choose the first two object.
+\item Choosing the third object: there are $n-2$ ways, as you cannot choose the first two objects.
 \item $\vdots$
 \item Choosing the $r$-th object: there are $n-(r-1) = n-r+1$ ways, as you cannot choose the first $r-1$ objects.
 \end{itemize}
@@ -517,10 +517,10 @@ The number of permutations of $n$ objects taken $r$ at a time is denoted
 
 \begin{frame}[t]
 \begin{ex}
-Suppose that 4 people are are to be randomly chosen out of 10 people who agreed to be interviewed in a market survey. How many permutations are there?
+Suppose that 4 people are to be randomly chosen out of 10 people who agreed to be interviewed in a market survey. How many permutations are there?
 \end{ex}
 \begin{sol}
-The four people are to be assigned to four interviewers, so the order matters. Thus, the number of permutations is 
+The four people are to be assigned to four distinct interviewers, so the order matters. Thus, the number of permutations is 
 \[P(10,4) = 10\cdot 9 \cdot 8 \cdot 7 = 5040.\]
 \end{sol}
 \end{frame}
@@ -530,7 +530,7 @@ The four people are to be assigned to four interviewers, so the order matters. T
 \begin{itemize}
 \item $P(n, 0) = 1$: \begin{slide}There is exactly 1 permutation with 0 objects.\end{slide}
 \item $P(n,1) = n$: \begin{slide}A permutation of 1 object is simply picking one object.\end{slide}
-\item $P(n,n) = n!$: \begin{slide}The number of permutation of all $n$ objects is simply the definition of factorial.\end{slide}
+\item $P(n,n) = n!$: \begin{slide}The number of permutations of all $n$ objects is simply the definition of factorial.\end{slide}
 \end{itemize}
 \end{prop}
 \end{frame}
@@ -538,7 +538,7 @@ The four people are to be assigned to four interviewers, so the order matters. T
 \begin{frame}{Properties of Permutation (2/2)}
 \begin{prop}{}{}
 \begin{itemize}
-\item $P(n,r) = \frac{n!}{(n-r)!}$: \begin{slide} We can use the factorial to rewrite  as
+\item $P(n,r) = \frac{n!}{(n-r)!}$: \begin{slide} We can use the factorial to rewrite as
 \begin{eq*}
 &&P(n,r) \\
 &=&  n \times  (n-1) \times \ldots \times (n-r+1)  \\
@@ -559,7 +559,7 @@ The four people are to be assigned to four interviewers, so the order matters. T
 \begin{frame}
 \frametitle{3. Combination}
 \begin{defn}{}{}
-\textbf{Combinations} are the possible selections of $r$ items from a group of $n$ items \textit{regardless of the order} of selection. To put it in another way, they are the possible sets of $n$ items. 
+\textbf{Combinations} are the possible selections of $r$ items from a group of $n$ items \textit{regardless of the order} of selection. To put it in another way, they are the possible subsets of $r$ items. 
 \end{defn}
 \begin{figure}[h!]
 \begin{tikzpicture}[scale =0.8]

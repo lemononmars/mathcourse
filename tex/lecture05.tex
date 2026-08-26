@@ -60,7 +60,7 @@ Win condition: \pa
 
 \begin{frame}
 \frametitle{Level Up!}
-\addfig{0.7}{l08i02}{Leveling system use exponential growth}{}
+\addfig{0.7}{l08i02}{Leveling systems use exponential growth}{}
 \end{frame}
 
 \begin{frame}
@@ -96,7 +96,7 @@ If it takes 30 days to fill the entire pond, and take over all the weeds, how ma
 \begin{frame}
 \frametitle{Test your exponential intuition 2} 
 \begin{alertblock}{}
-The inventor of chess requested his ruler give him wheat on the chessboard. He asked for 1 grain on the first space, 2 grains on the second space, 4 grains on the third space, 16 grains on the fourth space, and so on. The ruler laughs it off as a meager prize for a brilliant invention.
+The inventor of chess requested his ruler give him wheat on the chessboard. He asked for 1 grain on the first space, 2 grains on the second space, 4 grains on the third space, 8 grains on the fourth space, 16 grains on the fifth space, and so on. The ruler laughs it off as a meager prize for a brilliant invention.
 \medskip
 
 How many grains of wheat are needed? (approximately)
@@ -176,11 +176,11 @@ Use the definition to compute the following numbers.
 \begin{defn}{}{}
 An \textbf{exponential function} is a function of the form 
 \[ f(x) = a \times b^x\]
-when $a$ is a positive real number.
+where $a \neq 0$ is a constant, and $b > 0$ with $b \neq 1$ is the base.
 \end{defn}
 
 \begin{ex}
-\[ 2^x, \quad 3 \times 10^x, \quad -  0.01^x, \quad \left( \frac{2}{25} \right)^x\]
+\[ 2^x, \quad 3 \times 10^x, \quad - 0.01^x, \quad \left( \frac{2}{25} \right)^x\]
 \end{ex}
 \end{frame}
 
@@ -209,11 +209,11 @@ Actually, we already know that $\sqrt{M} \times \sqrt{M} = M$. Thus, it is natur
 \begin{frame}
 \frametitle{Fractional Power}
 \begin{defn}{}{}
-For any integer $n$, define the $n$-th root of $M$ as
+For any integer $n > 0$, define the $n$-th root of $M$ as
 \[\sqrt[n]{M} = M^{1/n}\]
 \tcblower
 
-For any rational numberr $k= \frac{a}{b}$ be a rational number where $a,b$ are both integers and $b \neq 0$, define
+For any rational number $k= \frac{a}{b}$ where $a,b$ are integers and $b > 0$, define
 \[ M^k = M^{a/b} = \sqrt[b]{M^a}\]
 \end{defn}
 \end{frame}
@@ -359,10 +359,10 @@ Simplify the following terms using properties.
 \end{ex}
 \begin{sol}
 \begin{tasks}(1)
-\task $3^4 \times 3^5 = (3 \times 3 \times 3 \times 3) \times (3 \times 3 \times 3 \times 3 \times 3) = 3^9$
-\task $2^{-2} \times 2^{3} = \frac{1}{2 \times 2} \times (2 \times 2 \times 2) = 2$
-\task $2^7 \times 3^7 = \underbrace{(2 \times 2 \times \cdots \times 2)}_{7 \text{ times}} \times \underbrace{(3 \times 3 \times \times \cdots 3)}_{7 \text{ times}} = (2 \times 3) \times (2 \times 3) \times \cdots \times (2 \times 3) = (2 \times 3)^7 = 6^7$
-\task Neither the bases of the exponents are the same. Nevertheless, we can convert the exponents to match. $9^3 \times 5^6 = (3^2)^3 \times 5^6 = 3^{(2 \times 3)} \times 5^6 = 3^6 \times 5^6 = (15)^6$
+\task $3^4 \times 3^5 = 3^{4+5} = 3^9$
+\task $2^{-2} \times 2^{3} = 2^{-2+3} = 2^1 = 2$
+\task $2^7 \times 3^7 = (2 \times 3)^7 = 6^7$
+\task $9^3 \times 2^6 = (3^2)^3 \times 2^6 = 3^6 \times 2^6 = (3 \times 2)^6 = 6^6$
 \end{tasks}
 \end{sol}
 \end{frame}
@@ -393,10 +393,10 @@ Use the properties to simplify the following terms. \textbf{Do not} blindly appl
 \begin{thm}{}{}
 A growth (or decay) can be modeled by the function
 \[ f(t) = a (1+b)^t, \]
-where $t$ represents time, and $a$ and $b$ are some constant with $b>0$.
+where $t$ represents time, $a > 0$ is the initial amount, and $b$ is the rate.
 \begin{itemize}
 \item If $b>0$, we call $f$ a growth function.
-\item If $-1<b,0$, we call $f$ a decay function.
+\item If $-1<b<0$, we call $f$ a decay function.
 \end{itemize}
 \end{thm}
 \end{frame}
@@ -407,10 +407,10 @@ Suppose that the population of India was about 1.25 billion in the year 2013, wi
 \end{ex}
 \begin{sol}
 This situation can be represented by the growth function
-\[ f(t) = 1.25 (1 + 12\%)^t = 1.25(1.012)^t, \]
-where $t$ is a number of years (since 2013). Notice that at the start when $t=0$, we have $f(t) = 1.25 (1.012)^0 = 1.25$ as intended.
+\[ f(t) = 1.25 (1 + 1.2\%)^t = 1.25(1.012)^t, \]
+where $t$ is the number of years (since 2013). Notice that at the start when $t=0$, we have $f(0) = 1.25 (1.012)^0 = 1.25$ as intended.
 
-Now, from 2013 to 2031, it'll take $2031-2013 = 18$ years, and so we can plug in $t=18$ into the function to get 
+Now, from 2013 to 2031, it takes $2031-2013 = 18$ years, and so we can plug in $t=18$ into the function to get 
 \[ f(18) = 1.25 (1.012)^{18} \approx 1.549.\]
 
 Thus, the population of India in 2031 would be about 1.549 billion.
@@ -431,7 +431,7 @@ f(35) &=& 50 = 100(1+b)^{35} \\
 1+b &=& \left(\tfrac{1}{2}\right)^{1/35}
 \end{eq*}
 Hence, we can compute the amount of substance when $t=54$ to be
-\[ f(54) = 100\left( \tfrac{1}{2^{1/35}}\right)^{54} \approx 34.321\]
+\[ f(54) = 100\left( \tfrac{1}{2^{1/35}}\right)^{54} \approx 34.321\text{ mg}\]
 \end{sol}
 \end{frame}
 
@@ -442,8 +442,8 @@ Let
 \begin{itemize}
 \item $P$ be the principal,
 \item $r$ be the annual percentage rate (APR),
-\item $n$ be the number of compouding periods in a year,
-\item $t$ be the time.
+\item $n$ be the number of compounding periods in a year,
+\item $t$ be the time (in years).
 \end{itemize}
 Then the account value by the end of time $t$ is
 \[ A(t) = P\left(1+ \frac{r}{n}\right)^{nt}.\]
@@ -467,9 +467,9 @@ A(10) &=& 3000 \left(1+\frac{0.03}{4}\right)^{4 \times 10} \\
 \begin{frame}
 \begin{exercisebox}{}{}
 \begin{enumerate}
-\item The fox population in a certain region has an annual growth rate of 9\% per year. In the year 2012, there were 23,900 fox counted in the area. What is the fox population predicted to be in the year 2020?
+\item The fox population in a certain region has an annual growth rate of 9\% per year. In the year 2012, there were 23,900 foxes counted in the area. What is the fox population predicted to be in the year 2020?
 \item A car was valued at \$38,000 in the year 2007. By 2013, the value had depreciated to \$11,000. If the car’s value continues to drop by the same percentage, what will it be worth by 2017?
-\item If we opended an investment account with an initial deposit of \$4,000 and with an annual interest rate of 7\%, compounding quarterly, how much will the account be worth in 9 years? 
+\item If we opened an investment account with an initial deposit of \$4,000 and with an annual interest rate of 7\%, compounding quarterly, how much will the account be worth in 9 years? 
 \end{enumerate}
 \end{exercisebox}
 \end{frame}
@@ -729,10 +729,10 @@ Use the properties to simplify the following terms
 \end{ex}
 \begin{sol}
 \begin{tasks}(1)
-\task $\log_2 8 + \log_2 32 = \log_2 (8 \times 32) = \log_2 (256) = 7$
+\task $\log_2 8 + \log_2 32 = \log_2 (8 \times 32) = \log_2 (256) = 8$
 \task $\log_3 36 - \log_3 4 = \log_3 \left( \frac{36}{4} \right) = \log_3 (9) = 2$
 \task $\frac{\log_5 81}{\log_5 3} = \log_{3} (81) = 4$
-\task $\log_5 \left(\frac{1}{2^4} \right) = \log_5 \left( \frac{1}{2} \right)^4 = \log_5 (2^{-4}) = -4 \log_5 2$  
+\task $\log_5 \left(\frac{1}{2^4} \right) = \log_5 (2^{-4}) = -4 \log_5 2$  
 \end{tasks}
 \end{sol}
 \end{frame}
@@ -745,7 +745,7 @@ If $\log$ is written without the base, we assume that it is in base 10*. In othe
 \end{defn}
 
 \begin{defn}{}{}
-As $\log$ base $e, \quad (e \approx 2.718)$ is frequently used, we define it as
+As $\log$ base $e \quad (e \approx 2.718)$ is frequently used, we define it as
 \[\ln x = \log_e x \]
 It reads ``the natural log of $x$'' or ``lon''.
 \end{defn}
@@ -816,7 +816,7 @@ It may seem intimidating for such a large number, so we first find some pattern 
 
 \begin{frame}[t]
 \frametitle{Pattern}
-Then, how can we simply such numbers? We use the fact that logarithm function is increasing and apply to the inequalities. If $x$ has $k$ digits, then we have
+Then, how can we simplify such numbers? We use the fact that the logarithm function is increasing and apply it to the inequalities. If $x$ has $k$ digits, then we have
 \begin{slide}
 \begin{eq*}
 10^{k-1} &\leq& x \quad < 10^{k} \\
@@ -830,13 +830,13 @@ We can summarize this observation (which is almost a proof) as follows.
 \begin{frame}
 \frametitle{Logarithm in Math}
 \begin{thm}{}{}
-Let $N$ be a real number. Then, the number of digits of $N$ in base 10 is
+Let $N$ be a positive real number. Then, the number of digits of $N$ in base 10 is
 \[ \lfloor \log_{10} N \rfloor + 1,\]
 where $\lfloor x \rfloor$ (called the floor function) is rounding $x$ down to the closest integer.
 
 \tcblower
 
-In general, the number of digits $N$ in base $k$ is
+In general, the number of digits of $N$ in base $k$ is
 \[ \lfloor \log_{k} N \rfloor + 1.\]
 \end{thm}
 \end{frame}
@@ -854,7 +854,7 @@ The number of digits is
 &=& \lfloor 30.10 \rfloor + 1 \\
 &=& 30 + 1 = 31
 \end{eq*}
-Thus, $2^{100}$ has 31 digits. A calculator would give you $1.267 \times 10^{30}$, which means it has the leading digit of 1 followed by 30 digits, for the total of 31 digits.
+Thus, $2^{100}$ has 31 digits. A calculator would give you $1.267 \times 10^{30}$, which means it has the leading digit of 1 followed by 30 digits, for a total of 31 digits.
 \end{sol}
 \end{frame}
 
@@ -864,13 +864,13 @@ Thus, $2^{100}$ has 31 digits. A calculator would give you $1.267 \times 10^{30}
 How many digits does $10^{100}$ have in base 2? Use the approximation $\log_{10} 2 \approx 0.3010.$
 \end{ex}
 \begin{sol}
-First of all, we can use the property of logarithm function to find 
+First of all, we can use the change-of-base property to find 
 $\log_{2} 10 = \frac{1}{\log_{10} 2} \approx \frac{1}{0.3010} \approx 3.3226.$ 
 Now we can compute the number of digits in base 2 to be
 \begin{eq*}
 \lfloor \log_{2} 10^{100} \rfloor + 1 &=& \lfloor 100 \times \log_{2} 10 \rfloor + 1 \\
-&\approx& \lfloor 332.226 \rfloor + 1 \\
-&=& \lfloor 332.226 \rfloor + 1 \\
+&\approx& \lfloor 100 \times 3.3226 \rfloor + 1 \\
+&=& \lfloor 332.26 \rfloor + 1 \\
 &=& 332 + 1 = 333
 \end{eq*}
 Thus, $10^{100}$ has 333 digits in base 2.
@@ -880,10 +880,10 @@ Thus, $10^{100}$ has 333 digits in base 2.
 
 \begin{frame}[t]
 \begin{ex}
-A standard deck of cards consists of 52 cards. It is known that it is unlikely that two well-shuffled deck of cards would have the same arrangements. 
+A standard deck of cards consists of 52 cards. It is known that it is unlikely that two well-shuffled decks of cards would have the same arrangements. 
 \medskip
 
-It is know that the number of different arrangements is $52!$, where $!$ is the factorial. How many digits does $52!$ have in base 10?
+It is known that the number of different arrangements is $52!$, where $!$ is the factorial. How many digits does $52!$ have in base 10?
 \end{ex}
 \begin{sol}
 First, we simplify $\log_{10} 52!$ using the multiplication property:

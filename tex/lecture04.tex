@@ -25,16 +25,19 @@ Five common methods for representing functions are:
 
 \begin{frame}
 \frametitle{1. Numerically by tables}
+A function can be represented as an input-output lookup table (e.g., Character Level vs. Max HP):
 \begin{table}[h!]
 \centering
-\begin{tabular}{|C||C|C|C|C|C|C|}
+\begin{tabular}{|c||c|c|c|c|c|c|}
 \hline
-x & - 1.1&-1.01 & -1.001 & -0.999 & -0.99 & -0.9 \\
+\textbf{Level ($x$)} & 1 & 2 & 3 & 4 & 5 & 6 \\
 \hline
-y & \pa 0.9 & \pa 0.99 & \pa 0.999 & \pa 1.001 & \pa 1.01 & \pa 1.1\\
+\textbf{Max HP ($y$)} & 100 & 160 & 240 & 340 & 460 & 600 \\
 \hline
 \end{tabular}
 \end{table}
+\medskip
+For every input level $x$, there is exactly one determined output HP value $y$.
 \end{frame}
 
 
@@ -79,7 +82,7 @@ As a machine that takes an input $x$ and gives a consistent output $y$.
 \end{frame}
 
 \begin{frame}
-\frametitle{Fourth concept}
+\frametitle{4. Geometrically by graphs}
 As points on a plane.
 \addfig{0.8}{covid_graph}{COVID cases (October 10th)}{}
 \end{frame}
@@ -87,19 +90,19 @@ As points on a plane.
 \begin{frame}
 \begin{figure}[h!]
 \centering
-\begin{tikzpicture}[domain=-3:3, scale = 0.4]
-\draw[help lines] (0,-6) grid (10,6);
-\draw[<->, thick] (-1,0) -- (10.5,0) node[right] {$x$};
-\draw[<->, thick] (0,-6.5) -- (0,6.5) node[above] {$y$};
-\draw[color=teal, variable = \t, very thick] plot ({\t*\t},{\t*2});
-\draw (4,4) circle [radius = 0.1cm] node[above] {$(x,y)$};
+\begin{tikzpicture}[scale = 0.6]
+\draw[help lines, color=gray!30] (-1,-3) grid (6,4);
+\draw[<->, thick] (-1.5,0) -- (6.5,0) node[right] {$x$};
+\draw[<->, thick] (0,-3.5) -- (0,4.5) node[above] {$y$};
+\draw[color=teal, variable = \x, domain = 0.2:6, very thick] plot (\x, {0.2*\x*\x - 1});
+\filldraw[teal] (4, 2.2) circle [radius = 0.1cm] node[above left] {$(x, f(x)) = (4, 2.2)$};
 \end{tikzpicture}
-\caption{A function as points $(x,y)$ on the plane.}
+\caption{A function as points $(x,y)$ on the Cartesian plane ($y = f(x)$).}
 \end{figure}
 \end{frame}
 
 \begin{frame}
-\frametitle{Fifth Concept}
+\frametitle{5. Verbally}
 Sometimes functions are described in words.
 \begin{remark}{Newton's Law of Universal Gravitation}
 The gravitational force of attraction between two bodies in the Universe is directly proportional to the product of their masses and inversely proportional to the square of the distance between them.
@@ -118,8 +121,52 @@ A function needs to give only one output for any input.
 
 We write 
 \[ f: A \rightarrow B\] 
-to represent a function $f$ from the set $A$, called \textbf{Domain}, to the set $B$, called \textbf{Range}.
-\end{defn} \pause
+to represent a function $f$ from the set $A$, called \textbf{Domain}, to the set $B$, called \textbf{Codomain} (where the actual outputs form the \textbf{Range} $f(A) \subseteq B$).
+\end{defn}
+\end{frame}
+
+\begin{frame}{Function Notation: $f(x) = y$}
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[scale = 0.85, every node/.style={align=center}]
+% Main equation components
+\node (fn) at (-1.6, 0) {\Huge \textbf{\textcolor{blue}{f}}};
+\node (lp) at (-1.0, 0) {\Huge \textbf{(}};
+\node (inp) at (-0.4, 0) {\Huge \textbf{\textcolor{red}{x}}};
+\node (rp) at (0.2, 0) {\Huge \textbf{)}};
+\node (eq) at (1.0, 0) {\Huge \textbf{=}};
+\node (out) at (1.8, 0) {\Huge \textbf{\textcolor{teal}{y}}};
+
+% Annotations with colored boxes
+\node[draw=blue, fill=blue!10, rounded corners, inner sep=4pt] (lblf) at (-3.0, 1.8) {\textbf{\textcolor{blue}{Function Name}}\\\small (The rule / formula)};
+\draw[->, very thick, blue] (lblf.south) -- (fn.north);
+
+\node[draw=red, fill=red!10, rounded corners, inner sep=4pt] (lblx) at (-0.4, -1.8) {\textbf{\textcolor{red}{Input / Argument}}\\\small (Independent variable / Domain)};
+\draw[->, very thick, red] (lblx.north) -- (inp.south);
+
+\node[draw=teal, fill=teal!10, rounded corners, inner sep=4pt] (lbly) at (2.8, 1.8) {\textbf{\textcolor{teal}{Output / Value}}\\\small (Dependent variable / Range)};
+\draw[->, very thick, teal] (lbly.south) -- (out.north);
+\end{tikzpicture}
+\caption{Breakdown of the notation: $f$ takes input $x$ and produces output $y = f(x)$.}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Functions vs Non-Functions in Game Design}
+\begin{block}{Functions in Games (Deterministic: 1 Input $\rightarrow$ Exactly 1 Output)}
+\begin{itemize}
+\item $\text{XPRequirement}(\text{Level})$: Level $5 \rightarrow 1,500\text{ XP}$ (fixed threshold). 
+\item $\text{Speed}(\text{Agility})$: Deterministic stat formula ($v = 10 + 0.5 \times \text{Agi}$). 
+\item $\text{ProjectileY}(\text{Time } t)$: Parabolic flight path height at time $t$.
+\end{itemize}
+\end{block}
+
+\begin{block}{Non-Functions in Games (Non-Deterministic: 1 Input $\rightarrow$ Multiple Outputs)}
+\begin{itemize}
+\item $\text{LootChest}(\text{Tier } 1) \rightarrow \{\text{Common Sword}, \text{Potion}, 50\text{ Gold}\}$ (RNG loot drop). 
+\item $\text{RollDice}() \rightarrow \{1, 2, 3, 4, 5, 6\}$ (Random dice outcome). 
+\item Branching dialogue choices: $[\text{Talk to NPC}] \rightarrow \{\text{Accept Quest}, \text{Refuse}\}$.
+\end{itemize}
+\end{block}
 \end{frame}
 
 \begin{frame}
@@ -230,7 +277,7 @@ If expressed as a mapping, then every element in the domain must have only one a
 
 \begin{frame}
 \frametitle{How to Test If It's a Function (2)}
-If expressed as a graph, every vertical line must intersect the graph once.
+If expressed as a graph, every vertical line must intersect the graph \textbf{at most once}.
 
 \begin{figure}[h!]
 \centering
@@ -259,7 +306,7 @@ If expressed as a graph, every vertical line must intersect the graph once.
 \begin{itemize}
 \item $R_1$ is a function, because any vertical line intersects the function at most once.
 \item $R_2$ is not a function, because there is a vertical line that intersects the graph twice.
-\item $R_3$ is not a function, because there is a vertical line that intersects the graph twice.
+\item $R_3$ is not a function, because there is a vertical line that intersects the graph three times.
 \end{itemize}
 
 \begin{figure}[h!]
@@ -330,14 +377,14 @@ Convert the following sentence in to functions in all 5 ways.
 \fi
 
 %%%%%%%%%%%%%
-\section[Evaluation]{Function Evaluation}
+\section[Evaluate]{Function Evaluation}
 \frame{\sectionpage}
 %%%%%%%%%%%%%
 
 
 \begin{frame}[t]
 \frametitle{Function evaluation}
-Given a function $f$ and a real number $a$ in the domain, we can define $f(a)$ to be the value when we substitute $x=a$ in the function. In other words, we replace all occurences of $x$ by $a$ \pa
+Given a function $f$ and a real number $a$ in the domain, we can define $f(a)$ to be the value when we substitute $x=a$ in the function. In other words, we replace all occurences of $x$ by $a$ 
 
 \begin{ex}
 Let $f(x) = 2x+1$. Compute the followings.
@@ -350,10 +397,10 @@ Let $f(x) = 2x+1$. Compute the followings.
 \end{ex}
 \begin{sol}
 \begin{eqnarray*} 
-\mbox{When } x=0 &\mbox{ we have }& \pa f(0) = 2(0) + 1 \pa = 1 \\ \pa
-\mbox{When } x=1 &\mbox{ we have }& \pa f(1) = 2(1) + 1 \pa = 2+1 \pa = 3\\ \pa
-\mbox{When } x=0.5 &\mbox{ we have }& \pa f(0.5) = 2(0.5) + 1 \pa = 1 + 1 \pa = 2\\ \pa
-\mbox{When } x=100 &\mbox{ we have }& \pa f(100) = 2(100) + 1 \pa = 200 + 1 \pa = 201
+\mbox{When } x=0 &\mbox{ we have }&  f(0) = 2(0) + 1  = 1 \\ 
+\mbox{When } x=1 &\mbox{ we have }&  f(1) = 2(1) + 1  = 2+1  = 3\\ 
+\mbox{When } x=0.5 &\mbox{ we have }&  f(0.5) = 2(0.5) + 1  = 1 + 1  = 2\\ 
+\mbox{When } x=100 &\mbox{ we have }&  f(100) = 2(100) + 1  = 200 + 1  = 201
 \end{eqnarray*}
 \end{sol}
 \end{frame}
@@ -371,10 +418,10 @@ Let $f(x) = x^2+x$. Compute the followings.
 \end{ex}
 \begin{sol}
 \begin{tasks}(1)
-\task $f(0) \pa = 0^2 + 0 = 0$ \pa
-\task $f(2) \pa = 2^2 + 2 \pa= 4+2 \pa= 6$ \pa
-\task $f(-3) \pa = (-3)^2 + (-3) \pa = 9 - 3 \pa = 6$ \pa
-\task $f\left(\frac{1}{3}\right) \pa= \left(\frac{1}{3}\right)^2 + \frac{1}{3} \pa= \frac{1}{9} + \frac{1}{3} \pa= \frac{4}{9}$
+\task $f(0)  = 0^2 + 0 = 0$ 
+\task $f(2)  = 2^2 + 2 = 4+2 = 6$ 
+\task $f(-3)  = (-3)^2 + (-3)  = 9 - 3  = 6$ 
+\task $f\left(\frac{1}{3}\right) = \left(\frac{1}{3}\right)^2 + \frac{1}{3} = \frac{1}{9} + \frac{1}{3} = \frac{4}{9}$
 \end{tasks}
 \end{sol}
 \end{frame}
@@ -385,18 +432,19 @@ Let $f(x) = x^2+x$. Compute the followings.
 We don't need to let $x$ be a number. It can be \textbf{anything}. For instance, let $f(x) = x^2+3x$. Then, we can write the followings.
 \begin{slide}
 \begin{eqnarray*}
-f(y) &=& y^2+3y \\ \pa
-f(\Xi) &=& \Xi^2 + 3\Xi \\ \pa
-f(x+5) &=& (x+5)^2 + 3(x+5) \\ \pa
-f(x+h) &=& (x+h)^2 + 3(x+h) \\ \pa
-f\left(\frac{1}{x}\right) &=& \left(\frac{1}{x}\right)^2 + 3\left(\frac{1}{x}\right) \pa
+f(y) &=& y^2+3y \\ 
+f(\Xi) &=& \Xi^2 + 3\Xi \\ 
+f(x+5) &=& (x+5)^2 + 3(x+5) \\ 
+f(x+h) &=& (x+h)^2 + 3(x+h) \\ 
+f\left(\frac{1}{x}\right) &=& \left(\frac{1}{x}\right)^2 + 3\left(\frac{1}{x}\right) 
 \end{eqnarray*}
 \end{slide}
 \end{remark}
 \end{frame}
 
+\iffalse
 \begin{frame}
-\begin{exercisebox}{}
+\begin{exercisebox}{}{}
 1. Google for your favorite/cool looking/bizarre/cute/funny graph.
 \begin{figure}[h!]
 \centering
@@ -405,6 +453,7 @@ f\left(\frac{1}{x}\right) &=& \left(\frac{1}{x}\right)^2 + 3\left(\frac{1}{x}\ri
 \end{figure}
 \end{exercisebox}
 \end{frame}
+\fi
 
 %%%%%%%%%%%%%
 \section[Algebra]{Algebra of Functions}
@@ -413,12 +462,12 @@ f\left(\frac{1}{x}\right) &=& \left(\frac{1}{x}\right)^2 + 3\left(\frac{1}{x}\ri
 
 \begin{frame}
 \frametitle{Algebra of Functions}
-Algebra of functions is the operation of the functions, specifically the arithematic operations.
+Algebra of functions refers to operations on functions, specifically arithmetic operations.
 \begin{prop}{}{}
 Let $f$ and $g$ be functions and $c$ be a constant.
 \begin{enumerate}
-\item $(cf) (x) = c ( f(x) )$ \pa
-\item $(f+g) (x) = f(x) + g(x)$ \pa
+\item $(cf) (x) = c ( f(x) )$ 
+\item $(f+g) (x) = f(x) + g(x)$ 
 \item $(f-g) (x) = f(x) - g(x)$
 \item $(f \cdot g) (x) = f(x) \cdot g(x) $
 \item $ \left(\frac{f}{g}\right)(x) = \frac{f(x)}{g(x)}$ where $g(x) \neq 0$
@@ -429,7 +478,7 @@ Let $f$ and $g$ be functions and $c$ be a constant.
 
 \begin{frame}[t]
 \begin{ex}
-Let $f(x) = x+1$ and $g(x) = 2x-3$. Find the followings.
+Let $f(x) = x+1$ and $g(x) = 2x-3$. Find the following.
 \begin{tasks}(4)
 \task $(2f)(x)$
 \task $(f+g)(x)$ 
@@ -439,14 +488,14 @@ Let $f(x) = x+1$ and $g(x) = 2x-3$. Find the followings.
 \end{ex}
 \begin{sol}
 \begin{eqnarray*}
-(2f)(x) \pa &=& 2f(x)  \\ \pa
-&=& 2(x+1) \pa = 2x+2 \\ \pa
-(f+g)(x) \pa &=& (x+1) + (2x-3)  \\ \pa
-&=& (x+2x) + (1-3) \pa = 3x-2 \\ \pa
-(f-g)(x) \pa &=& (x+1) - (2x-3) \\ \pa
-&=& (x+1) + (-2x + 3) \pa = (x-2x) + (1+3) \pa = -x+4 \\ \pa
-(3f + 2g) &=& 3f(x) + 2g(x) \\ \pa
-&=& 3(x+1) + 2(2x-3) \pa = (3x+3) + (4x-6) \pa = (7x-3)
+(2f)(x)  &=& 2f(x)  \\ 
+&=& 2(x+1)  = 2x+2 \\ 
+(f+g)(x)  &=& (x+1) + (2x-3)  \\ 
+&=& (x+2x) + (1-3)  = 3x-2 \\ 
+(f-g)(x)  &=& (x+1) - (2x-3) \\ 
+&=& (x+1) + (-2x + 3)  = (x-2x) + (1+3)  = -x+4 \\ 
+(3f + 2g)(x) &=& 3f(x) + 2g(x) \\ 
+&=& 3(x+1) + 2(2x-3)  = (3x+3) + (4x-6)  = 7x-3
 \end{eqnarray*}
 \end{sol}
 \end{frame}
@@ -462,8 +511,8 @@ Let $f(x) = x+1$ and $g(x) = 2x-3$. Find the followings.
 \end{ex}
 \begin{sol}
 \begin{eqnarray*}
-(fg)(x) \pa &=& (x+1)(2x-3) \\ \pa
-&=& 2x^2-3x+2x-3 \pa = 2x^2-x-3\\ \pa
+(fg)(x)  &=& (x+1)(2x-3) \\ 
+&=& 2x^2-3x+2x-3  = 2x^2-x-3\\ 
 \left(\frac{f}{g} \right)(x)&=& \frac{x+1}{2x-3}
 \end{eqnarray*}
 We can leave the fraction as is.
@@ -482,13 +531,61 @@ We can leave the fraction as is.
 \end{frame}
 
 
-\begin{frame}{composite function}
-We can combite two (or more) functions by chaining them.
-\begin{defn}{}{}
-Let $f(x)$ and $g(x)$ be functions. A composite function, denoted $f \circ g$, is defined as
- \[ (f \circ g)(x)= f(g(x))\]
-In other words, we replace $x$ in $f(x)$ by another function $g(x)$.
+\begin{frame}{Composite Functions: The Pipeline Concept}
+A \textbf{composite function} is simply chaining two (or more) functions into a pipeline.
+\begin{itemize}
+\item The \textbf{output} of the first function becomes the \textbf{input} of the next function.
+\item Think of it as an assembly line or sequential calculation in a game engine.
+\end{itemize}
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[scale=0.8, every node/.style={align=center}]
+\node[draw, fill=blue!15, rounded corners, inner sep=5pt] (in) at (0,0) {Input\\$x$};
+\node[draw, fill=teal!20, rounded corners, minimum width=2.2cm, minimum height=1.1cm] (g) at (3.2,0) {\textbf{Step 1:}\\[2pt]Function $g$};
+\node[draw, fill=purple!20, rounded corners, minimum width=2.2cm, minimum height=1.1cm] (f) at (7.0,0) {\textbf{Step 2:}\\[2pt]Function $f$};
+\node[draw, fill=orange!20, rounded corners, inner sep=5pt] (out) at (10.2,0) {Final Output\\$f(g(x))$};
+
+\draw[->, very thick] (in) -- (g);
+\draw[->, very thick] (g) -- node[above, scale=0.9] {$g(x)$} (f);
+\draw[->, very thick] (f) -- (out);
+\end{tikzpicture}
+\caption{Chaining functions: $x \longrightarrow g(x) \longrightarrow f(g(x))$}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Composite Function: Notation and Rule}
+\begin{defn}{Composite Function}{}
+Given functions $f$ and $g$, the \textbf{composite function} $(f \circ g)$ is defined by:
+\[ (f \circ g)(x) = f(g(x)) \]
 \end{defn}
+
+\textbf{How to read and evaluate the notation:}
+\begin{itemize}
+\item \textbf{Meaning of $\circ$}: Read $(f \circ g)$ as \textbf{``$f$ after $g$''} (apply $g$ first, then apply $f$). 
+\item \textbf{Inside-Out Rule}: Always evaluate the \textbf{inner function} $g(x)$ first, then feed the result into the \textbf{outer function} $f$. 
+\item \textbf{Order Matters}: In general, $(f \circ g)(x) \neq (g \circ f)(x)$!
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Example in Game Design: Damage Pipeline}
+\begin{block}{Sequential Combat Calculations}
+\begin{itemize}
+\item \textbf{Step 1 (Base Damage from Level):}
+\[ g(\text{lvl}) = 15 \times \text{lvl} + 20 \]
+\item \textbf{Step 2 (Critical Hit Buff - Double Damage):}
+\[ f(\text{dmg}) = 2 \times \text{dmg} \]
+\end{itemize}
+\end{block}
+use
+\medskip
+The \textbf{composite final damage function} $(f \circ g)$ combines both steps:
+\[ (f \circ g)(\text{lvl}) = f(g(\text{lvl})) = 2(15 \times \text{lvl} + 20) = 30 \times \text{lvl} + 40 \]
+use
+\begin{itemize}
+\item For a Level 4 player:
+\[ (f \circ g)(4) = 30(4) + 40 = 160\text{ damage} \]
+\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -571,7 +668,6 @@ In other words, we replace $x$ in $f(x)$ by another function $g(x)$.
 \node[scale = 2] at (7.5, 2.5) {$g$};
 \begin{scope}[yshift = -4cm]
 \filldraw[purple!40] (0,0) rectangle (9,2);
-\foreach \x in {-1,1}
 \foreach \x in {-0.8,0.8}
 {
 	\foreach \y in {-0.8,0.8}
@@ -609,13 +705,13 @@ Let $f(x) = x+1$ and $g(x) = x^2$. Find the followings.
 \end{ex}
 \begin{sol}
 \begin{eqnarray*}
-(f \circ g)(x) \pa &=& f(\alert{g(x)}) \pa= \alert{g(x)} + 1 = x^2 + 1 \\ \pa
-(g \circ f)(x) \pa &=& g(\green{f(x)}) \pa = \green{f(x)}^2 \pa = \green{(x+1)}^2
+(f \circ g)(x)  &=& f(\alert{g(x)}) = \alert{g(x)} + 1 = x^2 + 1 \\ 
+(g \circ f)(x)  &=& g(\green{f(x)})  = \green{f(x)}^2  = \green{(x+1)}^2
 \end{eqnarray*}
 Notice that $(f \circ g)(x) \neq (g \circ f)(x)$, so the order matters.
 \begin{eqnarray*}
-(f \circ f)(x) \pa &=& f(\green{f(x)}) \pa = \green{f(x)} + 1 \pa = \green{x+1} + 1 \pa = x+2 \\ \pa
-(g \circ g)(x) \pa &=& g(\red{g(x)}) \pa = (\red{g(x)})^2 \pa = (\red{x^2})^2 \pa = x^4
+(f \circ f)(x)  &=& f(\green{f(x)})  = \green{f(x)} + 1  = \green{x+1} + 1  = x+2 \\ 
+(g \circ g)(x)  &=& g(\red{g(x)})  = (\red{g(x)})^2  = (\red{x^2})^2  = x^4
 \end{eqnarray*}
 \end{sol}
 \end{frame} 
@@ -633,258 +729,14 @@ Let $f(x) = \sqrt{x} $ and $g(x) = 2x+1$. Find the followings.
 \end{ex}
 \begin{sol}
 \begin{eqnarray*}
-(f \circ g)(x) \pa &=& f(\alert{g(x)}) \pa= \sqrt{\alert{g(x)}} \pa = \sqrt{2x+1} \\ \pa
-(f \circ g)(4) \pa &=& \sqrt{2(4) + 1 } \pa = \sqrt{9} \pa = 3 \\ \pa
-(g \circ f)(x) \pa &=& g(\green{f(x)}) \pa = 2\green{f(x)}+1 \pa = 2\green{\sqrt{x}} + 1 \\ \pa
-(g \circ f)(4) \pa &=& 2\sqrt{4} + 1 \pa =  2(2) + 1 \pa = 5
+(f \circ g)(x)  &=& f(\alert{g(x)}) = \sqrt{\alert{g(x)}}  = \sqrt{2x+1} \\ 
+(f \circ g)(4)  &=& \sqrt{2(4) + 1 }  = \sqrt{9}  = 3 \\ 
+(g \circ f)(x)  &=& g(\green{f(x)})  = 2\green{f(x)}+1  = 2\green{\sqrt{x}} + 1 \\ 
+(g \circ f)(4)  &=& 2\sqrt{4} + 1  =  2(2) + 1  = 5
 \end{eqnarray*}
 \end{sol}
 \end{frame}
 
-\iffalse
-%%%%%%%%%%%%%%
-\section{ฟังก์ชันผกผัน}
-\frame{\sectionpage}
-%%%%%%%%%%%%%%
-
-\begin{frame}
-\frametitle{นิยามฟังก์ชันหนึ่งต่อหนึ่ง}
-ก่อนจะนิยามฟังก์ชันผกผันได้ เราจะต้องนิยามฟังก์ชันหนึ่งต่อหนึ่งก่อน
-\begin{defn}{}{}
-$f: A \rightarrow B$ เป็นฟังก์ชันหนึ่งต่อหนึ่ง ก็ต่อเมื่อ ไม่มีคู่อันดับที่สมาชิกตัวหลังเหมือนกัน \textbf{แต่สมาชิกตัวหน้าต่างกัน}
-\end{defn} \pa
-
-เช่น $f = \{ (1,A), (2,B), (3,C)\}$ เป็นฟังก์ชัน 1 ต่อ 1 \pa
-
-$g = \{(1,A), (2,A), (3,B)\}$ ไม่เป็นฟังก์ชัน 1 ต่อ 1 เพราะ $(1,A), (2,A)$ มีสมาชิกตัวหลังเหมือนกันแต่ตัวหน้าต่างกัน \pa
-\end{frame}
-
-\begin{frame}
-\begin{figure}[h!]
-\centering
-\begin{tikzpicture}[scale = 0.8]
-\filldraw[fill = teal!20!white] (1,2.5) ellipse [x radius = 1, y radius = 2.5];
-\filldraw[fill = blue!20!white] (5,2.5) ellipse [x radius = 1, y radius = 2.5];
-\node at (1,4) (a1) {a};
-\node at (1,3) (a2) {b};
-\node at (1,2) (a3) {c};
-\node at (1,1) (a4) {d};
-\node at (5,4) (b1) {w};
-\node at (5,3) (b2) {x};
-\node at (5,2) (b3) {y};
-\node at (5,1) (b4) {z};
-\draw[->] (a1) -- (b3);
-\draw[->] (a2) -- (b1);
-\draw[->] (a3) -- (b4);
-\draw[->] (a4) -- (b2);
-\node at (3,5) {$f_1$};
-\begin{scope}[xshift = 8cm]
-\filldraw[fill = teal!20!white] (1,2.5) ellipse [x radius = 1, y radius = 2.5];
-\filldraw[fill = blue!20!white] (5,2.5) ellipse [x radius = 1, y radius = 2.5];
-\node at (1,4) (a1) {a};
-\node at (1,3) (a2) {b};
-\node at (1,2) (a3) {c};
-\node at (1,1) (a4) {d};
-\node at (5,4) (b1) {w};
-\node[draw, circle, fill = red!40] at (5,3) (b2) {x};
-\node at (5,2) (b3) {y};
-\node at (5,1) (b4) {z};
-\draw[->,red] (a1) -- (b2);
-\draw[->] (a2) -- (b1);
-\draw[->] (a3) -- (b4);
-\draw[->,red] (a4) -- (b2);
-\node at (3,5) {$f_2$};
-\end{scope}
-\end{tikzpicture}
-\caption{ตัวอย่างฟังก์ชันหนึ่งต่อหนึ่ง $f_1$ และฟังก์ชันที่ไม่ใช่ฟังก์ชันหนึ่งต่อหนึ่ง $f_2$}
-\end{figure}
-\end{frame}
-
-\begin{frame}
-\frametitle{นิยามฟังก์ชันผกผัน}
-\begin{defn}{}{}
-กำหนดให้ $f$ เป็นฟังก์ชัน 1 ต่อ 1 \textbf{ ฟังก์ชันผกผันของ } $\mathbf{f}$ (เขียนแทนด้วย $f^{\, -1}$) คือฟังก์ชันที่มีสมบัติว่า
-\[\text{ถ้า } y = f(x) \text{ แล้ว }f^{\, -1}(y) = x\]
-\end{defn}
-\end{frame}
-
-\begin{frame}
-ถ้ากำหนดฟังก์ชัน $f$ ในรูปแบบเซต เราสามารถสร้างฟังก์ชันผกผันได้ด้วยการสลับตำแหน่งเซต $A$ และ $B$ แล้วทำการสลับทิศทางลูกศรทั้งหมด
-
-\begin{figure}[h!]
-\centering
-\begin{tikzpicture}[scale = 0.8]
-\filldraw[fill = red!20!white] (1,2.5) ellipse [x radius = 1, y radius = 2.5];
-\node[red] at (1,-1) {$A$};
-\filldraw[fill = teal!20!white] (5,2.5) ellipse [x radius = 1, y radius = 2.5];
-\node[teal] at (5,-1) {$B$};
-\node at (1,4) (a1) {a};
-\node at (1,3) (a2) {b};
-\node at (1,2) (a3) {c};
-\node at (1,1) (a4) {d};
-\node at (5,4) (b1) {1};
-\node at (5,3) (b2) {2};
-\node at (5,2) (b3) {3};
-\node at (5,1) (b4) {4};
-\draw[->] (a1) -- (b3);
-\draw[->] (a2) -- (b2);
-\draw[->] (a3) -- (b4);
-\draw[->] (a4) -- (b1);
-\node at (3, 5) {$f: A \rightarrow B$};
-\begin{scope}[xshift = 7cm]
-\filldraw[fill = teal!20!white] (1,2.5) ellipse [x radius = 1, y radius = 2.5];
-\node[teal] at (1,-1) {$B$};
-\filldraw[fill = red!20!white] (5,2.5) ellipse [x radius = 1, y radius = 2.5];
-\node[red] at (5,-1) {$A$};
-\node at (5,4) (a1) {a};
-\node at (5,3) (a2) {b};
-\node at (5,2) (a3) {c};
-\node at (5,1) (a4) {d};
-\node at (1,4) (b1) {1};
-\node at (1,3) (b2) {2};
-\node at (1,2) (b3) {3};
-\node at (1,1) (b4) {4};
-\draw[<-] (a1) -- (b3);
-\draw[<-] (a2) -- (b2);
-\draw[<-] (a3) -- (b4);
-\draw[<-] (a4) -- (b1);
-\node at (3, 5) {$f\,^{-1}: B \rightarrow A$};
-\end{scope}
-\end{tikzpicture}
-\caption{การสร้างฟังก์ชันผกผัน $f\,^{-1}$ ในรูปแบบความสัมพันธ์}
-\end{figure}
-\end{frame}
-
-\begin{frame}
-ถ้ากำหนดฟังก์ชัน $f$ ในรูปแบบการทำงานของเครื่องจักร เราสามารถสร้างฟังก์ชันผกผันได้ด้วยการหาว่าการทำงานแบบใดที่มีผลลัพธ์ตรงกันข้ามกับ $f$ เช่น ถ้า $f$ คือการลดขนาด แล้ว $f\,^{-1}$ คือการเพิ่มขนาด
-
-\begin{figure}[h!]
-\centering
-\begin{tikzpicture}[scale = 0.7]
-\filldraw[blue!40] (0,0) rectangle (3,2);
-\foreach \x in {-0.8,0.8}
-{
-	\foreach \y in {-0.8,0.8}
-	{
-		\draw[->] ({1.5+\x}, {1+\y}) -- ({1.5+(0.2*\x)},{1+(0.2*\y)});
-	}
-}
-\filldraw[ball color = teal] (-2.5,1) circle [radius = 1cm];
-\filldraw[ball color = teal] (4.5,1) circle [radius = 0.5cm];
-\foreach \x in {-1, 3.25}
-{
-	\draw[->] (\x,1) -- ({\x+0.5},1);
-}
-\node[scale = 2] at (1.5, 2.5) {$f$};
-\begin{scope}[yshift = -4cm]
-\filldraw[blue!40] (0,0) rectangle (3,2);
-\foreach \x in {-0.8,0.8}
-{
-	\foreach \y in {-0.8,0.8}
-	{
-		\draw[<-, red] ({1.5+\x}, {1+\y}) -- ({1.5+(0.2*\x)},{1+(0.2*\y)});
-	}
-}
-\filldraw[ball color = teal] (-2,1) circle [radius = 0.5cm];
-\filldraw[ball color = teal] (5,1) circle [radius = 1cm];
-\foreach \x in {-1, 3.25}
-{
-	\draw[->] (\x,1) -- ({\x+0.5},1);
-}
-\node[scale = 2] at (1.5, 2.5) {$f\,^{-1}$};
-\end{scope}
-\end{tikzpicture}
-\caption{การสร้างฟังก์ชันผกผัน $f\,^{-1}$ ในรูปการทำงานของเครื่องจักร}
-\end{figure}
-\end{frame}
-
-\begin{frame}
-ถ้ากำหนดฟังก์ชัน $f$ ในรูปแบบกราฟ เราสามารถสร้างฟังก์ชันผกผันได้ด้วยการแปลงจุด $(a,b)$ บนกราฟทั้งหมดให้กลายเป็นจุด $(b,a)$ ซึ่งมีค่าเท่ากับการสะท้อนกราฟฟังก์ชัน $y=f(x)$ บนเส้นแทยงมุม $y=x$ 
-
-\begin{figure}[h!]
-\centering
-\begin{tikzpicture}
-\axes{-2}{2}{-2}{2};
-\draw[blue] plot[domain = -2:1.4] (\x, {exp(\x)-1.5}) node[left] {$y=f\,^{-1}(x)$};
-\draw[red] plot[domain = -1.4:2] (\x, {ln(\x+1.5)}) node[right] 
-{$y=f(x)$};
-\draw[dashed] (-2,-2) -- (2,2) node {$y=x$};
-\draw[red] (-0.5, 0) circle [radius = 0.05cm] node [above left] {$(a,b)$};
-\draw[blue] (0, -0.5) circle [radius = 0.05cm] node [below right] {$(b,a)$};
-\draw[dotted, ->] (-0.5,0) -- (0,-0.5);
-\end{tikzpicture}
-\caption{ตัวอย่างการหาฟังก์ชันผกผันจากกราฟ}
-\end{figure}
-\end{frame}
-
-\begin{frame}
-\addfig{0.6}{function_inverse_meme}{ภาพ meme เปรียบเทียบฟังก์ชันปกติ และฟังก์ชันผกผัน}{}
-\end{frame}
-
-\begin{frame}
-\frametitle{วิธีหาฟังก์ชันผกผัน}
-\begin{block}{}
-\begin{enumerate}
-\item กำหนดตัวแปร $y$ โดยที่ $y = f(x)$  \pa
-\item สลับตัวแปรใหม่ ให้อยู่ในรูป $x = f(y)$ \pa
-\item จัดรูปสมการให้ฝั่งซ้ายมี $y$ พจน์เดียว และฝั่งขวามีพจน์ $x$ และค่าคงตัวทั้งหมด \pa
-\item สมการที่ได้จะอยู่ในรูป $y = f^{\, -1}$ ซึ่งเป็นฟังก์ชันผกผันที่ต้องการ
-\end{enumerate}
-\end{block}
-\end{frame}
-
-
-\begin{frame}[t]
-\begin{ex}
-กำหนดให้ $f(x) = x+2$ จงหา $f^{\, -1}(x)$
-\end{ex}
-\begin{sol}
-\begin{itemize}
-\item ขั้นแรกกำหนดตัวแปร $y = f(x)$ ขึ้นมาใหม่ \pa จะได้ 
-\[y = x+2\] \pa
-\item จากนั้นสลับตัวแปรใหม่จะได้เป็น \pa
-\[x = y+2\] \pa
-\item จัดรูปให้ $y$ อยู่ฝั่งซ้าย \pa จะได้
-\[y = x-2\] \pa 
-นั่นคือ $f^{-1}\,(x) = x-2$ เป็นฟังก์ชันผกผันที่ต้องการ
-\end{itemize}
-\end{sol}
-\end{frame}
-
-
-\begin{frame}[t]
-\begin{ex}
-กำหนดให้ $f(x) = x^2-3$ โดยที่ $x \geq 0$ จงหา $f^{\, -1}(x)$
-\end{ex}
-\begin{sol}
-\begin{itemize}
-\item ขั้นแรกกำหนดตัวแปร $y = f(x)$ ขึ้นมาใหม่ \pa จะได้ 
-\[y = x^2-3, \text{ โดยที่ } x \geq 0\] \pa
-\item สลับตัวแปรเป็น \pa
-\[x = y^2-3, \text{ โดยที่ } y \geq 0\] \pa
-จากนั้นจัดรูปใหม่\pa จะได้ 
-\[y^2 = x+3  \qquad \rightarrow \qquad y = \pm \sqrt{x+3}\]
-\pa แต่เนื่องจากเรากำหนดโดเมนที่มีค่า $y \geq 0$ \pa ฉะนั้นเราจึงได้ $y = \sqrt{x+3}$ \pa นั่นคือเราได้ฟังก์ชันผกผันเป็น  $f^{\, -1}(x) = \sqrt{x+3}$
-\end{itemize}
-\end{sol}
-\end{frame}
-
-\begin{frame}[t]
-\frametitle{สมบัติของฟังก์ชันผกผัน}
-\begin{prop}{}{}
-กำหนดให้ $f: A \to B$ เป็นฟังก์ชันหนึ่งต่อหนึ่ง $D_f$ และ $R_f$ เป็นโดเมนและเรนจ์ของฟังก์ชันตามลำดับ
-\begin{enumerate}
-\item $f^{-1}: R_f \to A$ และเป็นฟังก์ชันหนึ่งต่อหนึ่งเช่นกัน
-\item $(f \circ f^{-1}) (x) = x$ สำหรับทุก $x$ ใน $R_f$
-\item $(f^{-1} \circ f)(x) = x$ สำหรับทุก $x$ ใน $A$
-\end{enumerate}
-\end{prop}
-เช่น จากตัวอย่างก่อนหน้านี้เราทราบว่า $f(x) = x^2-3$ และ $f^{-1}(x) = \sqrt{x+3}$ ฉะนั้น
-\begin{slide}
-\[(f \circ f^{-1})(x) \pa = f( f^{-1}(x)) \pa = f( \sqrt{x+3} ) \pa = \sqrt{x+3}^2 - 3 \pa = (x+3) - 3 = x\]
-\end{slide}
-\end{frame}
-\fi
 
 %%%%%%%%%%%%%
 \section[Coordinate]{Coordinate System and Graph}
@@ -894,11 +746,11 @@ $g = \{(1,A), (2,A), (3,B)\}$ ไม่เป็นฟังก์ชัน 1 �
 \begin{frame}
 \begin{block}{Why do we plot graphs?}
 \begin{itemize}
-\item Visualize \pause 
-\item Prediction, tendency, asymptotic \pause
-\item Comparison \pause
-\item Discover correlation \pause
-\item Recreational purpose \pause
+\item Visualize use 
+\item Prediction, tendency, asymptotic use
+\item Comparison use
+\item Discover correlation use
+\item Recreational purpose use
 \end{itemize}
 \end{block}
 
@@ -924,7 +776,7 @@ node [above right] {$(\red{3},\blue{2})$};
 
 \begin{frame}
 \begin{defn}{}{}
-The \textbf{Cartesian coordinate system} is an coordinate system that specifies each point uniquely in a plane by a set of numerical coordinates. \pause
+The \textbf{Cartesian coordinate system} is a coordinate system that specifies each point uniquely in a plane by a pair of numerical coordinates $(x, y)$.
 \end{defn}
 
 \begin{block}{}
@@ -932,11 +784,73 @@ A graph of a function $f(x)$ shows a collection of points $(x, f(x))$ on the Car
 \end{block}
 \end{frame}
 
+\begin{frame}[t]
+\begin{ex}
+Find the coordinates $(x, y)$ of points $A, B, C$, and $D$ on the grid below.
+\medskip
+
+\begin{tikzpicture}[scale=0.55]
+\draw[help lines, color=gray!40] (-4,-4) grid (4,4);
+\draw[->, thick] (-4.3,0) -- (4.3,0) node[right] {$x$};
+\draw[->, thick] (0,-4.3) -- (0,4.3) node[above] {$y$};
+\foreach \x in {-4,-3,-2,-1,1,2,3,4}
+  \draw (\x,0.1) -- (\x,-0.1) node[below, scale=0.6] {\x};
+\foreach \y in {-4,-3,-2,-1,1,2,3,4}
+  \draw (0.1,\y) -- (-0.1,\y) node[left, scale=0.6] {\y};
+
+\filldraw[blue] (3,2) circle (3pt) node[above right] {$A$};
+\filldraw[red] (-3,1) circle (3pt) node[above left] {$B$};
+\filldraw[teal] (-2,-3) circle (3pt) node[below left] {$C$};
+\filldraw[orange] (2,-2) circle (3pt) node[below right] {$D$};
+\end{tikzpicture}
+\end{ex}
+\begin{sol}
+\[A = (3, 2), \quad B = (-3, 1), \quad C = (-2, -3), \quad D = (2, -2)\]
+\end{sol}
+\end{frame}
+
+\begin{frame}[t]
+\begin{ex}
+Use the graph of $y = f(x)$ below to find the coordinates and evaluate:
+\begin{tasks}(4)
+\task $f(2)$
+\task $f(0)$
+\task $f(-2)$
+\task Find $x$ where $f(x) = 0$
+\end{tasks}
+\medskip
+
+\begin{tikzpicture}[scale=0.55]
+\draw[help lines, color=gray!40] (-3,-2) grid (3,4);
+\draw[->, thick] (-3.3,0) -- (3.3,0) node[right] {$x$};
+\draw[->, thick] (0,-2.3) -- (0,4.3) node[above] {$y$};
+\foreach \x in {-3,-2,-1,1,2,3}
+  \draw (\x,0.1) -- (\x,-0.1) node[below, scale=0.6] {\x};
+\foreach \y in {-2,-1,1,2,3,4}
+  \draw (0.1,\y) -- (-0.1,\y) node[left, scale=0.6] {\y};
+
+\draw[thick, blue, domain=-2.2:2.2, samples=50] plot (\x, {-\x*\x + 3});
+\filldraw[red] (2,-1) circle (2.5pt);
+\filldraw[red] (-2,-1) circle (2.5pt);
+\filldraw[red] (0,3) circle (2.5pt);
+\end{tikzpicture}
+
+\begin{sol}
+\begin{tasks}(4)
+\task Point $(2, -1) \rightarrow f(2) = -1$ 
+\task Point $(0, 3) \rightarrow f(0) = 3$
+\task Point $(-2, -1) \rightarrow f(-2) = -1$
+\task Crosses x-axis: $x \approx \pm 1.73$
+\end{tasks}
+\end{sol}
+\end{ex}
+\end{frame}
+
 \begin{frame}
 \begin{figure}[h!]
 \centering
 \includegraphics[width = 0.9\textwidth]{l07i20.png}
-\caption{\href{desmos.com/calculator}{Online graphing utility}}
+\caption{\href{https://www.desmos.com/calculator}{Online graphing utility (Desmos)}}
 \end{figure}
 \end{frame}
 
@@ -967,13 +881,13 @@ Plot the points $(x,f(x))$ for the function $f(x) = \frac{1}{x^2+1}$ with $x=-2,
 Plot the points $(x,f(x))$ for the function $f(x) = | |x+1| - 1 |$ with $x=-2,-1,0,1,2$.
 \end{ex}
 \begin{sol}
-\addfig{0.8}{graph_plot_ex3.png}{The plot of the function $f(x) = \frac{1}{x^2+1}$}{}
+\addfig{0.8}{graph_plot_ex3.png}{The plot of the function $f(x) = ||x+1|-1|$}{}
 \end{sol}
 \end{frame}
 
 
 \begin{frame}
-\begin{exercisebox}{}
+\begin{exercisebox}{}{}
 Plot the points $(x,f(x))$ for the following functions with $x=-2,-1,0,1,2$ and connect the points to predict its shape.
 \begin{enumerate}
 \item $f(x) = \frac{x+1}{x+3}$
@@ -984,13 +898,13 @@ Plot the points $(x,f(x))$ for the following functions with $x=-2,-1,0,1,2$ and 
 \end{frame}
 
 %%%%%%%%%%%%%%
-\section{Function Type}
+\section[Types]{Function Types}
 \frame{\sectionpage}
 %%%%%%%%%%%%%%
 
 \begin{frame}
 \frametitle{Basic Functions}
-We will learn some basic functions.
+We will learn some basic functions commonly used in mathematics and game design:
 \begin{enumerate}
 \item Constant function
 \item Linear function
@@ -998,6 +912,7 @@ We will learn some basic functions.
 \item Polynomial function
 \item Rational function
 \item Absolute value function
+\item Step function
 \end{enumerate}
 \end{frame}
 
@@ -1005,8 +920,8 @@ We will learn some basic functions.
 \frametitle{1. Constant Function}
 A constant function is of the form
 \begin{block}{}\[f(x) = c\]\end{block} 
-when $c$ is a constant. The graph is a horizontal line parallel to the x-axis. \pause
-\textbf{Ex.}  $f(x) = -2, f(x) = 5$ \pause
+where $c$ is a constant. The graph is a horizontal line parallel to the x-axis. use
+\textbf{Ex.}  $f(x) = -2, f(x) = 5$ use
 
 
 \begin{figure}[h!]
@@ -1035,7 +950,7 @@ when $c$ is a constant. The graph is a horizontal line parallel to the x-axis. \
 A linear function is of the form 
 \begin{block}{}\[f(x) = ax+b\]\end{block} 
 where $a,b$ are constants and $a \neq 0$. 
-\textbf{Ex.} $f(x) = 2x, f(x) = -3x + 1$ \pause
+\textbf{Ex.} $f(x) = 2x, f(x) = -3x + 1$ use
 
 \begin{figure}[h!]
 \centering
@@ -1062,9 +977,9 @@ where $a,b$ are constants and $a \neq 0$.
 \frametitle{3. Quadratic Function}
 A quadratic function is of the form
 \begin{block}{}\[f(x) = ax^2+bx+c\]\end{block}
- when $a,b,c$ are constants and $a \neq 0$. The graph is called a \textbf{parabola}.
+where $a,b,c$ are constants and $a \neq 0$. The graph is called a \textbf{parabola}.
 
-\textbf{Ex.} $f(x) = x^2+2x+3, f(x) = 5x^2 - 4$ \pause
+\textbf{Ex.} $f(x) = x^2+2x+3, f(x) = 5x^2 - 4$ use
 
 
 \begin{figure}[h!]
@@ -1092,7 +1007,7 @@ A quadratic function is of the form
 \frametitle{4. Polynomial Function}
 A polynomial function (also called a polynomial) is of the form 
 \begin{block}{}\[f(x) = a_n x^n + a_{n-1}x^{n-1} + \ldots + a_2 x^2 + a_1 x + a_0\] \end{block}
-where $a_n, a_{n-1}, \ldots, a_2, a_1, a_0$ are all constants  and $n \geq 0$ is an integer. \pause
+where $a_n, a_{n-1}, \ldots, a_2, a_1, a_0$ are all constants and $n \geq 0$ is an integer. use
 
 
 \begin{figure}[h!]
@@ -1120,13 +1035,13 @@ where $a_n, a_{n-1}, \ldots, a_2, a_1, a_0$ are all constants  and $n \geq 0$ is
 \frametitle{5. Rational Function}
 A rational function is of the form
 \begin{block}{}\[f(x) = \frac{g(x)}{h(x)}\]\end{block}
-where $g(x)$ and $h(x)$ are polynomials and $h(x)$ is not the constant function $h(x) = 0$. 
+where $g(x)$ and $h(x)$ are polynomials and $h(x)$ is not the zero function $h(x) = 0$. 
 
-\textbf{Ex.} $\displaystyle f(x) = \frac{x+1}{x^2-1}, f(x) = \frac{4x^4 + 2x^2 + 1}{2x^2+1}, f(x) = \frac{1}{x^2+1}$ \pause
+\textbf{Ex.} $\displaystyle f(x) = \frac{x+1}{x^2-1}, f(x) = \frac{4x^4 + 2x^2 + 1}{2x^2+1}, f(x) = \frac{1}{x^2+1}$ use
 
 \begin{figure}[h!]
 \centering
-\begin{tikzpicture}[scale = 0.4, smooth, domain = -2:2]
+\begin{tikzpicture}[scale = 0.35, smooth, domain = -2:2]
 \axes{-2}{2}{-2}{2};
 \draw[blue] plot[domain = -2:-0.5] (\x, {1/\x});
 \draw[blue] plot[domain = 0.5:2] (\x, {1/\x});
@@ -1144,7 +1059,7 @@ where $g(x)$ and $h(x)$ are polynomials and $h(x)$ is not the constant function 
 \node[teal, scale = 0.8] at (0,-3) {$f(x) = \frac{x}{x^2-1}$};
 \end{scope}
 \end{tikzpicture}
-\caption{Rational functions $f(x) = \tfrac{f(x)}{g(x)}$}
+\caption{Rational functions $f(x) = \tfrac{g(x)}{h(x)}$}
 \end{figure}
 \end{frame}
 
@@ -1152,15 +1067,15 @@ where $g(x)$ and $h(x)$ are polynomials and $h(x)$ is not the constant function 
 \begin{frame}
 \frametitle{6. Absolute Value Function}
 Recall that an absolute value is defined as
-\begin{block}{}\[ |x| = \begin{cases} x &, \text{ if } x \geq 0 \\ -x &, \text{ if } x < 0\end{cases}\]\end{block}
-Then, an absolute value function is any function that has an absolute value.
+\begin{block}{}\[ |x| = \begin{cases} x, & \text{if } x \geq 0 \\ -x, & \text{if } x < 0\end{cases}\]\end{block}
+Then, an absolute value function is any function that contains an absolute value expression.
 
-\textbf{Ex.} $f(x) = | x | , f(x) = | x^3 | + 2  , f(x) = | x - 1|$\pause
+\textbf{Ex.} $f(x) = | x | , f(x) = | x^3 | + 2  , f(x) = | x - 1|$use
 
 
 \begin{figure}[h!]
 \centering
-\begin{tikzpicture}[scale = 0.6, smooth, domain = -2:2]
+\begin{tikzpicture}[scale = 0.45, smooth, domain = -2:2]
 \axes{-2}{2}{-2}{2};
 \draw[blue] plot[domain = -2:2] (\x, {abs(\x)});
 \node[blue, scale = 0.8] at (0,-3) {$f(x) = |x|$};
@@ -1180,23 +1095,23 @@ Then, an absolute value function is any function that has an absolute value.
 \end{frame}
 
 \begin{frame}
-\frametitle{Step function}
-7.  Step function - defined differently on intervals, so it looks like a staircase.
+\frametitle{7. Step Function}
+A step function is defined piecewise on intervals, resulting in a staircase graph.
 
 \begin{figure}[h!]
 \centering
-\begin{tikzpicture}[scale = 0.6]
+\begin{tikzpicture}[scale = 0.5]
 \axes{-2}{2}{-2}{2};
 \draw[blue] (-2,-1) -- (0,-1) (0,1) -- (2,1) (0,-1) circle [radius = 0.1cm];
 \filldraw (0,1) circle [radius = 0.1cm];
-\node[blue, scale = 0.8] at (0,-3) {$f(x) = \begin{cases} -1; & x < 0 \\ 1;&x \geq 0\end{cases}$};
-\begin{scope}[xshift = 6cm]
+\node[blue, scale = 0.8] at (0,-3) {$f(x) = \begin{cases} -1, & x < 0 \\ 1, & x \geq 0\end{cases}$};
+\begin{scope}[xshift = 10cm]
 \axes{-2}{2}{-2}{2};
 \draw[red] (-2,2) -- (-1,2) (-1,-1) -- (1,-1) (1,0) -- (2,0) (-1,2) circle [radius = 0.1cm] (1,0) circle [radius = 0.1cm];
 \filldraw (-1,-1) circle [radius = 0.1cm] (1,-1) circle [radius = 0.1cm];
-\node[red, scale = 0.8] at (0,-3) {$f(x) = \begin{cases} 2; & x < -1 \\ -1;&-1 \leq x \leq 1 \\ 0; & x > 1\end{cases}$};
+\node[red, scale = 0.8] at (0,-3) {$f(x) = \begin{cases} 2, & x < -1 \\ -1, & -1 \leq x \leq 1 \\ 0, & x > 1\end{cases}$};
 \end{scope}
-\begin{scope}[xshift = 12cm]
+\begin{scope}[xshift = 20cm]
 \axes{-2}{2}{-2}{2};
 \foreach \x in {-2,-1,0,1}
 {
@@ -1211,7 +1126,7 @@ Then, an absolute value function is any function that has an absolute value.
 \end{frame}
 
 \begin{frame}
-\begin{exercisebox}{}
+\begin{exercisebox}{}{}
 Graph the following functions for $x$ in $[0,2]$.
 \begin{enumerate}
 \item $f(x) = \lfloor x \rfloor$ where $\lfloor x \rfloor$ is the largest integer that is smaller than or equals to $x$. 
@@ -1281,7 +1196,7 @@ Use graphs to find the solutions of
 \end{ex}
 \begin{sol}
 We plot the graphs of the function $f(x) = x$ and $g(x) = x^2$ and see that the part where $f(x) \geq g(x)$ is when $0 \leq x \leq 1$. Thus, the solutions are in the closed interval $[0, 1]$.
-\addfig{0.5}{graph_ineq_ex1}{The region where of $f(x) \geq g(x)$.}{}
+\addfig{0.5}{graph_ineq_ex1}{The region where $f(x) \geq g(x)$.}{}
 \end{sol}
 \end{frame}
 
@@ -1292,13 +1207,13 @@ Use graphs to find the solutions of
 \[ x^2-3x+3 \geq 1\]
 \end{ex}
 \begin{sol}
-We plot the graphs of the function $f(x) = x^2-3x+3$ and $g(x) = 1$ (which is a constant function) and see that the region where $f(x) \geq g(x)$ is when $x \leq 1$ or $x \geq 2$. Thus, the solutions are in the union of intervals $(-\infty, 1) \cup (2, \infty)$.
-\addfig{0.5}{graph_ineq_ex2}{The region where of $f(x) \geq g(x)$.}{}
+We plot the graphs of the function $f(x) = x^2-3x+3$ and $g(x) = 1$ (which is a constant function) and see that the region where $f(x) \geq g(x)$ is when $x \leq 1$ or $x \geq 2$. Thus, the solutions are in the union of intervals $(-\infty, 1] \cup [2, \infty)$.
+\addfig{0.5}{graph_ineq_ex2}{The region where $f(x) \geq g(x)$.}{}
 \end{sol}
 \end{frame}
 
 \begin{frame}
-\begin{exercisebox}{}
+\begin{exercisebox}{}{}
 Use desmos.com (or your favorite graphing tool) to find the solutions of the following equations or inequalities.
 \begin{enumerate}
 \item $3x+1 = 2x+4$
@@ -1310,26 +1225,14 @@ Use desmos.com (or your favorite graphing tool) to find the solutions of the fol
 \end{exercisebox}
 \end{frame}
 
+\iffalse
 %%%%%%%%%%%%%%
 \section{Activity}
 \frame{\sectionpage}
 %%%%%%%%%%%%%%
 
-\iffalse
 \begin{frame}
-\begin{exercisebox}{}
-1. Google for your favorite/cool looking/bizarre/cute/funny graph.
-\begin{figure}[h!]
-\centering
-\includegraphics[width = 0.7\textwidth]{l07i20.png}
-\caption{\href{desmos.com/calculator}{Desmos.com}}
-\end{figure}
-\end{exercisebox}
-\end{frame}
-\fi
-
-\begin{frame}
-\begin{exercisebox}{}
+\begin{exercisebox}{}{}
 Save the Princess and screencap it! You only need to submit the last one, but it's recommended you finish World 1-1 and 1-2 to understand the mechanism.
 \begin{figure}[h!]
 \centering
@@ -1338,6 +1241,7 @@ Save the Princess and screencap it! You only need to submit the last one, but it
 \end{figure}
 \end{exercisebox}
 \end{frame}
+\fi
 
 %%%%%%%%%%%%%%
 \section{Extra}
@@ -1354,8 +1258,39 @@ Save the Princess and screencap it! You only need to submit the last one, but it
 \end{frame}
 
 
-\begin{frame}
-\frametitle{Polar Coordinate}
-\addfig{0.5}{graph_polar}{Polar Coordinate}{}
+\begin{frame}{Polar Coordinates $(r, \theta)$}
+In a \textbf{polar coordinate system}, each point $P$ is determined by:
+\begin{itemize}
+\item $r$: Radial distance from the origin (the \textbf{Pole})
+\item $\theta$: Angle measured from the positive x-axis (\textbf{Polar Axis})
+\end{itemize}
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[scale = 0.45]
+% Concentric circles
+\foreach \r in {1, 2, 3, 4} {
+  \draw[gray!35, thick] (0,0) circle (\r cm);
+  \node[gray!70, scale=0.55, below right] at (\r,0) {\r};
+}
+% Radial spokes
+\foreach \a in {0, 30, 45, 60, 90, 120, 135, 150, 180, 210, 225, 240, 270, 300, 315, 330} {
+  \draw[gray!25] (0,0) -- (\a:4.3cm);
+  \node[gray!80, scale=0.5] at (\a:4.6cm) {$\a^\circ$};
+}
+% Polar axis
+\draw[->, very thick] (0,0) -- (4.4,0) node[right, scale=0.7] {Polar Axis};
+\draw[->, thick, gray] (0,0) -- (0,4.4);
+
+% Example Point P(3, 45°)
+\draw[thick, red, ->] (0,0) -- (45:3cm) node[midway, above left, scale=0.7] {$r=3$};
+\filldraw[red] (45:3cm) circle (2.5pt) node[above right, scale=0.7] {$P(3, 45^\circ) = (3, \frac{\pi}{4})$};
+\draw[red, thick, ->] (0.9,0) arc (0:45:0.9cm) node[midway, right, scale=0.6] {$\theta = 45^\circ$};
+
+% Pole
+\filldraw[black] (0,0) circle (2pt) node[below left, scale=0.7] {Pole $(0,0)$};
+\end{tikzpicture}
+\caption{Polar coordinate system --- used in game radars, circular AoE spells, and minimap tracking.}
+\end{figure}
 \end{frame}
 

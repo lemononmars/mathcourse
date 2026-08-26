@@ -1,17 +1,17 @@
-\title{Lecture 12: Probability in Board Game and Complex Number}
+\title{Lecture 12: Probability in Board Games and Complex Numbers}
 
 \frame{\titlepage}
 
 %%%%%%%%%%%%%
-\section{Advance}
+\section{Advanced Expected Value}
 \frame{\sectionpage}
 %%%%%%%%%%%%%
 
 \begin{frame}{Infinite Sum}
-The formula for expected value still works if there are infinitely many outcomes. The following formula for geometric sum might be useful.
-\begin{block}{Geometric sum}
-If $-1 \leq r < 1$, then
-\[ \sum_{n=0}^{\infty} r^n = 1 + r + r^2 + r^3 + \ldots = \frac{1}{1-r}\]
+The formula for expected value still works if there are infinitely many outcomes. The following formula for geometric series might be useful:
+\begin{block}{Geometric series sum}
+If $-1 < r < 1$, then
+\[ \sum_{n=0}^{\infty} r^n = 1 + r + r^2 + r^3 + \ldots = \frac{1}{1-r}.\]
 \end{block}
 \end{frame}
 
@@ -21,9 +21,9 @@ If $-1 \leq r < 1$, then
 Suppose you flip a coin until you see a tail. What is the expected number of flips?
 \end{ex}
 \begin{sol}
-Let $X$ be the number of coin flips until we get a tail. For $X = k$, there must be $k-1$ consecutive heads, and then 1 last tail. Since each flip is independent, the probability  is $\frac{1}{2^k}$. Hence,
+Let $X$ be the number of coin flips until we get a tail. For $X = k$, there must be $k-1$ consecutive heads, and then 1 last tail. Since each flip is independent, the probability is $\frac{1}{2^k}$. Hence,
 \begin{eq*}
-\red{E(X)} &=& \sum_{x = 1}^{\infty} x E(x) = \sum_{x=1}^{\infty} \frac{x}{2^x} =\frac{1}{2} + \frac{2}{4} + \frac{3}{8} + \frac{4}{16} + \ldots \\
+\red{E(X)} &=& \sum_{x = 1}^{\infty} x P(X=x) = \sum_{x=1}^{\infty} \frac{x}{2^x} =\frac{1}{2} + \frac{2}{4} + \frac{3}{8} + \frac{4}{16} + \ldots \\
 \green{2E(X)} &=& 1 + \frac{2}{2} + \frac{3}{4} + \frac{4}{8} + \frac{5}{16} + \ldots \\
 \green{2E(X)} -\red{E(X)} &=& 1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{16} + \ldots \\
 E(X) &=& 2
@@ -61,7 +61,7 @@ This gives the same result as before.
 
 \begin{frame}[t]
 \begin{ex}
-Suppose you roll a die. If the result less than 6, you get that much coins. If the result is 6, you must pay a penalty of 5 coins before rerolling again. What is the expected number of coins you would gain?
+Suppose you roll a die. If the result is less than 6, you get that many coins. If the result is 6, you must pay a penalty of 5 coins before rerolling again. What is the expected number of coins you would gain?
 \end{ex}
 \begin{sol}
 Let $X$ be the amount of coins you gain. There is $\tfrac{1}{6}$ chance to roll a 1 and get 1 coin. There is $\tfrac{1}{6}$ chance to roll a 2 and get 2 coins, and so on. Finally, there is $\tfrac{1}{6}$ chance to roll a 6 and get $E(X) - 5$ coins. Thus, we have
@@ -70,7 +70,7 @@ E(X) &=& (1) \frac{1}{6} + (2) \frac{1}{6} + (3) \frac{1}{6} + (4) \frac{1}{6} +
 E(X) &=& \frac{10}{6} + \frac{E(X)}{6} \\
 E(X) &=& 2
 \end{eq*}
-Thus, despite the heavy penalty, on average you still gain 2 coins!
+Thus, despite the penalty on rolling 6, on average you still gain 2 coins!
 \end{sol}
 \end{frame}
 
@@ -83,7 +83,7 @@ Thus, despite the heavy penalty, on average you still gain 2 coins!
 \begin{itemize}
 \item Attacker and Defender roll some dice. 
 \item Sort dice on each side from highest to lowest.
-\item Compare highest pair of dice. The smaller value loses 1 troop, when tied the attacker loses 1 troop.
+\item Compare highest pair of dice. The smaller value loses 1 troop; when tied, the attacker loses 1 troop.
 \end{itemize}
 \end{frame}
 
@@ -94,7 +94,7 @@ Thus, despite the heavy penalty, on average you still gain 2 coins!
 
 \begin{frame}[t]
 \begin{ex}
-If attacker and defender each rolls a single die. Find the expected win for the attacker.
+If attacker and defender each roll a single die, find the expected win for the attacker.
 \end{ex}
 \begin{sol}
 Create a table listing all possible outcomes.
@@ -131,7 +131,7 @@ We see that the attacker wins 15 out of 36 equally likely outcomes. Therefore, t
 
 \begin{frame}[t]
 \begin{ex}
-If attacker rolls two dice and defender rolls one die. Find the expected loss for the attacker.
+If attacker rolls two dice and defender rolls one die, find the expected win for the attacker.
 \end{ex}
 \begin{sol}
 First, let $X$ be the maximum of two dice for the attacker and determine $P(X)$ for each possible value. 
@@ -242,7 +242,7 @@ Here is how to interpret the table: in the first row when the defender rolls a 1
 \end{tikzpicture}
 \end{figure}
 
-Since the defender's values from 1-6 are equally likely, the expected number can be obtained by adding all red numbers. 
+Since the defender's values from 1-6 are equally likely, the expected number can be obtained by adding all red numbers:
 \[ E(X) = \frac{1}{6}\left(\frac{35}{36} + \frac{32}{36} + \frac{27}{36} + \frac{20}{36} + \frac{11}{36}\right) = \frac{125}{216}.\]
 \end{sol}
 \end{frame}
@@ -261,10 +261,10 @@ Find the probability of getting a Yahtzee if you are allowed to reroll once (wit
 \end{ex}
 \begin{sol}
 \begin{itemize}
-\item If our very first rolls give us a Yahtzee already, we win (yay!), with probability $\frac{6}{6^5}$.
-\item If the first roll is four-of-a-kind, then we would reroll the last die. Now, the probability of getting four-of-a-kind is 
+\item If our very first roll gives us a Yahtzee already, we win, with probability $\frac{6}{6^5}$.
+\item If the first roll is four-of-a-kind, then we reroll the last die. The probability of getting four-of-a-kind is 
 \[\frac{6 \times C(5,4) \times 5}{6^5} = \frac{150}{6^5}.\] 
-We first consider which value to be the four-of-a-kind (6 possibilities), then which die to be the fifth unmatched die (5 chooses 4), and lastly which value to be on the fifth die (5 possibilities since it can't be the same with the rest).
+We first consider which value is the four-of-a-kind (6 possibilities), then which die is the fifth unmatched die ($\binom{5}{4}$), and lastly which value is on the fifth die (5 possibilities).
 \end{itemize}
 \end{sol}
 \end{frame}
@@ -276,14 +276,14 @@ Therefore, the probability of getting a four-of-a-kind and then rerolling to get
 \begin{itemize}
 \item If the first roll has three matching values, we apply a similar argument. The probability of getting such outcome is 
 \[\frac{6 \times C(5,3) \times (5 \times 5)}{6^5} = \frac{1500}{6^5}.\] 
-Then, the probability of rerolling two dice to match the first three is simply $\frac{1}{36}$. Thus, the probability is 
+Then, the probability of rerolling two dice to match the first three is $\frac{1}{36}$. Thus, the probability is 
 \[\frac{1500}{6^5} \times \frac{1}{36} = \frac{250}{6^6}.\]
 \end{itemize}
 \end{sol}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%
-\section{Complex Number}
+\section{Complex Numbers}
 \frame{\sectionpage}
 %%%%%%%%%%%%%%%%%%
 
@@ -300,26 +300,26 @@ Then, the probability of rerolling two dice to match the first three is simply $
   \begin{itemize}
   \item First we have the set of natural numbers 
   \[\mathbb{N} =\{1,2,3,\ldots\}.\]
-  \item Adding two natural numbers (says $3+9$) results in another natural number. This property is called closed: the set of natural numbers is closed under addition (and also multiplication).
-  \item But subtracting one natural numbers from another does not always give you another natural number (says $5-8$).
+  \item Adding two natural numbers (say $3+9$) results in another natural number. This property is called closed: the set of natural numbers is closed under addition (and also multiplication).
+  \item But subtracting one natural number from another does not always give you another natural number (say $5-8$).
   \item Fix: define negative numbers. Now we have the set of integers 
-  \[\mathbb{Z} = \{\ldots, -2,-1,0,1,2\}.\]
+  \[\mathbb{Z} = \{\ldots, -2,-1,0,1,2,\ldots\}.\]
   \end{itemize}
 \end{frame}
 
 \begin{frame}{Fractions}
   \begin{itemize}
-  \item Great! Now adding, multiplying or subtracting two integers give you another integer.
+  \item Great! Now adding, multiplying, or subtracting two integers gives you another integer.
   \item But now division doesn't work!
   \item Fix: define fractions. Now we have the set of rational numbers 
   \[\mathbb{Q} = \left\{\frac{a}{b} \Big| a,b \in \mathbb{Z}, b \neq 0 \right\}.\]
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Fractions}
+\begin{frame}{Real Numbers}
   \begin{itemize}
-  \item Great! Now adding or subtracting two integers give you another integer.
-  \item But the system is still flawed! There are numbers that can't be represented as a fraction of two integers, like the length of the hypotheuse of the right triangle with side lengths 1, or the circumference of a circle with radius 1.
+  \item Great! Now adding, subtracting, multiplying, or dividing rational numbers gives another rational number.
+  \item But the system is still flawed! There are numbers that can't be represented as a fraction of two integers, like the length of the hypotenuse of a right triangle with side lengths 1, or the circumference of a circle with radius 1.
   \begin{figure}[h!]
   \centering
   \begin{tikzpicture}[scale = 0.6]
@@ -331,20 +331,19 @@ Then, the probability of rerolling two dice to match the first three is simply $
   \draw[->] (0,1.1) arc[start angle = 0, end angle = 355, radius = 0.6] node[pos=0.5, left] {$?$};
   \end{tikzpicture}
   \end{figure}
-  \item Fix: define ``decimal numbers''. Now we have the set of rational numbers 
-\[\mathbb{R} = \left\{ x \, \Big| x \text{ can be written as an infinite decimal number.}\right\} \]
+  \item Fix: define real numbers. Now we have the set of real numbers:
+\[\mathbb{R} = \left\{ x \, \Big| x \text{ can be written as a decimal number.}\right\} \]
 $\sqrt{2}$ and $\pi$ are real numbers because we can write $\sqrt{2} = 1.41421356\ldots$ and $\pi = 3.14159265\ldots$
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Here comes the complex}
+\begin{frame}{Here comes the complex numbers}
   \begin{itemize}
-  \item Great! Now have all these fancy numbers!
+  \item Great! Now we have all these fancy numbers!
   \item But the system is still flawed! Polynomials like
-  \[x^2+1 = 0.\]
-  do not have solutions as real numbers.
-  \item Fix: assume they have solutions, which we defined as ``complex numbers''. Now we have the set of complex numbers $\mathbb{C} = \left\{ x \, | x  \text{ is a solution of a polynomial with real coefficients.}\right\}$.
-
+  \[x^2+1 = 0\]
+  do not have solutions in real numbers.
+  \item Fix: assume they have solutions, which we define as ``complex numbers''. Now we have the set of complex numbers $\mathbb{C}$.
   \end{itemize}
 \end{frame}
 
@@ -433,7 +432,7 @@ Multiply like polynomials and use $i^2=-1$:
     (a+bi)(c+di) = (ac - bd) + (ad+bc)i
     \end{equation}
   \end{thm}
-Note: do not remember the formula! You should multiply complex numbers like polynomials.
+Note: do not memorize the formula! You should multiply complex numbers like polynomials.
 \end{frame}
 
 
@@ -448,9 +447,9 @@ Compute the following products.
 \end{ex}
 \begin{sol}
 \begin{eq*}
-(3+2i)(4-5i) &=& (3)(4) + (3)(-5i) + (2i)(4) + (2i)(5i) \\
-&=& 12 - 15i + 8i - 10 \\
-&=& 22 - 7i \\
+(3+2i)(4-5i) &=& (3)(4) + (3)(-5i) + (2i)(4) + (2i)(-5i) \\
+&=& 12 - 15i + 8i - 10(-1) \\
+&=& 12 - 7i + 10 = 22 - 7i \\
 (4i)(-2+3i) &=& (4i)(-2) + (4i)(3i)\\
  &=& -8i - 12 \\
  &=& -12 - 8i \\
@@ -585,9 +584,9 @@ There are two units for the angle $\theta$: degree and radian. In this lecture, 
 
 \begin{frame}{Polar form $(r,\theta)$}
 \begin{defn}{}{}
-A complex number $z =a+bi$ can also be epressed in polar form as 
+A complex number $z =a+bi$ can also be expressed in polar form as 
 \begin{eq}
-z &=& r(\cos\theta + \sin\theta i) \\
+z &=& r(\cos\theta + i\sin\theta) \\
 &=& r e^{i\theta}
 \end{eq} 
 where $r=|z|$ is the modulus and $\theta=\arg(z)$ is the argument.
@@ -628,9 +627,9 @@ Change the following complex numbers in polar form to rectangular form.
 \end{ex}
 \begin{sol}
 \begin{tasks}
-\task $4e^{i \,30} = 4(\cos (30) + \sin (30)i) = 4 \left( \frac{\sqrt{3}}{2} + i \frac{1}{2}\right) = 2 \sqrt{3} + 2i$
-\task $-5e^{i \,120} = -5(\cos (120) + \sin (120)i) = -5 \left( \frac{-1}{2} + i \frac{\sqrt{3}}{2}\right) = \frac{5}{2} - \frac{5\sqrt{3}}{2}i$
-\task $\frac{1}{2} e^{i \,90} = \frac{1}{2} (\cos (90) + \sin (90) i) = \frac{1}{2}(i) = \frac{i}{2}$
+\task $4e^{i \,30} = 4(\cos (30) + i\sin (30)) = 4 \left( \frac{\sqrt{3}}{2} + i \frac{1}{2}\right) = 2 \sqrt{3} + 2i$
+\task $-5e^{i \,120} = -5(\cos (120) + i\sin (120)) = -5 \left( -\frac{1}{2} + i \frac{\sqrt{3}}{2}\right) = \frac{5}{2} - \frac{5\sqrt{3}}{2}i$
+\task $\frac{1}{2} e^{i \,90} = \frac{1}{2} (\cos (90) + i\sin (90)) = \frac{1}{2}(i) = \frac{i}{2}$
 \end{tasks}
 \end{sol}
 \end{frame}
@@ -643,7 +642,7 @@ Let $z_1 = r_1 e^{i\theta_1}$ and $z_2 = r_2 e^{i\theta_2}$. Then
 z_1 z_2 = r_1 r_2 e^{i(\theta_1 + \theta_2)}
 \end{eq}
 \end{thm}
-Interpretation: to multiply two complex numbers, you can multiply lengths and add angles.
+Interpretation: to multiply two complex numbers, multiply their lengths and add their angles.
 \end{frame}
 
 \begin{frame}{Division in polar form}
@@ -653,7 +652,7 @@ Let $z_1 = r_1 e^{i\theta_1}$ and $z_2 = r_2 e^{i\theta_2}$. Then
 \frac{z_1}{z_2} = \frac{r_1}{r_2} e^{i(\theta_1 - \theta_2)}
 \end{eq}
 \end{thm}
-Interpretation: to divide two complex numbers, you can divide their lengths and subtract angles.
+Interpretation: to divide two complex numbers, divide their lengths and subtract their angles.
 \end{frame}
 
 \begin{frame}[t]
@@ -667,8 +666,8 @@ Find the multiplications in polar form.
 \begin{sol}
 \begin{eq*}
 (3 e^{i \,90})(2 e^{i \,60}) &=& (3)(2) e^{i \,(90+60)} \\
-&=& 6 e^{i \,(150)} \\
-(-e^{i \,180})\left( \frac{1}{2} e^{-i 90} \right) &=& (-1)\left(\frac{1}{2}\right) e^{i \,(180+(-90)} \\
+&=& 6 e^{i \,150} \\
+(-e^{i \,180})\left( \frac{1}{2} e^{-i 90} \right) &=& (-1)\left(\frac{1}{2}\right) e^{i \,(180+(-90))} \\
 &=& -\frac{1}{2}e^{i \,90}
 \end{eq*}
 \end{sol}
@@ -682,7 +681,7 @@ Notice that if we multiply repeatedly, we have
 \end{eq*}
 Indeed, this observation is true for any positive power!
 \begin{thm}{De Moivre}{}
-Let $r$ and $\theta$ be real numbers and $n$ be a positive real number. Then, we have
+Let $r$ and $\theta$ be real numbers and $n$ be a positive integer. Then, we have
 \begin{equation}
 (r e^{i\theta})^n = r^n e^{in\theta}
 \end{equation}
@@ -713,7 +712,7 @@ Find a complex number $z$ such that $z^3 = 125 e^{i \, 60}$.
 \begin{sol}
 If we write $z = re^{i\theta}$, then $z^3 = r^3 e^{i (3\theta)}$. We can simply compare
 \[r^3 e^{i \,(3\theta)} = 125 e^{i \, 60}\]
-so that we have $r^3=125$ and $3\theta = 60$. These give use $r=5$ and $\theta = 20$, and thus
+so that we have $r^3=125$ and $3\theta = 60$. These give us $r=5$ and $\theta = 20$, and thus
 \[z = 5 e^{i \, 20}\]
 is a complex number such that $z^3 = 125 e^{i \, 60}$.
 \end{sol}
@@ -725,11 +724,11 @@ In the previous example, we have
 and then we can write
 \[z = (125 e^{i \, 60}) ^{\frac{1}{3}}.\]
 
-In particular, we have the following definition
+In particular, we have the following definition:
 \begin{defn}{}{}
 Let $z$ and $w$ be complex numbers and $n$ be a positive integer such that $z^n = w$. Then we have
 \[z = w^{\frac{1}{n}}\]
-and call $z$ an n-th root of $w$.
+and call $z$ an $n$-th root of $w$.
 \end{defn}
 \end{frame}
 
@@ -751,38 +750,37 @@ and so on. Note that $x^3=1$ has one real root $x=1$, but the degree of 3 sugges
 \end{frame}
 
 \begin{frame}{}
-We rewrite the equation as 
+We rewrite the equation as:
 \[x^3 = 1\]
 If $x = re^{i\theta}$, then
 \[x^3= r^3e^{i(3\theta)}\]
 
-We see that $r=1$ since the modulus (or length) of the right-handed side is 1. However, $\theta$ requires attention because note that
+We see that $r=1$ since the modulus (or length) of the right-hand side is 1. However, $\theta$ requires attention because note that
 \[1 = e^{i \, 0}\]
-and setting $3\theta = 0$ gives us $\theta = 0$as one solution. But actually, using trigonometry we have
+and setting $3\theta = 0$ gives us $\theta = 0$ as one solution. But actually, using trigonometry we have
 \[1 = e^{i \, (360 k)} \]
-where $k$ is an integer. This means that we can rotate the complex number $360$ degree and get the same number as the origin. Thus, the correct equation would be
+where $k$ is an integer. This means that we can rotate the complex number $360$ degrees and get the same number as the origin. Thus, the correct equation is:
 \[3 \theta = 360 k \]
 \end{frame}
 
 \begin{frame}{}
-Finally, we have
+Finally, we have:
 \begin{eq*}
 (k=0) \quad 3\theta = 0 &\rightarrow& \theta = 0 \\
 (k=1) \quad 3\theta = 360 & \rightarrow& \theta = 120 \\
 (k=2) \quad 3\theta = 720 & \rightarrow& \theta = 240 \\
 (k=3) \quad 3\theta = 1080 & \rightarrow& \theta = 360
 \end{eq*}
-But $\theta = 0$ and $\theta = 360$ are the same angle and thus yields the same solution. Thus, the roots of the polynomial $x^3=1$ are
-\[x = 1, e^{i \,120}, e^{i \, 240},\]
-or, in the form $z=a+bi$, we have
-We can repeat the same argument for any power $x^n$
+Since $\theta = 0$ and $\theta = 360$ are the same angle, they yield the same solution. Thus, the roots of the polynomial $x^3=1$ are:
+\[x = 1, \; e^{i \,120}, \; e^{i \, 240},\]
+or in rectangular form $a+bi$: $1, \; -\frac{1}{2} + \frac{\sqrt{3}}{2}i, \; -\frac{1}{2} - \frac{\sqrt{3}}{2}i$.
 \end{frame}
 
 \begin{frame}{Roots of Unity}
 \begin{thm}{}{}
 The roots of $x^n=1$ where $n$ is a natural number are
 \begin{equation}
-x = e^{i \,\frac{360 k}{n}}, k=0,1,2,\ldots,n-1
+x = e^{i \,\frac{360 k}{n}}, \quad k=0,1,2,\ldots,n-1
 \end{equation}
 These are called ``roots of unity'' of degree $n$. Geometrically, these are unit vectors equally spaced around the origin.
 \end{thm}
@@ -803,8 +801,7 @@ These are called ``roots of unity'' of degree $n$. Geometrically, these are unit
 	\end{scope}
 }
 \end{tikzpicture}
-\caption{}
-\label{}
+\caption{Roots of unity for different values of $n$}
 \end{figure}
 \end{frame}
 
@@ -814,20 +811,20 @@ Find the roots of unity of degree 4.
 \end{ex}
 \begin{sol}
 Applying the theorem, the roots are
-\[x = e^{i \,\frac{360k}{4}}, k=0,1,2,3\]
+\[x = e^{i \,\frac{360k}{4}}, \quad k=0,1,2,3\]
 These are $e^{i0}, e^{i \, 90}, e^{i \, 180}, e^{i \, 270}$, which can also be expressed as $1, i, -1, -i$.
 \end{sol}
 \end{frame}
 
 
 \begin{frame}{N-th roots}
-For any complex number $z = re^{i\theta}$, recall that we can find an n-root using De Moivre's rule.
+For any complex number $z = re^{i\theta}$, recall that we can find an $n$-th root using De Moivre's rule:
 \[ z^{\frac{1}{n}} = r^{\frac{1}{n}} e^{i \left(\frac{\theta}{n}\right)}\]
-Now, we can indeed find \text{all} roots using roots of unity.
+Now, we can find \textbf{all} $n$-th roots using roots of unity.
 \begin{thm}{}{}
-Let $z=re^{i\theta}$ be a complex number and $n$ be a natural number. The n-th roots of $z$ are
+Let $z=re^{i\theta}$ be a complex number and $n$ be a natural number. The $n$-th roots of $z$ are
 \begin{equation}
-z_k = r^{\frac{1}{n}} e^{i \,\frac{\theta + 360k}{n}}, k=0,1,2,\ldots,n-1
+z_k = r^{\frac{1}{n}} e^{i \,\frac{\theta + 360k}{n}}, \quad k=0,1,2,\ldots,n-1
 \end{equation}
 We have $z_k^n = z$.
 \end{thm}
@@ -849,7 +846,7 @@ These are: $2,\; 2e^{i \, 120}$ and $\; 2e^{i \, 240}.$
 Find all fourth roots of -81.
 \end{ex}
 \begin{sol}
-Write $-81 = 81 e^{i \,180}$. Cube roots are:
+Write $-81 = 81 e^{i \,180}$. Fourth roots are:
 \[ 81^{1/4} e^{i \, \frac{180 + 360k}{4}} = 3 e^{i \, (45 + 90k)},\quad k=0,1,2,3. \]
 These are: $3 e^{i \, 45}, 3e^{i \, 135}, 3e^{i\, 225}$ and $3e^{i \, 315}.$
 \end{sol}
