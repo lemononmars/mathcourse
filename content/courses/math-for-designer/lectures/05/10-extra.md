@@ -1,6 +1,6 @@
 ---
 week: 5
-order: 8
+order: 10
 slug: "extra"
 title: "Extra"
 source: "tex/lecture05.tex"
@@ -37,7 +37,6 @@ e &=& 1 + \frac{1}{1!} + \frac{1}{2!} + \frac{1}{3!} + \cdots
 
 &\approx& 2.71828\ldots
 \end{eqnarray*}
-
 
 
 

@@ -178,7 +178,7 @@ Find $\sin (180 - \theta)$ and $\cos (180 - \theta)$ in terms of $\sin \theta$ a
 
 :::solution
 
-Looking at the graph, we see that $180 - \theta$ degrees is the reflection of the angle $\theta$ across the y-axis. Thus, the height is the same, so $\sin (180 - \theta) = \theta$ and and width becomes negative so $\cos(180 - \theta) = -\cos(\theta)$.
+Looking at the graph, we see that $180 - \theta$ is the reflection of the angle $\theta$ across the $y$-axis. Thus, the height is unchanged, so $\sin (180 - \theta) = \sin \theta$, and the width becomes negative, so $\cos(180 - \theta) = -\cos \theta$.
 
 :::figure trig_prop_180minus
 :::
@@ -199,7 +199,7 @@ Find $\sin (90 - \theta)$ and $\cos (90 - \theta)$ in terms of $\sin \theta$ and
 
 :::solution
 
-If you draw a triangle with angle $90 - \theta$ degrees, you will notice that the other angle in the triangle, labeled $\alpha$ is exactly $\theta$. This is because we know that the sum of all three angles are 180, so $90 + (90 - \theta) + \alpha = 180$, giving us $\alpha = \theta$.
+If you draw a triangle with angle $90 - \theta$ degrees, you will notice that the other angle in the triangle, labeled $\alpha$, is exactly $\theta$. This is because the sum of all three angles is $180^{\circ}$, so $90 + (90 - \theta) + \alpha = 180$, giving us $\alpha = \theta$.
 
 :::figure trig_prop_90minus1
 :::
@@ -218,7 +218,7 @@ Then, if we focus on the other triangle, we get the following figure.
 :::figure trig_prop_90minus2
 :::
 
-Notice that the sine and cosine switch place. This is because we rotate the triangle by 90 degrees, so height becomes width and vice versa. Thus, if we compare this new triangle to the original triangle, we get
+Notice that the sine and cosine switch places. This is because we rotate the triangle by 90 degrees, so height becomes width and vice versa. Thus, if we compare this new triangle to the original triangle, we get
 
 \[\sin (90 - \theta) = \cos \theta\]
 \[\cos (90 - \theta) = \sin \theta \]

@@ -1,6 +1,6 @@
 ---
 week: 5
-order: 5
+order: 6
 slug: "logarithm"
 title: "Logarithm"
 source: "tex/lecture05.tex"
@@ -8,7 +8,7 @@ source: "tex/lecture05.tex"
 
 ## Inverse Problem
 
-Recall the Wheat and Chessboard problem. 
+Recall the Wheat and Chessboard problem.
 
 :::slide
 
@@ -23,7 +23,6 @@ and want a solution in the form
 \[k \geq ?\]
 
 :::
-
 
 
 
@@ -53,30 +52,30 @@ We read this logarithmic expression as ``The logarithm with base $b$ of $x$ equa
 
 :::tikz TikZ diagram
 \begin{tikzpicture}[every node/.style={scale = 2}]
-\node at (0,0) {log};
-\node at (2,0) (X) {$(x)$};
-\node at (3,0) {$=$};
-\node at (4,0) (Y) {$y$};
-\node at (1,-0.2) (B) {$b$};
-\draw[->, blue] (B) to[bend right] (Y);
-\draw[opacity = 0] (B) -- (Y) node [pos=0.5, below = 4pt, blue, opacity = 1] {to};
-\draw[->, blue ] (Y) to[bend right] (X);
-\draw[opacity = 0 ] (Y) -- (X) node [pos =0.5, above = 4pt, blue, opacity = 1] {$=$};
-\node at (8,0) [scale = 0.5, blue] {think $b$ to the $y = x$};
+      \node at (0,0) {log};
+      \node at (2,0) (X) {$(x)$};
+      \node at (3,0) {$=$};
+      \node at (4,0) (Y) {$y$};
+      \node at (1,-0.2) (B) {$b$};
+      \draw[->, blue] (B) to[bend right] (Y);
+      \draw[opacity = 0] (B) -- (Y) node [pos=0.5, below = 4pt, blue, opacity = 1] {to};
+      \draw[->, blue ] (Y) to[bend right] (X);
+      \draw[opacity = 0 ] (Y) -- (X) node [pos =0.5, above = 4pt, blue, opacity = 1] {$=$};
+      \node at (8,0) [scale = 0.5, blue] {think $b$ to the $y = x$};
 
-\begin{scope}[yshift = -3cm]
-\node at (0,0) {log};
-\node at (2,0) (X) {$(x)$};
-\node at (3,0) {$=$};
-\node at (4,0) (Y) {$y$};
-\node at (1,-0.2) (B) {$b$};
-\draw[->, red] (B) to[bend right] (Y);
-\draw[opacity = 0] (B) -- (Y) node [pos=0.5, below = 4pt, red, opacity = 1] {to};
-\draw[->, red] (Y) to[bend right] (X);
-\draw[opacity = 0 ] (Y) -- (X) node [pos =0.5, above = 4pt, red, opacity = 1] {$=$};
-\node at (8,0) [scale = 0.5, red] {means $b^y=x$};
-\end{scope}
-\end{tikzpicture}
+      \begin{scope}[yshift = -3cm]
+        \node at (0,0) {log};
+        \node at (2,0) (X) {$(x)$};
+        \node at (3,0) {$=$};
+        \node at (4,0) (Y) {$y$};
+        \node at (1,-0.2) (B) {$b$};
+        \draw[->, red] (B) to[bend right] (Y);
+        \draw[opacity = 0] (B) -- (Y) node [pos=0.5, below = 4pt, red, opacity = 1] {to};
+        \draw[->, red] (Y) to[bend right] (X);
+        \draw[opacity = 0 ] (Y) -- (X) node [pos =0.5, above = 4pt, red, opacity = 1] {$=$};
+        \node at (8,0) [scale = 0.5, red] {means $b^y=x$};
+      \end{scope}
+    \end{tikzpicture}
 :::
 
 
@@ -118,15 +117,14 @@ Convert each exponential equation into a logarithm equation.
 
 
 
-
 :::example
 
 Use definition of logarithm function to find the following.
 
 
-- $\log_3 9$ 
+- $\log_3 9$
 
-- $\log_4 64$ 
+- $\log_4 64$
 
 - $\log_2 \frac{1}{32}$
 
@@ -169,7 +167,7 @@ Use definition of logarithm function to find the following.
 \begin{question}{}
 Is it necessary that $b > 0$? Why can't we have $b=1$?
 \tcbsubtitle{Answer}
-Yes. Because $f(x) = \log_{-2} x$ is not a function. There is no solution for some value of $x$. For instance, $(-2)^y = 8$ has no solution. 
+Yes. Because $f(x) = \log_{-2} x$ is not a function. There is no solution for some value of $x$. For instance, $(-2)^y = 8$ has no solution.
 
 
 To avoid the issue, we require the base $b$ to be positive. Then, the function would be defined for all positive real numbers $x$.

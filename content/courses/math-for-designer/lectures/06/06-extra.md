@@ -8,8 +8,8 @@ source: "tex/lecture06.tex"
 
 ## The Whole Family
 
-Note: We also define the following functions
-\[ \sec \theta = \frac{1}{\sin \theta}, \quad \csc \theta = \frac{1}{\cos \theta}, \quad\cot \theta = \frac{1}{\tan \theta}\] 
+Note: We also define the following reciprocal functions:
+\[ \sec \theta = \frac{1}{\cos \theta}, \quad \csc \theta = \frac{1}{\sin \theta}, \quad\cot \theta = \frac{1}{\tan \theta}\] 
 
 These notations are handy when dealing with some types of problems, but we do not need them for now.
 

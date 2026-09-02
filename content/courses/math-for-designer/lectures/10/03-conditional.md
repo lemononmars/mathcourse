@@ -200,9 +200,9 @@ Let $B$ = one of the kids is male. Then, we can see that
 \[B = \{FM, MF, MM\}.\]
 
 
-- It is clear from the sentence that they cannot both be female, as one of them is known to be male. Thus, we immediately conclude that $P(A_1|B) = 0$.
+- It is clear from the problem that they cannot both be female, as one of them is known to be male. Thus, we immediately conclude that $P(A_1|B) = 0$.
 
-- Using the formula, we get $P(A_2 |B) = \frac{P(A_2 \cap B)}{P(B)} = \frac{1/4}{3/4} = \frac{1}{3}$
+- Using the formula, we get $P(A_2 |B) = \frac{P(A_2 \cap B)}{P(B)} = \frac{1/4}{3/4} = \frac{1}{3}$.
 
 
 :::

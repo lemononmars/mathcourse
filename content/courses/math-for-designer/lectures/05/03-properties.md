@@ -35,8 +35,6 @@ Thus, we conclude that
 
 
 
-
-
 :::note
 
 \[(M \times N)^a\]
@@ -58,7 +56,6 @@ Thus, we conclude that
 \[(M \times N)^a = M^a \times N^a.\]
 
 :::
-
 
 
 
@@ -90,7 +87,6 @@ Thus, we conclude that
 
 
 
-
 :::note
 
 \[M^0\]
@@ -104,7 +100,7 @@ If we apply the first property with $b=0$ we have
 \begin{eq*}
 M^{a+0} &=& M^a \times M^0 
 
-M^a &=& M^a \times M^0 
+M^a &=& M^a \times M^0
 \end{eq*}
 For the equation to hold, we need
 \[M^0 = 1.\]
@@ -128,9 +124,9 @@ Alternately, we notice that if going up (say from $M^3$ to $M^4$) means we multi
 
 :::slide
 
-We know that 
+We know that
 \[M^a \times M^{-a} = M^{a + (-a)} = M^0 = 1.\] 
-And also, 
+And also,
 \[M^a \times \frac{1}{M^a} = \frac{M^a}{M^a} = 1.\] 
 Thus, we conclude that
 \[M^{-a} = \frac{1}{M^a}.\]
@@ -200,7 +196,6 @@ The correct approach is to transform the exponent into simple multiplication.
 
 
 
-
 :::example
 
 Simplify the following terms using properties.
@@ -222,13 +217,13 @@ Simplify the following terms using properties.
 
 
 
-- $3^4 \times 3^5 = (3 \times 3 \times 3 \times 3) \times (3 \times 3 \times 3 \times 3 \times 3) = 3^9$
+- $3^4 \times 3^5 = 3^{4+5} = 3^9$
 
-- $2^{-2} \times 2^{3} = \frac{1}{2 \times 2} \times (2 \times 2 \times 2) = 2$
+- $2^{-2} \times 2^{3} = 2^{-2+3} = 2^1 = 2$
 
-- $2^7 \times 3^7 = \underbrace{(2 \times 2 \times \cdots \times 2)}_{7 \text{ times}} \times \underbrace{(3 \times 3 \times \times \cdots 3)}_{7 \text{ times}} = (2 \times 3) \times (2 \times 3) \times \cdots \times (2 \times 3) = (2 \times 3)^7 = 6^7$
+- $2^7 \times 3^7 = (2 \times 3)^7 = 6^7$
 
-- Neither the bases of the exponents are the same. Nevertheless, we can convert the exponents to match. $9^3 \times 5^6 = (3^2)^3 \times 5^6 = 3^{(2 \times 3)} \times 5^6 = 3^6 \times 5^6 = (15)^6$
+- $9^3 \times 2^6 = (3^2)^3 \times 2^6 = 3^6 \times 2^6 = (3 \times 2)^6 = 6^6$
 
 
 :::

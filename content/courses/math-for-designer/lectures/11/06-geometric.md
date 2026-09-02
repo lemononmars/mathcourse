@@ -44,7 +44,7 @@ Let's consider each possible value of $X$ one by one. If the first flip is head,
 
 :::solution
 (Continued) 
-Thus, we have the following table
+Thus, we have the following table:
 
 \def\arraystretch{2}
 
@@ -54,7 +54,7 @@ Thus, we have the following table
 
 
 
-Using the table above, we can make the folowing chart.
+Using the table above, we can make the following chart:
 
 
 
@@ -89,7 +89,7 @@ Using the table above, we can make the folowing chart.
 
 :::definition
 
-A **geometric experiment** has three characteristics
+A **geometric experiment** has three characteristics:
 
 
 - There are one or more Bernoulli trials with **ALL** failures **EXCEPT** the last one, which is a success.
@@ -108,7 +108,7 @@ A **geometric experiment** has three characteristics
 
 :::note
 
-Let $X$ be the number of independent trials **before** the first success. Then, $P(X)$ is called a **a geometric probability distribution**.
+Let $X$ be the number of independent trials **before** the first success. Then, $P(X)$ is called **a geometric probability distribution**.
 
 We denote $X \sim G(p)$, read as $X$ is a random variable with a geometric distribution.
 
@@ -122,9 +122,9 @@ We denote $X \sim G(p)$, read as $X$ is a random variable with a geometric distr
 
 - The number of lotteries, if you buy one biweekly until you win a last-two-digit prize.
 
-- The number of friends you have a handshake with until you get a COVID-19.
+- The number of friends you have a handshake with until you get COVID-19.
 
-- The number of partners you go out with until you find the TRUE LOVE.
+- The number of partners you go out with until you find TRUE LOVE.
 
 
 :::
@@ -162,12 +162,12 @@ Note that this implies there are $k+1$ trials in total.
 
 ## Formulas
 
-Again, these are irrelevent to our course, but for the sake of completeness here are other variables.
+Again, these are irrelevant to our course, but for the sake of completeness here are other variables:
 
 
-- The variance is $$\sigma^2 = V(X) = \frac{1}{p} \left( \frac{1}{p} - 1\right).$$
+- The variance is $$\sigma^2 = V(X) = \frac{1-p}{p^2}.$$
 
-- The standard variation is $$\sigma = \sqrt{\frac{1}{p} \left( \frac{1}{p} - 1\right)}.$$
+- The standard deviation is $$\sigma = \frac{\sqrt{1-p}}{p}.$$
 
 
 

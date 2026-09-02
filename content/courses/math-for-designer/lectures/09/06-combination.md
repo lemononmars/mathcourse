@@ -11,7 +11,7 @@ source: "tex/lecture09.tex"
 
 :::definition
 
-**Combinations** are the possible selections of $r$ items from a group of $n$ items *regardless of the order* of selection. To put it in another way, they are the possible sets of $n$ items. 
+**Combinations** are the possible selections of $r$ items from a group of $n$ items *regardless of the order* of selection. To put it in another way, they are the possible subsets of $r$ items. 
 
 :::
 

@@ -131,7 +131,7 @@ source: "tex/lecture06.tex"
 
 :::example
 
-Let $\theta$ be the angel indicated in the figure below. Find $\sin\theta, \cos\theta$ and $\tan\theta$.
+Let $\theta$ be the angle indicated in the figure below. Find $\sin\theta, \cos\theta$ and $\tan\theta$.
 
 :::
 
@@ -179,7 +179,7 @@ Let $\theta$ be the angel indicated in the figure below. Find $\sin\theta, \cos\
 
 :::example
 
-Let $\theta$ be the angel indicated in the figure below. Find $\sin\theta, \cos\theta$ and $\tan\theta$.
+Let $\theta$ be the angle indicated in the figure below. Find $\sin\theta, \cos\theta$ and $\tan\theta$.
 
 :::
 
@@ -213,7 +213,7 @@ Let $\theta$ be the angel indicated in the figure below. Find $\sin\theta, \cos\
 
 \cos \theta &=& \frac{2}{2\sqrt{2}} = \frac{1}{\sqrt{2}}
 
-\tan \theta &=& \frac{2\sqrt{2}}{2\sqrt{2}} = 1 
+\tan \theta &=& \frac{2}{2} = 1 
 \end{eq*}
 
 :::
@@ -228,7 +228,7 @@ Let $\theta$ be the angel indicated in the figure below. Find $\sin\theta, \cos\
 
 :::example
 
-Let $\Omega$ be the angel indicated in the figure below. Find $\sin\theta, \cos\theta$ and $\tan\theta$.
+Let $\theta$ be the angle indicated in the figure below. Find $\sin\theta, \cos\theta$ and $\tan\theta$.
 
 :::
 
@@ -257,19 +257,19 @@ Let $\Omega$ be the angel indicated in the figure below. Find $\sin\theta, \cos\
 
 :::solution
 
-First we need to find the hypotenuse.
+First we find the hypotenuse:
 \begin{eqnarray*}
 c^2 &=& a^2 + b^2 
 
 c &=& \sqrt{a^2 + b^2} = \sqrt{2^2 + 3^2} = \sqrt{13}
 \end{eqnarray*}
-Thus
+Since the opposite side is 3 and the adjacent side is 2:
 \begin{eq*}
-\sin \theta &=& \frac{2}{\sqrt{13}}
+\sin \theta &=& \frac{3}{\sqrt{13}}
 
-\cos \theta &=& \frac{3}{\sqrt{13}}
+\cos \theta &=& \frac{2}{\sqrt{13}}
 
-\tan \theta &=& \frac{2}{3}
+\tan \theta &=& \frac{3}{2}
 \end{eq*}
 
 :::

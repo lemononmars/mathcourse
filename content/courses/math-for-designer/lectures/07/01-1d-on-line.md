@@ -66,9 +66,9 @@ The operations are performed from right to left.
 
 :::example
 
-Define the following transformations
-\[T_1(x) = 3x, T_2(x) = x+3, T_3(x) = -2x.\]
-Describe the composition $T_1(T_2(T_3(x)))$ (a) by visual (b) by computation.
+Define the following transformations:
+\[T_1(x) = 3x, \quad T_2(x) = x+3, \quad T_3(x) = -2x.\]
+Describe the composition $(T_1 \circ T_2 \circ T_3)(x)$ (a) visually, and (b) algebraically.
 
 :::
 
@@ -76,16 +76,18 @@ Describe the composition $T_1(T_2(T_3(x)))$ (a) by visual (b) by computation.
 :::solution
 
 
-(a) Here.
 
-(b) We compute the composition from right to left.
+- First dilate and flip by $-2$, then translate right by $3$, and finally scale by $3$.
+
+- We compute the composition from right to left:
 \begin{eq*}
 T_3(x) &=& -2x 
 
 T_2(T_3(x)) &=& T_2(**-2x**) = (**-2x**) + 3 = -2x+3 
 
-T_1(T_2(T_3(x))) &=& T_1(**-2x+3**) = 3(**-2x+3**) =-6x+9 
+T_1(T_2(T_3(x))) &=& T_1(**-2x+3**) = 3(**-2x+3**) = -6x+9 
 \end{eq*}
+
 
 :::
 
@@ -95,7 +97,7 @@ T_1(T_2(T_3(x))) &=& T_1(**-2x+3**) = 3(**-2x+3**) =-6x+9
 
 :::exercise
 
-Describe each composition $T_1 \circ T_2$ (a) by visual, and (b) by computation.
+Describe each composition $T_1 \circ T_2$ (a) visually, and (b) algebraically.
 
 
 - $T_1(x) = 2x, \quad T_2(x) = x+1$

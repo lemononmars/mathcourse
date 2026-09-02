@@ -60,12 +60,12 @@ y\end{pmatrix}\]
 
 ## Rotation
 
-A counterclockwise rotation around the origin by $\theta$ degree can be computed by
+A counterclockwise rotation around the origin by $\theta$ degrees can be computed by
 \[ \begin{pmatrix}x
 y\end{pmatrix} \to \begin{pmatrix} \cos\theta & -\sin\theta 
 \sin\theta & \cos\theta \end{pmatrix} \begin{pmatrix}x
 y\end{pmatrix}.\]
-A clockwise rotation around the origin by $\theta$ degree can be computed by
+A clockwise rotation around the origin by $\theta$ degrees can be computed by
 \[ \begin{pmatrix}x
 y\end{pmatrix} \to \begin{pmatrix} \cos(-\theta) & -\sin(-\theta) 
 \sin(-\theta) & \cos(-\theta) \end{pmatrix} \begin{pmatrix}x

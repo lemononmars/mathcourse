@@ -46,7 +46,7 @@ A student is shopping for a new computer. He is deciding among 3 desktop compute
 
 :::solution
 
-Since the student only needs on computer, we can add the number of desktop computers and laptop computers to find the total number of options. Hence, the number of computer options is 7.
+Since the student only needs one computer, we can add the number of desktop computers and laptop computers to find the total number of options. Hence, the number of computer options is $3 + 4 = 7$.
 
 :::
 

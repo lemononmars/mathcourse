@@ -6,7 +6,7 @@ title: "Triangle"
 source: "tex/lecture06.tex"
 ---
 
-## This Kind of Trinagles
+## This Kind of Triangles
 
 
 
@@ -45,7 +45,7 @@ source: "tex/lecture06.tex"
 
 
 
-## Pythagorus Theorem
+## Pythagorean Theorem
 
 
 

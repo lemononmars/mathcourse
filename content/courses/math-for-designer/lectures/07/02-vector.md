@@ -94,9 +94,9 @@ Find the position vector of the following vectors.
 4-3\end{pmatrix} = \begin{pmatrix}4
 1\end{pmatrix}$
 
-- $\vec{v} = \begin{pmatrix}-1-3
-2-(-4)\end{pmatrix} = \begin{pmatrix}-4
-6\end{pmatrix}$
+- $\vec{v} = \begin{pmatrix}3-(-1)
+-4-2\end{pmatrix} = \begin{pmatrix}4
+-6\end{pmatrix}$
 
 
 :::
@@ -162,4 +162,4 @@ Find the position vector of the following vectors.
 :::
 
 
-*A 3-dimentional vector $\left\langle 4,2,3 \right\rangle$*
+*A 3-dimensional vector $\left\langle 4,2,3 \right\rangle$*

@@ -40,7 +40,7 @@ source: "tex/lecture06.tex"
 \[\sin(\alpha + \beta) \neq \sin(\alpha) + \sin(\beta)\]
 \end{alertblock}
 
-You can see easily that this is not the case by trying some angles (say $\alpha = \beta = 30$).
+You can see easily that this is not the case by trying some angles (say $\alpha = \beta = 30^{\circ}$).
 
 Instead, we have 
 
@@ -60,7 +60,7 @@ We do not need this for this introductory course, and the proof is quite complic
 
 :::example
 
-Given the identity $\sin^2 \alpha + \cos^2 \alpha = 1$ and that $\sin 37 \approx 0.6$, find $\cos 37$.
+Given the identity $\sin^2 \alpha + \cos^2 \alpha = 1$ and that $\sin 37^{\circ} \approx 0.6$, find $\cos 37^{\circ}$.
 
 :::
 
@@ -73,9 +73,9 @@ We can simplify the identity to be
 
 \cos\alpha &=& \sqrt{1-\sin^2\alpha}
 \end{eq*}
-Thus, if we plug it $\alpha = 37$, we get
+Thus, if we plug in $\alpha = 37^{\circ}$, we get
 \begin{eq*}
-\cos 37 &=& \sqrt{1- \sin^2 (37)} 
+\cos 37^{\circ} &=& \sqrt{1- \sin^2 (37^{\circ})} 
 
 &=& \sqrt{1 - (0.6)^2} 
 
@@ -91,18 +91,18 @@ Thus, if we plug it $\alpha = 37$, we get
 
 :::example
 
-Given the identity $\cos \frac{\alpha}{2} = \sqrt{\frac{1+\cos(\alpha)}{2}}$ and that $\cos 60 = \frac{1}{2}$. Find the value of $\cos 30$.
+Given the identity $\cos \frac{\alpha}{2} = \sqrt{\frac{1+\cos(\alpha)}{2}}$ and that $\cos 60^{\circ} = \frac{1}{2}$. Find the value of $\cos 30^{\circ}$.
 
 :::
 
 
 :::solution
 
-If we plug in the value $\alpha = 60$, we have
+If we plug in the value $\alpha = 60^{\circ}$, we have
 \begin{eq*}
-\cos \frac{60}{2} &=& \sqrt{\frac{1+\cos 60}{2}} 
+\cos \frac{60^{\circ}}{2} &=& \sqrt{\frac{1+\cos 60^{\circ}}{2}} 
 
-\cos 30 &=& \sqrt{\frac{1+\frac{1}{2}}{2}} 
+\cos 30^{\circ} &=& \sqrt{\frac{1+\frac{1}{2}}{2}} 
 
 &=& \sqrt{\frac{3}{4}} 
 
@@ -118,19 +118,19 @@ If we plug in the value $\alpha = 60$, we have
 
 :::example
 
-Given the identity $\sin (2\alpha) = 2\sin\alpha \cos \alpha$ and that $\sin 30 = \frac{1}{2}$. Find the value of $\sin 60$.
+Given the identity $\sin (2\alpha) = 2\sin\alpha \cos \alpha$ and that $\sin 30^{\circ} = \frac{1}{2}$. Find the value of $\sin 60^{\circ}$.
 
 :::
 
 
 :::solution
 
-If we plug in the value $\alpha = 30$, we have
-\[\sin 60 = 2 \sin 30 \cos 30\]
-We don't know the value of $\cos 30$ yet, but of course we can use the pythagorean theorem to get
-\[\cos 30 = \sqrt{1-\sin^2 (30)} = \sqrt{1 - \left(\frac{1}{2}\right)^2} = \sqrt{\frac{3}{4}} = \frac{\sqrt{3}}{2}\]
+If we plug in the value $\alpha = 30^{\circ}$, we have
+\[\sin 60^{\circ} = 2 \sin 30^{\circ} \cos 30^{\circ}\]
+We don't know the value of $\cos 30^{\circ}$ yet, but of course we can use the Pythagorean theorem to get
+\[\cos 30^{\circ} = \sqrt{1-\sin^2 (30^{\circ})} = \sqrt{1 - \left(\frac{1}{2}\right)^2} = \sqrt{\frac{3}{4}} = \frac{\sqrt{3}}{2}\]
 Therefore,
-\[\sin 60 = 2 \sin 30 \cos 30 = 2 \left(\frac{1}{2}\right) \left(\frac{\sqrt{3}}{2}\right) = \frac{\sqrt{3}}{2}\]
+\[\sin 60^{\circ} = 2 \sin 30^{\circ} \cos 30^{\circ} = 2 \left(\frac{1}{2}\right) \left(\frac{\sqrt{3}}{2}\right) = \frac{\sqrt{3}}{2}\]
 
 :::
 
@@ -170,9 +170,9 @@ Therefore,
 
 - Given that $\sin \beta = \frac{1}{4}$ for some angle $\beta$, find $\cos \beta$.
 
-- Given the identity $\cos (2\alpha) = 1-2\sin^2 (\alpha)$ and the value $\sin (45) = \frac{\sqrt{2}}{2}$, find $\cos 90$.
+- Given the identity $\cos (2\alpha) = 1-2\sin^2 (\alpha)$ and the value $\sin (45^{\circ}) = \frac{\sqrt{2}}{2}$, find $\cos 90^{\circ}$.
 
-- Use the identity $\cos (2\alpha) = 2\cos^2 (\alpha)-1$ to find the solutions of $\cos (2\alpha) = \cos\alpha$ for $0 \leq \alpha \leq 360$. Also plot the graph of $f(x) = \cos(2\alpha)$ and $g(x) = \cos\alpha$ to verify that you get all the solutions.
+- Use the identity $\cos (2\alpha) = 2\cos^2 (\alpha)-1$ to find the solutions of $\cos (2\alpha) = \cos\alpha$ for $0^{\circ} \leq \alpha \leq 360^{\circ}$. Also plot the graphs of $f(x) = \cos(2x)$ and $g(x) = \cos x$ to verify that you get all the solutions.
 
 
 :::

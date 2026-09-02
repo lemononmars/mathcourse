@@ -76,11 +76,11 @@ Compute $\begin{pmatrix} 1 & 2
 **3** & **4** \end{pmatrix} 
 \begin{pmatrix} **0** & \orange{1} 
 **-2** & \orange{3}\end{pmatrix}
-&=& \begin{pmatrix} **1**\times **0** + **2** \times **-2** & **1**\times \orange{1} +**2** \times \orange{3} 
-**3** \times **0** + **4** \times **-2** & **3** \times \orange{1} + **4** \times \orange{3 }\end{pmatrix} 
+&=& \begin{pmatrix} **1**\times **0** + **2** \times (**-2**) & **1**\times \orange{1} +**2** \times \orange{3} 
+**3** \times **0** + **4** \times (**-2**) & **3** \times \orange{1} + **4** \times \orange{3 }\end{pmatrix} 
 
-&=& \begin{pmatrix} -4 & -3 
-7 & 15 \end{pmatrix}
+&=& \begin{pmatrix} -4 & 7 
+-8 & 15 \end{pmatrix}
 \end{eq*}
 
 :::
@@ -118,7 +118,7 @@ Dilation $\begin{pmatrix} 3 & 0
 
 :::solution
 
-In terms of transformation, dilating (or scaling) twice is the same as dilating once by the product of each scaling factor. In other word, the result should be a dilation by a factor of $3 \times 2 = 6$.
+In terms of transformation, dilating (or scaling) twice is the same as dilating once by the product of each scaling factor. In other words, the result should be a dilation by a factor of $3 \times 2 = 6$.
 
 As a matrix, we have
 \[\begin{pmatrix} 3 & 0 
@@ -148,7 +148,7 @@ Counterclockwise rotation by $45^{\circ} \begin{pmatrix} \tfrac{\sqrt{2}}{2} & -
 
 :::solution
 
-In terms of transformation, a sequence of ratotations is identical to a single rotation by the sum of angles. Thus, we expect the result to be a counterclockwise rotation by $45^{\circ} + 45^{\circ} = 90^{\circ}$
+In terms of transformation, a sequence of rotations is identical to a single rotation by the sum of angles. Thus, we expect the result to be a counterclockwise rotation by $45^{\circ} + 45^{\circ} = 90^{\circ}$.
 
 As a matrix, we have
 \[\begin{pmatrix} \tfrac{\sqrt{2}}{2} & -\tfrac{\sqrt{2}}{2} 

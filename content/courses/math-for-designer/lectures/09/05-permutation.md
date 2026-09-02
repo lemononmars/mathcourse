@@ -60,7 +60,7 @@ How many permutations are there of numbers $123$?
 :::solution
 
 The permutations are 
-\[\text{123}, \qquad \text{132}, \qquad, \text{213}, \qquad \text{231}, \qquad \text{312}, \qquad \text{321},\]
+\[\text{123}, \qquad \text{132}, \qquad \text{213}, \qquad \text{231}, \qquad \text{312}, \qquad \text{321},\]
 which we can search exhaustively using the tree diagram below. Hence, there are 6 permutations. 
 
 
@@ -219,14 +219,14 @@ How many permutations are there of 3 letters in the English alphabet?
 
 :::solution
 
-Listing all permutations is possible, but would be a waste of paper. Instead, we use a rule of product to help counting. There are three arrangements to make.
+Listing all permutations is possible, but would be a waste of paper. Instead, we use the rule of product to help counting. There are three arrangements to make:
 
 
 - Choosing the first letter: there are 26 ways.
 
-- Choosing the second letter: there are 25 ways left, as one of the letters has already been chosen.
+- Choosing the second letter: there are 25 ways left, as one letter has already been chosen.
 
-- Choosing the third letter: there are 24 ways left, as two of them have already been chosen.
+- Choosing the third letter: there are 24 ways left, as two letters have already been chosen.
 
 Since we have to make all three arrangements, then by the rule of product there are $26 \times 25 \times 24 = 15,600$ permutations.
 
@@ -241,14 +241,14 @@ Since we have to make all three arrangements, then by the rule of product there 
 
 :::slide
 
-We can generalize the procedure in the previous example as follows. If there are $n$ objects and we order $r$ of them, then there are $r$ arrangements to make.
+We can generalize the procedure in the previous example as follows. If there are $n$ objects and we order $r$ of them, then there are $r$ arrangements to make:
 
 
 - Choosing the first object: there are $n$ ways.
 
 - Choosing the second object: there are $n-1$ ways, as you cannot choose the first object again.
 
-- Choosing the third object: there are $n-2$ ways, as you cannot choose the first two object.
+- Choosing the third object: there are $n-2$ ways, as you cannot choose the first two objects.
 
 - $\vdots$
 
@@ -303,14 +303,14 @@ The number of permutations of $n$ objects taken $r$ at a time is denoted
 
 :::example
 
-Suppose that 4 people are are to be randomly chosen out of 10 people who agreed to be interviewed in a market survey. How many permutations are there?
+Suppose that 4 people are to be randomly chosen out of 10 people who agreed to be interviewed in a market survey. How many permutations are there?
 
 :::
 
 
 :::solution
 
-The four people are to be assigned to four interviewers, so the order matters. Thus, the number of permutations is 
+The four people are to be assigned to four distinct interviewers, so the order matters. Thus, the number of permutations is 
 \[P(10,4) = 10\cdot 9 \cdot 8 \cdot 7 = 5040.\]
 
 :::
@@ -339,7 +339,7 @@ A permutation of 1 object is simply picking one object.
 
 - $P(n,n) = n!$: 
 :::slide
-The number of permutation of all $n$ objects is simply the definition of factorial.
+The number of permutations of all $n$ objects is simply the definition of factorial.
 :::
 
 

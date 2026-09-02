@@ -26,4 +26,4 @@ source: "tex/lecture09.tex"
 
 - Arrange, order, place
 
-- Distinct vs. repetion
+- Distinct vs. repetition

@@ -31,7 +31,7 @@ where $v_1, v_2, v_1', v_2'$ are real numbers.
 
 :::example
 
-Describe how each transformation change the square consisting of points $(0,0), (0,1), (1,1)$ and $(1,0)$.
+Describe how each transformation changes the square consisting of points $(0,0), (0,1), (1,1)$ and $(1,0)$.
 
 
 - $\begin{pmatrix}x
@@ -105,7 +105,7 @@ x-y\end{pmatrix}$
 
 
 
-This is a dilation in the x-axis by a factor of 2.
+This is a dilation in the $x$-axis by a factor of 2.
 
 :::
 
@@ -159,7 +159,7 @@ This is a dilation in the x-axis by a factor of 2.
 
 
 
-This is a dilation in the y-axis by a factor of -2.
+This is a dilation in the $y$-axis by a factor of $-2$.
 
 :::
 
@@ -213,7 +213,7 @@ This is a dilation in the y-axis by a factor of -2.
 
 
 
-This is a rotation around the origin $(0,0)$ by 90 degrees.
+This is a clockwise rotation around the origin $(0,0)$ by 90 degrees.
 
 :::
 
@@ -267,7 +267,7 @@ This is a rotation around the origin $(0,0)$ by 90 degrees.
 
 
 
-This is a rotation around the origin $(0,0)$ by 45 degree, and also a dilation in both directions by a factor of $\sqrt{2}$.
+This is a rotation around the origin $(0,0)$ by 45 degrees, and also a dilation in both directions by a factor of $\sqrt{2}$.
 
 :::
 
@@ -276,7 +276,7 @@ This is a rotation around the origin $(0,0)$ by 45 degree, and also a dilation i
 
 :::exercise
 
-Describe how each transformation change the square consisting of points $(0,0), (0,1), (1,1)$ and $(1,0)$. Also, explain in your own words what kind of transformation it looks like.
+Describe how each transformation changes the square consisting of points $(0,0), (0,1), (1,1)$ and $(1,0)$. Also, explain in your own words what kind of transformation it looks like.
 
 
 - $\begin{pmatrix}x

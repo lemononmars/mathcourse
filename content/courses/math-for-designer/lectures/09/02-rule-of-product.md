@@ -46,7 +46,7 @@ N_1 \times N_2 \times N_3 \times \ldots \times N_k
 
 :::example
 
-How many ways you can finish an exam with ten true-or-false questions.
+How many ways can you finish an exam with ten true-or-false questions?
 
 :::
 
@@ -100,8 +100,8 @@ How many different four-of-a-kind hands are there in the standard 5-card poker?
 
 :::solution
 
-We first choose which value would be the the four-of-a-kind, in which there are 13 different ways. Then, after taking all 4 cards of that value, we can pick any card as the fifth, so there are 52-4 = 48 ways. Since we do not care about order, the number of four-of-a-kind hands is
-\[ 13 \times 48 = 624\]
+We first choose which value would be the four-of-a-kind, for which there are 13 different ways. Then, after taking all 4 cards of that value, we can pick any card as the fifth, so there are $52-4 = 48$ ways. Since we do not care about order, the number of four-of-a-kind hands is
+\[ 13 \times 48 = 624.\]
 
 :::
 
@@ -119,14 +119,14 @@ How many three-digit numbers are there where all digits are odd?
 
 :::solution
 
-We can construct such three-digit number in three steps. 
+We can construct such three-digit number in three steps: 
 
 
-- Choose the left most (hundreds) digit: there are 5 options (1,3,5,7 or 9) 
+- Choose the leftmost (hundreds) digit: there are 5 options (1,3,5,7 or 9) 
 
-- Choose the middle most (tens) digit: there are 5 options (1,3,5,7 or 9) 
+- Choose the middle (tens) digit: there are 5 options (1,3,5,7 or 9) 
 
-- Choose the right most (ones) digit: there are 5 options (1,3,5,7 or 9) 
+- Choose the rightmost (ones) digit: there are 5 options (1,3,5,7 or 9) 
 
 Thus, the number of three-digit numbers where all digits are odd is $5 \times 5 \times 5 = 125$.
 

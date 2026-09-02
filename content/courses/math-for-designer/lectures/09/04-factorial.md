@@ -13,7 +13,7 @@ source: "tex/lecture09.tex"
 
 Let $n$ be a positive integer. Then, define **the factorial of $n$** to be the product of all numbers from $1$ to $n$. In other words, the formula is given by
 \begin{equation}
-n! = n \times (n-1) \times (n-2) \times 2 \times 1
+n! = n \times (n-1) \times (n-2) \times \cdots \times 2 \times 1
 \end{equation}
 
 :::
@@ -113,7 +113,7 @@ Simplify the following expressions. Do not compute them!
 
 :::example
 
-Convert the following expressions as factorials (sum, difference, product, ratio.)
+Express the following terms using factorials.
 
 
 - $20 \times 19 \times 18$
@@ -159,7 +159,7 @@ Convert the following expressions as factorials (sum, difference, product, ratio
 - $13! - 12!$
 
 
-- Convert the following expressions as factorials (sum, difference, product, ratio.)
+- Express the following terms using factorials:
 
 
 - $11 \times 10 \times 9$

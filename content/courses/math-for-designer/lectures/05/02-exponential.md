@@ -55,10 +55,9 @@ Let $a$ be a positive integer and $M$ be a real number. Recall that we define th
 :::definition
 
 Let $a$ be a positive integer and $M$ be a real number. We define the exponent $M^a$ (read $M$ to the power of $a$) to be
-\[ M^a = \underbrace{M \times M \times M \times \cdots \times M}_{a \text{ times}}.\] 
+\[ M^a = \underbrace{M \times M \times M \times \cdots \times M}_{a \text{ times}}.\]
 
 :::
-
 
 
 
@@ -100,15 +99,14 @@ Use the definition to compute the following numbers.
 
 
 
-
 ## Definition
 
 
 :::definition
 
-An **exponential function** is a function of the form 
+An **exponential function** is a function of the form
 \[ f(x) = a \times b^x\]
-when $a$ is a positive real number.
+where $a \neq 0$ is a constant, and $b > 0$ with $b \neq 1$ is the base.
 
 :::
 
@@ -162,11 +160,11 @@ Actually, we already know that $\sqrt{M} \times \sqrt{M} = M$. Thus, it is natur
 
 :::definition
 
-For any integer $n$, define the $n$-th root of $M$ as
+For any integer $n > 0$, define the $n$-th root of $M$ as
 \[\sqrt[n]{M} = M^{1/n}\]
 
 
-For any rational numberr $k= \frac{a}{b}$ be a rational number where $a,b$ are both integers and $b \neq 0$, define
+For any rational number $k= \frac{a}{b}$ where $a,b$ are integers and $b > 0$, define
 \[ M^k = M^{a/b} = \sqrt[b]{M^a}\]
 
 :::

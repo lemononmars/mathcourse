@@ -13,7 +13,7 @@ Sometimes a vector is given as a direction from one point to another.
 
 :::definition
 
-Let $P_1(x_1, y_1)$ and $P_2(x_2, y_2)$ be points on the plane. A vector starting at $P_1$ and ending at $P_2$ is denoted by $\vec{P_1P_2}$ which can be computed as follows.
+Let $P_1(x_1, y_1)$ and $P_2(x_2, y_2)$ be points on the plane. A vector starting at $P_1$ and ending at $P_2$ is denoted by $\overrightarrow{P_1P_2}$, which can be computed as follows:
 \begin{equation}
 \overrightarrow{P_1P_2} = \left\langle x_2 - x_1, y_2 - y_1 \right\rangle
 \end{equation} 
@@ -50,12 +50,12 @@ Let $P_1(x_1, y_1)$ and $P_2(x_2, y_2)$ be points on the plane. A vector startin
 
 :::example
 
-Find the following vectors
+Find the following vectors:
 
 
-- $From P_1(3,2)$ to $P_2(4,6)$
+- From $P_1(3,2)$ to $P_2(4,6)$
 
-- $From Q_1(-1,0)$ to $Q_2(3,-2)$
+- From $Q_1(-1,0)$ to $Q_2(3,-2)$
 
 
 :::

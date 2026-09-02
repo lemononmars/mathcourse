@@ -36,10 +36,10 @@ Let $X$ = the number of heads from 3 coin flips. Draw the bar chart of the proba
 Compute each $P(X=k)$ separately. For $X=0$, the only way to get 0 heads is when all three coins are tails, and the probability is 
 \[P(X=0) = \frac{1}{2} \times \frac{1}{2} \times \frac{1}{2} = \frac{1}{8}.\]
 
-For $X=1$, there are 3 such outcomes - namely HTT, THT, and TTH. Hence, 
+For $X=1$, there are 3 such outcomes --- namely HTT, THT, and TTH. Hence, 
 \[P(X=1) = 3 \times \frac{1}{8} = \frac{3}{8}.\]
 
-Similary, we can compute $P(X=2) = \frac{3}{8}$ and $P(X=3) = \frac{1}{8}$.
+Similarly, we can compute $P(X=2) = \frac{3}{8}$ and $P(X=3) = \frac{1}{8}$.
 
 :::
 
@@ -48,7 +48,7 @@ Similary, we can compute $P(X=2) = \frac{3}{8}$ and $P(X=3) = \frac{1}{8}$.
 
 
 :::solution
-(Continued) Thus, we have the following table
+(Continued) Thus, we have the following table:
 
 \def\arraystretch{2}
 
@@ -58,7 +58,7 @@ Similary, we can compute $P(X=2) = \frac{3}{8}$ and $P(X=3) = \frac{1}{8}$.
 
 
 
-Using the table above, we can make the folowing chart.
+Using the table above, we can make the following chart:
 
 
 
@@ -92,14 +92,14 @@ Using the table above, we can make the folowing chart.
 
 :::definition
 
-A **binomial experiment** has three characteristics
+A **binomial experiment** has three characteristics:
 
 
 - There are a fixed number of $n$ trials.
 
 - There are only two possible outcomes: success or failure. Let $p$ be the probability of a success on a single trial.
 
-- All $n$ trials are independent and are repeated using identical condition.
+- All $n$ trials are independent and are repeated using identical conditions.
 
 
 :::
@@ -108,7 +108,7 @@ A **binomial experiment** has three characteristics
 
 :::note
 
-Let $X$ be the number of successes obtained in the $n$ independent trails. Then, $P(X)$ is called a **a binomial probability distribution**.
+Let $X$ be the number of successes obtained in the $n$ independent trials. Then, $P(X)$ is called **a binomial probability distribution**.
 
 :::
 
@@ -165,12 +165,12 @@ Let $X$ be the number of successes obtained in the $n$ independent trails. Then,
 
 ## Formulas (2/2)
 
-These are irrelevent to our course, but for the sake of completeness here are other variables.
+These are irrelevant to our course, but for the sake of completeness here are other variables:
 
 
 - The variance is $$\sigma^2 = V(X) = np(1-p).$$
 
-- The standard variation is $$\sigma = \sqrt{np(1-p)}.$$
+- The standard deviation is $$\sigma = \sqrt{np(1-p)}.$$
 
 
 

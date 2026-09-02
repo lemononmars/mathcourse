@@ -47,4 +47,4 @@ These functions are commonly used to model physical behaviors such as
 
 - Oscillation 
 
-- Periodic
+- Periodic motion

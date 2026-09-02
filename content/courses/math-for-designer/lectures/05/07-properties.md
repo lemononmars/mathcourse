@@ -1,6 +1,6 @@
 ---
 week: 5
-order: 6
+order: 7
 slug: "properties"
 title: "Properties of Logarithm Function"
 source: "tex/lecture05.tex"
@@ -54,7 +54,7 @@ Another example is
 
 If we take logarithm on both sides, we get
 \[\log_M (M^a \times M^b) = \log_M (M^{a+b}) = a+b.\]
-Then, if we let 
+Then, if we let
 \[A = M^a \text{ and } B = M^b,\]
 then by definition we have
 \[\log_M A = a \text{ and } \log_M B = b.\]
@@ -165,7 +165,6 @@ Let $M,N, a$ be positive real numbers.
 
 
 
-
 :::example
 
 Use the properties to simplify the following terms
@@ -177,7 +176,7 @@ Use the properties to simplify the following terms
 
 - $\frac{\log_5 81}{\log_5 3}$
 
-- $\log_5 \left(\frac{1}{2^4} \right)$ 
+- $\log_5 \left(\frac{1}{2^4} \right)$
 
 
 :::
@@ -187,13 +186,13 @@ Use the properties to simplify the following terms
 
 
 
-- $\log_2 8 + \log_2 32 = \log_2 (8 \times 32) = \log_2 (256) = 7$
+- $\log_2 8 + \log_2 32 = \log_2 (8 \times 32) = \log_2 (256) = 8$
 
 - $\log_3 36 - \log_3 4 = \log_3 \left( \frac{36}{4} \right) = \log_3 (9) = 2$
 
 - $\frac{\log_5 81}{\log_5 3} = \log_{3} (81) = 4$
 
-- $\log_5 \left(\frac{1}{2^4} \right) = \log_5 \left( \frac{1}{2} \right)^4 = \log_5 (2^{-4}) = -4 \log_5 2$ 
+- $\log_5 \left(\frac{1}{2^4} \right) = \log_5 (2^{-4}) = -4 \log_5 2$
 
 
 :::
@@ -216,7 +215,7 @@ If $\log$ is written without the base, we assume that it is in base 10*. In othe
 
 :::definition
 
-As $\log$ base $e, \quad (e \approx 2.718)$ is frequently used, we define it as
+As $\log$ base $e \quad (e \approx 2.718)$ is frequently used, we define it as
 \[\ln x = \log_e x \]
 It reads ``the natural log of $x$'' or ``lon''.
 
@@ -238,7 +237,7 @@ Use the properties to simplify the following terms
 
 - $\frac{\log_3 16}{\log_3 2}$
 
-- $\log_2 (5^{-8})$ 
+- $\log_2 (5^{-8})$
 
 
 :::

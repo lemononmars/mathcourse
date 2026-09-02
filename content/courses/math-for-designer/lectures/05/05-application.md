@@ -1,6 +1,6 @@
 ---
 week: 5
-order: 4
+order: 5
 slug: "application"
 title: "Application of Exponential"
 source: "tex/lecture05.tex"
@@ -13,12 +13,12 @@ source: "tex/lecture05.tex"
 
 A growth (or decay) can be modeled by the function
 \[ f(t) = a (1+b)^t, \]
-where $t$ represents time, and $a$ and $b$ are some constant with $b>0$.
+where $t$ represents time, $a > 0$ is the initial amount, and $b$ is the rate.
 
 
 - If $b>0$, we call $f$ a growth function.
 
-- If $-1<b,0$, we call $f$ a decay function.
+- If $-1<b<0$, we call $f$ a decay function.
 
 
 :::
@@ -37,10 +37,10 @@ Suppose that the population of India was about 1.25 billion in the year 2013, wi
 :::solution
 
 This situation can be represented by the growth function
-\[ f(t) = 1.25 (1 + 12\%)^t = 1.25(1.012)^t, \]
-where $t$ is a number of years (since 2013). Notice that at the start when $t=0$, we have $f(t) = 1.25 (1.012)^0 = 1.25$ as intended.
+\[ f(t) = 1.25 (1 + 1.2\%)^t = 1.25(1.012)^t, \]
+where $t$ is the number of years (since 2013). Notice that at the start when $t=0$, we have $f(0) = 1.25 (1.012)^0 = 1.25$ as intended.
 
-Now, from 2013 to 2031, it'll take $2031-2013 = 18$ years, and so we can plug in $t=18$ into the function to get 
+Now, from 2013 to 2031, it takes $2031-2013 = 18$ years, and so we can plug in $t=18$ into the function to get
 \[ f(18) = 1.25 (1.012)^{18} \approx 1.549.\]
 
 Thus, the population of India in 2031 would be about 1.549 billion.
@@ -62,7 +62,7 @@ A scientist begins with 100 milligrams of a radioactive substance that decays ex
 
 This situation can be represented by a decay function
 \[ f(t) = a (1 + b)^t =100(1+b)^t,\]
-where $b$ is some constant. We know that 
+where $b$ is some constant. We know that
 \begin{eq*}
 f(35) &=& 50 = 100(1+b)^{35} 
 
@@ -71,7 +71,7 @@ f(35) &=& 50 = 100(1+b)^{35}
 1+b &=& \left(\tfrac{1}{2}\right)^{1/35}
 \end{eq*}
 Hence, we can compute the amount of substance when $t=54$ to be
-\[ f(54) = 100\left( \tfrac{1}{2^{1/35}}\right)^{54} \approx 34.321\]
+\[ f(54) = 100\left( \tfrac{1}{2^{1/35}}\right)^{54} \approx 34.321\text{ mg}\]
 
 :::
 
@@ -84,16 +84,16 @@ Hence, we can compute the amount of substance when $t=54$ to be
 
 :::theorem
 
-Let 
+Let
 
 
 - $P$ be the principal,
 
 - $r$ be the annual percentage rate (APR),
 
-- $n$ be the number of compouding periods in a year,
+- $n$ be the number of compounding periods in a year,
 
-- $t$ be the time.
+- $t$ be the time (in years).
 
 Then the account value by the end of time $t$ is
 \[ A(t) = P\left(1+ \frac{r}{n}\right)^{nt}.\]
@@ -132,11 +132,11 @@ A(10) &=& 3000 \left(1+\frac{0.03}{4}\right)^{4 \times 10}
 
 
 
-- The fox population in a certain region has an annual growth rate of 9\% per year. In the year 2012, there were 23,900 fox counted in the area. What is the fox population predicted to be in the year 2020?
+- The fox population in a certain region has an annual growth rate of 9\% per year. In the year 2012, there were 23,900 foxes counted in the area. What is the fox population predicted to be in the year 2020?
 
 - A car was valued at \$38,000 in the year 2007. By 2013, the value had depreciated to \$11,000. If the car’s value continues to drop by the same percentage, what will it be worth by 2017?
 
-- If we opended an investment account with an initial deposit of \$4,000 and with an annual interest rate of 7\%, compounding quarterly, how much will the account be worth in 9 years? 
+- If we opened an investment account with an initial deposit of \$4,000 and with an annual interest rate of 7\%, compounding quarterly, how much will the account be worth in 9 years?
 
 
 :::

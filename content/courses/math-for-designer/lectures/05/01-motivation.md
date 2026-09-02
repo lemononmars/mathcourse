@@ -9,7 +9,7 @@ source: "tex/lecture05.tex"
 ## Level Up!
 
 
-:::figure l08i02 — Leveling system use exponential growth
+:::figure l08i02 — Leveling systems use exponential growth
 :::
 
 
@@ -46,9 +46,9 @@ source: "tex/lecture05.tex"
 
 
 
-:::youtube kMQ4PBjF0TI | Exponential Idle (app)
+:::figure exponential_idle — [](https://www.youtube.com/watch?v=kMQ4PBjF0TI
 :::
-
+)
 
 
 
@@ -56,7 +56,7 @@ source: "tex/lecture05.tex"
 ## Test your exponential intuition 1
 
 \begin{alertblock}{}
-Assume a beautiful Lotus flower has a magical property to double every day. First day, there is only one lotus flower. Second day, there are 2 lotus flowers. Third day, there are 4 lotus flowers. 4th day there are 8 lotus flowers, then 16, then 32 and 64 and so on. 
+Assume a beautiful Lotus flower has a magical property to double every day. First day, there is only one lotus flower. Second day, there are 2 lotus flowers. Third day, there are 4 lotus flowers. 4th day there are 8 lotus flowers, then 16, then 32 and 64 and so on.
 
 
 If it takes 30 days to fill the entire pond, and take over all the weeds, how many days does it take for the pond to be half full?
@@ -72,7 +72,7 @@ If it takes 30 days to fill the entire pond, and take over all the weeds, how ma
 ## Test your exponential intuition 2
 
 \begin{alertblock}{}
-The inventor of chess requested his ruler give him wheat on the chessboard. He asked for 1 grain on the first space, 2 grains on the second space, 4 grains on the third space, 16 grains on the fourth space, and so on. The ruler laughs it off as a meager prize for a brilliant invention.
+The inventor of chess requested his ruler give him wheat on the chessboard. He asked for 1 grain on the first space, 2 grains on the second space, 4 grains on the third space, 8 grains on the fourth space, 16 grains on the fifth space, and so on. The ruler laughs it off as a meager prize for a brilliant invention.
 
 
 How many grains of wheat are needed? (approximately)

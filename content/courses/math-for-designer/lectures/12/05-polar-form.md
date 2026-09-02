@@ -35,9 +35,9 @@ There are two units for the angle $\theta$: degree and radian. In this lecture, 
 
 :::definition
 
-A complex number $z =a+bi$ can also be epressed in polar form as 
+A complex number $z =a+bi$ can also be expressed in polar form as 
 \begin{eq}
-z &=& r(\cos\theta + \sin\theta i) 
+z &=& r(\cos\theta + i\sin\theta) 
 
 &=& r e^{i\theta}
 \end{eq} 
@@ -99,11 +99,11 @@ Change the following complex numbers in polar form to rectangular form.
 
 
 
-- $4e^{i \,30} = 4(\cos (30) + \sin (30)i) = 4 \left( \frac{\sqrt{3}}{2} + i \frac{1}{2}\right) = 2 \sqrt{3} + 2i$
+- $4e^{i \,30} = 4(\cos (30) + i\sin (30)) = 4 \left( \frac{\sqrt{3}}{2} + i \frac{1}{2}\right) = 2 \sqrt{3} + 2i$
 
-- $-5e^{i \,120} = -5(\cos (120) + \sin (120)i) = -5 \left( \frac{-1}{2} + i \frac{\sqrt{3}}{2}\right) = \frac{5}{2} - \frac{5\sqrt{3}}{2}i$
+- $-5e^{i \,120} = -5(\cos (120) + i\sin (120)) = -5 \left( -\frac{1}{2} + i \frac{\sqrt{3}}{2}\right) = \frac{5}{2} - \frac{5\sqrt{3}}{2}i$
 
-- $\frac{1}{2} e^{i \,90} = \frac{1}{2} (\cos (90) + \sin (90) i) = \frac{1}{2}(i) = \frac{i}{2}$
+- $\frac{1}{2} e^{i \,90} = \frac{1}{2} (\cos (90) + i\sin (90)) = \frac{1}{2}(i) = \frac{i}{2}$
 
 
 :::
@@ -124,7 +124,7 @@ z_1 z_2 = r_1 r_2 e^{i(\theta_1 + \theta_2)}
 
 :::
 
-Interpretation: to multiply two complex numbers, you can multiply lengths and add angles.
+Interpretation: to multiply two complex numbers, multiply their lengths and add their angles.
 
 
 
@@ -140,7 +140,7 @@ Let $z_1 = r_1 e^{i\theta_1}$ and $z_2 = r_2 e^{i\theta_2}$. Then
 
 :::
 
-Interpretation: to divide two complex numbers, you can divide their lengths and subtract angles.
+Interpretation: to divide two complex numbers, divide their lengths and subtract their angles.
 
 
 
@@ -163,9 +163,9 @@ Find the multiplications in polar form.
 \begin{eq*}
 (3 e^{i \,90})(2 e^{i \,60}) &=& (3)(2) e^{i \,(90+60)} 
 
-&=& 6 e^{i \,(150)} 
+&=& 6 e^{i \,150} 
 
-(-e^{i \,180})\left( \frac{1}{2} e^{-i 90} \right) &=& (-1)\left(\frac{1}{2}\right) e^{i \,(180+(-90)} 
+(-e^{i \,180})\left( \frac{1}{2} e^{-i 90} \right) &=& (-1)\left(\frac{1}{2}\right) e^{i \,(180+(-90))} 
 
 &=& -\frac{1}{2}e^{i \,90}
 \end{eq*}
@@ -187,7 +187,7 @@ Indeed, this observation is true for any positive power!
 
 :::theorem De Moivre
 
-Let $r$ and $\theta$ be real numbers and $n$ be a positive real number. Then, we have
+Let $r$ and $\theta$ be real numbers and $n$ be a positive integer. Then, we have
 \begin{equation}
 (r e^{i\theta})^n = r^n e^{in\theta}
 \end{equation}
@@ -238,7 +238,7 @@ Find a complex number $z$ such that $z^3 = 125 e^{i \, 60}$.
 
 If we write $z = re^{i\theta}$, then $z^3 = r^3 e^{i (3\theta)}$. We can simply compare
 \[r^3 e^{i \,(3\theta)} = 125 e^{i \, 60}\]
-so that we have $r^3=125$ and $3\theta = 60$. These give use $r=5$ and $\theta = 20$, and thus
+so that we have $r^3=125$ and $3\theta = 60$. These give us $r=5$ and $\theta = 20$, and thus
 \[z = 5 e^{i \, 20}\]
 is a complex number such that $z^3 = 125 e^{i \, 60}$.
 
@@ -254,12 +254,12 @@ In the previous example, we have
 and then we can write
 \[z = (125 e^{i \, 60}) ^{\frac{1}{3}}.\]
 
-In particular, we have the following definition
+In particular, we have the following definition:
 
 :::definition
 
 Let $z$ and $w$ be complex numbers and $n$ be a positive integer such that $z^n = w$. Then we have
 \[z = w^{\frac{1}{n}}\]
-and call $z$ an n-th root of $w$.
+and call $z$ an $n$-th root of $w$.
 
 :::

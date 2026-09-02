@@ -1,6 +1,6 @@
 ---
 week: 5
-order: 7
+order: 9
 slug: "application"
 title: "Application of Logarithm"
 source: "tex/lecture05.tex"
@@ -51,7 +51,7 @@ Earthquake (Richter magnitude)
 
 \begin{question}{}
 How many digits does $2^{100}$ have?
-\end{question} 
+\end{question}
 
 :::slide
 
@@ -79,7 +79,7 @@ It may seem intimidating for such a large number, so we first find some pattern 
 
 ## Pattern
 
-Then, how can we simply such numbers? We use the fact that logarithm function is increasing and apply to the inequalities. If $x$ has $k$ digits, then we have
+Then, how can we simplify such numbers? We use the fact that the logarithm function is increasing and apply it to the inequalities. If $x$ has $k$ digits, then we have
 
 :::slide
 
@@ -103,17 +103,16 @@ We can summarize this observation (which is almost a proof) as follows.
 
 :::theorem
 
-Let $N$ be a real number. Then, the number of digits of $N$ in base 10 is
+Let $N$ be a positive real number. Then, the number of digits of $N$ in base 10 is
 \[ \lfloor \log_{10} N \rfloor + 1,\]
 where $\lfloor x \rfloor$ (called the floor function) is rounding $x$ down to the closest integer.
 
 
 
-In general, the number of digits $N$ in base $k$ is
+In general, the number of digits of $N$ in base $k$ is
 \[ \lfloor \log_{k} N \rfloor + 1.\]
 
 :::
-
 
 
 
@@ -138,10 +137,9 @@ The number of digits is
 
 &=& 30 + 1 = 31
 \end{eq*}
-Thus, $2^{100}$ has 31 digits. A calculator would give you $1.267 \times 10^{30}$, which means it has the leading digit of 1 followed by 30 digits, for the total of 31 digits.
+Thus, $2^{100}$ has 31 digits. A calculator would give you $1.267 \times 10^{30}$, which means it has the leading digit of 1 followed by 30 digits, for a total of 31 digits.
 
 :::
-
 
 
 
@@ -156,15 +154,15 @@ How many digits does $10^{100}$ have in base 2? Use the approximation $\log_{10}
 
 :::solution
 
-First of all, we can use the property of logarithm function to find 
-$\log_{2} 10 = \frac{1}{\log_{10} 2} \approx \frac{1}{0.3010} \approx 3.3226.$ 
+First of all, we can use the change-of-base property to find
+$\log_{2} 10 = \frac{1}{\log_{10} 2} \approx \frac{1}{0.3010} \approx 3.3226.$
 Now we can compute the number of digits in base 2 to be
 \begin{eq*}
 \lfloor \log_{2} 10^{100} \rfloor + 1 &=& \lfloor 100 \times \log_{2} 10 \rfloor + 1 
 
-&\approx& \lfloor 332.226 \rfloor + 1 
+&\approx& \lfloor 100 \times 3.3226 \rfloor + 1 
 
-&=& \lfloor 332.226 \rfloor + 1 
+&=& \lfloor 332.26 \rfloor + 1 
 
 &=& 332 + 1 = 333
 \end{eq*}
@@ -176,13 +174,12 @@ Thus, $10^{100}$ has 333 digits in base 2.
 
 
 
-
 :::example
 
-A standard deck of cards consists of 52 cards. It is known that it is unlikely that two well-shuffled deck of cards would have the same arrangements. 
+A standard deck of cards consists of 52 cards. It is known that it is unlikely that two well-shuffled decks of cards would have the same arrangements.
 
 
-It is know that the number of different arrangements is $52!$, where $!$ is the factorial. How many digits does $52!$ have in base 10?
+It is known that the number of different arrangements is $52!$, where $!$ is the factorial. How many digits does $52!$ have in base 10?
 
 :::
 

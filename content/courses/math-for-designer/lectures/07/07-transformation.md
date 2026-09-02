@@ -12,14 +12,14 @@ cx+dy\end{pmatrix}$. This is called a **linear transformation**.
 
 :::remark Note
 
-Informally, a linear transformation $T$ has two properties
+Informally, a linear transformation $T$ has two properties:
 
 
-- $T(x+y) = T(x) + T(y)$.
+- $T(\vec{u}+\vec{v}) = T(\vec{u}) + T(\vec{v})$.
 
-- $T(cx) = cT(x)$.
+- $T(c\vec{v}) = cT(\vec{v})$.
 
-Given these properties, we can prove all the useful formulas. But we are not going into details here.
+Given these properties, we can prove all the useful formulas.
 
 :::
 
@@ -51,7 +51,7 @@ v_2+a_2\end{pmatrix}.\]
 
 :::definition
 
-A dilation by a factor $\vec{k}$ is defined as
+A dilation by a scalar factor $k$ is defined as
 \[ T(\vec{v}) = k \cdot \vec{v}.\]
 In two dimensions, we have
 \[ \begin{pmatrix}v_1
@@ -86,7 +86,7 @@ v_2\end{pmatrix} \to \begin{pmatrix}2a_1-v_1
 
 ## Rotation
 
-We can use trigonometry functions and some analysis to compute the formula for rotation, which is.
+We can use trigonometry functions and some analysis to compute the formula for rotation, which is:
 \[ \begin{pmatrix}v_1
 v_2\end{pmatrix} \to \begin{pmatrix}v_1\cos\theta - v_2\sin\theta
 v_1\sin\theta + v_2\cos\theta\end{pmatrix}\]
@@ -95,11 +95,11 @@ However, it seems impossible to express the result as a linear combination of ve
 
 
 
-We can't define rotation using only vector notations. This means that we need to extent the definitions. Notice that
+We can't define rotation using only vector notations. This means that we need to extend the definitions. Notice that
 \begin{eq*} 
 \begin{pmatrix}x\cos\theta - y\sin\theta
 x\sin\theta + y\cos\theta\end{pmatrix} &=& \begin{pmatrix}x\cos\theta
-x\cos\theta\end{pmatrix} + \begin{pmatrix}-y\sin\theta
+x\sin\theta\end{pmatrix} + \begin{pmatrix}-y\sin\theta
 y\cos\theta\end{pmatrix} 
 
 &=& x\begin{pmatrix}\cos\theta

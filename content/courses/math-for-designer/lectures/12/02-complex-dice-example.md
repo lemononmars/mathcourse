@@ -14,7 +14,7 @@ source: "tex/lecture12.tex"
 
 - Sort dice on each side from highest to lowest.
 
-- Compare highest pair of dice. The smaller value loses 1 troop, when tied the attacker loses 1 troop.
+- Compare highest pair of dice. The smaller value loses 1 troop; when tied, the attacker loses 1 troop.
 
 
 
@@ -30,7 +30,7 @@ source: "tex/lecture12.tex"
 
 :::example
 
-If attacker and defender each rolls a single die. Find the expected win for the attacker.
+If attacker and defender each roll a single die, find the expected win for the attacker.
 
 :::
 
@@ -80,7 +80,7 @@ We see that the attacker wins 15 out of 36 equally likely outcomes. Therefore, t
 
 :::example
 
-If attacker rolls two dice and defender rolls one die. Find the expected loss for the attacker.
+If attacker rolls two dice and defender rolls one die, find the expected win for the attacker.
 
 :::
 
@@ -218,7 +218,7 @@ Here is how to interpret the table: in the first row when the defender rolls a 1
 
 
 
-Since the defender's values from 1-6 are equally likely, the expected number can be obtained by adding all red numbers. 
+Since the defender's values from 1-6 are equally likely, the expected number can be obtained by adding all red numbers:
 \[ E(X) = \frac{1}{6}\left(\frac{35}{36} + \frac{32}{36} + \frac{27}{36} + \frac{20}{36} + \frac{11}{36}\right) = \frac{125}{216}.\]
 
 :::
@@ -251,11 +251,11 @@ Find the probability of getting a Yahtzee if you are allowed to reroll once (wit
 
 
 
-- If our very first rolls give us a Yahtzee already, we win (yay!), with probability $\frac{6}{6^5}$.
+- If our very first roll gives us a Yahtzee already, we win, with probability $\frac{6}{6^5}$.
 
-- If the first roll is four-of-a-kind, then we would reroll the last die. Now, the probability of getting four-of-a-kind is 
+- If the first roll is four-of-a-kind, then we reroll the last die. The probability of getting four-of-a-kind is 
 \[\frac{6 \times C(5,4) \times 5}{6^5} = \frac{150}{6^5}.\] 
-We first consider which value to be the four-of-a-kind (6 possibilities), then which die to be the fifth unmatched die (5 chooses 4), and lastly which value to be on the fifth die (5 possibilities since it can't be the same with the rest).
+We first consider which value is the four-of-a-kind (6 possibilities), then which die is the fifth unmatched die ($\binom{5}{4}$), and lastly which value is on the fifth die (5 possibilities).
 
 
 :::
@@ -272,7 +272,7 @@ Therefore, the probability of getting a four-of-a-kind and then rerolling to get
 
 - If the first roll has three matching values, we apply a similar argument. The probability of getting such outcome is 
 \[\frac{6 \times C(5,3) \times (5 \times 5)}{6^5} = \frac{1500}{6^5}.\] 
-Then, the probability of rerolling two dice to match the first three is simply $\frac{1}{36}$. Thus, the probability is 
+Then, the probability of rerolling two dice to match the first three is $\frac{1}{36}$. Thus, the probability is 
 \[\frac{1500}{6^5} \times \frac{1}{36} = \frac{250}{6^6}.\]
 
 
