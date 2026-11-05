@@ -8,6 +8,7 @@
     "build": "node scripts/generate-course-data.mjs && node scripts/generate-prob-stat-data.mjs && node scripts/generate-all-courses.mjs && node scripts/prebuild-tikz.mjs --check && vite build",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "test:activity12": "node --experimental-strip-types scripts/test-lecture12.mjs",
     "test:payload": "node --experimental-strip-types scripts/check-lecture-payload.mjs",
     "content:sync": "node scripts/generate-course-data.mjs && node scripts/generate-prob-stat-data.mjs && node scripts/generate-all-courses.mjs",
     "content:reset": "node scripts/generate-course-data.mjs --force && node scripts/generate-prob-stat-data.mjs --force && node scripts/generate-all-courses.mjs --force",

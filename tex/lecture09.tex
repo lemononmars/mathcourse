@@ -89,6 +89,16 @@ We first choose which value would be the four-of-a-kind, for which there are 13 
 \[ 13 \times 48 = 624.\]
 \end{sol}
 \end{frame}
+\begin{frame}[t]{Two-stage product: a character outfit}
+\small
+\begin{ex}
+A character has four shirts and three pairs of trousers. How many outfits use one of each?
+\end{ex}
+\begin{sol}
+Choose a shirt in $4$ ways, then trousers in $3$ ways. Every shirt works with every pair of trousers:\[4\times3=12.\] Multiply because both choices must be made.
+\end{sol}
+\end{frame}
+
 
 
 \begin{frame}[t]
@@ -125,10 +135,30 @@ If there are more than 2 arrangements, then we extend the rule as follows.
 \begin{thm}{}{}
 If there are $k$ different arrangements in which they cannot happen at the same time, and for each arrangement there are $N_k$ ways to do so, then the number of ways to arrange either of these things is
 \begin{equation} \label{eq:rule_of_addition}
-N_1 + N_2 + N_3 \ldots + N_n
+N_1 + N_2 + N_3 + \ldots + N_k
 \end{equation}
 \end{thm}
 \end{frame}
+\begin{frame}[t]{Multi-group sum: one asset}
+\small
+\begin{ex}
+Choose exactly one asset from five sounds, eight textures, or four scripts. The collections do not overlap. How many choices are there?
+\end{ex}
+\begin{sol}
+Each asset belongs to exactly one collection, so these alternatives are disjoint:\[5+8+4=17.\]
+\end{sol}
+\end{frame}
+
+\begin{frame}[t]{Multi-group sum: one prize}
+\small
+\begin{ex}
+A raffle offers two distinct gold prizes, three silver prizes, and five bronze prizes. A winner chooses exactly one prize. How many choices are there?
+\end{ex}
+\begin{sol}
+Add the counts of the three mutually exclusive categories:\[2+3+5=10.\] There is no multiplication because the winner does not choose one prize from every category.
+\end{sol}
+\end{frame}
+
 
 
 \begin{frame}[t]
@@ -534,6 +564,26 @@ The four people are to be assigned to four distinct interviewers, so the order m
 \end{itemize}
 \end{prop}
 \end{frame}
+\begin{frame}[t]{Permutation boundaries: four cards}
+\small
+\begin{ex}
+From four distinct cards, count ordered selections of zero cards, one card, and all four cards.
+\end{ex}
+\begin{sol}
+\[P(4,0)=1,\qquad P(4,1)=4,\qquad P(4,4)=4!=24.\] There is one empty arrangement, four single-card choices, and $24$ orders of all four cards.
+\end{sol}
+\end{frame}
+
+\begin{frame}[t]{Permutation boundaries: three icons}
+\small
+\begin{ex}
+A toolbar has three distinct icons. Count arrangements using no icon, one icon, and all three icons.
+\end{ex}
+\begin{sol}
+\[P(3,0)=1,\qquad P(3,1)=3,\qquad P(3,3)=3!=6.\] The empty toolbar is one arrangement; the three one-icon choices and six full orders illustrate the other identities.
+\end{sol}
+\end{frame}
+
 
 \begin{frame}{Properties of Permutation (2/2)}
 \begin{prop}{}{}
@@ -549,6 +599,26 @@ The four people are to be assigned to four distinct interviewers, so the order m
 \end{itemize}
 \end{prop}
 \end{frame}
+\begin{frame}[t]{Factorial ratio: assigning two roles}
+\small
+\begin{ex}
+Seven candidates compete for president and secretary. A person cannot hold both roles. How many assignments are possible?
+\end{ex}
+\begin{sol}
+The roles distinguish the order:\[P(7,2)=\frac{7!}{(7-2)!}=\frac{7!}{5!}=7\times6=42.\] Cancelling $5!$ leaves the two sequential choices.
+\end{sol}
+\end{frame}
+
+\begin{frame}[t]{Factorial ratio: a code without repeats}
+\small
+\begin{ex}
+Fill three ordered code positions with distinct symbols from a set of five. How many codes are possible?
+\end{ex}
+\begin{sol}
+\[P(5,3)=\frac{5!}{(5-3)!}=\frac{5!}{2!}=5\times4\times3=60.\] Divide away the unused final two factorial factors.
+\end{sol}
+\end{frame}
+
 
 
 %%%%%%%%%%%%%
@@ -628,6 +698,16 @@ We first choose which suit $\clubsuit, \vardiamondsuit, \spadesuit, \varheartsui
 \[ \ch{13}{5} \times 4 = 5148\]
 \end{sol}
 \end{frame}
+\begin{frame}[t]{Combination formula: an unordered committee}
+\small
+\begin{ex}
+Choose three committee members from seven students, with no assigned roles. How many committees are there?
+\end{ex}
+\begin{sol}
+\[C(7,3)=\frac{7!}{3!4!}=\frac{7\times6\times5}{3\times2\times1}=35.\] Divide by $3!$ because every ordering of the same three members gives the same committee.
+\end{sol}
+\end{frame}
+
 
 \begin{frame}
 \frametitle{Properties}
@@ -638,6 +718,26 @@ We first choose which suit $\clubsuit, \vardiamondsuit, \spadesuit, \varheartsui
 \end{enumerate}
 \end{prop}
 \end{frame}
+\begin{frame}[t]{Combination boundaries: five posters}
+\small
+\begin{ex}
+From five distinct posters, count selections of none, all five, and exactly one.
+\end{ex}
+\begin{sol}
+\[\ch{5}{0}=1,\qquad\ch{5}{5}=1,\qquad\ch{5}{1}=5.\] The empty and full selections are unique. A one-poster selection has five choices.
+\end{sol}
+\end{frame}
+
+\begin{frame}[t]{Combination boundaries: eight sprites}
+\small
+\begin{ex}
+From eight distinct sprites, count selections of none, all eight, and exactly one.
+\end{ex}
+\begin{sol}
+\[\ch{8}{0}=1,\qquad\ch{8}{8}=1,\qquad\ch{8}{1}=8.\] Selecting all sprites is one group; ordering all sprites would instead give $8!$ arrangements.
+\end{sol}
+\end{frame}
+
 
 
 
@@ -651,6 +751,26 @@ or, better yet, combinatorially. If there are $n$ distinct objects, then the num
 \end{enumerate}
 \end{prop}
 \end{frame}
+\begin{frame}[t]{Combination symmetry: starters and substitutes}
+\small
+\begin{ex}
+Choose four starters from six players. Count the same choices by selecting the substitutes.
+\end{ex}
+\begin{sol}
+Each set of four starters determines one set of two substitutes, and conversely:\[\ch{6}{4}=\ch{6}{2}=\frac{6\times5}{2}=15.\]
+\end{sol}
+\end{frame}
+
+\begin{frame}[t]{Combination symmetry: illuminated tiles}
+\small
+\begin{ex}
+A board has nine distinct tiles, exactly seven of which are illuminated. Count configurations using the dark tiles.
+\end{ex}
+\begin{sol}
+Choosing seven illuminated tiles is equivalent to choosing the two tiles left dark:\[\ch{9}{7}=\ch{9}{2}=\frac{9\times8}{2}=36.\] Complementary selections have equal counts.
+\end{sol}
+\end{frame}
+
 
 \begin{frame}
 \begin{prop}{}{}
@@ -660,4 +780,22 @@ or, better yet, combinatorially. If there are $n$ distinct objects, then the num
 \end{enumerate}
 \end{prop}
 \end{frame}
+\begin{frame}[t]{Choose then order: three medals}
+\small
+\begin{ex}
+Eight entrants compete for gold, silver, and bronze. Count assignments to different entrants.
+\end{ex}
+\begin{sol}
+First choose the winners, then assign their medals:\[P(8,3)=C(8,3)\times3!=56\times6=336.\] Each unordered winner set yields six ordered medal assignments.
+\end{sol}
+\end{frame}
 
+\begin{frame}[t]{Choose then order: an image strip}
+\small
+\begin{ex}
+Choose three of five distinct images and place them left to right. How many strips are possible?
+\end{ex}
+\begin{sol}
+\[P(5,3)=C(5,3)\times3!=10\times6=60.\] There are ten image sets and six orders for every set.
+\end{sol}
+\end{frame}

@@ -373,6 +373,16 @@ Given a random variable $X$ and $Y$. Define $X + Y$ to be a new random variable 
 \[E(X+Y) = E(X) + E(Y)\]
 \end{thm}
 \end{frame}
+\begin{frame}[t]{Sum linearity: dependent variables}
+\small
+\begin{ex}
+Roll a fair die. Let $X$ be its face value and let $Y=7-X$. Find $E(X+Y)$ although $X$ and $Y$ are dependent.
+\end{ex}
+\begin{sol}
+\[E(X)=3.5,\qquad E(Y)=3.5,\]\[E(X+Y)=E(X)+E(Y)=7.\] Indeed, $X+Y=7$ on every outcome. Linearity of expectation does not require independence.
+\end{sol}
+\end{frame}
+
 
 
 \begin{frame}[t]
@@ -387,8 +397,8 @@ Let $X_6$ be the outcome of a single six-sided die roll (abbreviated as \red{d6}
 \begin{itemize}
 \item The expected value of rolling one \red{d6} and one \blue{d10} is \pa
 \[E(X_6 +X_{10}) \pa = E(X_6) + E(X_{10}) \pa = 3.5 + 5.5 = 9\]
-\item The expected value of rolling three \blue{d10} is
-\[E(X_{10} + X_{10} + X_{10}) = E(X_{10}) + E(X_{10}) + E(X_{10}) = 5.5 + 5.5 + 5.5 = 16.5\]
+\item Let $X_{10,j}$ be the outcome of the $j$-th ten-sided die roll. The expected value of rolling three \blue{d10} is
+\[E(X_{10,1} + X_{10,2} + X_{10,3}) = E(X_{10,1}) + E(X_{10,2}) + E(X_{10,3}) = 5.5 + 5.5 + 5.5 = 16.5\]
 \end{itemize}
 \end{sol}
 \end{frame}
@@ -400,8 +410,28 @@ Similarly, we have the following property.
 Given a random variable $X$ and a constant $a$. Define $aX$ to be a new random variable defined by multiplying $a$ to all outcomes of $X$. Then, we have
 \[E(aX) = aE(X)\]
 \end{thm}
-Note: \red{$2X \neq X+X$} !!! For example, $X$ is the result of a die roll, then possible values of $2X$ are $2,4,6,8,10$ and $12$, which is different from $X+X$ where values range from $2$ up to $12$.
+Note: $2X=X+X$ for the same random variable. If $X_1$ and $X_2$ are independent die rolls, $X_1+X_2$ can take every integer from $2$ to $12$, whereas $2X$ takes only $2,4,6,8,10,12$. Their means agree, but their distributions differ.
 \end{frame}
+\begin{frame}[t]{Scalar linearity: multiplying a reward}
+\small
+\begin{ex}
+A reward $X$ has expected value $4$ coins. A bonus triples the reward on every outcome. Find the expected bonus reward.
+\end{ex}
+\begin{sol}
+Let $Y=3X$. Then\[E(Y)=E(3X)=3E(X)=12\text{ coins}.\] This triples the same realized reward, rather than drawing three independent rewards.
+\end{sol}
+\end{frame}
+
+\begin{frame}[t]{Scalar linearity: a random penalty}
+\small
+\begin{ex}
+The expected number of mistakes in a game is $E(X)=2.5$. Each mistake costs two points. Find the expected score change.
+\end{ex}
+\begin{sol}
+The score change is $Y=-2X$, so\[E(Y)=E(-2X)=-2E(X)=-5\text{ points}.\] The negative scalar models a loss: the expected loss is five points.
+\end{sol}
+\end{frame}
+
 
 \begin{frame}
 These formula are very useful in answering these types of questions: \pa
@@ -708,6 +738,26 @@ These are irrelevant to our course, but for the sake of completeness here are ot
 \task The standard deviation is $$\sigma = \sqrt{np(1-p)}.$$
 \end{tasks}
 \end{frame}
+\begin{frame}[t]{Binomial formulas: fair coin flips}
+\small
+\begin{ex}
+Let $X$ count heads in four independent fair coin flips. Find $P(X=2)$, the mean, variance, and standard deviation.
+\end{ex}
+\begin{sol}
+Use $n=4$, $p=1/2$:\[P(X=2)=\ch{4}{2}\left(\frac12\right)^2\left(\frac12\right)^2=\frac38,\]\[E(X)=2,\quad V(X)=4\left(\frac12\right)\left(\frac12\right)=1,\quad\sigma=1.\]
+\end{sol}
+\end{frame}
+
+\begin{frame}[t]{Binomial formulas: rare drops}
+\small
+\begin{ex}
+Each of ten independent game rounds drops an item with probability $0.2$. Let $X$ count drops. Find $P(X=0)$ and the three summary quantities.
+\end{ex}
+\begin{sol}
+\[P(X=0)=\ch{10}{0}(0.2)^0(0.8)^{10}\approx0.1074,\]\[E(X)=10(0.2)=2,\quad V(X)=10(0.2)(0.8)=1.6,\quad\sigma=\sqrt{1.6}\approx1.265.\] The same mean as the coin example does not imply the same variance.
+\end{sol}
+\end{frame}
+
 
 \begin{frame}
 \frametitle{Notes}
@@ -791,7 +841,7 @@ A \textbf{geometric experiment} has three characteristics:
 
 \begin{frame}[t]
 \begin{block}{}
-Let $X$ be the number of independent trials \textbf{before} the first success. Then, $P(X)$ is called \textbf{a geometric probability distribution}.
+Let $X$ count failures before the first success in independent trials. Then, $P(X)$ is called \textbf{a geometric probability distribution}.
 
 We denote $X \sim G(p)$, read as $X$ is a random variable with a geometric distribution.
 \end{block}
@@ -831,6 +881,26 @@ Again, these are irrelevant to our course, but for the sake of completeness here
 \task The standard deviation is $$\sigma = \frac{\sqrt{1-p}}{p}.$$
 \end{tasks}
 \end{frame}
+\begin{frame}[t]{Geometric formulas: waiting for a head}
+\small
+\begin{ex}
+Flip a fair coin independently until its first head. Let $X$ count failures before it. Find $P(X=2)$, the mean, variance, and standard deviation.
+\end{ex}
+\begin{sol}
+Here $p=1/2$, and two failures means TTH:\[P(X=2)=\frac12\left(\frac12\right)^2=\frac18,\]\[E(X)=\frac{1/2}{1/2}=1,\quad V(X)=\frac{1/2}{(1/2)^2}=2,\quad\sigma=\sqrt2.\] The expected total number of flips is $E(X+1)=2$.
+\end{sol}
+\end{frame}
+
+\begin{frame}[t]{Geometric formulas: repeated attempts}
+\small
+\begin{ex}
+Independent attempts succeed with probability $1/4$. Let $X$ count failures before the first success. Find $P(X=0)$ and the three summary quantities.
+\end{ex}
+\begin{sol}
+\[P(X=0)=\frac14,\quad E(X)=\frac{3/4}{1/4}=3,\]\[V(X)=\frac{3/4}{(1/4)^2}=12,\qquad\sigma=\sqrt{12}=2\sqrt3.\] Success on the first attempt means zero failures. The expected total number of attempts is $4$.
+\end{sol}
+\end{frame}
+
 
 
 \begin{frame}[t]

@@ -84,6 +84,26 @@ The probability of any outcome is the \red{long-term relative frequency} of that
 If there are $n$ possible outcomes, and they are all equally likely, then the probability of each outcome is $\frac{1}{n}$
 \end{thm}
 \end{frame}
+\begin{frame}[t]{Equally likely outcomes: a die face}
+\small
+\begin{ex}
+What is the probability that a fair six-sided die shows exactly $5$?
+\end{ex}
+\begin{sol}
+The six individual outcomes are equally likely, so the theorem gives\[P(\{5\})=\frac16.\] This counts one specified outcome, not a set of several outcomes.
+\end{sol}
+\end{frame}
+
+\begin{frame}[t]{Equally likely outcomes: a spinner sector}
+\small
+\begin{ex}
+A spinner has four equally likely sectors: red, blue, green, and yellow. What is the probability of landing on blue?
+\end{ex}
+\begin{sol}
+Each of the four individual outcomes has probability\[P(\text{blue})=\frac14.\] The rule requires equal chances; four labels alone do not guarantee a probability of $1/4$.
+\end{sol}
+\end{frame}
+
 
 \begin{frame}
 \frametitle{Mathematical Definition}
@@ -333,10 +353,10 @@ Suppose we roll two fair dice. Find all pairs of events below that are mutually 
 \begin{sol}
 We see that
 \begin{itemize}
-\item $A$ and $D$ are mutually exclusive. You can tell without listing all the elements because if both dice have the same value, then the different must be 0, not 3. 
-\item On the other hand, $A \cap B = \{11\}$ and $A \cap C = \{44\}$, so neither pair $A$ and $B$, or $A$ and $C$ are mutually exclusive.
-\item $B$ and $C$ are mutually exclusive. If the first dice is 1 and the sum is 8, then the other dice would need to be 7.
-\item $C$ and $D$ are mutually exclusive. Again, we can see algebraically that if the sum is 8, then both numbers are even or odd, so the difference will always be even.
+\item $A$ and $C$ are mutually exclusive: a first roll of $1$ would require a second roll of $7$ for a sum of $8$.
+\item $A$ and $D$ are mutually exclusive: a sum of $8$ makes the two rolls have the same parity, so their absolute difference cannot be $3$.
+\item $B$ and $D$ are mutually exclusive: equal rolls have difference $0$.
+\item The other pairs overlap: $A\cap B=\{44\}$, $B\cap C=\{11\}$, and $C\cap D=\{14\}$. Here $ab$ denotes first roll $a$, second roll $b$.
 \end{itemize}
 
 \end{sol}
@@ -572,6 +592,46 @@ For any event $A$ in the sample space $S$, the following are true:
 \end{thm}
 Note that the third property is also known as the principle of inclusion-exclusion.
 \end{frame}
+\begin{frame}[t]{Probability bounds: a fair die}
+\small
+\begin{ex}
+For a fair die, find probabilities of an impossible event, a certain event, and an even result. Check the bounds.
+\end{ex}
+\begin{sol}
+\[P(\text{roll }7)=0,\quad P(\{1,2,3,4,5,6\})=1,\quad P(\{2,4,6\})=\frac12.\] Each probability is in $[0,1]$, including the endpoints. The impossible event is the empty subset of the sample space.
+\end{sol}
+\end{frame}
+
+\begin{frame}[t]{Probability bounds: colored tokens}
+\small
+\begin{ex}
+A bag contains two red and three blue tokens. Draw one uniformly. Find probabilities of green, red or blue, and red.
+\end{ex}
+\begin{sol}
+\[P(\text{green})=0,\quad P(\text{red or blue})=1,\quad P(\text{red})=\frac25.\] None of these probabilities is negative or greater than one.
+\end{sol}
+\end{frame}
+
+\begin{frame}[t]{Complement: at least one six}
+\small
+\begin{ex}
+Roll a fair die twice independently. Find the probability of at least one six.
+\end{ex}
+\begin{sol}
+The complement is no six on either roll:\[P(\text{no six})=\left(\frac56\right)^2=\frac{25}{36},\]\[P(\text{at least one six})=1-\frac{25}{36}=\frac{11}{36}.\]
+\end{sol}
+\end{frame}
+
+\begin{frame}[t]{Inclusion-exclusion: overlapping preferences}
+\small
+\begin{ex}
+Of 30 students, 18 like drawing, 14 like animation, and 8 like both. Choose a student uniformly. Find the probability of liking at least one.
+\end{ex}
+\begin{sol}
+Let $D$ and $A$ be the two events. The overlap was counted twice:\[P(D\cup A)=\frac{18}{30}+\frac{14}{30}-\frac{8}{30}=\frac45.\] Subtract it once to obtain $24$ students out of $30$.
+\end{sol}
+\end{frame}
+
 
  
 \begin{frame}[t] 
@@ -704,6 +764,16 @@ P(A \cup B) = P(A) + P(B)
 \end{equation}
 \end{thm}
 \end{frame}
+\begin{frame}[t]{Disjoint addition: red or blue}
+\small
+\begin{ex}
+A bag contains three red, two blue, and five green tokens. Draw one uniformly. Find the probability of red or blue.
+\end{ex}
+\begin{sol}
+A single token cannot be both colors, so the events are mutually exclusive:\[P(\text{red or blue})=\frac{3}{10}+\frac{2}{10}=\frac12.\] No overlap needs to be subtracted.
+\end{sol}
+\end{frame}
+
 
  
 \begin{frame}[t]

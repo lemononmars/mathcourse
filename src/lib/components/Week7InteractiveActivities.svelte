@@ -1,4 +1,5 @@
 <script lang="ts">
+  import CoordinateTransformLab from './CoordinateTransformLab.svelte';
   import Move from '@lucide/svelte/icons/move';
   import Navigation from '@lucide/svelte/icons/navigation';
   import Route from '@lucide/svelte/icons/route';
@@ -11,7 +12,7 @@
   import Zap from '@lucide/svelte/icons/zap';
   import Shield from '@lucide/svelte/icons/shield';
 
-  type TabType = 'components' | 'displacement' | 'arithmetic' | 'unitvec' | 'dotprod' | 'transforms';
+  type TabType = 'components' | 'displacement' | 'arithmetic' | 'unitvec' | 'dotprod' | 'transforms' | 'coordinates';
   let activeTab = $state<TabType>('components');
 
   // ==========================================
@@ -183,6 +184,7 @@
       <option value="unitvec">4. Normalization & Game Speed</option>
       <option value="dotprod">5. Dot Product & Surface Lighting</option>
       <option value="transforms">6. 2D Unit Square Transformations</option>
+      <option value="coordinates">7. Coordinate Mapping (pages 49–52)</option>
     </select>
   </div>
 
@@ -230,11 +232,20 @@
       >
         <Maximize2 size={14} /> 2D Transform
       </button>
+      <button
+        class={`tab tab-xs md:tab-sm font-bold gap-1 transition-all ${activeTab === 'coordinates' ? 'tab-active !bg-primary !text-primary-content' : ''}`}
+        onclick={() => (activeTab = 'coordinates')}
+      >
+        <Route size={14} /> Coordinate Mapping
+      </button>
     </div>
   </div>
 
   <!-- Studio Main Content Area -->
   <div class="flex-1 overflow-y-auto py-2">
+    {#if activeTab === 'coordinates'}
+      <CoordinateTransformLab />
+    {/if}
 
     <!-- ========================================== -->
     <!-- TAB 1: VECTOR COMPONENTS & NORM            -->
